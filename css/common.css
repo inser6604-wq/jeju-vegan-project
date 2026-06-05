@@ -1,0 +1,32 @@
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  font-weight: 700;
+  line-height: 1;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.btn-primary {
+  width: 220px;
+  height: 45px;
+  border: 2px solid #2d6a4f;
+  color: #2d6a4f;
+}
+
+.btn-sm {
+  width: 65px;
+  height: 30px;
+  background-color: #fff;
+  color: #2d6a4f;
+  font-size: 1.2rem;
+}
+
+.btn-lg {
+  width: 400px;
+  height: 65px;
+  background-color: #fff;
+  color: #2d6a4f;
+}
