@@ -4,88 +4,214 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>제주비건지도</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+  <div id="wrap">
+    <header include-html="include/header.html"></header>
 
-  <main id="container" class="page page-index"></main>
+    <main id="container" class="page page-index">
+      <section class="home-hero section">
+        <div class="inner">
 
-  <section class="home-hero section">
-    <div class="inner">
+          <div class="home-hero-content">
 
-      <div class="home-hero-content">
+            <p class="home-hero-subtitle">
+              제주에서 발견하는 더 건강하고 지속 가능한 라이프 스타일
+            </p> 
 
-        <p class="home-hero-subtitle">
-          제주에서 발견하는 더 건강하고 지속 가능한 라이프 스타일
-        </p>
+            <h2 class="home-hero-title">
+              EAT<br>  
+              VEGAN<br>
+              IN JEJU
+              </h2>
 
-        <h2 class="home-hero-title">
-          EAT<br> 
-          VEGAN<br>
-          IN JEJU
-          </h2>
+          <div class="home-hero-btn">
+            <a href="#" class="btn btn-primary">
+              비건 지도 보기
+            </a>
+          </div>
 
-        <div class="home-hero-btn">
-          <a href="#" class="btn btn-primary">
-            비건 지도 보기
-          </a>
+        </div>
+
+        <div class="home-hero-slide">
+          <!-- swiper 할 자리임 -->
         </div>
 
       </div>
+    </section>
 
-      <div class="home-hero-slide">
-        <!-- swiper 할 자리임 -->
-      </div>
+    <section class="home-pick section">
+      <div class="inner">
 
+        <div class="section-head">
+          <h2 class="section-title">오늘의 비건 <span>PICK</span>
+          </h2>
+          
+          <a href="#" class="btn btn-primary">
+            VIEW MORE
+          </a>
+          </div>
+
+        <ul class="home-pick-content card-list">
+        <!-- 메인카드 -->
+        <li class="home-pick-main card">
+          <div class="home-pick-main-img img-box">
+            <img src="image/vegan-pick-img01.png" alt="제주 흑보리 비건 플레이트"> 
+          </div>
+          <div class="home-pick-main-info card-body">
+            <h3 class="home-pick-main-title card-title">제주 흑보리 비건 플레이트</h3>
+            <p class="home-pick-main-desc card-desc">고소한 <span>제주 흑보리와</span>
+              <span>신선한 채소</span>로 완성한 건강한 한끼</p>
+              <p class="home-pick-main-place">
+                Jeju Veggie's · 제주시내
+              </p>
+          </div>
+        </li>
+
+          <li class="home-pick-side card">
+            <div class="home-pick-item">
+              <div class="home-pick-side-img img-box">
+                <img src="image/vegan-pick-img02.png" alt="제주 바당 비건라면"> 
+              </div>
+              <div class="home-pick-side-info card-body">
+                <span class="home-pick-side-place">
+                  Five Seventh 성산 · 구좌
+                </span>
+                <h3 class="home-pick-side-title card-title">제주 바당 비건라면</h3>
+                <p class="home-pick-side-desc card-desc"><span>"해물없는 해물라면</span>깊고 얼큰한 국물 맛은 그대로,<span>식물성재료</span>로 담백하게."
+                </p>
+              </div>
+            </div>
+          </li>
+
+          <li class="home-pick-side card">
+            <div class="home-pick-item">
+              <div class="home-pick-side-img img-box">
+                <img src="image/vegan-pick-img03.png" alt="한라 비건 무스케이크"> 
+              </div>
+              <div class="home-pick-side-info card-body">
+                <span class="home-pick-side-place">
+                  And유(Yu)Café  애월 · 한림권
+                </span>
+                <h3 class="home-pick-side-title card-title">한라 비건 무스케이크</h3>
+                <p class="home-pick-side-desc card-desc"><span>“계란과 우유 없이</span>만든 달콤한 디저트로 마무리하세요.”
+                </p>
+              </div>
+            </div>
+          </li>
+
+    </ul>
     </div>
-  </section>
+    </section>
 
-  <section class="home-pick section">
-    <div class="inner">
+    <section class="home-course section">     
+      <div class="inner"> 
+        <div class="section-head">
+          <h2 class="section-title">여행코스</h2>
+          <span class="section-subtitle"><a>제주를 맛있게 걷는 방법,</a> 비건 식당, 카페, 자연 스팟을 따라 하루를 채우는 특별한 제주 여행 코스.</span>
+          
+          <a href="#" class="btn btn-line">
+            전체보기 
+          </a>
+          </div>
+          <!-- 코스 카드 -->
+        <ul class="home-course-content card-list">
+          <li class="course-card card">
+            <div class="card-img home-course-img img-box">
+              <div class="tag-list home-course-tag-list">
+                <button type="button" class="btn tag">#샐러드</button>
+                <button type="button" class="btn tag">#파스타</button>
+              </div>
+              <img src="image/main-course-card-img01.jpg" alt="서귀포 코스"> 
+            </div>
+            <div class="card-body home-course-body">
+              <h3 class="card-title home-course-title">서귀 포 코스</h3>
+              <p class="card-desc home-course-desc">자연과 로컬 비건 맛집을 함께 즐기는 여행</p>
+              <div class="home-course-like">
+                <button type="button" class="btn btn-text home-course-like-btn" aria-label="서귀포 코스 좋아요">
+                  <span class="home-course-heart" aria-hidden="true">♥</span>
+                  <span class="like-count">56</span>
+                </button>
+              </div>
+            </div>
+          </li>
 
-      <div class="section-head">
-      <h2 class="section-title">오늘의 비건 <span>PICK</span>
-      </h2>
-      
-      <a href="#" class="btn btn-primary">
-        VIEW MORE
-      </a>
+          <li class="course-card card">
+            <div class="card-img home-course-img img-box">
+              <div class="tag-list home-course-tag-list">
+                <button type="button" class="btn tag">#브런치</button>
+                <button type="button" class="btn tag">#디저트</button>
+              </div>
+              <a href="#" class="btn btn-primary btn-sm home-course-view">BEST COSURSE</a>
+              <img src="image/main-course-card-img02.jpg" alt="한림·협재 코스"> 
+            </div>
+            <div class="card-body home-course-body">
+              <h3 class="card-title home-course-title">협재 ·금능 코스</h3>
+              <p class="card-desc home-course-desc">에메랄드빛 해변과 감성 비건 스팟 탐방</p>
+              <div class="home-course-like">
+                <button type="button" class="btn btn-text home-course-like-btn" aria-label="한림·협재 코스 좋아요">
+                  <span class="home-course-heart" aria-hidden="true">♥</span>
+                  <span class="like-count">182</span>
+                </button>
+              </div>
+            </div>
+          </li>
+
+          <li class="course-card card">
+            <div class="card-img home-course-img img-box">
+              <div class="tag-list home-course-tag-list">
+                <button type="button" class="btn tag">#건강식</button>
+                <button type="button" class="btn tag">#포케</button>
+              </div>
+              <img src="image/main-course-card-img03.jpg" alt="한라산 코스"> 
+            </div>
+            <div class="card-body home-course-body">
+              <h3 class="card-title home-course-title">한라산 코스</h3>
+              <p class="card-desc home-course-desc">등산 후 즐기는 건강한 비건 식사와 휴식</p>
+              <div class="home-course-like">
+                <button type="button" class="btn btn-text home-course-like-btn" aria-label="한라산 코스 좋아요">
+                  <span class="home-course-heart" aria-hidden="true">♥</span>
+                  <span class="like-count">60</span>
+                </button>
+              </div>
+            </div>
+          </li>
+        </ul>
       </div>
+    
+    </section>
 
-    <div class="home-pick-content">
-    <!-- 메인카드 -->
-    <div class="home-pick-main">
-      <div class="home-pick-main-img">
-        <img src="img/vegan-pick-img01.png" alt="제주 흑보리 비건 플레이트"> 
+    <section class="home-map section">
+      <div class="inner">
+          <h2 class="home-map section-title">
+            VEGAN MAP</h2>
+          <span class="section-subtitle">146개의 비건 스팟을 한눈에 탐색해보세요.</span>
+          
+          <a href="#" class="btn btn-line">
+            비건지도 보기 
+          </a>
+          </div>
+        <img class="home-map-img" src="image/main-map.svg" alt="제주 비건 지도">
       </div>
-      <div class="home-pick-main-info">
-        <h3 class="home-pick-main-title">제주 흑보리 비건 플레이트</h3>
-        <p class="home-pick-main-desc">고소한 <span>제주 흑보리와</span>
-          <span>신선한 채소</span>로 완성한 건강한 한끼</p>
-          <p class="home-pick-main-place">
-            Jeju Veggie's · 제주시내
-          </p>
-    </div>
-  </section>
+    </section>
 
-  <section class="home-course section">
-    <div class="inner"></div>
-  </section>
+    <section class="home-together section">
+      <div class="inner"></div>
+    </section>
 
-  <section class="home-map section">
-    <div class="inner"></div>
-  </section>
+    <section class="home-join section">
+      <div class="inner"></div>
+    </section>
 
-  <section class="home-together section">
-    <div class="inner"></div>
-  </section>
+    <section class="home-subscribe section">
+      <div class="inner"></div>
+    </section>
 
-  <section class="home-join section">
-    <div class="inner"></div>
-  </section>
-
-  <section class="home-subscribe section">
-    <div class="inner"></div>
-  </section>
-
+    
+  </main>
+  <footer include-html="include/footer.html"></footer>
+  </div>
+  <script src="js/includeHTML.js"></script>
 </body>
 </html>
