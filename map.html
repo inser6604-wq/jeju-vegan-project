@@ -3,30 +3,90 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
   <title>Document</title>
 </head>
 <body>
-  <header include-html="include/header.html"></header>
+  <!-- <header include-html="include/header.html"></header> -->
 
   <main id="container" class="page page-map">
-    <div class="map-hero-content">
+    <!-- hero -->
+    <section class="map-hero-content">
       <div class="inner">
-        
+        <!-- hero image 고민 -->
       </div>
-    </div>
-    <div class="map-spot-content">
-      <div class="inner">
+    </section>
+
+    <!-- 지도  -->
+    <section class="map-spot-content">
+      <div class="inner map-inner">
         <div class="section-head">
           <h2 class="section-title">비건 지도</h2>
           <p class="section-desc">당신의 취향에 맞는 제주 비건 스팟을 추천해드려요</p>
         </div>
-        <div class="img-box">
-          <img src="image/map.png" alt="map">
+        <!-- 비주얼 및 필터 -->
+        <div class="map-main-content"><!-- backgroundimg:map -->
+          <div class="map-main-content-inner inner">
+            <div class="map-filter">
+              <div class="map-search search">
+                <input type="text" placeholder="지역, 식당이름을 입력">
+                <div class="map-search-icon img-box">
+                  <img src="image/map-search-icon.svg" alt="search-icon">
+                </div>
+              </div>
+              <div class="map-filter-title">
+                <p>어떤 식당을 찾고 계신가요?</p>
+                <p>맞춤 추천 설정</p>
+              </div>
+              <button class="map-reset" id="map-reset">
+                <img src="image/map-reset-icon.svg" alt="reset-icon">
+                <span>초기화</span>
+              </button>
+              <div class="map-setting">
+              <div class="map-filter1">
+                <p>영업정보</p>
+                <div class="map-filter1-in">
+                  <button class="btn btn-sm">영업 중</button>
+                  <button class="btn btn-sm">영업 마감</button>
+                </div>
+              </div>
+              <div class="map-filter2">
+                <p>인원</p>
+                <div class="map-filter2-in">
+                  <button class="btn btn-sm">#혼밥</button>
+                  <button class="btn btn-sm">#논비건 동행</button>
+                  <button class="btn btn-sm">#가족 외식</button>
+                  <button class="btn btn-sm">#아이 동반</button>
+                </div>
+              </div>
+              <div class="map-filter3">
+                <p>비건의 정도</p>
+                <div class="map-filter3-in">
+                  <button class="btn btn-sm">🌱 완전 비건</button>
+                  <button class="btn btn-sm">🥗 비건 옵션</button>
+                  <button class="btn btn-sm">🍽️ 베지테리언</button>
+                  <button class="btn btn-sm">🍖 논비건</button>
+                </div>
+              </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="map-in-info card place-card">
+
+          </div>
+          <ul class="map-pin">
+            <li><img src="image/mappin-green.svg" alt="mappin-green"></li>
+            <li><img src="image/mappin-green.svg" alt="mappin-green"></li>
+            <li><img src="image/mappin-green.svg" alt="mappin-green"></li>
+            <li><img src="image/mappin-orange.svg" alt="mappin-orange"></li>
+          </ul>
         </div>
       </div>
-    </div>
+    </section>
+    
   </main>
 
-  <footer include-html="include/footer.html"></footer>
+  <!-- <footer include-html="include/footer.html"></footer> -->
 </body>
 </html>
