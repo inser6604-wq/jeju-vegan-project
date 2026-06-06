@@ -9,7 +9,7 @@
 </head>
 <body>
 <div id="wrap"> 
-  <header include-html="header.html"></header>
+    <header include-html="include/header.html"></header>
   <main id="container" class="page page-pick">
     <div class="inner">
       
@@ -27,7 +27,7 @@
   
         <div class="pick-layout">
           <div class="pick-img img-box">
-            <img src="./img/vegan-pick-img01.png" alt="제주흑보리">
+            <img src="./image/main-course-card-img01.jpg" alt="제주흑보리">
           </div>
     
           <div class="pick-info">
@@ -84,7 +84,7 @@
       <ul class="card-list">
         <li class="card place-card">
           <div class="card-img img box">
-            <img src="./img/vegan-pick-img02.png" alt="제주 바당 비건라면">
+            <img src="./image/vegan-pick-img02.png" alt="제주 바당 비건라면">
           </div>
           <div class="card-body">
               <div class="tag">완전비건</div>
@@ -102,7 +102,7 @@
         </li>
         <li class="card place-card">
           <div class="card-img">
-            <img src="./img/vegan-pick-img03.png" alt="한라 비건 무스케이크">
+            <img src="./image/vegan-pick-img03.png" alt="한라 비건 무스케이크">
           </div>
           <div class="card-body">
               <div class="tag">완전비건</div>
@@ -175,15 +175,8 @@
       </ul>
     </div>
   </main>
-  <footer include-html="footer.html"></footer>
-</div>
-
+  <footer include-html="include/footer.html"></footer>
+  </div>
   <script src="js/includeHTML.js"></script>
-  <script src="js/index.js"></script>
-  <script>
-    includeHTML( function () {
-      initAll();  // 처음 로딩(내가 만드는 js파일 불러옴)
-    });
-  </script>
 </body>
 </html>
