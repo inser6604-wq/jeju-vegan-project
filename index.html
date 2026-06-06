@@ -8,210 +8,231 @@
 </head>
 <body>
   <div id="wrap">
-    <header include-html="include/header.html"></header>
+    <!-- <header include-html="include/header.html"></header> -->
 
     <main id="container" class="page page-index">
       <section class="home-hero section">
         <div class="inner">
-
           <div class="home-hero-content">
-
-            <p class="home-hero-subtitle">
-              제주에서 발견하는 더 건강하고 지속 가능한 라이프 스타일
-            </p> 
-
-            <h2 class="home-hero-title">
-              EAT<br>  
-              VEGAN<br>
-              IN JEJU
-              </h2>
-
-          <div class="home-hero-btn">
-            <a href="#" class="btn btn-primary">
-              비건 지도 보기
-            </a>
+            <p class="home-hero-subtitle">제주에서 발견하는 더 건강하고 지속 가능한 라이프 스타일</p>
+            <h2 class="home-hero-title">EAT<br><span>VEGAN</span><br>IN JEJU</h2>
+            <a href="map.html" class="btn btn-primary">비건 지도 보기</a>
           </div>
 
+          <div class="home-hero-controls">
+            <button type="button" class="btn home-hero-arrow" aria-label="이전 슬라이드">‹</button>
+            <button type="button" class="btn home-hero-arrow" aria-label="다음 슬라이드">›</button>
+          </div>
         </div>
+      </section>
 
-        <div class="home-hero-slide">
-          <!-- swiper 할 자리임 -->
-        </div>
-
-      </div>
-    </section>
-
-    <section class="home-pick section">
-      <div class="inner">
-
-        <div class="section-head">
-          <h2 class="section-title">오늘의 비건 <span>PICK</span>
-          </h2>
-          
-          <a href="#" class="btn btn-primary">
-            VIEW MORE
-          </a>
+      <section class="home-pick section">
+        <div class="inner">
+          <div class="section-head">
+            <h2 class="section-title">오늘의 비건 <span>PICK</span></h2>
+            <a href="pick.html" class="btn btn-primary">VIEW MORE</a>
           </div>
 
-        <ul class="home-pick-content card-list">
-        <!-- 메인카드 -->
-        <li class="home-pick-main card">
-          <div class="home-pick-main-img img-box">
-            <img src="image/vegan-pick-img01.png" alt="제주 흑보리 비건 플레이트"> 
-          </div>
-          <div class="home-pick-main-info card-body">
-            <h3 class="home-pick-main-title card-title">제주 흑보리 비건 플레이트</h3>
-            <p class="home-pick-main-desc card-desc">고소한 <span>제주 흑보리와</span>
-              <span>신선한 채소</span>로 완성한 건강한 한끼</p>
-              <p class="home-pick-main-place">
-                Jeju Veggie's · 제주시내
-              </p>
-          </div>
-        </li>
+          <ul class="home-pick-content card-list">
+            <li class="home-pick-main card place-card">
+              <div class="home-pick-main-img card-img img-box">
+                <img src="image/vegan-pick-img01.png" alt="제주 흑보리 비건 플레이트">
+              </div>
+              <div class="home-pick-main-info card-body">
+                <span class="badge badge-vegan">오늘의 PICK</span>
+                <h3 class="home-pick-main-title card-title">제주 흑보리 비건 플레이트</h3>
+                <p class="home-pick-main-desc card-desc">고소한 
+                <span>제주 흑보리와 신선한 채소</span>로 완성한 건강한 한 끼</p>
+                <p class="home-pick-main-place">Jeju Veggie's · 제주시내</p>
+              </div>
+            </li>
 
-          <li class="home-pick-side card">
-            <div class="home-pick-item">
-              <div class="home-pick-side-img img-box">
-                <img src="image/vegan-pick-img02.png" alt="제주 바당 비건라면"> 
+            <li class="home-pick-side card place-card">
+              <div class="home-pick-side-img card-img img-box">
+                <img src="image/vegan-pick-img02.png" alt="제주 바당 비건라면">
               </div>
               <div class="home-pick-side-info card-body">
-                <span class="home-pick-side-place">
-                  Five Seventh 성산 · 구좌
-                </span>
+                <span class="home-pick-side-place">Five Seventh 성산 · 구좌</span>
                 <h3 class="home-pick-side-title card-title">제주 바당 비건라면</h3>
-                <p class="home-pick-side-desc card-desc"><span>"해물없는 해물라면</span>깊고 얼큰한 국물 맛은 그대로,<span>식물성재료</span>로 담백하게."
-                </p>
+                <p class="home-pick-side-desc card-desc"><span>해물 없는 해물라면</span>깊고 얼큰한 국물 맛은 그대로,<span>식물성 재료</span>로 담백하게</p>
               </div>
-            </div>
-          </li>
+            </li>
 
-          <li class="home-pick-side card">
-            <div class="home-pick-item">
-              <div class="home-pick-side-img img-box">
-                <img src="image/vegan-pick-img03.png" alt="한라 비건 무스케이크"> 
+            <li class="home-pick-side card place-card">
+              <div class="home-pick-side-img card-img img-box">
+                <img src="image/vegan-pick-img03.png" alt="한라 비건 무스케이크">
               </div>
               <div class="home-pick-side-info card-body">
-                <span class="home-pick-side-place">
-                  And유(Yu)Café  애월 · 한림권
-                </span>
+                <span class="home-pick-side-place">And유 Café 애월 · 한림권</span>
                 <h3 class="home-pick-side-title card-title">한라 비건 무스케이크</h3>
-                <p class="home-pick-side-desc card-desc"><span>“계란과 우유 없이</span>만든 달콤한 디저트로 마무리하세요.”
-                </p>
+                <p class="home-pick-side-desc card-desc"><span>계란과 우유 없이</span>만든 달콤한 디저트로 마무리하세요.</p>
               </div>
-            </div>
-          </li>
+            </li>
+          </ul>
+        </div>
+      </section>
 
-    </ul>
-    </div>
-    </section>
-
-    <section class="home-course section">     
-      <div class="inner"> 
-        <div class="section-head">
-          <h2 class="section-title">여행코스</h2>
-          <span class="section-subtitle"><a>제주를 맛있게 걷는 방법,</a> 비건 식당, 카페, 자연 스팟을 따라 하루를 채우는 특별한 제주 여행 코스.</span>
-          
-          <a href="#" class="btn btn-line">
-            전체보기 
-          </a>
+      <section class="home-course section">
+        <div class="inner">
+          <div class="section-head">
+            <h2 class="section-title">여행코스</h2>
+            <p class="section-desc"><span>제주를 맛있게 걷는 방법</span>,비건 식당, 카페, 자연 스팟을 따라 하루를 채우는 특별한 제주 여행 코스.</p>
+            <a href="course.html" class="btn btn-line">전체보기</a>
           </div>
-          <!-- 코스 카드 -->
-        <ul class="home-course-content card-list">
-          <li class="course-card card">
-            <div class="card-img home-course-img img-box">
-              <div class="tag-list home-course-tag-list">
-                <button type="button" class="btn tag">#샐러드</button>
-                <button type="button" class="btn tag">#파스타</button>
+
+          <ul class="home-course-content card-list">
+            <li class="course-card card">
+              <div class="card-img home-course-img img-box">
+                <div class="tag-list">
+                  <span class="tag">#샐러드</span>
+                  <span class="tag">#파스타</span>
+                </div>
+                <img src="image/main-course-card-img01.jpg" alt="서귀포 코스">
               </div>
-              <img src="image/main-course-card-img01.jpg" alt="서귀포 코스"> 
-            </div>
-            <div class="card-body home-course-body">
-              <h3 class="card-title home-course-title">서귀 포 코스</h3>
-              <p class="card-desc home-course-desc">자연과 로컬 비건 맛집을 함께 즐기는 여행</p>
-              <div class="home-course-like">
-                <button type="button" class="btn btn-text home-course-like-btn" aria-label="서귀포 코스 좋아요">
-                  <span class="home-course-heart" aria-hidden="true">♥</span>
-                  <span class="like-count">56</span>
+              <div class="card-body home-course-body">
+                <h3 class="card-title home-course-title">서귀포 코스</h3>
+                <p class="card-desc home-course-desc">자연과 로컬 비건 맛집을 함께 즐기는 여행</p>
+                <button type="button" class="btn like-btn" aria-label="서귀포 코스 좋아요">
+                <span class="iconify like-icon" data-icon="mdi:heart-outline" aria-hidden="true"></span>
+                <span class="like-count">102</span>
                 </button>
               </div>
-            </div>
-          </li>
+            </li>
 
-          <li class="course-card card">
-            <div class="card-img home-course-img img-box">
-              <div class="tag-list home-course-tag-list">
-                <button type="button" class="btn tag">#브런치</button>
-                <button type="button" class="btn tag">#디저트</button>
+            <li class="course-card card">
+              <div class="card-img home-course-img img-box">
+                <div class="tag-list">
+                  <span class="tag">#브런치</span>
+                  <span class="tag">#디저트</span>
+                </div>
+                <a href="course.html" class="btn home-course-view">BEST COURSE</a>
+                <img src="image/main-course-card-img02.jpg" alt="한림 협재 코스">
               </div>
-              <a href="#" class="btn btn-primary btn-sm home-course-view">BEST COSURSE</a>
-              <img src="image/main-course-card-img02.jpg" alt="한림·협재 코스"> 
-            </div>
-            <div class="card-body home-course-body">
-              <h3 class="card-title home-course-title">협재 ·금능 코스</h3>
-              <p class="card-desc home-course-desc">에메랄드빛 해변과 감성 비건 스팟 탐방</p>
-              <div class="home-course-like">
-                <button type="button" class="btn btn-text home-course-like-btn" aria-label="한림·협재 코스 좋아요">
-                  <span class="home-course-heart" aria-hidden="true">♥</span>
+              <div class="card-body home-course-body">
+                <h3 class="card-title home-course-title">협재 · 금능 코스</h3>
+                <p class="card-desc home-course-desc">에메랄드빛 해변과 감성 비건 스팟 탐방</p>
+                <button type="button" class="btn like-btn is-active" aria-label="협재 금능 코스 좋아요">
+                  <span class="iconify like-icon" data-icon="mdi:heart" aria-hidden="true"></span>
                   <span class="like-count">182</span>
                 </button>
               </div>
-            </div>
-          </li>
+            </li>
 
-          <li class="course-card card">
-            <div class="card-img home-course-img img-box">
-              <div class="tag-list home-course-tag-list">
-                <button type="button" class="btn tag">#건강식</button>
-                <button type="button" class="btn tag">#포케</button>
+            <li class="course-card card">
+              <div class="card-img home-course-img img-box">
+                <div class="tag-list">
+                  <span class="tag">#건강식</span>
+                  <span class="tag">#포케</span>
+                </div>
+                <img src="image/main-course-card-img03.jpg" alt="한라산 코스">
               </div>
-              <img src="image/main-course-card-img03.jpg" alt="한라산 코스"> 
-            </div>
-            <div class="card-body home-course-body">
-              <h3 class="card-title home-course-title">한라산 코스</h3>
-              <p class="card-desc home-course-desc">등산 후 즐기는 건강한 비건 식사와 휴식</p>
-              <div class="home-course-like">
-                <button type="button" class="btn btn-text home-course-like-btn" aria-label="한라산 코스 좋아요">
-                  <span class="home-course-heart" aria-hidden="true">♥</span>
-                  <span class="like-count">60</span>
+              <div class="card-body home-course-body">
+                <h3 class="card-title home-course-title">한라산 코스</h3>
+                <p class="card-desc home-course-desc">등산 후 즐기는 건강한 비건 식사와 휴식</p>
+                <button type="button" class="btn like-btn" aria-label="한라산 코스 좋아요">
+                <span class="iconify like-icon" data-icon="mdi:heart-outline" aria-hidden="true"></span>
+                <span class="like-count">56</span>
                 </button>
               </div>
-            </div>
-          </li>
-        </ul>
-      </div>
-    
-    </section>
+            </li>
+          </ul>
+        </div>
+      </section>
 
-    <section class="home-map section">
-      <div class="inner">
-          <h2 class="home-map section-title">
-            VEGAN MAP</h2>
-          <span class="section-subtitle">146개의 비건 스팟을 한눈에 탐색해보세요.</span>
-          
-          <a href="#" class="btn btn-line">
-            비건지도 보기 
-          </a>
+      <section class="home-map section">
+        <div class="inner">
+          <div class="section-head">
+            <h2 class="section-title">VEGAN MAP</h2>
+            <p class="section-desc">146개의 비건 스팟을 한눈에 탐색해보세요.</p>
+            <a href="map.html" class="btn btn-line">비건지도 보기</a>
           </div>
-        <img class="home-map-img" src="image/main-map.svg" alt="제주 비건 지도">
-      </div>
-    </section>
 
-    <section class="home-together section">
-      <div class="inner"></div>
-    </section>
+          <div class="home-map-visual img-box">
+            <img src="image/main-map.svg" alt="제주 비건 지도">
+          </div>
 
-    <section class="home-join section">
-      <div class="inner"></div>
-    </section>
+          <ul class="home-map-stats card-list">
+            <li class="notice-card card">
+              <strong>146+</strong>
+              <span>📍Spots</span>
+            </li>
+            <li class="notice-card card">
+              <strong>48</strong>
+              <span>🍽Cafes</span>
+            </li>
+            <li class="notice-card card">
+              <strong>32</strong>
+              <span>🗺Featured Course</span>
+            </li>
+          </ul>
+        </div>
+      </section>
 
-    <section class="home-subscribe section">
-      <div class="inner"></div>
-    </section>
+      <section class="home-together section">
+        <div class="inner">
+          <div class="section-head">
+            <h2 class="section-title">취향은 달라도 식사는 함께</h2>
+            <p class="section-desc"><span>비건과 논비건 모두가 만족</span>할 수 있는 식당을 추천해드릴게요.<br>함께하는 식사도 더 쉽고 즐겁게.</p>
+          </div>
 
-    
-  </main>
-  <footer include-html="include/footer.html"></footer>
+          <div class="home-together-visual img-box">
+            <img src="image/main-eat-together-img.jpg" alt="함께 나누는 비건 식탁">
+            <strong>EAT<br>TOGETHER</strong>
+          </div>
+
+          <div class="home-together-tag-list">
+            <span class="tag">#논비건동반</span>
+            <span class="tag">#가족외식</span>
+            <span class="tag">#친구모임</span>
+            <span class="tag">#맛집추천</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="home-join section">
+        <div class="inner">
+          <div class="section-head">
+            <h2 class="section-title">함께 만들어요</h2>
+            <p class="section-desc">제주의 <span>숨은 비건 맛집과 새로운 스팟
+            </span>을 공유해주세요.<br>당신의 제보가 더 많은 사람들에게 건강한 선택지를 전합니다.<br><span>사장님은 가게를 등록하고, 방문객은 새로운 맛집을 제보</span>할 수 있습니다.</p>
+          </div>
+
+          <div class="home-join-content">
+            <div class="home-join-visual img-box">
+              <img src="image/main-bottom-with.jpg" alt="손 마주잡으려는 두 사람">
+            </div>
+            <div class="home-join-actions">
+              <a href="submit.html" class="btn btn-main-bottom">사장님 가게 등록할게요</a>
+              <a href="submit.html" class="btn btn-main-bottom">내가 아는 비건 맛집 제보할게요</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="home-subscribe section">
+        <div class="inner">
+          <div class="section-head">
+            <h2 class="section-title">새로운 비건 스팟,<br>제일 먼저 알려드릴게요</h2>
+            <p class="section-desc">제주의 새 비건식당, 오늘의 pick을 이메일로 받아보세요.</p>
+          </div>
+
+          <form class="home-subscribe-form form-area">
+            <div class="form-row">
+              <label for="home-subscribe-email" class="hide">이메일</label>
+              <input type="email" id="home-subscribe-email" class="form-input" placeholder="이메일 주소를 입력해 주세요">
+              <button type="submit" class="btn btn-primary">구독하기</button>
+            </div>
+          </form>
+          <p class="home-subscribe-note">구독시 개인정보 처리 방침에 동의하는 것으로 간주합니다.<br>언제든지 구독을 취소할 수 있어요.</p>
+        </div>
+      </section>
+    </main>
+
+    <footer include-html="include/footer.html"></footer>
   </div>
+
+  <script src="https://code.iconify.design/3/3.1.1/iconify.min.js"></script>
   <script src="js/includeHTML.js"></script>
+  <script src="js/index.js"></script>
 </body>
 </html>
