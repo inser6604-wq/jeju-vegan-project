@@ -11,3 +11,68 @@ document.querySelectorAll('.like-btn').forEach(btn => {
     }
   });
 });
+
+document.addEventListener('DOMContentLoaded', function () {
+
+      // FAQ 아코디언
+      document.querySelectorAll('.js-faq-question').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          var item = this.closest('.faq-item');
+          var isActive = item.classList.contains('active');
+
+          item.closest('.faq-list').querySelectorAll('.faq-item').forEach(function (el) {
+            el.classList.remove('active');
+            el.querySelector('.js-faq-question').setAttribute('aria-expanded', 'false');
+          });
+
+          if (!isActive) {
+            item.classList.add('active');
+            this.setAttribute('aria-expanded', 'true');
+          }
+        });
+      });
+
+      // 카테고리 탭 필터
+      document.querySelectorAll('.js-tab-btn').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          document.querySelectorAll('.js-tab-btn').forEach(function (b) {
+            b.classList.remove('active');
+            b.setAttribute('aria-selected', 'false');
+          });
+          this.classList.add('active');
+          this.setAttribute('aria-selected', 'true');
+
+          var tab = this.dataset.tab;
+          document.querySelectorAll('.faq-group').forEach(function (group) {
+            group.style.display = (tab === 'all' || group.dataset.panel === tab) ? '' : 'none';
+          });
+        });
+      });
+
+      // 검색
+      var searchForm = document.querySelector('.faq-search-form');
+      var searchInput = document.querySelector('.faq-search-input');
+
+      function runSearch() {
+        var query = searchInput.value.trim().toLowerCase();
+
+        if (!query) {
+          document.querySelectorAll('.faq-item').forEach(function (item) { item.style.display = ''; });
+          document.querySelectorAll('.faq-group').forEach(function (group) { group.style.display = ''; });
+          return;
+        }
+
+        document.querySelectorAll('.faq-group').forEach(function (group) {
+          var hasVisible = false;
+          group.querySelectorAll('.faq-item').forEach(function (item) {
+            var match = item.textContent.toLowerCase().includes(query);
+            item.style.display = match ? '' : 'none';
+            if (match) hasVisible = true;
+          });
+          group.style.display = hasVisible ? '' : 'none';
+        });
+      }
+
+      if (searchForm) searchForm.addEventListener('submit', function (e) { e.preventDefault(); runSearch(); });
+      if (searchInput) searchInput.addEventListener('input', runSearch);
+    });
