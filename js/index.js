@@ -11,3 +11,14 @@ document.querySelectorAll('.like-btn').forEach(btn => {
     }
   });
 });
+
+function setSubmitTabFromHash() {
+  const hash = window.location.hash.slice(1);
+  if (hash === 'tab-store' || hash === 'tab-report') {
+    const tab = document.getElementById(hash);
+    if (tab) tab.checked = true;
+  }
+}
+
+window.addEventListener('DOMContentLoaded', setSubmitTabFromHash);
+window.addEventListener('hashchange', setSubmitTabFromHash);
