@@ -12,6 +12,7 @@ document.querySelectorAll('.like-btn').forEach(btn => {
   });
 });
 
+<<<<<<< HEAD
 document.addEventListener('DOMContentLoaded', function () {
 
       // FAQ 아코디언
@@ -76,3 +77,15 @@ document.addEventListener('DOMContentLoaded', function () {
       if (searchForm) searchForm.addEventListener('submit', function (e) { e.preventDefault(); runSearch(); });
       if (searchInput) searchInput.addEventListener('input', runSearch);
     });
+=======
+function setSubmitTabFromHash() {
+  const hash = window.location.hash.slice(1);
+  if (hash === 'tab-store' || hash === 'tab-report') {
+    const tab = document.getElementById(hash);
+    if (tab) tab.checked = true;
+  }
+}
+
+window.addEventListener('DOMContentLoaded', setSubmitTabFromHash);
+window.addEventListener('hashchange', setSubmitTabFromHash);
+>>>>>>> 254d8179e9481cb619ed27239a4edcedaf9548d4
