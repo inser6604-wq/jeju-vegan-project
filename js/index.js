@@ -193,3 +193,83 @@ document.addEventListener("click", (e) => {
     tabBtn.classList.add("active");
   }
 });
+// map-btn클릭 효과
+const mapBtns = document.querySelectorAll('.map-btn');
+const resetBtn = document.querySelector('#map-reset');
+
+mapBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    btn.classList.toggle('active');
+  });
+});
+
+resetBtn.addEventListener('click', () => {
+  mapBtns.forEach(btn => btn.classList.remove('active'));
+});
+
+// map-filter-tab 여닫기 클릭
+document.addEventListener('DOMContentLoaded', () => {
+  const filterTab = document.querySelector('.map-filter-tab');
+  const filterInner = document.querySelector('.map-filter-inner');
+  const mapFilter = document.querySelector('.map-filter');
+  const tabArrow = filterTab.querySelector('img');
+  let isOpen = true;
+
+  filterTab.addEventListener('click', (e) => {
+    e.preventDefault();
+    isOpen = !isOpen;
+    filterInner.classList.toggle('hidden', !isOpen);
+    mapFilter.classList.toggle('closed', !isOpen);
+    tabArrow.style.transform = isOpen ? 'rotate(0deg)' : 'rotate(180deg)';
+  });
+});
+
+  // map-filter-search기능
+const searchInput = document.querySelector('.map-search input');
+const allCards = document.querySelectorAll('.map-place-card');
+
+searchInput.addEventListener('input', () => {
+  const keyword = searchInput.value.trim().toLowerCase();
+
+  allCards.forEach(card => {
+    const title = card.querySelector('.map-card-title').textContent.toLowerCase();
+    const place = card.querySelector('.card-place').textContent.toLowerCase();
+
+    if (keyword === '') {
+      // 입력값 없으면 원래 상태로 (map-hidden 유지)
+      if (card.classList.contains('map-hidden')) {
+        card.style.display = 'none';
+      } else {
+        card.style.display = 'flex';
+      }
+    } else {
+      // 제목이나 주소에 키워드 포함되면 표시
+      if (title.includes(keyword)){
+        card.style.display = 'flex';
+      } else {
+        card.style.display = 'none';
+      }
+    }
+  });
+});
+
+  // map-pin hover
+const mapPins = document.querySelectorAll('.map-pin-list a');
+
+mapPins.forEach(pin => {
+  const img = pin.querySelector('img');
+  const original = img.src;
+  const hoverSrc = original.replace('mappin-green', 'mappin-orange');
+
+  pin.addEventListener('mouseenter', () => {
+    if (img.src.includes('mappin-green')) {
+      img.src = hoverSrc;
+    }
+  });
+
+  pin.addEventListener('mouseleave', () => {
+    if (img.src.includes('mappin-orange') && !pin.closest('.map-pin4')) {
+      img.src = original;
+    }
+  });
+});
