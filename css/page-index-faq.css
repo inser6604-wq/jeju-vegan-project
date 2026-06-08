@@ -498,62 +498,9 @@
 }
 
 /* 히어로 */
+
 .faq-hero {
-  padding: 80px 0 72px;
-  background: #e8e8e6;
-  text-align: center;
-}
-
-.faq-hero-title {
-  color: #111;
-  font-family: "a2z", sans-serif;
-  font-size: 4.4rem;
-  font-weight: 700;
-  letter-spacing: -0.02em;
-}
-
-.faq-hero-desc {
-  margin-top: 16px;
-  color: #666;
-  font-size: 1.5rem;
-  letter-spacing: -0.01em;
-}
-
-/* 브레드크럼 */
-.faq-breadcrumb {
-  padding: 16px 0;
-  background: #fff;
-  border-bottom: 1px solid #eee;
-}
-
-.faq-breadcrumb-list {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  font-size: 1.3rem;
-  color: #999;
-}
-
-.faq-breadcrumb-list a {
-  display: flex;
-  align-items: center;
-  color: #999;
-  font-size: 1.6rem;
-  transition: color 0.2s;
-}
-
-.faq-breadcrumb-list a:hover {
-  color: #2d6a4f;
-}
-
-.faq-breadcrumb-list li + li::before {
-  content: "<";
-  color: #ccc;
-}
-
-.faq-breadcrumb-list li:last-child {
-  color: #333;
-  font-weight: 500;
+  background: url(../image/vegan-pick-main.png) center center / cover no-repeat;
 }
 
 /* 본문 영역 */
