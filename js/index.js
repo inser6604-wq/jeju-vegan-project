@@ -87,3 +87,51 @@ function setSubmitTabFromHash() {
 
 window.addEventListener('DOMContentLoaded', setSubmitTabFromHash);
 window.addEventListener('hashchange', setSubmitTabFromHash);
+
+document.addEventListener("click", (e) => {
+  const mobileMenu = document.querySelector(".mobile-menu");
+
+  // 햄버거 버튼 토글
+  const menuBtn = e.target.closest(".menu-btn");
+  if (menuBtn) {
+    e.preventDefault();
+    const isActive = menuBtn.classList.toggle("active");
+    mobileMenu?.classList.toggle("active", isActive);
+    document.body.classList.toggle("menu-open", isActive);
+    return;
+  }
+
+  // X 닫기 버튼
+  if (e.target.closest(".mobile-menu-close")) {
+    document.querySelector(".menu-btn")?.classList.remove("active");
+    mobileMenu?.classList.remove("active");
+    document.body.classList.remove("menu-open");
+    return;
+  }
+
+  // 메뉴 외부(오버레이) 클릭 시 닫기
+  if (document.body.classList.contains("menu-open") && !e.target.closest(".mobile-menu")) {
+    document.querySelector(".menu-btn")?.classList.remove("active");
+    mobileMenu?.classList.remove("active");
+    document.body.classList.remove("menu-open");
+    return;
+  }
+
+  // 아코디언 메인메뉴 토글
+  const span = e.target.closest(".mobile-depth1 > li > span");
+  if (span) {
+    const subMenu = span.nextElementSibling;
+    document.querySelectorAll(".mobile-depth2").forEach(item => {
+      if (item !== subMenu) item.classList.remove("active");
+    });
+    subMenu?.classList.toggle("active");
+  }
+
+    // pick / course 탭 버튼 active 토글
+  const tabBtn = e.target.closest(".tab-list .tab-btn");
+  if (tabBtn) {
+    const tabList = tabBtn.closest(".tab-list");
+    tabList.querySelectorAll(".tab-btn").forEach(btn => btn.classList.remove("active"));
+    tabBtn.classList.add("active");
+  }
+});
