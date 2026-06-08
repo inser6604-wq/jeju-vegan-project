@@ -215,3 +215,87 @@
     width: 100%;
   }
 }
+
+
+/* =========================================
+   FAQ 반응형
+   ========================================= */
+
+@media (max-width: 768px) {
+  .faq-hero {
+    padding: 56px 0 48px;
+  }
+
+  .faq-hero-title {
+    font-size: 3.2rem;
+  }
+
+  .faq-hero-desc {
+    font-size: 1.35rem;
+  }
+
+  .faq-body {
+    padding: 44px 0 72px;
+  }
+
+  .faq-tab .tab-btn {
+    height: 38px;
+    padding: 0 16px;
+    font-size: 1.3rem;
+  }
+
+  .faq-search-form {
+    height: 52px;
+  }
+
+  .faq-search-input {
+    font-size: 1.4rem;
+  }
+
+  .faq-group-title {
+    font-size: 2rem;
+  }
+
+  .faq-content {
+    gap: 40px;
+  }
+
+  .faq-answer {
+    padding-left: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .faq-hero-title {
+    font-size: 2.8rem;
+  }
+
+  .faq-hero-desc {
+    font-size: 1.3rem;
+  }
+
+  .faq-tab .tab-list {
+    gap: 8px;
+  }
+
+  .faq-tab .tab-btn {
+    height: 36px;
+    padding: 0 14px;
+    font-size: 1.25rem;
+  }
+
+  .faq-question {
+    padding: 18px 18px;
+    font-size: 1.4rem;
+    gap: 10px;
+  }
+
+  .faq-answer {
+    padding: 16px 18px;
+    font-size: 1.35rem;
+  }
+
+  .faq-group-title {
+    font-size: 1.8rem;
+  }
+}

@@ -487,3 +487,268 @@
 .home-subscribe .btn-primary {
   min-width: 130px;
 }
+
+
+/* =========================================
+  FAQ PAGE
+   ========================================= */
+
+.page-faq {
+  background: #f8f8f6;
+}
+
+/* 히어로 */
+.faq-hero {
+  padding: 80px 0 72px;
+  background: #e8e8e6;
+  text-align: center;
+}
+
+.faq-hero-title {
+  color: #111;
+  font-family: "a2z", sans-serif;
+  font-size: 4.4rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.faq-hero-desc {
+  margin-top: 16px;
+  color: #666;
+  font-size: 1.5rem;
+  letter-spacing: -0.01em;
+}
+
+/* 브레드크럼 */
+.faq-breadcrumb {
+  padding: 16px 0;
+  background: #fff;
+  border-bottom: 1px solid #eee;
+}
+
+.faq-breadcrumb-list {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 1.3rem;
+  color: #999;
+}
+
+.faq-breadcrumb-list a {
+  display: flex;
+  align-items: center;
+  color: #999;
+  font-size: 1.6rem;
+  transition: color 0.2s;
+}
+
+.faq-breadcrumb-list a:hover {
+  color: #2d6a4f;
+}
+
+.faq-breadcrumb-list li + li::before {
+  content: "<";
+  color: #ccc;
+}
+
+.faq-breadcrumb-list li:last-child {
+  color: #333;
+  font-weight: 500;
+}
+
+/* 본문 영역 */
+.faq-body {
+  padding: 60px 0 100px;
+}
+
+/* 카테고리 탭 */
+.faq-tab {
+  margin-bottom: 24px;
+}
+
+.faq-tab .tab-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.faq-tab .tab-btn {
+  height: 44px;
+  padding: 0 22px;
+  border: 1.5px solid #d5ddd9;
+  border-radius: 999px;
+  background: #fff;
+  color: #666;
+  font-size: 1.4rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: border-color 0.2s, color 0.2s, background 0.2s;
+}
+
+.faq-tab .tab-btn:hover {
+  border-color: #2d6a4f;
+  color: #2d6a4f;
+}
+
+.faq-tab .tab-btn.active {
+  background: #2d6a4f;
+  border-color: #2d6a4f;
+  color: #fff;
+  font-weight: 700;
+}
+
+/* 검색바 */
+.faq-search {
+  margin-bottom: 56px;
+}
+
+.faq-search-form {
+  display: flex;
+  align-items: center;
+  height: 58px;
+  padding: 0 12px 0 20px;
+  border: 1.5px solid #d5ddd9;
+  border-radius: 999px;
+  background: #fff;
+  transition: border-color 0.2s;
+}
+
+.faq-search-form:focus-within {
+  border-color: #2d6a4f;
+}
+
+.faq-search-icon {
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+  color: #bbb;
+  font-size: 2.2rem;
+  flex-shrink: 0;
+}
+
+.faq-search-input {
+  flex: 1;
+  height: 100%;
+  border: 0;
+  background: transparent;
+  color: #111;
+  font-size: 1.5rem;
+  outline: none;
+}
+
+.faq-search-input::placeholder {
+  color: #bbb;
+}
+
+.faq-search-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #2d6a4f;
+  color: #fff;
+  font-size: 1.9rem;
+  flex-shrink: 0;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.faq-search-btn:hover {
+  background: #1e5037;
+}
+
+/* FAQ 그룹 */
+.faq-content {
+  display: flex;
+  flex-direction: column;
+  gap: 56px;
+}
+
+.faq-group-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+  color: #111;
+  font-family: "a2z", sans-serif;
+  font-size: 2.4rem;
+  font-weight: 700;
+}
+
+.faq-group-icon {
+  font-size: 2.4rem;
+  line-height: 1;
+}
+
+/* 아코디언 */
+.faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.faq-item {
+  overflow: hidden;
+  border: 1.5px solid #e3ebe5;
+  border-radius: 16px;
+  background: #fff;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.faq-item.active {
+  border-color: #b8d4c5;
+  box-shadow: 0 4px 14px rgba(45, 106, 79, 0.08);
+}
+
+.faq-question {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  width: 100%;
+  padding: 22px 24px;
+  text-align: left;
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #222;
+}
+
+.faq-q-mark {
+  flex-shrink: 0;
+  color: #2d6a4f;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.faq-question-text {
+  flex: 1;
+}
+
+.faq-icon {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  color: #aaa;
+  font-size: 2.2rem;
+  transition: transform 0.25s, color 0.2s;
+}
+
+.faq-item.active .faq-icon {
+  transform: rotate(180deg);
+  color: #2d6a4f;
+}
+
+.faq-answer {
+  display: none;
+  padding: 20px 24px 24px 60px;
+  border-top: 1px solid #e8eeea;
+  background: #f5f7f5;
+  color: #53615b;
+  font-size: 1.45rem;
+  line-height: 1.85;
+}
+
+.faq-item.active .faq-answer {
+  display: block;
+}
