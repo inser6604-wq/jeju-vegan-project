@@ -5,7 +5,8 @@
   background: #fbfaf6;
 }
 
-.about-eyebrow {
+.about-eyebrow,
+.submit-eyebrow {
   display: block;
   margin-bottom: 14px;
   color: #ff7a00;
@@ -447,39 +448,39 @@
   display: none;
 }
 
-#tab-store:checked ~ .submit-hero .store-hero,
-#tab-report:checked ~ .submit-hero .report-hero {
+#tab-store:checked ~ .submit-hero .submit-store-hero,
+#tab-report:checked ~ .submit-hero .submit-report-hero {
   display: block;
 }
 
-.submit-row.store-only,
-.submit-row.report-only,
-.store-only,
-.report-only,
-.store-sidebar,
-.report-sidebar,
-.btn-store,
-.btn-report {
+.submit-row.submit-store-only,
+.submit-row.submit-report-only,
+.submit-store-only,
+.submit-report-only,
+.submit-store-sidebar,
+.submit-report-sidebar,
+.submit-btn-store,
+.submit-btn-report {
   display: none !important;
 }
 
-#tab-store:checked ~ .submit-form .submit-row.store-only,
-#tab-store:checked ~ .submit-form .store-only {
+#tab-store:checked ~ .submit-form .submit-row.submit-store-only,
+#tab-store:checked ~ .submit-form .submit-store-only {
   display: grid !important;
 }
 
-#tab-report:checked ~ .submit-form .submit-row.report-only,
-#tab-report:checked ~ .submit-form .report-only {
+#tab-report:checked ~ .submit-form .submit-row.submit-report-only,
+#tab-report:checked ~ .submit-form .submit-report-only {
   display: grid !important;
 }
 
-#tab-store:checked ~ .submit-form .store-sidebar,
-#tab-store:checked ~ .submit-form .btn-store {
+#tab-store:checked ~ .submit-form .submit-store-sidebar,
+#tab-store:checked ~ .submit-form .submit-btn-store {
   display: block !important;
 }
 
-#tab-report:checked ~ .submit-form .report-sidebar,
-#tab-report:checked ~ .submit-form .btn-report {
+#tab-report:checked ~ .submit-form .submit-report-sidebar,
+#tab-report:checked ~ .submit-form .submit-btn-report {
   display: block !important;
 }
 
@@ -524,8 +525,8 @@
   line-height: 1.8;
 }
 
-#tab-store:checked ~ .submit-hero .submit-switch-content .store-panel,
-#tab-report:checked ~ .submit-hero .submit-switch-content .report-panel {
+#tab-store:checked ~ .submit-hero .submit-switch-content .submit-store-panel,
+#tab-report:checked ~ .submit-hero .submit-switch-content .submit-report-panel {
   display: grid;
 }
 
@@ -602,21 +603,21 @@
   gap: 20px;
 }
 
-.submit-chip-group {
+.submit-vegan-status-group {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 16px;
 }
 
-.category-chip-group {
+.submit-category-chip-group {
   display: grid;
   grid-template-columns: repeat(6, minmax(120px, 1fr));
   gap: 12px;
 }
 
-.category-chip-group input,
-.submit-chip-group input,
-.vegan-stage-grid input {
+.submit-category-chip-group input,
+.submit-vegan-status-group input,
+.submit-vegan-stage-grid input {
   position: absolute;
   width: 0;
   height: 0;
@@ -624,12 +625,13 @@
   pointer-events: none;
 }
 
-.category-chip-group label,
-.submit-chip-group label,
-.vegan-stage-card {
+.submit-category-chip-group label,
+.submit-vegan-status-group label,
+.submit-vegan-stage-card {
   min-height: 88px;
   padding: 18px 20px;
   display: grid;
+  align-items: center;
   gap: 8px;
   border-radius: 22px;
   border: 1px solid #d8e0db;
@@ -642,60 +644,60 @@
   transition: all 0.25s ease;
 }
 
-.category-chip-group label {
+.submit-category-chip-group label {
   justify-content: center;
   text-align: center;
   font-size: 1.3rem;
   padding: 16px 18px;
 }
 
-.category-chip-group label:hover,
-.submit-chip-group label:hover,
-.vegan-stage-card:hover {
+.submit-category-chip-group label:hover,
+.submit-vegan-status-group label:hover,
+.submit-vegan-stage-card:hover {
   border-color: #2d6a4f;
 }
 
-.category-chip-group input:checked + label,
+.submit-category-chip-group input:checked + label,
 #status-1:checked + label,
 #status-2:checked + label,
 #status-3:checked + label,
 #status-4:checked + label,
-#stage1:checked + .vegan-stage-card,
-#stage2:checked + .vegan-stage-card,
-#stage3:checked + .vegan-stage-card,
-#stage4:checked + .vegan-stage-card {
+#stage1:checked + .submit-vegan-stage-card,
+#stage2:checked + .submit-vegan-stage-card,
+#stage3:checked + .submit-vegan-stage-card,
+#stage4:checked + .submit-vegan-stage-card {
   border-color: #2d6a4f;
   background: #e9f1dc;
   color: #2d6a4f;
 }
 
-.submit-chip-group label span,
-.vegan-stage-card span {
+.submit-vegan-status-group label span,
+.submit-vegan-stage-card span {
   font-size: 1.15rem;
   font-weight: 500;
   color: #6f7f74;
 }
 
-.vegan-stage-grid {
+.submit-vegan-stage-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 16px;
 }
 
-.vegan-stage-card {
+.submit-vegan-stage-card {
   min-height: 120px;
   padding: 20px;
   gap: 10px;
   justify-items: start;
 }
 
-.vegan-stage-card strong {
+.submit-vegan-stage-card strong {
   display: block;
   font-size: 1.45rem;
   color: #111;
 }
 
-.vegan-stage-card span {
+.submit-vegan-stage-card span {
   color: #6f7f74;
   line-height: 1.6;
 }
@@ -706,6 +708,33 @@
   border-radius: 22px;
   border: 1px solid #d8e0db;
   font-size: 1.4rem;
+}
+
+.page-submit .form-input,
+.page-submit .form-select {
+  position: static;
+  top: auto;
+  left: auto;
+  width: 100%;
+  height: 48px;
+  min-height: auto;
+  padding: 0 18px;
+  border-radius: 999px;
+  border: 1px solid #d8e0db;
+  box-sizing: border-box;
+  background: #fff;
+  color: #111;
+}
+
+.page-submit input.form-input[type="text"] {
+  font-size: 1.4rem;
+}
+
+.page-submit .form-textarea {
+  min-height: 140px;
+  padding: 16px 18px;
+  border-radius: 16px;
+  resize: vertical;
 }
 
 .submit-photo {
@@ -946,8 +975,8 @@
   font-weight: 700;
 }
 
-.btn-store,
-.btn-report {
+.submit-btn-store,
+.submit-btn-report {
   width: auto;
 }
 
@@ -958,7 +987,7 @@
 
   .submit-row,
   .submit-address-row,
-  .submit-chip-group,
+  .submit-vegan-status-group,
   .submit-photo {
     grid-template-columns: 1fr;
   }
@@ -1043,3 +1072,4 @@
     width: 100%;
   }
 }
+
