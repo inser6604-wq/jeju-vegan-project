@@ -22,7 +22,7 @@ input {
 }
 
 .section {
-  padding: 90px 0;
+  padding: 120px 0;
 }
 
 .section-head {
@@ -40,6 +40,68 @@ input {
   color: #53615b;
   font-size: 1.5rem;
   line-height: 1.7;
+}
+/* sub페이지 공통사항 css - 히어로, 타이틀, 브래드크럼 */
+.sub-hero {
+  position: relative;
+  min-height: 53rem;
+}
+
+.sub-hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.4);
+  pointer-events: none;
+}
+
+.sub-hero .inner {
+  position: relative;
+  z-index: 1;
+  min-height: 53rem;
+}
+
+.sub-hero-content {
+  position: absolute;
+  left: 10rem;
+  top: 58%;
+  transform: translateY(-50%);
+}
+
+.sub-hero-title {
+  font-family: "A2Z", sans-serif;
+  font-size: 3.6rem;
+  color: #163525;
+}
+
+.sub-hero-subtitle {
+  margin-top: 2rem;
+  color: #222;
+  font-size: 1.4rem;
+  font-weight: 300;
+  line-height: 1.6;
+}
+
+.breadcrumb {
+  margin-left: 6rem;
+  padding: 2rem 0 8rem;
+  font-size: 1.3rem;
+  color: #888;
+}
+
+.breadcrumb span + span,
+.breadcrumb a + span,
+.breadcrumb span + a {
+  margin-left: 0.4rem;
+}
+
+.breadcrumb a:hover {
+  color: #2d6a4f;
+}
+
+.breadcrumb .current {
+  color: #2d6a4f;
+  font-weight: 600;
 }
 
 .row {
@@ -118,6 +180,33 @@ input {
   font-size: 1.6rem;
 }
 
+.btn-go-top {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  width: 52px;
+  height: 52px;
+  padding: 0;
+  border-radius: 50%;
+  background: #2d6a4f;
+  color: #fff;
+  box-shadow: 0 12px 24px rgba(45, 106, 79, 0.2);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s ease, transform 0.25s ease;
+  transform: translateY(16px);
+  z-index: 20;
+}
+
+.btn-go-top.is-visible {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+.btn-go-top .iconify {
+  font-size: 2rem;
+}
 
 .card-list {
   list-style: none;

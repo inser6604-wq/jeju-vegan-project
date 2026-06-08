@@ -13,25 +13,21 @@
     <main id="container" class="page page-faq">
 
       <!-- 히어로 -->
-      <section class="faq-hero">
+      <section class="sub-hero faq-hero">
         <div class="inner">
-          <h2 class="faq-hero-title">자주 묻는 질문</h2>
-          <p class="faq-hero-desc">제주비건지도에 대한 궁금한 내용을 검색,또는 찾아보세요</p>
+          <div class="sub-hero-content">
+            <h2 class="sub-hero-title">자주 묻는 질문</h2>
+            <p class="sub-hero-subtitle">
+              제주 비건 지도 이용 중 궁금한 내용을 검색하거나 카테고리별로 찾아보세요.
+            </p>
+          </div>
         </div>
       </section>
 
-      <!-- 브레드크럼 -->
-      <nav class="faq-breadcrumb" aria-label="브레드크럼">
-        <div class="inner">
-          <ol class="faq-breadcrumb-list">
-            <li>
-              <a href="index.html" aria-label="홈">
-                <iconify-icon icon="mdi:home" aria-hidden="true"></iconify-icon>
-              </a>
-            </li>
-            홈<li> <span>FAQ</span></li>
-          </ol>
-        </div>
+      <nav class="breadcrumb">
+        <a href="index.html">홈</a>
+        <span>&gt;</span>
+        <span class="current">FAQ</span>
       </nav>
 
       <!-- 필터 + 검색 + FAQ 목록 -->

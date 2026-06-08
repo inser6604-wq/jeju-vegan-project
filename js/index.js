@@ -85,6 +85,21 @@ function setSubmitTabFromHash() {
   }
 }
 
+var goTopBtn = document.getElementById('goTopBtn');
+if (goTopBtn) {
+  window.addEventListener('scroll', function () {
+    if (window.scrollY > 300) {
+      goTopBtn.classList.add('is-visible');
+    } else {
+      goTopBtn.classList.remove('is-visible');
+    }
+  });
+
+  goTopBtn.addEventListener('click', function () {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+}
+
 window.addEventListener('DOMContentLoaded', setSubmitTabFromHash);
 window.addEventListener('hashchange', setSubmitTabFromHash);
 
