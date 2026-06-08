@@ -6,7 +6,7 @@
 
 .home-hero {
   position: relative;
-  min-height: 760px;
+  height: 100vh;
   padding: 160px 0 100px;
   background:
     url("../image/main-hero.jpg") center / cover no-repeat;
@@ -20,6 +20,7 @@
 .home-hero-content {
   width: min(100%, 520px);
   padding-top: 68px;
+  padding-left: 55px;
 }
 
 .home-hero-subtitle {
@@ -85,7 +86,9 @@
   justify-content: space-between;
   gap: 24px;
 }
-
+.home-pick .section-head{
+  margin:50px 0 80px 0;
+}
 .home-pick .section-title span {
   color: #2d6a4f;
 }
@@ -103,6 +106,20 @@
   min-height: 480px;
   overflow: hidden;
   border-radius: 28px;
+  transition: transform 0.3s ease;
+}
+
+.home-pick-main:hover {
+  transform: translateY(-12px);
+}
+
+.home-pick-main > a {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+  color: inherit;
 }
 
 .home-pick-main-img {
@@ -134,7 +151,9 @@
   margin-top: 10px;
   font-size: 1.5rem;
 }
-
+.home-pick-main-desc span{
+  font-weight: 700;
+}
 .home-pick-main-place {
   margin-top: 18px;
   font-size: 1.3rem;
@@ -142,11 +161,25 @@
 
 .home-pick-side {
   display: grid;
-  grid-template-columns: 210px minmax(0, 1fr);
+  grid-template-columns: 250px minmax(0, 1fr);
   overflow: hidden;
   border: 1px solid #e3ebe5;
-  border-radius: 0 28px 28px 0;
+  border-radius: 30px;
   box-shadow: 0 10px 24px rgba(45, 106, 79, 0.08);
+  transition: transform 0.3s ease;
+}
+
+.home-pick-side:hover {
+  transform: translateY(-12px);
+}
+
+.home-pick-main > a,
+.home-pick-side > a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+  color: inherit;
 }
 
 .home-pick-side-img {
@@ -161,12 +194,12 @@
   display: inline-flex;
   min-height: 26px;
   align-items: center;
-  padding: 0 12px;
-  border-radius: 999px;
+  padding: 8px 20px;
+  border-radius: 20px;
   background: #2d6a4f;
   color: #fff;
-  font-size: 1.1rem;
-  font-weight: 700;
+  font-size: 1.4rem;
+  font-weight: 500;
 }
 
 .home-pick-side-title {
@@ -178,7 +211,10 @@
   margin-top: 12px;
   font-size: 1.4rem;
 }
-
+.home-pick-side-desc span{
+  color: #2d6a4f;
+  font-weight: 600;
+}
 .home-course {
   background: #fff;
 }
@@ -187,31 +223,75 @@
   position: relative;
   text-align: center;
 }
-
+.home-course .section-title {
+  margin-bottom: 40px;
+}
 .home-course .section-desc {
   max-width: 680px;
   margin-left: auto;
   margin-right: auto;
 }
-
+.home-course .section-desc span {
+  color: #2d6a4f;
+  font-weight: 600;
+}
 .home-course .btn-line {
+  font-size: 1.4rem;
   position: absolute;
   right: 0;
   bottom: 0;
+  transition: background-color 0.3s, color 0.3s;
 }
-
+.home-course .btn-line:hover{
+  background-color:#ff7a00;
+  color:#fff;
+}
 .home-course-content {
+  margin-top: 130px;
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   align-items: end;
   gap: 42px;
 }
-
+.home-course-content .course-card:nth-child(2) {
+  transform: translateY(-50px);
+}
 .home-course .course-card {
+  position: relative;
   overflow: hidden;
   border: 1px solid #e8eee9;
   border-radius: 22px;
   box-shadow: 0 12px 28px rgba(47, 70, 55, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.home-course .course-card:nth-child(2):hover {
+  transform: translateY(-62px);
+}
+.home-course .course-card:nth-child(1):hover,
+.home-course .course-card:nth-child(3):hover {
+  transform: translateY(-12px);
+}
+
+.home-course .card-link-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  text-decoration: none;
+  color: inherit;
+}
+
+.home-course .course-card .like-btn {
+  position: absolute;
+  right: 22px;
+  top: 20px;
+  flex-direction: row;
+  align-items: center;
+  gap: 4px;
+  color: #ff7a00;
+  font-size: 1.4rem;
+  font-weight: 700;
+  z-index: 2;
 }
 
 .home-course-img {
@@ -275,22 +355,10 @@
   font-weight: 700;
 }
 
-.home-course-body .like-btn {
-  position: absolute;
-  right: 22px;
-  top: 20px;
-  flex-direction: row;
-  align-items: center;
-  gap: 4px;
-  color: #ff7a00;
-  font-size: 1.4rem;
-  font-weight: 700;
-}
-
 .home-map {
   position: relative;
   overflow: hidden;
-  background: #f7f3e9;
+  background: #FFFCF7;
 }
 
 .home-map .inner {
@@ -314,13 +382,27 @@
   font-size: 7.2rem;
 }
 
+.home-map {
+  overflow: hidden;
+}
+.home-map .btn-line {
+  width: 250px;
+  font-size: 1.4rem;
+  transition: background-color 0.3s, color 0.3s;
+}
+.home-map .btn-line:hover{
+  background-color:#ff7a00;
+  color:#fff;
+}
 .home-map-visual {
-  width: 100%;
-  min-height: 590px;
+  width: 120%;
+  margin-left: auto;
 }
 
 .home-map-visual img {
-  object-fit: contain;
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
 .home-map-stats {
@@ -350,7 +432,7 @@
   display: block;
   margin-top: 8px;
   color: #415047;
-  font-size: 1.3rem;
+  font-size: 1.8rem;
 }
 
 .home-together {
@@ -454,10 +536,10 @@
   content: "";
   position: absolute;
   right: -40px;
-  bottom: -44px;
-  width: 300px;
-  height: 220px;
-  background: url("../image/vegan-pick-img03.png") center / cover no-repeat;
+  top: -44px;
+  width: 400px;
+  height: 250px;
+  background: url("../image/main-subscribe-img.png") center / cover no-repeat;
   border-radius: 150px 0 0 0;
 }
 
@@ -500,7 +582,7 @@
 /* 히어로 */
 
 .faq-hero {
-  background: url(../image/vegan-pick-main.png) center center / cover no-repeat;
+  background: url(../image/FAQ.png) center center / cover no-repeat;
 }
 
 /* 본문 영역 */

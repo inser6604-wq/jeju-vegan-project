@@ -75,6 +75,49 @@ document.addEventListener('DOMContentLoaded', function () {
 
       if (searchForm) searchForm.addEventListener('submit', function (e) { e.preventDefault(); runSearch(); });
       if (searchInput) searchInput.addEventListener('input', runSearch);
+      
+      // 메인페이지 카운트업 애니메이션
+      var countupItems = document.querySelectorAll('.home-map-stats strong[data-count]');
+      if (countupItems.length) {
+        function animateCount(item) {
+          if (item.dataset.countStarted === 'true') return;
+          item.dataset.countStarted = 'true';
+
+          var target = parseInt(item.dataset.count, 10) || 0;
+          var suffix = item.dataset.suffix || '';
+          var duration = 1200;
+          var startTime = null;
+
+          function updateCount(timestamp) {
+            if (!startTime) startTime = timestamp;
+            var elapsed = timestamp - startTime;
+            var progress = Math.min(elapsed / duration, 1);
+            var current = Math.floor(progress * target);
+            item.textContent = current + suffix;
+
+            if (progress < 1) {
+              window.requestAnimationFrame(updateCount);
+            } else {
+              item.textContent = target + suffix;
+            }
+          }
+
+          window.requestAnimationFrame(updateCount);
+        }
+
+        var observer = new IntersectionObserver(function (entries, obs) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+              animateCount(entry.target);
+              obs.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.3 });
+
+        countupItems.forEach(function (item) {
+          observer.observe(item);
+        });
+      }
     });
 
 function setSubmitTabFromHash() {
