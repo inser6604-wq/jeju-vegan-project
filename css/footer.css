@@ -4,6 +4,7 @@ footer{
   background-color: #163525;
   border-radius: 50px 50px 0 0;
   color:#fff;
+  z-index:3;
 }
 .footer-content{
   width:inherit;
