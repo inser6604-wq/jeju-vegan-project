@@ -40,13 +40,13 @@
 
 /* pick.html______________ */
 
-.pick-hero{
+.page-pick .pick-hero{
   position: relative;
   min-height: 53rem;
   background: url(../image/vegan-pick-main.png)center center/cover no-repeat;
 }
 
-.pick-hero:after{
+.page-pick .pick-hero:after{
   content: '';
   top: 0;
   left: 0;
@@ -57,26 +57,25 @@
   pointer-events: none;
 }
 
-.pick-hero .inner{
+.page-pick .pick-hero .inner{
   position: relative;
   z-index: 1;
   min-height: 53rem;
 }
 
-.pick-hero-content{
+.page-pick .pick-hero-content{
   position: absolute;
   left: 10rem;
   top: 58%;
   transform: translateY(-50%);
 }
 
-.pick-hero-title{
-  font-family: "A2Z", sans-serif;
+.page-pick .pick-hero-title{
   font-size: 3.6rem;
   color: #163525;
 }
 
-.pick-hero-subtitle{
+.page-pick .pick-hero-subtitle{
   color: #222;
   font-size: 1.4rem;
   font-weight: 300;
@@ -84,21 +83,11 @@
   line-height: 1.6;
 }
 
-.pick-location{
-  padding: 2rem 0 8rem;
-  font-size: 1.3rem;
-  color: #888;
-}
-
-.pick-location span + span{
-  margin-left: 0.4rem;
-}
-
-.pick-today{
+.page-pick .pick-today{
   padding-bottom: 15rem;
 }
 
-.pick-layout{
+.page-pick .pick-layout{
   display: flex;
   gap: 2rem;
   align-items: stretch;
@@ -107,7 +96,7 @@
   margin: 0 auto;
 }
 
-.pick-img{
+.page-pick .pick-img{
   flex: 2.1;
   min-width: 0;
   height: 45rem;
@@ -115,14 +104,14 @@
   overflow: hidden;
 }
 
-.pick-img img{
+.page-pick .pick-img img{
   display: block;
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-.pick-content{
+.page-pick .pick-content{
   flex: 0.9;
   min-width: 0;
   display: flex;
@@ -133,24 +122,28 @@
   background:#fff;
 }
 
-.pick-info .badge-vegan{
+.page-pick .pick-title{
+  font-family: "A2Z", sans-serif;
+}
+
+.page-pick .pick-info .badge-vegan{
   margin-bottom: 1rem;
 }
 
-.pick-title{
+.page-pick .pick-title{
   color: #163525;
   font-size: 2.4rem;
   font-weight: 600;
   line-height: 1.3;
 }
 
-.pick-sub-title{
+.page-pick .pick-sub-title{
   margin-top: 0.8rem;
   color: #777;
   font-size: 1.4rem;
 }
 
-.pick-content .tag-list{
+.page-pick .pick-content .tag-list{
   position: static;
   display: flex;
   flex-wrap: wrap;
@@ -158,7 +151,7 @@
   margin-top: 1.6rem;
 }
 
-.pick-content .tag{
+.page-pick .pick-content .tag{
   padding: 0.6rem 1.4rem;
   border-radius: 5rem;
   background: #edf5f0;
@@ -167,7 +160,7 @@
   font-weight: 600;
 }
 
-.pick-address{
+.page-pick .pick-address{
   display: flex;
   align-items: center;
   gap: 0.6rem;
@@ -179,14 +172,14 @@
   line-height: 1.6;
 }
 
-.pick-list{
+.page-pick .pick-list{
   margin-top: 1.2rem;
   display: flex;
   flex-direction: column;
   gap: 1rem;
 }
 
-.pick-list-item{
+.page-pick .pick-list-item{
   display: flex;
   align-items: center;
   gap: 1rem;
@@ -194,19 +187,19 @@
   font-size: 1.4rem;
 }
 
-.badge-open{
+.page-pick .badge-open{
   background: #2D6A4F;
   color: #fff;
 }
 
-.pick-actions{
+.page-pick .pick-actions{
   display: flex;
   gap: 1.2rem;
   margin-top: auto;
   padding-top: 2.4rem;
 }
 
-.pick-btn-map{
+.page-pick .pick-btn-map{
   flex: 1;
   padding: 1.2rem 1.6rem;
   border-radius: 1rem;
@@ -217,11 +210,11 @@
   transition: 0.35s ease;
 }
 
-.pick-btn-map:hover{
+.page-pick .pick-btn-map:hover{
   background: #245a42;
 }
 
-.pick-btn-like{
+.page-pick .pick-btn-like{
   flex: 1;
   padding: 1.2rem 1.6rem;
   border-radius: 1rem;
@@ -231,20 +224,18 @@
   border: 0.1rem solid #ddd;
 }
 
-.pick-btn-like:hover{
+.page-pick .pick-btn-like:hover{
   border-color: #2D6A4F;
   color: #2D6A4F;
 }
 
-.pick-rest{
+.page-pick .pick-rest{
   padding-bottom: 15rem;
 }
 
-.pick-rest .section-title{
+.page-pick .pick-rest .section-title{
   margin-bottom: 5rem;
-  color: #163525;
   text-align: center;
-  font-size: 3.6rem;
 }
 
 .page-pick .tab-list{
@@ -280,36 +271,36 @@
   color: #fff;
 }
 
-.pick-rest .card-list{
+.page-pick .pick-rest .card-list{
   display:grid;
   grid-template-columns: 1fr 1fr 1fr;
   column-gap: 3rem;
   row-gap: 5rem;
 }
 
-.place-card{
+.page-pick .place-card{
   overflow: hidden;
   border: 0.1rem solid #eee;
-  border-radius: 5rem;
+  border-radius: 2.6rem;
   box-shadow: 0 0.8rem 2rem rgba(0, 0, 0, 0.08);
   transition: 0.35s;
 }
 
-.place-card:hover{
+.page-pick .place-card:hover{
   transform: translateY(-0.4rem);
   box-shadow: 0 0.8rem 2rem rgba(0, 0, 0, 0.2);
 }
 
-.place-card .card-img{
+.page-pick .place-card .card-img{
   height: 30rem;
 }
 
-.place-card .card-body{
+.page-pick .place-card .card-body{
   padding: 2.5rem;
   border-radius: 2rem 2rem 0 0;
 }
 
-.place-card .tag-list{
+.page-pick .place-card .tag-list{
   position: static;
   display: flex;
   flex-wrap: wrap;
@@ -317,7 +308,7 @@
   margin-bottom: 1.5rem;
 }
 
-.place-card .tag{
+.page-pick .place-card .tag{
   padding: 0.5rem 1rem;
   background: #edf5f0;
   color: #2D6A4F;
@@ -325,18 +316,18 @@
   font-weight: 600;
 }
 
-.place-card .card-title{
+.page-pick .place-card .card-title{
   font-size: 1.8rem;
   font-weight: 800;
   color: #222;
 }
 
-.place-card .card-desc{
+.page-pick .place-card .card-desc{
   margin-top: 0.8rem;
   font-size: 1.4rem;
 }
 
-.pick-card-info{
+.page-pick .pick-card-info{
   display: flex;
   gap: 1.6rem;
   margin-top: 1.5rem;
@@ -348,13 +339,13 @@
 
 /* course.html______________ */
 
-.course-hero{
+.page-course .course-hero{
   position: relative;
   min-height: 53rem;
   background: url(../image/vegan-course-main.png) center center/ cover no-repeat;
 }
 
-.course-hero:after{
+.page-course .course-hero:after{
   content: '';
   top: 0;
   left: 0;
@@ -365,26 +356,25 @@
   pointer-events: none;
 }
 
-.course-hero .inner {
+.page-course .course-hero .inner {
   position: relative;
   z-index: 1;
   min-height: 53rem;
 }
 
-.course-hero-content{
+.page-course .course-hero-content{
   position: absolute;
   left: 10rem;
   top: 58%;
   transform: translateY(-50%);
 }
 
-.course-hero-title {
-  font-family: "A2Z", sans-serif;
+.page-course .course-hero-title {
   font-size: 3.6rem;
   color: #163525;
 }
 
-.course-hero-subtitle{
+.page-course .course-hero-subtitle{
   color: #222;
   font-size: 1.4rem;
   font-weight: 300;
@@ -392,17 +382,7 @@
   line-height: 1.6;
 }
 
-.course-location{
-  padding: 2rem 0 8rem;
-  font-size: 1.3rem;
-  color: #888;
-}
-
-.course-location span + span{
-  margin-left: 0.4rem;
-}
-
-.course-title h3{
+.page-course .course-title h3{
   font-family: "A2Z", sans-serif;
   margin-bottom: 5rem;
   color: #163525;
@@ -447,56 +427,56 @@
   padding-bottom: 9rem;
 }
 
-.course-card-list{
+.page-course .course-card-list{
   display:grid;
   grid-template-columns: 1fr 1fr 1fr;
   column-gap: 3rem;
   row-gap: 5rem;
 }
 
-.course-card{
+.page-course .course-card{
   position: relative;
   overflow: hidden;
   border: 0.1rem solid #eee;
-  border-radius: 5rem;
+  border-radius: 2.6rem;
   box-shadow: 0 0.8rem 2rem rgba(0, 0, 0, 0.08);
   transition: 0.35s;
 }
 
-.course-card:hover{
+.page-course .course-card:hover{
   transform: translateY(-0.4rem);
   box-shadow: 0 0.8rem 2rem rgba(0, 0, 0, 0.2);
 }
 
-.course-card .card-img{
+.page-course .course-card .card-img{
   height: 30rem;
 }
 
-.course-card .tag-list{
+.page-course .course-card .tag-list{
   position: absolute;
   top: 2rem;
   left: 2.5rem;
   z-index: 2;
 }
 
-.course-card-body{
+.page-course .course-card-body{
   position: relative;
   padding: 2.5rem;
 }
 
-.course-card-title{
+.page-course .course-card-title{
   padding-right: 3.6rem;
   color: #222;
   font-size: 1.8rem;
   font-weight: 800;
 }
 
-.course-card-desc{
+.page-course .course-card-desc{
   margin-top: 0.8rem;
   font-size: 1.4rem;
 }
 
-.course-card-info{
+.page-course .course-card-info{
   display: flex;
   flex-wrap: wrap;
   gap: 1.6rem;
@@ -504,7 +484,7 @@
   list-style: none;
 }
 
-.course-card-info li{
+.page-course .course-card-info li{
   display: inline-flex;
   align-items: center;
   gap: 0.4rem;
@@ -512,13 +492,13 @@
   font-size: 1.3rem;
 }
 
-.course-card-info .iconify {
+.page-course .course-card-info .iconify {
   flex-shrink: 0;
   font-size: 1.4rem;
   color: #2d6a4f;
 }
 
-.course-card-body .like-btn {
+.page-course .course-card-body .like-btn {
   position: absolute;
   top: 2.3rem;
   right: 2rem;
@@ -526,11 +506,11 @@
   font-size: 2.4rem;
 }
 
-.course-service{
+.page-course .course-service{
   padding-bottom: 10rem;
 }
 
-.course-service-map{
+.page-course .course-service-map{
   position: relative;
   background: #2D6A4F;
   margin-bottom: 2rem;
@@ -538,7 +518,7 @@
   overflow: hidden;
 }
 
-.course-service-map::after {
+.page-course .course-service-map::after {
   content: '';
   position: absolute;
   top: 0;
@@ -550,7 +530,7 @@
   pointer-events: none;
 }
 
-.course-service-map-inner{
+.page-course .course-service-map-inner{
   position: relative;
   display: flex;
   align-items: center;
@@ -558,23 +538,23 @@
   z-index: 3;
 }
 
-.course-service-map-content{
+.page-course .course-service-map-content{
   margin-left: 10rem;
 }
 
-.course-service-map-content h2{
+.page-course .course-service-map-content h2{
   color: #fff;
   font-family: "A2Z", sans-serif;
-  font-weight: 400;
+  font-weight: 600;
   font-size: 2.8rem;
   line-height: 1.3;
 }
 
-.course-service-map-content{
+.page-course .course-service-map-content{
   position: relative;
 }
 
-.course-service-map-content .btn{
+.page-course .course-service-map-content .btn{
   display: inline-flex;
   align-items: center;
   margin-top: 2rem;
@@ -587,12 +567,12 @@
   transition: 0.35s;
 }
 
-.course-service-map-content .btn:hover{
+.page-course .course-service-map-content .btn:hover{
   background: #fff;
   color: #2d6a4f;
 }
 
-.course-service-map-visual{
+.page-course .course-service-map-visual{
   position: absolute;
   top: 0;
   right: 0;
@@ -603,7 +583,7 @@
   z-index: 1;
 }
 
-.course-service-map-visual img{
+.page-course .course-service-map-visual img{
   display: block;
   height: 100%;
   width: 100%;
@@ -611,13 +591,13 @@
   object-position: right center;
 }
 
-.course-service-grid{
+.page-course .course-service-grid{
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 2.4rem;
 }
 
-.course-service-card{
+.page-course .course-service-card{
   position: relative;
   display: flex;
   flex-direction: column;
@@ -631,16 +611,16 @@
   margin-top: 7rem;
 }
 
-.course-service-card--make{
+.page-course .course-service-card--make{
   background: url(../image/course-service-make.jpg) center center/cover no-repeat;
 }
 
-.course-service-card--report{
+.page-course .course-service-card--report{
   background: url(../image/course-service-report.jpg) center center/cover
   no-repeat;
 }
 
-.course-service-card:before{
+.page-course .course-service-card:before{
   content: '';
   position: absolute;
   top: 0;
@@ -651,14 +631,14 @@
   z-index: 0;
 }
 
-.course-service-card h3{
+.page-course .course-service-card h3{
   font-size: 2.2rem;
   color: #fff;
   font-weight: 500;
   z-index: 1;
 }
 
-.course-service-card .btn{
+.page-course .course-service-card .btn{
   margin-top: 2rem;
   padding: 0.7rem 2rem;
   border-radius: 0.5rem;
@@ -671,7 +651,207 @@
   z-index: 100;
 }
 
-.course-service-card .btn:hover{
+.page-course .course-service-card .btn:hover{
   background: #2D6A4F;
   color: #fff;
+}
+
+
+/* =========================================
+   Pick / Course 반응형
+   ========================================= */
+
+@media (max-width: 768px) {
+
+  /* ---- 공통 히어로 ---- */
+  .page-pick .pick-hero,
+  .page-course .course-hero {
+    min-height: 32rem;
+  }
+
+  .page-pick .pick-hero .inner,
+  .page-course .course-hero .inner {
+    min-height: 32rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  .page-pick .pick-hero-content,
+  .page-course .course-hero-content {
+    position: static;
+    transform: none;
+    left: auto;
+    top: auto;
+    padding-left: 2rem;
+    margin-top: 10rem;
+  }
+
+  .page-pick .pick-hero-title,
+  .page-course .course-hero-title {
+    font-size: 2.6rem;
+  }
+
+  .page-pick .pick-hero-subtitle,
+  .page-course .course-hero-subtitle {
+    font-size: 1.3rem;
+    margin-top: 1.2rem;
+  }
+
+  /* ---- pick 레이아웃 (이미지 + 정보 세로로) ---- */
+  .page-pick .pick-layout {
+    flex-direction: column;
+    gap: 1.6rem;
+  }
+
+  .page-pick .pick-img {
+    height: 24rem;
+  }
+
+  .page-pick .pick-content {
+    padding: 2rem;
+  }
+
+  .page-pick .pick-actions {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  /* ---- 카드 이미지 높이 축소 ---- */
+  .page-pick .place-card .card-img,
+  .page-course .course-card .card-img {
+    height: 17rem;
+  }
+
+  /* ---- pick 카드 리스트 2열 ---- */
+  .page-pick .pick-rest .card-list {
+    grid-template-columns: 1fr 1fr;
+    column-gap: 2rem;
+    row-gap: 3rem;
+  }
+
+  .page-pick .pick-rest .section-title {
+    font-size: 2.6rem;
+    margin-bottom: 3rem;
+  }
+
+  /* ---- course 카드 2열 ---- */
+  .page-course .course-card-list {
+    grid-template-columns: 1fr 1fr;
+    column-gap: 2rem;
+    row-gap: 3rem;
+  }
+
+  .page-course .course-title h3 {
+    font-size: 2.6rem;
+    margin-bottom: 3rem;
+  }
+
+  /* 카드 제목 단어 단위 줄바꿈 */
+  .page-course .course-card-title {
+    word-break: keep-all;
+  }
+
+  /* ---- 탭 리스트 : 간격 + | 구분자 처리 ---- */
+  .page-pick .tab-list,
+  .page-course .tab-list {
+    gap: 0.8rem 0.5rem;
+  }
+
+  .page-pick .tab-btn,
+  .page-course .tab-btn {
+    font-size: 1.2rem;
+    padding: 0.5rem 1.1rem;
+    white-space: nowrap;
+  }
+
+  /* pick: 유일한 | 숨김 / course: 첫 번째 | 숨김, 두 번째(카페투어) 앞 | 유지 */
+  .page-pick .tab-option:before,
+  .page-course .tab-option:first-of-type:before {
+    display: none;
+  }
+
+  /* ---- course 서비스 맵 : 우측 패딩 제거 + 이미지 contain ---- */
+  .page-course .course-service-map-inner {
+    padding-right: 0;
+    width: 100%;
+    max-width: none;
+  }
+
+  .page-course .course-service-map-content {
+    margin-left: 2rem;
+  }
+
+  .page-course .course-service-map-visual {
+    width: 32%;
+  }
+
+  .page-course .course-service-map-visual img {
+    object-fit: contain;
+    object-position: right center;
+  }
+
+  /* ---- course 서비스 그리드 1열 ---- */
+  .page-course .course-service-grid {
+    grid-template-columns: 1fr;
+    margin-top: 10rem;
+  }
+
+  .page-course .course-service-card {
+    margin-top: 0;
+    min-height: 22rem;
+  }
+
+  /* ---- 서브메뉴 버튼 ---- */
+  .pick-submenu ul {
+    flex-direction: column;
+    gap: 0.8rem;
+    width: 100%;
+  }
+
+  .pick-submenu a {
+    width: 100%;
+    min-width: 0;
+  }
+}
+
+@media (max-width: 480px) {
+
+  /* ---- pick 카드 1열 ---- */
+  .page-pick .pick-rest .card-list {
+    grid-template-columns: 1fr;
+  }
+
+  .page-pick .place-card .card-img,
+  .page-course .course-card .card-img {
+    height: 22rem;
+  }
+
+  .page-pick .pick-img {
+    height: 20rem;
+  }
+
+  .page-pick .pick-hero,
+  .page-course .course-hero {
+    min-height: 26rem;
+  }
+
+  .page-pick .pick-hero .inner,
+  .page-course .course-hero .inner {
+    min-height: 26rem;
+  }
+
+  /* ---- course 카드 1열 ---- */
+  .page-course .course-card-list {
+    grid-template-columns: 1fr;
+  }
+
+  /* ---- course 서비스 맵 ---- */
+  .page-course .course-service-map-content h2 {
+    font-size: 2rem;
+  }
+
+  .page-course .course-service-map-visual {
+    width: 28%;
+  }
 }

@@ -8,12 +8,12 @@
 </head>
 <body>
 <div id="wrap"> 
-    <header include-html="include/header.html"></header>
+  <header include-html="include/header.html"></header>
   <main id="container" class="page page-pick">
     <section class="pick-hero">
       <div class="inner">
         <div class="pick-hero-content">
-          <h2 class="pick-hero-title">오늘의 비건 PICK</h2>
+          <h2 class="hero-title pick-hero-title">오늘의 비건 PICK</h2>
           <p class="pick-hero-subtitle">제주비건 팀이 오늘 직접 고른 비건 메뉴 추천, <br>매일 새로운 맛집과 메뉴를 소개합니다.
           </p>
         </div>
@@ -22,7 +22,13 @@
     <div class="inner">
       <section class="pick-today">
         <div class="pick-location">
-          <span>홈</span><span>&gt; 여행코스 &gt;</span><span>오늘의 비건 pick</span>
+          <nav class="breadcrumb">
+            <a href="index.html">홈</a>
+            <span>&gt;</span>
+            <a href="map.html">여행코스</a>
+            <span>&gt;</span>
+            <span class="current">오늘의 비건 pick</span>
+          </nav>
         </div>
   
         <div class="pick-submenu">
@@ -225,5 +231,6 @@
   </div>
   <script src="https://code.iconify.design/3/3.1.1/iconify.min.js"></script>
   <script src="js/includeHTML.js"></script>
+  <script src="js/index.js"></script>
 </body>
 </html>
