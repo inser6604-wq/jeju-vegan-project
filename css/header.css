@@ -8,14 +8,14 @@
 .site-header {
   position: fixed;
   top: 0;
-  left: 50%;
+  left: 0;
   z-index: 1000;
-  width: calc(100% - 4rem);
-  max-width: 100%;
+  width: 100%;
+  max-width: none;
   height: 8rem;
   background-color: #2d6a4f;
   border-radius: 0 0 5rem 5rem;
-  transform: translateX(-50%);
+  transform: 0;
   overflow: hidden;
   transition: height .35s;
 }
@@ -58,14 +58,6 @@ body.dOpen .site-header {
 .header-logo {
   display: block;
   width: 100%;
-}
-
-.header-logo.green {
-  display: none;
-}
-
-.header-logo.white {
-  display: block;
 }
 
 .gnb {
