@@ -4,10 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/style.css">
-  <title>Document</title>
+  <title>비건 지도</title>
 </head>
 <body>
-  <!-- <header include-html="include/header.html"></header> -->
+  <header include-html="include/header.html"></header>
 
   <main id="container" class="page page-map">
     <!-- hero -->
@@ -19,8 +19,8 @@
 
     <!-- 지도  -->
     <section class="map-spot-content">
-      <div class="inner map-inner">
-        <div class="section-head">
+      <div class="inner map-sopt-inner">
+        <div class="map-section-head section-head">
           <h2 class="section-title">비건 지도</h2>
           <p class="section-desc">당신의 취향에 맞는 제주 비건 스팟을 추천해드려요</p>
         </div>
@@ -28,65 +28,198 @@
         <div class="map-main-content"><!-- backgroundimg:map -->
           <div class="map-main-content-inner inner">
             <div class="map-filter">
-              <div class="map-search search">
-                <input type="text" placeholder="지역, 식당이름을 입력">
-                <div class="map-search-icon img-box">
-                  <img src="image/map-search-icon.svg" alt="search-icon">
+              <div class="map-filter-inner">
+                <div class="map-search search">
+                  <input type="text" placeholder="지역, 식당이름을 입력">
+                  <div class="map-search-icon img-box">
+                    <a href="#none"><img src="image/map-search-icon.svg" alt="search-icon"></a>
+                  </div>
                 </div>
-              </div>
-              <div class="map-filter-title">
-                <p>어떤 식당을 찾고 계신가요?</p>
-                <p>맞춤 추천 설정</p>
-              </div>
-              <button class="map-reset" id="map-reset">
-                <img src="image/map-reset-icon.svg" alt="reset-icon">
-                <span>초기화</span>
-              </button>
-              <div class="map-setting">
-              <div class="map-filter1">
-                <p>영업정보</p>
-                <div class="map-filter1-in">
-                  <button class="btn btn-sm">영업 중</button>
-                  <button class="btn btn-sm">영업 마감</button>
+                <div class="map-filter-title">
+                  <p>어떤 식당을 찾고 계신가요?</p>
+                  <p>맞춤 추천 설정</p>
                 </div>
-              </div>
-              <div class="map-filter2">
-                <p>인원</p>
-                <div class="map-filter2-in">
-                  <button class="btn btn-sm">#혼밥</button>
-                  <button class="btn btn-sm">#논비건 동행</button>
-                  <button class="btn btn-sm">#가족 외식</button>
-                  <button class="btn btn-sm">#아이 동반</button>
+                <button class="map-reset" id="map-reset">
+                  <img src="image/map-reset-icon.svg" alt="reset-icon">
+                  <span>초기화</span>
+                </button>
+                <div class="map-setting">
+                  <div class="map-filter1">
+                  <p class="map-filter-name">영업정보</p>
+                  <div class="map-filter1-in">
+                    <button class="map-btn btn btn-sm">영업 중</button>
+                    <button class="map-btn btn btn-sm">영업 마감</button>
+                  </div>
+                  </div>
+                  <div class="map-filter2">
+                  <p class="map-filter-name">인원</p>
+                  <div class="map-filter2-in">
+                    <button class="map-btn btn btn-sm">#혼밥</button>
+                    <button class="map-btn btn btn-sm">#논비건 동행</button>
+                    <button class="map-btn btn btn-sm">#가족 외식</button>
+                    <button class="map-btn btn btn-sm">#아이 동반</button>
+                  </div>
+                  </div>
+                  <div class="map-filter3">
+                  <p class="map-filter-name">비건의 정도</p>
+                  <div class="map-filter3-in">
+                    <button class="map-btn btn btn-sm">🌱 완전 비건</button>
+                    <button class="map-btn btn btn-sm">🥗 비건 옵션</button>
+                    <button class="map-btn btn btn-sm">🍽️ 베지테리언</button>
+                    <button class="map-btn btn btn-sm">🍖 논비건</button>
+                  </div>
+                  </div>
+                  <div class="map-filter4">
+                  <p class="map-filter-name">그 외</p>
+                  <div class="map-filter4-in">
+                    <button class="map-btn btn btn-sm">🫘 글루텐프리</button>
+                    <button class="map-btn btn btn-sm">🐾 반려동물 동반</button>
+                    <button class="map-btn btn btn-sm">🚗 주차가능</button>
+                  </div>
+                  </div>
+                  <div class="map-filter5">
+                  <p class="map-filter-name">추천 코스</p>
+                  <div class="map-filter5-in">
+                    <button class="map-btn map-course-btn btn btn-sm">
+                      <img src="image/course-hanlasan.png" alt="한라산">한라산 코스
+                    </button>
+                    <button class="map-btn map-course-btn btn btn-sm">
+                      <img src="image/course-seo.png" alt="서귀포">서귀포 코스
+                    </button>
+                    <button class="map-btn map-course-btn btn btn-sm">
+                      <img src="image/course-hyeopjae.png" alt="협재·금능">협재·금능 코스
+                    </button>
+                    <button class="map-btn map-course-btn btn btn-sm">
+                      <img src="image/course-hanlim.png" alt="한림공원">한림공원 코스
+                    </button>
+                  </div>
+                  </div>
                 </div>
+                <a href="#none" class="map-apply">
+                  <img src="image/map-send-icon.svg" alt="send-icon">
+                  <p>필터 적용하기</p>
+                </a>
               </div>
-              <div class="map-filter3">
-                <p>비건의 정도</p>
-                <div class="map-filter3-in">
-                  <button class="btn btn-sm">🌱 완전 비건</button>
-                  <button class="btn btn-sm">🥗 비건 옵션</button>
-                  <button class="btn btn-sm">🍽️ 베지테리언</button>
-                  <button class="btn btn-sm">🍖 논비건</button>
-                </div>
-              </div>
-              </div>
+              <a href="#none" class="map-filter-tap tab tab-btn active">
+                  <img src="image/map-filter-tap-arrow-icon.svg" alt="map-filter-tap">
+              </a>
             </div>
           </div>
 
-          <div class="map-in-info card place-card">
-
+          <div class="map-in-info card">
+            <div class="map-in-info-head">
+              <div class="map-in-info-title">
+                <p class="map-info-name">cafe 901</p>
+                <p class="map-info-cur">영업 중</p>
+              </div>
+              <p class="map-info-time">09:00~18:00 | 화요일 휴무</p>
+            </div>
+            <img class="map-info-img" src="image/map-card-cafe-901.jpg" alt="card1">
           </div>
-          <ul class="map-pin">
-            <li><img src="image/mappin-green.svg" alt="mappin-green"></li>
-            <li><img src="image/mappin-green.svg" alt="mappin-green"></li>
-            <li><img src="image/mappin-green.svg" alt="mappin-green"></li>
-            <li><img src="image/mappin-orange.svg" alt="mappin-orange"></li>
+          <ul class="map-pin-list">
+            <li class="map-pin1">
+              <a href="#none">
+                <img src="../image/mappin-green.svg" alt="mappin-green">
+              </a>
+            </li>
+            <li class="map-pin2">
+              <img src="../image/mappin-green.svg" alt="mappin-green">
+            </li>
+            <li class="map-pin3">
+              <img src="../image/mappin-green.svg" alt="mappin-green">
+            </li>
+            <li class="map-pin4">
+              <img src="../image/mappin-orange.svg" alt="mappin-orange">
+            </li>
           </ul>
         </div>
       </div>
     </section>
     
+    <section class="map-list-content">
+      <h2 class="map-section-title section-title">식당 리스트</h2>
+      <ul class="map-card-list card-list">
+        <li class="map-place-card card place-card">
+          <div class="map-place-card-inner">
+            <img class="map-place-card-img" src="image/map-list1.jpg" alt="카페901">
+            <div class="map-card-inner card-desc">
+              <div class="map-card-top">
+                <p class="card-title">카페 901</p>
+                <p class="card-place">제주시 노형동</p>
+                <p class="card-time">09:00~18:00 | 화요일 휴무</p>
+                <div class="card-rating like-btn">
+                  <img class="like-icon" src="image/map-star-icon.svg" alt="star-icon">
+                  <p>4.8 <span>(128)</span></p>
+                </div>
+              </div>
+              <p class="map-card-speak">신선하고 혼밥하기 좋아요! 다음에 또 오고 싶어요 ㅎㅎ
+              </p>
+              <div class="map-card-tags card-tags">
+                <span class="map-card-tag card-tag">🥗 비건 옵션</span>
+                <span class="map-card-tag card-tag">혼밥</span>
+                <span class="map-card-tag card-tag">주차가능</span>
+              </div>
+            </div>
+            <span class="map-info-cur map-list-cur">영업 중</span>
+          </div>
+        </li>
+        <li class="map-place-card card place-card">
+          <div class="map-place-card-inner">
+            <img class="map-place-card-img" src="image/map-list1.jpg" alt="카페901">
+            <div class="map-card-inner card-desc">
+              <div class="map-card-top">
+                <p class="card-title">카페 901</p>
+                <p class="card-place">제주시 노형동</p>
+                <p class="card-time">09:00~18:00 | 화요일 휴무</p>
+                <div class="card-rating like-btn">
+                  <img class= like-icon src="image/map-star-icon.svg" alt="star-icon">
+                  <p>4.8 <span>(128)</span></p>
+                </div>
+              </div>
+              <p class="map-card-speak">신선하고 혼밥하기 좋아요! 다음에 또 오고 싶어요 ㅎㅎ
+              </p>
+              <div class="map-card-tags card-tags">
+                <span class="map-card-tag card-tag">🥗 비건 옵션</span>
+                <span class="map-card-tag card-tag">혼밥</span>
+                <span class="map-card-tag card-tag">주차가능</span>
+              </div>
+            </div>
+            <span class="map-info-cur map-list-cur">영업 중</span>
+          </div>
+        </li>
+        <li class="map-place-card card place-card">
+          <div class="map-place-card-inner">
+            <img class="map-place-card-img" src="image/map-list1.jpg" alt="카페901">
+            <div class="map-card-inner card-desc">
+              <div class="map-card-top">
+                <p class="card-title">카페 901</p>
+                <p class="card-place">제주시 노형동</p>
+                <p class="card-time">09:00~18:00 | 화요일 휴무</p>
+                <div class="card-rating like-btn">
+                  <img class= like-icon src="image/map-star-icon.svg" alt="star-icon">
+                  <p>4.8 <span>(128)</span></p>
+                </div>
+              </div>
+              <p class="map-card-speak">신선하고 혼밥하기 좋아요! 다음에 또 오고 싶어요 ㅎㅎ
+              </p>
+              <div class="map-card-tags card-tags">
+                <span class="map-card-tag card-tag">🥗 비건 옵션</span>
+                <span class="map-card-tag card-tag">혼밥</span>
+                <span class="map-card-tag card-tag">주차가능</span>
+              </div>
+            </div>
+            <span class="map-info-cur map-list-cur">영업 중</span>
+          </div>
+        </li>
+        <li class="map-list-tab tab-btn active">
+          더보기
+        </li>
+      </ul>
+    </section>
   </main>
 
-  <!-- <footer include-html="include/footer.html"></footer> -->
+  <footer include-html="include/footer.html"></footer>
+
+  <script src="js/includeHTML.js"></script>
 </body>
 </html>
