@@ -41,46 +41,7 @@
 /* pick.html______________ */
 
 .page-pick .pick-hero{
-  position: relative;
-  min-height: 53rem;
   background: url(../image/vegan-pick-main.png)center center/cover no-repeat;
-}
-
-.page-pick .pick-hero:after{
-  content: '';
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  position: absolute;
-  background: rgba(255,255,255,0.4);
-  pointer-events: none;
-}
-
-.page-pick .pick-hero .inner{
-  position: relative;
-  z-index: 1;
-  min-height: 53rem;
-}
-
-.page-pick .pick-hero-content{
-  position: absolute;
-  left: 10rem;
-  top: 58%;
-  transform: translateY(-50%);
-}
-
-.page-pick .pick-hero-title{
-  font-size: 3.6rem;
-  color: #163525;
-}
-
-.page-pick .pick-hero-subtitle{
-  color: #222;
-  font-size: 1.4rem;
-  font-weight: 300;
-  margin-top: 2rem;
-  line-height: 1.6;
 }
 
 .page-pick .pick-today{
@@ -90,10 +51,6 @@
 .page-pick .pick-layout{
   display: flex;
   gap: 2rem;
-  align-items: stretch;
-  width: 100%;
-  max-width: 140rem;
-  margin: 0 auto;
 }
 
 .page-pick .pick-img{
@@ -340,54 +297,13 @@
 /* course.html______________ */
 
 .page-course .course-hero{
-  position: relative;
-  min-height: 53rem;
   background: url(../image/vegan-course-main.png) center center/ cover no-repeat;
 }
 
-.page-course .course-hero:after{
-  content: '';
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  position: absolute;
-  background: rgba(255,255,255,0.4);
-  pointer-events: none;
-}
-
-.page-course .course-hero .inner {
-  position: relative;
-  z-index: 1;
-  min-height: 53rem;
-}
-
-.page-course .course-hero-content{
-  position: absolute;
-  left: 10rem;
-  top: 58%;
-  transform: translateY(-50%);
-}
-
-.page-course .course-hero-title {
-  font-size: 3.6rem;
-  color: #163525;
-}
-
-.page-course .course-hero-subtitle{
-  color: #222;
-  font-size: 1.4rem;
-  font-weight: 300;
-  margin-top: 2rem;
-  line-height: 1.6;
-}
-
-.page-course .course-title h3{
-  font-family: "A2Z", sans-serif;
-  margin-bottom: 5rem;
+.page-course .section-title{
   color: #163525;
   text-align: center;
-  font-size: 3.6rem;
+  margin-bottom: 5rem;
 }
 
 .page-course .tab-list{
@@ -546,7 +462,7 @@
   color: #fff;
   font-family: "A2Z", sans-serif;
   font-weight: 600;
-  font-size: 2.8rem;
+  font-size: 3rem;
   line-height: 1.3;
 }
 
@@ -609,7 +525,10 @@
   overflow: hidden;
   text-align: center;
   margin-top: 7rem;
+  transition: 0.35s;
 }
+
+.page-course .course-service-card:hover{transform: translateY(-0.4rem);}
 
 .page-course .course-service-card--make{
   background: url(../image/course-service-make.jpg) center center/cover no-repeat;
@@ -632,9 +551,9 @@
 }
 
 .page-course .course-service-card h3{
-  font-size: 2.2rem;
+  font-size: 2.5rem;
   color: #fff;
-  font-weight: 500;
+  font-weight: 600;
   z-index: 1;
 }
 
@@ -643,8 +562,8 @@
   padding: 0.7rem 2rem;
   border-radius: 0.5rem;
   border: 0.1rem solid #2D6A4F;
-  color: #2D6A4F;
-  background: #fff;
+  color: #fff;
+  background: #2D6A4F;
   font-size: 1.3rem;
   font-weight: 600;
   transition: 0.35s;
@@ -652,10 +571,30 @@
 }
 
 .page-course .course-service-card .btn:hover{
-  background: #2D6A4F;
-  color: #fff;
+  background: #fff;
+  color: #2D6A4F;
 }
 
+/* 스크롤 애니메이션 */
+.sr {
+  opacity: 0;
+  transform: translateY(3.5rem);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+  will-change: opacity, transform;
+}
+
+.sr.sr-left {
+  transform: translateX(-4rem);
+}
+
+.sr.sr-right {
+  transform: translateX(4rem);
+}
+
+.sr.is-visible {
+  opacity: 1;
+  transform: none;
+}
 
 /* =========================================
    Pick / Course 반응형
@@ -664,39 +603,6 @@
 @media (max-width: 768px) {
 
   /* ---- 공통 히어로 ---- */
-  .page-pick .pick-hero,
-  .page-course .course-hero {
-    min-height: 32rem;
-  }
-
-  .page-pick .pick-hero .inner,
-  .page-course .course-hero .inner {
-    min-height: 32rem;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-  }
-
-  .page-pick .pick-hero-content,
-  .page-course .course-hero-content {
-    position: static;
-    transform: none;
-    left: auto;
-    top: auto;
-    padding-left: 2rem;
-    margin-top: 10rem;
-  }
-
-  .page-pick .pick-hero-title,
-  .page-course .course-hero-title {
-    font-size: 2.6rem;
-  }
-
-  .page-pick .pick-hero-subtitle,
-  .page-course .course-hero-subtitle {
-    font-size: 1.3rem;
-    margin-top: 1.2rem;
-  }
 
   /* ---- pick 레이아웃 (이미지 + 정보 세로로) ---- */
   .page-pick .pick-layout {
