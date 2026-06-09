@@ -9,26 +9,50 @@ body {
   background-color: #fffcf7;
 }
 .map-hero {
+  position: relative;
   background: url(../image/map-hero-image.png) center center / cover no-repeat;
+  min-height: 53rem;
 }
-
+.map-hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.4);
+  height:100%;
+  pointer-events: none;
+}
+.map-inner {
+  border: 1px solid red;
+  z-index: 1;
+  min-height: 53rem;
+  display: flex;
+  justify-content: center;
+  align-items: center
+}
+.map-hero-title{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  font-size:10rem;
+  color: rgba(255, 255, 255, 0.7);
+  font-weight: 800;
+  height:inherit;
+}
 .map-spot-content,
 .map-detail-content {
-  /* border: 1px solid red; */
   width: 100%;
   height: auto;
   margin-top: 8rem;
 }
 
 .map-main-content {
-  /* border: 1px solid #000; */
+  border: 1px solid #a2c7b6;
   position: relative;
   background: url(../image/map.png) no-repeat center/cover;
   border-radius: 2.5rem;
-  width: 100%;
+  width: 140rem;
   height: 80rem;
   margin-bottom: 10rem;
-  overflow: hidden;
 }
 
 .map-main-content-inner {
@@ -36,11 +60,12 @@ body {
   height: inherit;
   display: flex;
   align-items: center;
+  overflow: hidden;
+
 }
 
 .map-section-head {
   text-align: center;
-  padding-top: 8rem;
 }
 
 .map-section-head h2 {
@@ -221,13 +246,10 @@ input[type="text"]::placeholder {
   width: 2rem;
   height: 2rem;
 }
-
 .map-apply p {
   font-size: 1.6rem;
   font-weight: 600;
 }
-
-/* tap 클릭시,filter 여닫음 효과 */
 .map-filter-tab {
   position: absolute;
   top: 50%;
@@ -238,7 +260,6 @@ input[type="text"]::placeholder {
   background-color: #fff;
   border-radius: 0 1rem 1rem 0;
 }
-
 .map-filter-tab img {
   width: 2rem;
   height: 5.6rem;
@@ -248,74 +269,40 @@ input[type="text"]::placeholder {
 .map-filter-inner {
   transition: 0.3s ease;
 }
-.map-pin-list {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-.map-pin-list a img {
-  transition:0.2s ease;
-}
-.map-pin-list a:hover img {
-  opacity: 0.8;
-}
-.map-pin1 {
-  position: absolute;
-  top: 10%;
-  right: 22%;
-}
-.map-pin2 {
-  position: absolute;
-  top: 32%;
-  right: 10%;
-}
-.map-pin3 {
-  position: absolute;
-  top: 50%;
-  right: 18%;
-}
-.map-pin4 {
-  position: absolute;
-  top: 30%;
-  left: 55%;
-}
-.map-pin5 {
-  position: absolute;
-  top: 30%;
-  left: 30%;
-}
-.map-pin6 {
-  position: absolute;
-  top: 50%;
-  left: 8%;
-}
-.map-pin7 {
-  position: absolute;
-  top: 60%;
-  left: 50%;
-}
-.map-pin8 {
-  position: absolute;
-  top: 60%;
-  left: 15%;
-}
+.map-pin{position: absolute;
 
-.map-in-info {
+}
+.map-pin1 {top: 10%; right: 22%;}
+.map-pin2 {top: 32%; right: 10%;}
+.map-pin3 {top: 50%; right: 18%;}
+.map-pin4 {top: 30%; left: 55%;}
+.map-pin5 {top: 30%; left: 30%;}
+.map-pin6 {top: 22%;  left: 35%;}
+.map-pin7 {top: 60%; left: 50%;}
+.map-pin8 {top: 60%; left: 15%;}
+
+.map-in-card{
   position: absolute;
-  top: 7%;
-  right: 35%;
   width: 27.7rem;
   height: 22rem;
   border-radius: 3rem;
-  display: flex;
+  display:flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   row-gap: 1.5rem;
+  top: calc(100% + 8px);
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  visibility: hidden;
+  z-index: 2;
+  transition: opacity 0.25s ease, visibility 0.25s ease;
 }
-
+.map-pin:hover .map-in-card {
+  opacity: 1;
+  visibility: visible;
+}
 .map-in-info-head {
   width: 24rem;
   height: auto;
@@ -375,7 +362,7 @@ input[type="text"]::placeholder {
   justify-content: center;
   align-items: center;
   gap: 1.6rem;
-  padding: 12rem 0px;
+  padding: 12rem 0;
 }
 .map-card-list {
   display: flex;
@@ -383,14 +370,19 @@ input[type="text"]::placeholder {
   row-gap: 3rem;
 }
 .map-place-card {
-  /* border: 1px solid #2D6A4F; */
+  border: 1px solid #b3d3c4;
   width: 109rem;
   height: 30.5rem;
   display: flex;
   align-items: center;
   border-radius: 3rem;
+  transition: 0.3s;
 }
-
+.map-place-card:hover{
+  box-shadow: 0 12px 28px rgba(47, 70, 55, 0.1);
+  transition: transform 0.3s ease;
+  transform: translateY(-5px);
+}
 .map-place-card-inner {
   position: relative;
   width: 99.2rem;
@@ -446,8 +438,8 @@ input[type="text"]::placeholder {
 }
 
 .map-card-speak {
-  width: auto;
-  height: 3.2rem;
+  width: fit-content;
+  height: auto;
   border-radius: 2rem;
   border: 1px solid #2d6a4f;
   text-align: center;
@@ -478,9 +470,16 @@ input[type="text"]::placeholder {
   width: 8.5rem;
   height: 3.7rem;
   font-size: 1.6rem;
+  font-weight:600;
+}
+.map-cur-end {
+  background-color: #cecece;
+  color: #707070;
+  border-radius: 2rem;
+  font-weight: 400;
 }
 .map-list-tab {
-  width: 100%;
+  width: 109rem;
   height: 5.4rem;
   border-radius: 2rem;
   border: 1px solid #2d6a4f;
