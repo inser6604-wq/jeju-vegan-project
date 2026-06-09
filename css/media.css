@@ -419,34 +419,44 @@
     padding-bottom: 1rem;
   }
 
-  .mobile-depth1 > li > a,
-  .mobile-depth1 > li > span {
-    display: block;
-    color: #fff;
-    font-size: 1.8rem;
-    font-weight: 600;
-    cursor: pointer;
-  }
+.mobile-depth1 > li > a,
+.mobile-depth1 > li > span {
+  display: block;
+  color: #fff;
+  font-size: 1.8rem;
+  font-weight: 400;
+  cursor: pointer;
+  transition: 0.1s;
+}
 
-  .mobile-depth2 {
-    display: none;
-    margin-top: 1rem;
-    padding-left: 1rem;
-  }
+.mobile-depth1 > li > a:hover,
+.mobile-depth1 > li > span:hover {
+  font-weight: 600;
+}
 
-  .mobile-depth2.active {
-    display: block;
-  }
+.mobile-depth2 {
+  display: none;
+  margin-top: 1rem;
+  padding-left: 1rem;
+}
 
-  .mobile-depth2 li + li {
-    margin-top: 0.8rem;
-  }
+.mobile-depth2.active {
+  display: block;
+}
 
-  .mobile-depth2 a {
-    color: #fff;
-    font-size: 1.5rem;
-    opacity: 0.8;
-  }
+.mobile-depth2 li + li {
+  margin-top: 0.8rem;
+}
+
+.mobile-depth2 a {
+  color: #fff;
+  font-size: 1.5rem;
+  opacity: 0.8;
+  transition: 0.1s;
+}
+
+.mobile-depth2 a:hover {
+  font-weight: 500;
 }
 
 This branch has conflicts that must be resolved
