@@ -35,7 +35,7 @@
   margin-bottom: 34px;
   color: #111;
   font-size: 11rem;
-  font-weight: 400;
+  font-weight: 600;
   line-height: 1;
 }
 
@@ -48,12 +48,24 @@
 }
 
 .home-hero .btn-primary {
-  width: 220px;
+  width: 42rem;
   border: 2px solid #2d6a4f;
-  background: rgba(255, 255, 255, 0.9);
+  background-color: rgba(255, 255, 255, 0.9);
+  background-image: linear-gradient(#2d6a4f, #2d6a4f);
+  background-size: 0% 100%;
+  background-position: left center;
+  background-repeat: no-repeat;
   color: #2d6a4f;
+  margin-top: 2rem;
+  transition: background-size 0.35s ease, color 0.35s ease;
 }
 
+.home-hero .btn-primary:hover,
+.home-hero .btn-primary:focus-visible {
+  background-color: rgba(255, 255, 255, 0.9);
+  background-size: 100% 100%;
+  color: #fff;
+}
 .home-hero-controls {
   position: absolute;
   top: 50%;
@@ -564,7 +576,7 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  gap: 8rem;
+  gap: 4rem;
 }
 
 .home-subscribe-left {
