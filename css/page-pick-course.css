@@ -240,12 +240,13 @@
   border: 0.1rem solid #eee;
   border-radius: 2.6rem;
   box-shadow: 0 0.8rem 2rem rgba(0, 0, 0, 0.08);
-  transition: 0.35s;
+  transition: box-shadow 0.35s ease;
 }
 
 .page-pick .place-card:hover{
   transform: translateY(-0.4rem);
   box-shadow: 0 0.8rem 2rem rgba(0, 0, 0, 0.2);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
 }
 
 .page-pick .place-card .card-img{
@@ -356,12 +357,13 @@
   border: 0.1rem solid #eee;
   border-radius: 2.6rem;
   box-shadow: 0 0.8rem 2rem rgba(0, 0, 0, 0.08);
-  transition: 0.35s;
+  transition: box-shadow 0.35s ease;
 }
 
 .page-course .course-card:hover{
   transform: translateY(-0.4rem);
   box-shadow: 0 0.8rem 2rem rgba(0, 0, 0, 0.2);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
 }
 
 .page-course .course-card .card-img{
@@ -579,7 +581,7 @@
 .sr {
   opacity: 0;
   transform: translateY(3.5rem);
-  transition: opacity 0.7s ease, transform 0.7s ease;
+  transition: opacity 1.5s ease, transform 1.5s ease;
   will-change: opacity, transform;
 }
 
@@ -594,6 +596,16 @@
 .sr.is-visible {
   opacity: 1;
   transform: none;
+}
+
+.page-pick .place-card.sr,
+.page-course .course-card.sr {
+  transition: opacity 1.5s ease, transform 1.5s ease, box-shadow 0.35s ease;
+}
+
+.page-pick .place-card.sr.is-visible:hover,
+.page-course .course-card.sr.is-visible:hover {
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
 }
 
 /* =========================================
