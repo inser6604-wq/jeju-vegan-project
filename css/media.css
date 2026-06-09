@@ -424,9 +424,16 @@
     display:block;
     color:#fff;
     font-size:1.8rem;
-    font-weight:600;
+    font-weight:400;
     cursor:pointer;
+    transition: 0.1s;
   }
+
+  .mobile-depth1 > li > a:hover,
+  .mobile-depth1 > li > span:hover{
+    font-weight: 600;
+  }
+  
 
   .mobile-depth2{
     display:none;
@@ -446,5 +453,10 @@
     color:#fff;
     font-size:1.5rem;
     opacity:.8;
+    transition: 0.1s;
+  }
+
+  .mobile-depth2 a:hover{
+    font-weight: 500;
   }
 }
