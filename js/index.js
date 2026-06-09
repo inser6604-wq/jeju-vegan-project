@@ -193,7 +193,9 @@ document.addEventListener("click", (e) => {
     tabBtn.classList.add("active");
   }
 });
-// map-btn클릭 효과
+
+// map__________________________________________________________
+// map-btn클릭 
 const mapBtns = document.querySelectorAll('.map-btn');
 const resetBtn = document.querySelector('#map-reset');
 
@@ -236,14 +238,12 @@ searchInput.addEventListener('input', () => {
     const place = card.querySelector('.card-place').textContent.toLowerCase();
 
     if (keyword === '') {
-      // 입력값 없으면 원래 상태로 (map-hidden 유지)
       if (card.classList.contains('map-hidden')) {
         card.style.display = 'none';
       } else {
         card.style.display = 'flex';
       }
     } else {
-      // 제목이나 주소에 키워드 포함되면 표시
       if (title.includes(keyword)){
         card.style.display = 'flex';
       } else {
@@ -254,22 +254,50 @@ searchInput.addEventListener('input', () => {
 });
 
   // map-pin hover
-const mapPins = document.querySelectorAll('.map-pin-list a');
+const mapPinItems = document.querySelectorAll('.map-pin');
 
-mapPins.forEach(pin => {
-  const img = pin.querySelector('img');
-  const original = img.src;
-  const hoverSrc = original.replace('mappin-green', 'mappin-orange');
+mapPinItems.forEach(pinItem => {
+  const anchor = pinItem.querySelector('a');
+  const greenImg = anchor.querySelector('img');
 
-  pin.addEventListener('mouseenter', () => {
-    if (img.src.includes('mappin-green')) {
-      img.src = hoverSrc;
-    }
+  const orangeImg = document.createElement('img');
+  orangeImg.setAttribute('src', greenImg.getAttribute('src').replace('mappin-green', 'mappin-orange'));
+  orangeImg.setAttribute('alt', 'mappin-orange');
+  orangeImg.style.position = 'absolute';
+  orangeImg.style.top = '0';
+  orangeImg.style.left = '0';
+  orangeImg.style.opacity = '0';
+  orangeImg.style.transition = 'opacity 0.3s ease';
+
+  greenImg.style.transition = 'opacity 0.3s ease';
+  greenImg.style.display = 'block';
+
+  anchor.style.display = 'block';
+  anchor.style.position = 'relative';
+  anchor.appendChild(orangeImg);
+
+  pinItem.addEventListener('mouseenter', () => {
+    greenImg.style.opacity = '0';
+    orangeImg.style.opacity = '1';
   });
 
-  pin.addEventListener('mouseleave', () => {
-    if (img.src.includes('mappin-orange') && !pin.closest('.map-pin4')) {
-      img.src = original;
-    }
+  pinItem.addEventListener('mouseleave', () => {
+    greenImg.style.opacity = '1';
+    orangeImg.style.opacity = '0';
   });
+});
+// map-list-tab 클릭
+const mapListTab = document.querySelector('.map-list-tab');
+const hiddenCards = document.querySelectorAll('.map-hidden');
+
+mapListTab.addEventListener('click', () => {
+  const isHidden = mapListTab.classList.contains('active');
+
+  hiddenCards.forEach(card => {
+    card.classList.toggle('map-hidden');
+  });
+
+  mapListTab.classList.toggle('active');
+  mapListTab.querySelector('img').style.transform = isHidden ? 'rotate(180deg)' : 'rotate(0deg)';
+  mapListTab.lastChild.textContent = isHidden ? '접기' : '더보기';
 });
