@@ -775,3 +775,159 @@
     font-weight: 500;
   }
 }
+
+/* footer 반응형 */
+/* ============================
+  1200px 이하
+   ============================ */
+@media (max-width: 1200px) {
+  .footer-inner {
+    width: 90%;
+    height: auto;
+  }
+
+  .footer-left {
+    row-gap: 5rem;
+  }
+
+  .footer-right {
+    column-gap: 8rem;
+  }
+}
+
+/* ============================
+  768px 이하
+   ============================ */
+@media (max-width: 768px) {
+  footer {
+    border-radius: 3rem 3rem 0 0;
+    padding: 3rem;
+  }
+
+  .footer-content {
+    padding: 0;
+    align-items: flex-start;
+  }
+
+  .footer-inner {
+    flex-direction: column;
+    height: auto;
+    width: 100%;
+    row-gap: 3rem;
+  }
+
+  .footer-left {
+    row-gap: 3rem;
+  }
+
+  .footer-left-top {
+    row-gap: 1.5rem;
+  }
+
+  .footer-logo {
+    width: 12rem;
+  }
+
+  .footer-icon {
+    width: 4rem;
+    height: 4rem;
+  }
+
+  .footer-icon img {
+    width: 2.2rem;
+    height: 2.2rem;
+  }
+
+  .footer-icon-list {
+    column-gap: 2rem;
+  }
+
+  .footer-desc {
+    font-size: 1.4rem;
+  }
+
+  .footer-right {
+    font-size: 1.2rem;
+    column-gap: 6rem;
+    flex-wrap: wrap;
+  }
+
+  .footer-menu {
+    row-gap: 1rem;
+  }
+
+  .footer-menu-top {
+    border-radius: 1.5rem;
+    padding: 0.6rem 1rem;
+    margin-bottom: 1rem;
+  }
+}
+
+/* ============================
+  480px 이하
+   ============================ */
+@media (max-width: 480px) {
+  footer {
+    border-radius: 2rem 2rem 0 0;
+    padding: 2rem;
+  }
+
+  .footer-content {
+    padding: 0;
+  }
+
+  .footer-inner {
+    width: 100%;
+    row-gap: 2rem;
+  }
+
+  .footer-left {
+    row-gap: 2rem;
+  }
+
+  .footer-left-top {
+    row-gap: 1rem;
+  }
+
+  .footer-logo {
+    width: 100%;
+    margin: 0 auto;
+  }
+  .footer-desc {
+    font-size: 1.3rem;
+    text-align: center;
+    width: 100%;
+  }
+
+  .footer-right {
+    display:flex;
+    justify-content: center;
+    width:90%;
+    column-gap: 4rem;
+  }
+
+  .footer-menu {
+    row-gap: 0.5rem;
+    
+  }
+
+  .footer-menu-top {
+    border-radius: 1.2rem;
+    padding: 0.5rem 0.8rem;
+    margin-bottom: 0.8rem;
+    font-size: 1rem;
+  }
+  .footer-icon {
+    width: 3.5rem;
+    height: 3.5rem;
+  }
+
+  .footer-icon img {
+    width: 1.8rem;
+    height: 1.8rem;
+  }
+
+  .footer-icon-list {
+    column-gap: 1.5rem;
+  }
+}
