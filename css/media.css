@@ -67,6 +67,15 @@
     font-size: 6.2rem;
   }
 
+  .home-hero .btn-primary {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    padding: 1.2rem 2.4rem;
+    font-size: 1.4rem;
+    box-sizing: border-box;
+  }
+
   .home-hero-controls {
     display: none;
   }
@@ -95,8 +104,11 @@
   }
 
   .home-course .section-desc {
+    max-width: 100%;
     margin-left: 0;
     margin-right: 0;
+    line-height: 1.65;
+    word-break: keep-all;
   }
 
   .home-course .btn-line {
@@ -109,46 +121,254 @@
     grid-template-columns: 1fr;
   }
 
+  .home-course-content {
+    margin-top: 40px;
+    align-items: stretch;
+    gap: 24px;
+  }
+
+  .home-course-content .course-card:nth-child(2) {
+    transform: none;
+  }
+
+  .home-course .course-card:nth-child(1):hover,
+  .home-course .course-card:nth-child(2):hover,
+  .home-course .course-card:nth-child(3):hover {
+    transform: translateY(-8px);
+  }
+
+  .home-course-desc {
+    line-height: 1.6;
+    word-break: keep-all;
+  }
+
   .home-map .section-head {
+    position: static;
     width: 100%;
     min-width: 0;
-    margin-bottom: 24px;
+    margin-bottom: 20px;
   }
 
   .home-map .section-title {
-    font-size: 5rem;
+    font-size: 4.2rem;
+  }
+
+  .home-map .section-desc {
+    font-size: 1.3rem;
   }
 
   .home-map-visual {
+    width: 100%;
+    margin-left: 0;
     min-height: auto;
   }
 
   .home-map-stats {
-    margin-top: 24px;
+    margin-top: 20px;
+  }
+
+  .home-map-stats .card {
+    min-height: auto;
+    padding: 20px 16px;
+  }
+
+  .home-map-stats strong {
+    font-size: 2.6rem;
+  }
+
+  .home-map-stats span {
+    font-size: 1.5rem;
+  }
+
+  /* home-together */
+  .home-together.section {
+    padding: 56px 0;
+    overflow: hidden;
+  }
+
+  .home-together .section-head {
+    margin-bottom: 28px;
+  }
+
+  .home-together .section-title {
+    font-size: 2.6rem;
+    line-height: 1.35;
+    word-break: keep-all;
+  }
+
+  .home-together .section-desc {
+    font-size: 1.35rem;
+    line-height: 1.65;
+    word-break: keep-all;
   }
 
   .home-together-visual {
-    height: 220px;
+    width: 100%;
+    min-width: 0;
+    height: 200px;
   }
 
   .home-together-visual strong {
-    font-size: 4.8rem;
+    left: 50%;
+    width: 100%;
+    padding: 0 16px;
+    box-sizing: border-box;
+    font-size: 4.2rem;
+    text-align: center;
+  }
+
+  .home-together-tag-list {
+    flex-wrap: wrap;
+    gap: 1rem 0.8rem;
+    margin-top: 32px;
+    padding: 0 4px;
+  }
+
+  .home-together-tag-list span {
+    font-size: 1.3rem;
+  }
+
+  .home-together .tag {
+    min-width: 0;
+    padding: 0.8rem 1.4rem;
+    font-size: 1.2rem;
+  }
+
+  /* home-join */
+  .home-join.section {
+    padding: 56px 0;
+    overflow: hidden;
+  }
+
+  .home-join .section-head {
+    margin-bottom: 28px;
+  }
+
+  .home-join .section-title {
+    margin-bottom: 16px;
+    font-size: 2.6rem;
+    word-break: keep-all;
+  }
+
+  .home-join .section-desc {
+    font-size: 1.35rem;
+    line-height: 1.65;
+    word-break: keep-all;
+  }
+
+  .home-join-content {
+    width: 100%;
+    min-width: 0;
   }
 
   .home-join-visual {
-    width: min(82vw, 420px);
+    width: min(72vw, 300px);
   }
 
   .home-join-actions {
     position: static;
     flex-direction: column;
-    align-items: center;
-    margin-top: 28px;
+    align-items: stretch;
+    width: 100%;
+    max-width: 100%;
+    gap: 12px;
+    margin-top: 24px;
+    padding: 0;
   }
 
-  .home-subscribe .inner {
-    grid-template-columns: 1fr;
-    gap: 26px;
+  .home-join .btn-main-bottom {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    height: auto;
+    min-height: 5.2rem;
+    padding: 1.4rem 1.6rem;
+    font-size: 1.5rem;
+    line-height: 1.35;
+    white-space: normal;
+    text-align: center;
+  }
+
+  /* home-subscribe */
+  .home-subscribe.section {
+    padding: 56px 0 48px;
+    text-align: center;
+  }
+
+  .home-subscribe-content {
+    flex-direction: column;
+    align-items: center;
+    gap: 2.4rem;
+    width: 100%;
+    min-width: 0;
+    text-align: center;
+  }
+
+  .home-subscribe-left,
+  .home-subscribe-right {
+    flex: none;
+    width: 100%;
+    min-width: 0;
+  }
+
+  .home-subscribe .section-title {
+    font-size: 2.8rem;
+    line-height: 1.45;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+
+  .home-subscribe .section-desc {
+    margin-top: 0;
+    font-size: 1.4rem;
+    color: #2d6a4f;
+    line-height: 1.6;
+    text-align: center;
+  }
+
+  .home-subscribe::after {
+    top: -20px;
+    right: -30px;
+    width: 180px;
+    height: 120px;
+  }
+
+  .home-subscribe-form {
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    max-width: 100%;
+    height: 5.6rem;
+    border-radius: 999px;
+  }
+
+  .home-subscribe .form-input {
+    flex: 1;
+    width: auto;
+    min-width: 0;
+    height: 100%;
+    padding: 0 1.8rem;
+    font-size: 1.3rem;
+  }
+
+  .home-subscribe .btn-primary {
+    width: auto;
+    min-width: 9.6rem;
+    height: 100%;
+    padding: 0 2.2rem;
+    border: none;
+    border-radius: 0;
+    font-size: 1.4rem;
+    flex-shrink: 0;
+  }
+
+  .home-subscribe-note {
+    margin-left: 0;
+    margin-top: 1.2rem;
+    font-size: 1.1rem;
+    line-height: 1.65;
+    text-align: center;
+    color: #999;
   }
 }
 
@@ -179,7 +399,8 @@
   }
 
   .home-hero .btn-primary {
-    width: 180px;
+    padding: 1.1rem 2rem;
+    font-size: 1.35rem;
   }
 
   .home-pick-main {
@@ -192,27 +413,122 @@
   }
 
   .home-map .section-title {
-    font-size: 3.8rem;
+    font-size: 3.2rem;
+  }
+
+  .home-map .section-desc {
+    font-size: 1.25rem;
+  }
+
+  .home-map-stats strong {
+    font-size: 2.2rem;
+  }
+
+  .home-map-stats span {
+    font-size: 1.35rem;
+  }
+
+  .home-map-stats .card {
+    padding: 18px 14px;
+  }
+
+  .home-course .section-desc {
+    font-size: 1.3rem;
+    line-height: 1.7;
+  }
+
+  .home-course-content {
+    margin-top: 32px;
+    gap: 20px;
+  }
+
+  .home-together.section,
+  .home-join.section,
+  .home-subscribe.section {
+    padding: 44px 0;
+  }
+
+  .home-together .section-title,
+  .home-join .section-title {
+    font-size: 2.2rem;
+  }
+
+  .home-together .section-desc,
+  .home-join .section-desc {
+    font-size: 1.3rem;
   }
 
   .home-together-visual {
-    height: 180px;
-  }
-
-  .home-together-visual strong {
-    font-size: 3.8rem;
-  }
-
-  .home-subscribe .form-row {
-    flex-direction: column;
-  }
-
-  .home-subscribe-form {
+    height: 160px;
     border-radius: 24px;
   }
 
+  .home-together-visual strong {
+    font-size: 3.2rem;
+  }
+
+  .home-together-tag-list {
+    margin-top: 24px;
+    gap: 0.8rem;
+  }
+
+  .home-together .tag {
+    padding: 0.7rem 1.2rem;
+    font-size: 1.15rem;
+  }
+
+  .home-join-visual {
+    width: min(68vw, 260px);
+  }
+
+  .home-join .btn-main-bottom {
+    font-size: 1.4rem;
+    min-height: 4.8rem;
+    padding: 1.2rem 1.4rem;
+  }
+
+  .home-subscribe.section {
+    padding: 48px 0 40px;
+  }
+
+  .home-subscribe-content {
+    gap: 2rem;
+  }
+
+  .home-subscribe .section-title {
+    font-size: 2.4rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .home-subscribe .section-desc {
+    font-size: 1.3rem;
+  }
+
+  .home-subscribe::after {
+    top: -16px;
+    right: -24px;
+    width: 140px;
+    height: 95px;
+  }
+
+  .home-subscribe-form {
+    height: 5.2rem;
+  }
+
+  .home-subscribe .form-input {
+    padding: 0 1.4rem;
+    font-size: 1.2rem;
+  }
+
   .home-subscribe .btn-primary {
-    width: 100%;
+    min-width: 8.4rem;
+    padding: 0 1.8rem;
+    font-size: 1.3rem;
+  }
+
+  .home-subscribe-note {
+    margin-top: 1rem;
+    font-size: 1.05rem;
   }
 }
 
@@ -419,44 +735,43 @@
     padding-bottom: 1rem;
   }
 
-.mobile-depth1 > li > a,
-.mobile-depth1 > li > span {
-  display: block;
-  color: #fff;
-  font-size: 1.8rem;
-  font-weight: 400;
-  cursor: pointer;
-  transition: 0.1s;
-}
+  .mobile-depth1 > li > a,
+  .mobile-depth1 > li > span {
+    display: block;
+    color: #fff;
+    font-size: 1.8rem;
+    font-weight: 400;
+    cursor: pointer;
+    transition: 0.1s;
+  }
 
-.mobile-depth1 > li > a:hover,
-.mobile-depth1 > li > span:hover {
-  font-weight: 600;
-}
+  .mobile-depth1 > li > a:hover,
+  .mobile-depth1 > li > span:hover {
+    font-weight: 600;
+  }
 
-.mobile-depth2 {
-  display: none;
-  margin-top: 1rem;
-  padding-left: 1rem;
-}
+  .mobile-depth2 {
+    display: none;
+    margin-top: 1rem;
+    padding-left: 1rem;
+  }
 
-.mobile-depth2.active {
-  display: block;
-}
+  .mobile-depth2.active {
+    display: block;
+  }
 
-.mobile-depth2 li + li {
-  margin-top: 0.8rem;
-}
+  .mobile-depth2 li + li {
+    margin-top: 0.8rem;
+  }
 
-.mobile-depth2 a {
-  color: #fff;
-  font-size: 1.5rem;
-  opacity: 0.8;
-  transition: 0.1s;
-}
+  .mobile-depth2 a {
+    color: #fff;
+    font-size: 1.5rem;
+    opacity: 0.8;
+    transition: 0.1s;
+  }
 
-.mobile-depth2 a:hover {
-  font-weight: 500;
+  .mobile-depth2 a:hover {
+    font-weight: 500;
+  }
 }
-
-This branch has conflicts that must be resolved
