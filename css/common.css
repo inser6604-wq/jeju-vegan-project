@@ -274,13 +274,12 @@ input {
   top: 1.6rem;
   left: 1.6rem;
   z-index: 2;
-
   display: flex;
   gap: 0.8rem;
 }
 
 .tag {
-  padding: 0.8rem 1.6rem;
+  padding: 1rem 2rem;
   border-radius: 99.9rem;
   background: #fff;
   color: #2d6a4f;

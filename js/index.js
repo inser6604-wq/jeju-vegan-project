@@ -146,6 +146,25 @@ if (goTopBtn) {
 window.addEventListener('DOMContentLoaded', setSubmitTabFromHash);
 window.addEventListener('hashchange', setSubmitTabFromHash);
 
+// Scroll Reveal Animation
+(function () {
+  var srEls = document.querySelectorAll('.sr');
+  if (!srEls.length) return;
+
+  var observer = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        var delay = parseFloat(entry.target.dataset.srDelay) || 0;
+        entry.target.style.transitionDelay = delay + 's';
+        entry.target.classList.add('is-visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+  srEls.forEach(function (el) { observer.observe(el); });
+})();
+
 document.addEventListener("click", (e) => {
   const mobileMenu = document.querySelector(".mobile-menu");
 
