@@ -86,6 +86,7 @@ body.dOpen .site-header {
   font-weight: 400;
   white-space: nowrap;
   text-decoration: none;
+  transition: 0.1s;
 }
 
 .header-menu .main > a:hover {
@@ -110,12 +111,13 @@ body.dOpen .site-header {
   margin-top: 1.5rem;
 }
 
-.sub-menu a {
+.sub-menu  a{
   color: #fff;
   font-size: 1.5rem;
   font-weight: 300;
   text-decoration: none;
   white-space: nowrap;
+  transition: 0.35s;
 }
 
 .sub-menu a:hover{font-weight: 500;}
