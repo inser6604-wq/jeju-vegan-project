@@ -893,6 +893,7 @@
     width: 100%;
     margin: 0 auto;
   }
+
   .footer-desc {
     font-size: 1.3rem;
     text-align: center;
@@ -905,10 +906,9 @@
     width:90%;
     column-gap: 4rem;
   }
-
+  
   .footer-menu {
     row-gap: 0.5rem;
-    
   }
 
   .footer-menu-top {
