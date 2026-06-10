@@ -55,41 +55,13 @@
   position: absolute;
   inset: 0;
   z-index: 2;
-  padding: 0 5rem;
+  padding: 0 1.5rem;
   display: flex;
   align-items: center;
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
   transition: opacity 0.8s ease, visibility 0.8s ease;
-}
-
-.sr {
-  opacity: 0;
-  transform: translateY(30px);
-  transition: opacity 0.85s cubic-bezier(0.22, 1, 0.36, 1), transform 0.85s cubic-bezier(0.22, 1, 0.36, 1);
-  will-change: opacity, transform;
-}
-
-.sr-up {
-  transform: translateY(30px);
-}
-
-.sr-down {
-  transform: translateY(-30px);
-}
-
-.sr-left {
-  transform: translateX(-30px);
-}
-
-.sr-right {
-  transform: translateX(30px);
-}
-
-.sr.is-visible {
-  opacity: 1;
-  transform: none;
 }
 
 .home-course-content .course-card.sr,
@@ -114,14 +86,15 @@
 }
 .home-hero-search-title,
 .home-hero-search-desc{
-  padding-left: 2rem;
+  padding-left: 1.3rem;
+  white-space: nowrap;
 }
 .home-hero-search-title {
   font-family: "A2Z", sans-serif;
-  font-size: 3.2rem;
+  font-size: 5rem;
   font-weight: 700;
   color: #111;
-  line-height: 1.35;
+  line-height: 1.5;
   word-break: keep-all;
 }
 
@@ -133,9 +106,9 @@
 
 .home-hero-search-desc {
   margin-top: 1.4rem;
-  font-size: 1.5rem;
+  font-size: 2rem;
   color: #222;
-  line-height: 1.65;
+  line-height: 2;
   word-break: keep-all;
 }
 .home-hero-search-desc span {
@@ -146,9 +119,9 @@
   display: flex;
   align-items: center;
   width: 100%;
-  max-width: 52rem;
-  height: 5.6rem;
-  margin-top: 2.4rem;
+  max-width: 54rem;
+  height: 5.8rem;
+  margin-top: 2.8rem;
   padding: 0.5rem 0.5rem 0.5rem 2.4rem;
   border-radius: 999px;
   background: #e8e8e6;
@@ -190,7 +163,7 @@
 
 .home-hero-content {
   width: min(100%, 520px);
-  padding-top: 4rem;
+  padding-top: 2rem;
   pointer-events: auto;
 }
 
@@ -557,6 +530,8 @@
 
 .home-course-title {
   font-size: 1.8rem;
+  font-family: "A2Z", sans-serif;
+  font-weight: 600;
 }
 
 .home-course-desc {
@@ -661,6 +636,52 @@
   width: 100%;
   height: auto;
 }
+.map-wrapper {
+  position: relative;
+  display: inline-block; /* 또는 width 고정 */
+  width: 100%;
+}
+
+.map-wrapper img {
+  display: block;
+  width: 100%;
+}
+
+.main-map-pin {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transform: translateX(-50%);
+  z-index: 10;
+}
+
+.main-map-pin img {
+  width: 4.8rem;
+  filter: drop-shadow(0 3px 6px rgba(0,0,0,0.25));
+}
+
+.main-map-pin span {
+  background: white;
+  border-radius: 2rem;
+  padding: 0.6rem 1.4rem;
+  font-size: 2rem;
+  font-weight: 600;
+  white-space: nowrap;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.02);
+  color: #333;
+}
+
+.main-map-pin[data-location="jeju"]{ left: 54%; top: 10%; }
+.main-map-pin[data-location="aewol"]{ left: 30%; top: 24%; }
+.main-map-pin[data-location="hallim"]{ left: 12%;  top: 49%; }
+.main-map-pin[data-location="hyeopjae"]{ left: 18%; top: 68%; }
+.main-map-pin[data-location="seogwipo"]{ left: 50%; top: 70%; }
+.main-map-pin[data-location="seongsan"]{ left: 88%; top: 36%; }
 
 .home-map-stats {
   position: relative;
