@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', function () {
         var total = slides.length;
         var current = 0;
         var timer = null;
-        var INTERVAL = 7000;
+        var INTERVAL = 3000;
 
         if (!total) return;
 
@@ -172,7 +172,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
           var target = parseInt(item.dataset.count, 10) || 0;
           var suffix = item.dataset.suffix || '';
-          var duration = 1200;
+          var duration = 2000;
           var startTime = null;
 
           function updateCount(timestamp) {

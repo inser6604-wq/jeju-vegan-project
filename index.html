@@ -23,8 +23,8 @@
 
         <div class="inner home-hero-inner home-hero-inner--search is-visible">
           <div class="home-hero-search-copy sr sr-up" data-sr-delay="0.1">
-            <h2 class="home-hero-search-title">지금 어떤 <span>음식</span>이 끌리시나요?</h2>
-            <p class="home-hero-search-desc">먹고 싶은 메뉴를 입력하시면 <span>제주 비건 맛집</span>을 추천해드릴게요</p>
+            <h2 class="home-hero-search-title"><span>제주 비건 맛집</span>, 어디로 가볼까요?</h2>
+            <p class="home-hero-search-desc"><span>찾고 싶은 메뉴</span>를 입력하면 제주 비건 맛집을 지도에서 바로 확인할 수 있어요.</p>
             <form class="home-hero-search-form" action="map.html" method="get">
               <label for="hero-search-input" class="hide">메뉴 검색</label>
               <input
@@ -197,7 +197,34 @@
           </div>
 
           <div class="home-map-visual sr sr-up" data-sr-delay="0.1">
-            <img src="image/main-map01.png" alt="제주 비건 지도">
+            <div class="map-wrapper">
+              <img src="image/main-mapbefore.png" alt="제주 비건 지도">
+              
+              <button class="main-map-pin sr sr-up" data-sr-delay="0.5" data-location="jeju">
+                <img src="image/mappin-orange.svg" alt="제주시">
+                <span>제주시</span>
+              </button>
+              <button class="main-map-pin sr sr-up" data-sr-delay="0.7" data-location="aewol">
+                <img src="image/mappin-orange.svg" alt="애월">
+                <span>애월</span>
+              </button>
+              <button class="main-map-pin sr sr-up" data-sr-delay="0.9" data-location="hallim">
+                <img src="image/mappin-orange.svg" alt="한림">
+                <span>한림</span>
+              </button>
+              <button class="main-map-pin sr sr-up" data-sr-delay="1.1" data-location="hyeopjae">
+                <img src="image/mappin-orange.svg" alt="협재">
+                <span>협재</span>
+              </button>
+              <button class="main-map-pin sr sr-up" data-sr-delay="1.3" data-location="seogwipo">
+                <img src="image/mappin-orange.svg" alt="서귀포">
+                <span>서귀포</span>
+              </button>
+              <button class="main-map-pin sr sr-up" data-sr-delay="2" data-location="seongsan">
+                <img src="image/mappin-orange.svg" alt="성산">
+                <span>성산</span>
+              </button>
+            </div>
           </div>
 
           <ul class="home-map-stats card-list">
