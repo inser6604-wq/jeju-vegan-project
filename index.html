@@ -12,16 +12,57 @@
 
     <main id="container" class="page page-index">
       <section class="home-hero">
-        <div class="inner">
+        <div class="home-hero-slides">
+          <div class="home-hero-slide home-hero-slide--search is-active">
+            <img src="image/main-hero-img.svg" alt= "main-slider-image01">
+          </div>
+          <div class="home-hero-slide">
+            <img src="image/main-hero.svg" alt= "main-slider-image02">
+          </div>
+        </div>
+
+        <div class="inner home-hero-inner home-hero-inner--search is-visible">
+          <div class="home-hero-search-copy">
+            <h2 class="home-hero-search-title">지금 어떤 <span>음식</span>이 끌리시나요?</h2>
+            <p class="home-hero-search-desc">먹고 싶은 메뉴를 입력하시면 <span>제주 비건 맛집</span>을 추천해드릴게요</p>
+            <form class="home-hero-search-form" action="map.html" method="get">
+              <label for="hero-search-input" class="hide">메뉴 검색</label>
+              <input
+                type="search"
+                id="hero-search-input"
+                name="q"
+                class="home-hero-search-input"
+                placeholder="파스타, 샐러드, 브런치, 디저트...">
+              <button type="submit" class="btn home-hero-search-btn" aria-label="검색">
+                <span class="iconify" data-icon="mdi:chevron-right" aria-hidden="true"></span>
+              </button>
+            </form>
+          </div>
+        </div>
+
+        <div class="inner home-hero-inner home-hero-inner--main">
           <div class="home-hero-content">
             <p class="home-hero-subtitle">제주에서 발견하는 더 건강하고 지속 가능한 라이프 스타일</p>
             <h2 class="home-hero-title">EAT<br><span>VEGAN</span><br>IN JEJU</h2>
             <a href="map.html" class="btn btn-primary">비건 지도 보기</a>
           </div>
+        </div>
 
-          <div class="home-hero-controls">
-            <button type="button" class="btn home-hero-arrow" aria-label="이전 슬라이드">‹</button>
-            <button type="button" class="btn home-hero-arrow" aria-label="다음 슬라이드">›</button>
+        <div class="home-hero-bar">
+          <div class="inner home-hero-bar-inner">
+            <p class="home-hero-counter" aria-live="polite">
+              <span class="home-hero-current">01</span>
+              <span class="home-hero-counter-sep" aria-hidden="true">—</span>
+              <span class="home-hero-total">02</span>
+            </p>
+            <div class="home-hero-nav">
+              <button type="button" class="btn home-hero-nav-btn home-hero-prev" aria-label="이전 슬라이드">
+                <span class="iconify" data-icon="mdi:chevron-left" aria-hidden="true"></span>
+              </button>
+              <button type="button" class="btn home-hero-nav-btn home-hero-next" aria-label="다음 슬라이드">
+                <span class="iconify" data-icon="mdi:chevron-right" aria-hidden="true"></span>
+              </button>
+            </div>
           </div>
         </div>
       </section>

@@ -7,20 +7,158 @@
 .home-hero {
   position: relative;
   height: 100vh;
-  padding: 160px 0 100px;
-  background:
-    url("../image/main-hero.jpg") center / cover no-repeat;
+  min-height: calc(100vh - 8rem);
+  padding: 160px 0 88px;
+  overflow: hidden;
 }
 
-.home-hero .inner {
-  position: relative;
-  min-height: 500px;
+.home-hero-slides {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.home-hero-slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.8s ease, visibility 0.8s ease;
+}
+
+.home-hero-slide.is-active {
+  opacity: 1;
+  visibility: visible;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.home-hero-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: bottom;
+  cursor: pointer;
+}
+
+.home-hero-slide--search {
+  background: #f0ebe3;
+}
+
+.home-hero-slide--search img {
+  object-fit: cover;
+  object-position: center center;
+}
+
+.home-hero-inner {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  padding: 0 5rem;
+  display: flex;
+  align-items: center;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.8s ease, visibility 0.8s ease;
+}
+
+.home-hero-inner.is-visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+.home-hero-inner--search {
+  padding-top: 8rem;
+  padding-bottom: 9rem;
+  box-sizing: border-box;
+}
+
+.home-hero-search-copy {
+  width: min(100%, 52rem);
+  pointer-events: auto;
+}
+.home-hero-search-title,
+.home-hero-search-desc{
+  padding-left: 2rem;
+}
+.home-hero-search-title {
+  font-family: "A2Z", sans-serif;
+  font-size: 3.2rem;
+  font-weight: 700;
+  color: #111;
+  line-height: 1.35;
+  word-break: keep-all;
+}
+
+.home-hero-search-title span{
+  font-family: "A2Z", sans-serif;
+  color: #2d6a4f;
+  font-weight: 700;
+}
+
+.home-hero-search-desc {
+  margin-top: 1.4rem;
+  font-size: 1.5rem;
+  color: #222;
+  line-height: 1.65;
+  word-break: keep-all;
+}
+.home-hero-search-desc span {
+  color: #2d6a4f;
+  font-weight: 600;
+}
+.home-hero-search-form {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 52rem;
+  height: 5.6rem;
+  margin-top: 2.4rem;
+  padding: 0.5rem 0.5rem 0.5rem 2.4rem;
+  border-radius: 999px;
+  background: #e8e8e6;
+}
+
+.home-hero-search-input {
+  flex: 1;
+  min-width: 0;
+  height: 100%;
+  border: 0;
+  background: transparent;
+  font-size: 1.4rem;
+  color: #333;
+}
+
+.home-hero-search-input::placeholder {
+  color: #9a9a9a;
+}
+
+.home-hero-search-input:focus {
+  outline: none;
+}
+
+.home-hero-search-btn {
+  flex-shrink: 0;
+  width: 4.8rem;
+  height: 4.8rem;
+  border-radius: 50%;
+  background: #2d6a4f;
+  color: #fff;
+  font-size: 2.4rem;
+  transition: background 0.2s ease;
+}
+
+.home-hero-search-btn:hover,
+.home-hero-search-btn:focus-visible {
+  background: #245740;
 }
 
 .home-hero-content {
   width: min(100%, 520px);
-  padding-top: 68px;
-  padding-left: 55px;
+  padding-top: 4rem;
+  pointer-events: auto;
 }
 
 .home-hero-subtitle {
@@ -66,25 +204,67 @@
   background-size: 100% 100%;
   color: #fff;
 }
-.home-hero-controls {
+.home-hero-bar {
   position: absolute;
-  top: 50%;
   left: 0;
   right: 0;
-  display: flex;
-  justify-content: space-between;
-  transform: translateY(-50%);
-  pointer-events: none;
+  bottom: 0;
+  z-index: 3;
+  background: #1A3A2A;
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
 }
 
-.home-hero-arrow {
-  width: 58px;
-  height: 58px;
-  background: rgba(255, 255, 255, 0.92);
-  color: #111;
-  font-size: 4rem;
+.home-hero-bar-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 72px;
+  padding: 14px 0;
+}
+
+.home-hero-counter {
+  margin: 0;
+  font-size: 1.6rem;
+  line-height: 1;
+  letter-spacing: 0.04em;
+}
+
+.home-hero-current {
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.home-hero-counter-sep {
+  margin: 0 0.5rem;
+  color: #c8c8c8;
   font-weight: 300;
-  pointer-events: auto;
+}
+
+.home-hero-total {
+  font-weight: 400;
+  color: #9a9a9a;
+}
+
+.home-hero-nav {
+  display: flex;
+  gap: 12px;
+}
+
+.home-hero-nav-btn {
+  width: 44px;
+  height: 44px;
+  border: 1px solid #d8d8d8;
+  border-radius: 50%;
+  background: #fff;
+  color: #333;
+  font-size: 2.2rem;
+  transition: border-color 0.2s ease, color 0.2s ease;
+}
+
+.home-hero-nav-btn:hover,
+.home-hero-nav-btn:focus-visible {
+  border-color: #2d6a4f;
+  color: #2d6a4f;
 }
 
 .home-pick {

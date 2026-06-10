@@ -14,6 +14,93 @@ document.querySelectorAll('.like-btn').forEach(btn => {
 
 document.addEventListener('DOMContentLoaded', function () {
 
+      // 메인 히어로 슬라이더
+      (function initHeroSlider() {
+        var hero = document.querySelector('.home-hero');
+        if (!hero) return;
+
+        var slides = hero.querySelectorAll('.home-hero-slide');
+        var heroSearch = hero.querySelector('.home-hero-inner--search');
+        var heroMain = hero.querySelector('.home-hero-inner--main');
+        var currentEl = hero.querySelector('.home-hero-current');
+        var totalEl = hero.querySelector('.home-hero-total');
+        var prevBtn = hero.querySelector('.home-hero-prev');
+        var nextBtn = hero.querySelector('.home-hero-next');
+        var total = slides.length;
+        var current = 0;
+        var timer = null;
+        var INTERVAL = 7000;
+
+        if (!total) return;
+
+        function pad(num) {
+          return String(num).padStart(2, '0');
+        }
+
+        function updateCounter() {
+          if (currentEl) currentEl.textContent = pad(current + 1);
+          if (totalEl) totalEl.textContent = pad(total);
+        }
+
+        function updateContent() {
+          if (heroSearch) heroSearch.classList.toggle('is-visible', current === 0);
+          if (heroMain) heroMain.classList.toggle('is-visible', current === 1);
+        }
+
+        function goTo(index) {
+          slides[current].classList.remove('is-active');
+          current = (index + total) % total;
+          slides[current].classList.add('is-active');
+          updateCounter();
+          updateContent();
+        }
+
+        function next() {
+          goTo(current + 1);
+        }
+
+        function prev() {
+          goTo(current - 1);
+        }
+
+        function startAutoplay() {
+          stopAutoplay();
+          timer = window.setInterval(next, INTERVAL);
+        }
+
+        function stopAutoplay() {
+          if (timer) {
+            window.clearInterval(timer);
+            timer = null;
+          }
+        }
+
+        if (prevBtn) {
+          prevBtn.addEventListener('click', function () {
+            prev();
+            startAutoplay();
+          });
+        }
+
+        if (nextBtn) {
+          nextBtn.addEventListener('click', function () {
+            next();
+            startAutoplay();
+          });
+        }
+
+        hero.addEventListener('mouseenter', stopAutoplay);
+        hero.addEventListener('mouseleave', startAutoplay);
+        hero.addEventListener('focusin', stopAutoplay);
+        hero.addEventListener('focusout', function (e) {
+          if (!hero.contains(e.relatedTarget)) startAutoplay();
+        });
+
+        updateCounter();
+        updateContent();
+        startAutoplay();
+      })();
+
       // FAQ 아코디언
       document.querySelectorAll('.js-faq-question').forEach(function (btn) {
         btn.addEventListener('click', function () {
