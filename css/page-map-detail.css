@@ -530,6 +530,9 @@ input[type="text"]::placeholder {
 .map-detail-desc-inner{
   padding:0 1rem;
 }
+.map-detail-section{
+  padding:3rem 0;
+}
 .map-detail-head-img-list {
   width: 100%;
   height: 70rem;
@@ -566,7 +569,6 @@ input[type="text"]::placeholder {
   /* border: 1px solid red; */
   position: relative;
   width:100%;
-  height:30rem;
   display:flex;
   flex-direction: column;
   justify-content: center;
@@ -616,6 +618,29 @@ input[type="text"]::placeholder {
   height:3.7rem;
   font-size:1.6rem;
 }
-.map-detail-divider{
-  
+.map-detail-divider{border:1px solid #e6e6e6;}
+.map-detail-sub-title{
+  font-size:1.8rem;
+  font-weight:500;
+  margin-bottom:1.5rem;
+}
+.map-detail-def-list{
+  display:flex;
+  flex-direction: column;
+  row-gap:1.5rem;
+  color:#222;
+}
+.map-detail-def{
+  display:flex;
+  column-gap:1.5rem;
+  font-size:1.6rem;
+}
+.map-detail-def-left{
+  width:10rem;
+  display:flex;
+  column-gap:0.5rem;
+}
+.map-detail-sub-desc{
+  font-size:1.6rem;
+  color:#222;
 }
