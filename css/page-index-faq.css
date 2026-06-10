@@ -10,6 +10,7 @@
   min-height: calc(100vh - 8rem);
   padding: 160px 0 88px;
   overflow: hidden;
+  margin-top: -8rem;
 }
 
 .home-hero-slides {
