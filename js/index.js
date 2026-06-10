@@ -233,24 +233,42 @@ if (goTopBtn) {
 window.addEventListener('DOMContentLoaded', setSubmitTabFromHash);
 window.addEventListener('hashchange', setSubmitTabFromHash);
 
-// Scroll Reveal Animation-
-// (function () {
-//   var srEls = document.querySelectorAll('.sr');
-//   if (!srEls.length) return;
+// 메인 페이지 투명 헤더: includeHTML 로딩 완료 후 초기화
+document.addEventListener('includeHTMLLoaded', function () {
+  if (!document.querySelector('.page-index')) return;
 
-//   var observer = new IntersectionObserver(function (entries) {
-//     entries.forEach(function (entry) {
-//       if (entry.isIntersecting) {
-//         var delay = parseFloat(entry.target.dataset.srDelay) || 0;
-//         entry.target.style.transitionDelay = delay + 's';
-//         entry.target.classList.add('is-visible');
-//         observer.unobserve(entry.target);
-//       }
-//     });
-//   }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+  var header = document.querySelector('.site-header');
+  if (!header) return;
 
-//   srEls.forEach(function (el) { observer.observe(el); });
-// })();
+  var logoImg = header.querySelector('.logo img');
+  var defaultLogo = 'image/jeju-vegan-logo-default.svg';
+  var greenLogo = 'image/jeju-vegan-logo-green.svg';
+
+  function updateHeader() {
+    if (window.scrollY < 10) {
+      header.classList.add('is-transparent');
+      if (logoImg) logoImg.src = greenLogo;
+    } else {
+      header.classList.remove('is-transparent');
+      if (logoImg) logoImg.src = defaultLogo;
+    }
+  }
+
+  header.addEventListener('mouseenter', function () {
+    if (header.classList.contains('is-transparent') && logoImg) {
+      logoImg.src = defaultLogo;
+    }
+  });
+
+  header.addEventListener('mouseleave', function () {
+    if (header.classList.contains('is-transparent') && logoImg) {
+      logoImg.src = greenLogo;
+    }
+  });
+
+  window.addEventListener('scroll', updateHeader);
+  updateHeader();
+});
 
 document.addEventListener("click", (e) => {
   const mobileMenu = document.querySelector(".mobile-menu");
