@@ -305,59 +305,67 @@ document.addEventListener("click", (e) => {
 const mapBtns = document.querySelectorAll('.map-btn');
 const resetBtn = document.querySelector('#map-reset');
 
-mapBtns.forEach(btn => {
-  btn.addEventListener('click', () => {
-    btn.classList.toggle('active');
+if (mapBtns.length) {
+  mapBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      btn.classList.toggle('active');
+    });
   });
-});
+}
 
-resetBtn.addEventListener('click', () => {
-  mapBtns.forEach(btn => btn.classList.remove('active'));
-});
+if (resetBtn) {
+  resetBtn.addEventListener('click', () => {
+    mapBtns.forEach(btn => btn.classList.remove('active'));
+  });
+}
 
 // map-filter-tab 여닫기 클릭
 document.addEventListener('DOMContentLoaded', () => {
   const filterTab = document.querySelector('.map-filter-tab');
   const filterInner = document.querySelector('.map-filter-inner');
   const mapFilter = document.querySelector('.map-filter');
-  const tabArrow = filterTab.querySelector('img');
+  const tabArrow = filterTab ? filterTab.querySelector('img') : null;
   let isOpen = true;
 
-  filterTab.addEventListener('click', (e) => {
-    e.preventDefault();
-    isOpen = !isOpen;
-    filterInner.classList.toggle('hidden', !isOpen);
-    mapFilter.classList.toggle('closed', !isOpen);
-    tabArrow.style.transform = isOpen ? 'rotate(0deg)' : 'rotate(180deg)';
-  });
+  if (filterTab && filterInner && mapFilter && tabArrow) {
+    filterTab.addEventListener('click', (e) => {
+      e.preventDefault();
+      isOpen = !isOpen;
+      filterInner.classList.toggle('hidden', !isOpen);
+      mapFilter.classList.toggle('closed', !isOpen);
+      tabArrow.style.transform = isOpen ? 'rotate(0deg)' : 'rotate(180deg)';
+    });
+  }
 });
 
   // map-filter-search기능
 const searchInput = document.querySelector('.map-search input');
 const allCards = document.querySelectorAll('.map-place-card');
 
-searchInput.addEventListener('input', () => {
-  const keyword = searchInput.value.trim().toLowerCase();
+if (searchInput) {
+  searchInput.addEventListener('input', () => {
+    const keyword = searchInput.value.trim().toLowerCase();
 
-  allCards.forEach(card => {
-    const title = card.querySelector('.map-card-title').textContent.toLowerCase();
-    const place = card.querySelector('.card-place').textContent.toLowerCase();
+    allCards.forEach(card => {
+      const title = card.querySelector('.map-card-title').textContent.toLowerCase();
+      const place = card.querySelector('.card-place').textContent.toLowerCase();
 
-    if (keyword === '') {
-      if (card.classList.contains('map-hidden')) {
-        card.style.display = 'none';
+      if (keyword === '') {
+        if (card.classList.contains('map-hidden')) {
+          card.style.display = 'none';
+        } else {
+          card.style.display = 'flex';
+        }
       } else {
-        card.style.display = 'flex';
+        if (title.includes(keyword)){
+          card.style.display = 'flex';
+        } else {
+          card.style.display = 'none';
+        }
       }
-    } else {
-      if (title.includes(keyword)){
-        card.style.display = 'flex';
-      } else {
-        card.style.display = 'none';
-      }
-    }
+    });
   });
-});
+}
 
   // map-pin hover
 const mapPinItems = document.querySelectorAll('.map-pin');
@@ -396,14 +404,21 @@ mapPinItems.forEach(pinItem => {
 const mapListTab = document.querySelector('.map-list-tab');
 const hiddenCards = document.querySelectorAll('.map-hidden');
 
-mapListTab.addEventListener('click', () => {
-  const isHidden = mapListTab.classList.contains('active');
+if (mapListTab) {
+  mapListTab.addEventListener('click', () => {
+    const isHidden = mapListTab.classList.contains('active');
 
-  hiddenCards.forEach(card => {
-    card.classList.toggle('map-hidden');
+    hiddenCards.forEach(card => {
+      card.classList.toggle('map-hidden');
+    });
+
+    mapListTab.classList.toggle('active');
+    const tabImg = mapListTab.querySelector('img');
+    if (tabImg) {
+      tabImg.style.transform = isHidden ? 'rotate(180deg)' : 'rotate(0deg)';
+    }
+    if (mapListTab.lastChild) {
+      mapListTab.lastChild.textContent = isHidden ? '접기' : '더보기';
+    }
   });
-
-  mapListTab.classList.toggle('active');
-  mapListTab.querySelector('img').style.transform = isHidden ? 'rotate(180deg)' : 'rotate(0deg)';
-  mapListTab.lastChild.textContent = isHidden ? '접기' : '더보기';
-});
+}
