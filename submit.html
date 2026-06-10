@@ -12,38 +12,31 @@
     <main id="container" class="page page-submit">
       <input id="tab-store" type="radio" name="submit-type" checked hidden>
       <input id="tab-report" type="radio" name="submit-type" hidden>
-      <section class="submit-hero section">
+      <section class="sub-hero submit-hero">
         <div class="inner">
-          <div class="submit-hero-head submit-store-hero">
-            <span class="submit-eyebrow">가게 등록</span>
+          <div class="sub-hero-content submit-hero-head submit-store-hero">
             <h1 class="submit-hero-title">비건 식당 등록 신청</h1>
-            <p class="submit-hero-desc">사장님이 직접 비건 식당을 등록 신청하는 페이지입니다. 정확한 정보를 입력해 주세요.</p>
+            <p class="submit-hero-desc">사장님이 직접 비건 식당을 등록 신청하는 페이지입니다.<br> 정확한 정보를 입력해 주세요.</p>
           </div>
-          <div class="submit-hero-head submit-report-hero">
-            <span class="submit-eyebrow">맛집 제보</span>
+          <div class="sub-hero-content submit-hero-head submit-report-hero">
             <h1 class="submit-hero-title">비건 정보 제보하기</h1>
-            <p class="submit-hero-desc">직접 방문한 비건 식당 정보를 공유해 주세요. 여러분의 제보가 다른 비건 여행자에게 도움이 됩니다.</p>
-          </div>
-          <div class="submit-switch">
-            <div class="submit-tabs">
-              <label for="tab-store">식당 등록</label>
-              <label for="tab-report">소비자 제보</label>
-            </div>
-            <div class="submit-switch-content">
-              <div class="submit-copy submit-store-panel">
-                <span class="submit-copy-label">가게 등록</span>
-                <h2>사장님이 직접 등록하는 신뢰도 높은 등록 페이지입니다.</h2>
-                <p>사장님이 직접 입력하신 정보는 더 빠르게 검증되어 제주 비건 지도에 반영됩니다. 정확한 주소와 메뉴 정보를 입력해 주세요.</p>
-              </div>
-              <div class="submit-copy submit-report-panel">
-                <span class="submit-copy-label">맛집 제보</span>
-                <h2>방문객이 간편하게 제보하는 맛집 정보 페이지입니다.</h2>
-                <p>제주의 숨은 비건 스팟을 제보해 주세요. 방문한 날짜, 메뉴, 사진을 함께 남기면 더 정확하게 반영됩니다.</p>
-              </div>
-            </div>
+            <p class="submit-hero-desc">직접 방문한 비건 식당 정보를 공유해 주세요.<br> 여러분의 제보가 다른 비건 여행자에게 도움이 됩니다.</p>
           </div>
         </div>
       </section>
+      <nav class="breadcrumb">
+        <a href="index.html">홈</a>
+        <span>&gt;</span>
+        <a href="submit.html">식당등록</a>
+        <span class="submit-crumb-store">&gt;</span>
+        <span class="current submit-crumb-store">가게 등록</span>
+        <span class="submit-crumb-report">&gt;</span>
+        <span class="current submit-crumb-report">맛집 제보</span>
+      </nav>
+      <div class="submit-tabs">
+        <label for="tab-store">가게 등록</label>
+        <label for="tab-report">맛집 제보</label>
+      </div>
       <section class="submit-form section">
         <div class="inner">
           <form class="submit-form-body" action="#" method="post">
