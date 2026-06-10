@@ -61,9 +61,7 @@ body {
   display: flex;
   align-items: center;
   overflow: hidden;
-
 }
-
 .map-section-head {
   text-align: center;
 }
@@ -502,9 +500,21 @@ input[type="text"]::placeholder {
 }
 
 /* map-detail______________ */
+.map-detail-content{
+  border: 1px solid #a2c7b6;
+  background-color: #fff;
+  width:140rem;
+  height: auto;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin:8rem auto 0;
+}
 .map-detail-inner{
   border: 1px solid #000;
-  padding:2rem 0;
+  padding:4rem 5rem;
+  
 }
 .map-detail-back{
   display:flex;
@@ -517,18 +527,49 @@ input[type="text"]::placeholder {
 .map-detail-back-img{
   width:2rem;
 }
-.map-detail-head-img{
-  width:100%;
-  height:50rem;
+.map-detail-desc-inner{
+  padding:0 1rem;
+}
+.map-detail-head-img-list {
+  width: 100%;
+  height: 70rem;
+  display: flex;
+  column-gap: 1rem;
+  align-items: stretch;
+}
+
+.map-detail-head-img1 {
+  width: 60%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 2rem;
+  flex-shrink: 0;
+}
+
+.map-detail-head-img-right {
+  width: 40%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+}
+
+.map-detail-head-img2,
+.map-detail-head-img3 {
+  width: 100%;
+  flex: 1;
+  min-height: 0;
   object-fit: cover;
   border-radius: 2rem;
 }
 .map-detail-title{
-  border: 1px solid red;
+  /* border: 1px solid red; */
+  position: relative;
   width:100%;
   height:30rem;
   display:flex;
   flex-direction: column;
+  justify-content: center;
   row-gap:1.8rem;
   color:#222;
 }
@@ -537,10 +578,44 @@ input[type="text"]::placeholder {
   font-family: 'A2Z';
   font-weight:600;
 }
+.map-detail-name span{
+  font-size:1.8rem;
+  color:#969696;
+  font-weight:500;
+  letter-spacing: -0.05em;
+}
 .map-detail-place{
-  font-size:3.5rem;
-  font-weight:400;
+  font-size:2.5rem;
+  font-weight:500;
+}
+.map-detail-rating{
+  display:flex;
+  font-size:1.6rem;
+  color:#ff7a00;
 }
 .map-detail-rating span{
+  font-size:1.4rem;
+  color:#777;
+  margin-left:0.5rem;
+}
+.map-detail-vegan-level{
+  font-size:1.5rem;
+  display:flex;
+  align-items: center;
+  column-gap:1rem;
+}
+.map-detail-vegan-leaves img{
+  width:3rem;
+  height:3rem;
+}
+.map-detail-cur{
+  position:absolute;
+  top:3rem;
+  right:3rem;
+  width:8.5rem;
+  height:3.7rem;
   font-size:1.6rem;
+}
+.map-detail-divider{
+  
 }
