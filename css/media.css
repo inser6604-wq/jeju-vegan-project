@@ -1016,3 +1016,18 @@
     column-gap: 1.5rem;
   }
 }
+/* 지도 핀 반응형 */
+@media (max-width: 1200px) {
+  .main-map-pin img { width: 40px; }
+  .main-map-pin span { font-size: 13px; padding: 4px 11px; }
+}
+@media (max-width: 768px) {
+  .main-map-pin img { width: 30px; }
+  .main-map-pin span { font-size: 11px; padding: 3px 8px; }
+  .main-map-pin { gap: 4px; }
+}
+@media (max-width: 480px) {
+  .main-map-pin img { width: 22px; }
+  .main-map-pin span { font-size: 9px; padding: 2px 6px; }
+  .main-map-pin { gap: 2px; }
+}
