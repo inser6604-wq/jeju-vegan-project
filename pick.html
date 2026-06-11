@@ -19,7 +19,7 @@
         </div>
       </div>
     </section>     
-    <nav class="breadcrumb">
+    <nav class="breadcrumb sr">
       <a href="index.html">홈</a>
       <span>&gt;</span>
       <a href="map.html">여행코스</a>
@@ -29,7 +29,7 @@
     <div class="inner">
       <section class="pick-today">
   
-        <div class="pick-submenu">
+        <div class="pick-submenu sr">
           <ul>
             <li><a href="pick.html" class="active">오늘의 비건 pick</a></li>
             <li><a href="course.html">비건 여행 코스</a></li>
@@ -37,11 +37,11 @@
         </div>
   
         <div class="pick-layout">
-          <div class="pick-img img-box">
+          <div class="pick-img img-box sr sr-left">
             <img src="./image/vegan-pick-img08.png" alt="제주흑보리">
           </div>
     
-          <div class="pick-content">
+          <div class="pick-content sr sr-right">
             <div class="pick-info">
               <span class="badge badge-vegan">완전비건</span>
               <h2 class="pick-title">제주 흑보리 비건 플레이트</h2>
@@ -83,9 +83,9 @@
       </section>
   
       <section class="pick-rest">
-        <h3 class="section-title">오늘의 추천맛집 & 메뉴 </h3>
+        <h3 class="section-title sr">오늘의 추천맛집 & 메뉴 </h3>
       
-        <div class="tab">
+        <div class="tab sr">
           <div class="tab-list">
             <button class="tab-btn active">전체</button>
             <button class="tab-btn">제주시</button>
@@ -101,7 +101,7 @@
         </div>
   
         <ul class="card-list">
-          <li class="card place-card">
+          <li class="card place-card sr" data-sr-delay="0">
             <div class="card-img img-box">
               <img src="./image/vegan-pick-img02.png" alt="제주 바당 비건라면">
             </div>
@@ -121,7 +121,7 @@
               </div>
             </div>
           </li>
-          <li class="card place-card">
+          <li class="card place-card sr" data-sr-delay="0.1">
             <div class="card-img img-box">
               <img src="./image/vegan-pick-img03.png" alt="한라 비건 무스케이크">
             </div>
@@ -141,7 +141,7 @@
               </div>
             </div>
           </li>
-          <li class="card place-card ">
+          <li class="card place-card sr" data-sr-delay="0.2">
             <div class="card-img img-box">
               <img src="./image/vegan-pick-img04.jpg" alt="샌드위치">
             </div>
@@ -161,7 +161,7 @@
               </div>
             </div>
           </li>
-          <li class="card place-card">
+          <li class="card place-card sr" data-sr-delay="0.3">
             <div class="card-img img-box">
               <img src="./image/vegan-pick-img05.jpg" alt="베이커리">
             </div>
@@ -181,7 +181,7 @@
               </div>
             </div>
           </li>
-          <li class="card place-card">
+          <li class="card place-card sr" data-sr-delay="0.4">
             <div class="card-img img-box">
               <img src="./image/vegan-pick-img06.jpg" alt="파스타">
             </div>
@@ -201,7 +201,7 @@
               </div>
             </div>
           </li>
-          <li class="card place-card">
+          <li class="card place-card sr" data-sr-delay="0.5">
             <div class="card-img img-box">
               <img src="./image/vegan-pick-img07.jpg" alt="비건 브런치">
             </div>
@@ -221,7 +221,7 @@
               </div>
             </div>
           </li>
-          <li class="card place-card">
+          <li class="card place-card sr card-extra card-hidden">
             <div class="card-img img-box">
               <img src="./image/vegan-pick-img07.jpg" alt="비건 브런치">
             </div>
@@ -241,7 +241,7 @@
               </div>
             </div>
           </li>
-          <li class="card place-card">
+          <li class="card place-card sr card-extra card-hidden">
             <div class="card-img img-box">
               <img src="./image/vegan-pick-img07.jpg" alt="비건 브런치">
             </div>
@@ -261,7 +261,7 @@
               </div>
             </div>
           </li>
-          <li class="card place-card">
+          <li class="card place-card sr card-extra card-hidden">
             <div class="card-img img-box">
               <img src="./image/vegan-pick-img07.jpg" alt="비건 브런치">
             </div>
@@ -281,7 +281,7 @@
               </div>
             </div>
           </li>
-          <li class="card place-card">
+          <li class="card place-card sr card-extra card-hidden">
             <div class="card-img img-box">
               <img src="./image/vegan-pick-img07.jpg" alt="비건 브런치">
             </div>
@@ -301,7 +301,7 @@
               </div>
             </div>
           </li>
-          <li class="card place-card">
+          <li class="card place-card sr card-extra card-hidden">
             <div class="card-img img-box">
               <img src="./image/vegan-pick-img07.jpg" alt="비건 브런치">
             </div>
@@ -321,7 +321,7 @@
               </div>
             </div>
           </li>
-          <li class="card place-card">
+          <li class="card place-card sr card-extra card-hidden">
             <div class="card-img img-box">
               <img src="./image/vegan-pick-img07.jpg" alt="비건 브런치">
             </div>
@@ -342,6 +342,12 @@
             </div>
           </li>
         </ul>
+        <div class="card-more-wrap sr">
+          <button type="button" class="card-more-btn">
+            <img class="card-more-icon" src="image/map-down-icon.svg" alt="">
+            <span class="card-more-label">더보기</span>
+          </button>
+        </div>
       </section>
     </div>
   </main>
@@ -352,6 +358,7 @@
   </button>
   <script src="https://code.iconify.design/3/3.1.1/iconify.min.js"></script>
   <script src="js/includeHTML.js"></script>
+  <script src="js/scroll.js"></script>
   <script src="js/index.js"></script>
 </body>
 </html>
