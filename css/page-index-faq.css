@@ -76,7 +76,7 @@
 
 .home-course-content .course-card.sr,
 .home-pick-content .place-card.sr {
-  transition: opacity 0.85s cubic-bezier(0.22, 1, 0.36, 1), transform 0.85s cubic-bezier(0.22, 1, 0.36, 1);
+  transition: opacity 0.85s cubic-bezier(0.22, 1, 0.36, 1), transform 0.35s ease, box-shadow 0.35s ease;
 }
 
 .home-hero-inner.is-visible {
@@ -374,7 +374,8 @@
   transition: transform 0.3s ease;
 }
 
-.home-pick-main:hover {
+.home-pick-main:hover,
+.home-pick-content .home-pick-main.sr.is-visible:hover {
   transform: translateY(-12px);
 }
 
@@ -438,7 +439,8 @@
   font-family: "A2Z", sans-serif;
   font-weight: 600;
 }
-.home-pick-side:hover {
+.home-pick-side:hover,
+.home-pick-content .home-pick-side.sr.is-visible:hover {
   transform: translateY(-12px);
 }
 
@@ -744,6 +746,15 @@
   cursor: pointer;
   transform: translateX(-50%);
   z-index: 10;
+}
+
+.main-map-pin.sr,
+.main-map-pin.sr.sr-up {
+  transform: translateX(-50%) translateY(30px);
+}
+
+.main-map-pin.sr.is-visible {
+  transform: translateX(-50%);
 }
 
 .main-map-pin img {
