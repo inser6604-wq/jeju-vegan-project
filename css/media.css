@@ -115,6 +115,37 @@
     text-align: center;
   }
 
+  .home-hero-inner--fresh {
+    justify-content: center;
+    padding-right: 1.5rem;
+  }
+
+  .home-hero-fresh-copy {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-right: 0;
+    text-align: center;
+  }
+
+  .home-hero-fresh-title {
+    font-size: clamp(5.8rem, 16vw, 8.2rem);
+    line-height: 0.8;
+  }
+
+  .home-hero-fresh-desc {
+    width: 100%;
+    margin-top: 1.2rem;
+    font-size: 1.35rem;
+    line-height: 1.45;
+    text-align: center;
+  }
+
+  .home-hero-slide--fresh img {
+    object-position: center bottom;
+  }
+
   .home-hero-subtitle {
     font-size: 1.55rem;
   }
@@ -190,11 +221,16 @@
     text-align: center;
   }
 
+  .home-course .section-title {
+    margin-bottom: 16px;
+  }
+
   .home-course .section-desc {
     max-width: 100%;
+    margin-top: 6px;
     margin-left: auto;
     margin-right: auto;
-    line-height: 1.65;
+    line-height: 1.45;
     word-break: keep-all;
     text-align: center;
   }
@@ -488,6 +524,15 @@
     bottom: 64px;
   }
 
+  .home-hero-fresh-title {
+    font-size: clamp(5.2rem, 15vw, 7.4rem);
+  }
+
+  .home-hero-fresh-desc {
+    font-size: 1.25rem;
+    line-height: 1.4;
+  }
+
   .home-hero-search-title {
     font-size: 2.3rem;
   }
@@ -575,7 +620,8 @@
 
   .home-course .section-desc {
     font-size: 1.3rem;
-    line-height: 1.7;
+    margin-top: 4px;
+    line-height: 1.4;
   }
 
   .home-course-content {
