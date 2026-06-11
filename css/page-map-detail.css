@@ -92,7 +92,6 @@ body {
   width: 0;
 }
 .map-filter-inner {
-  /* border: 1px solid #000; */
   width: 45rem;
   height: 70rem;
   transition: 0.3s ease;
@@ -184,7 +183,6 @@ input[type="text"]::placeholder {
   flex-direction: column;
   row-gap: 1.8rem;
 }
-/* 클릭시.보더없애기 */
 .map-btn{
   border: 1px solid #e2e1e1;
   color: #2d6a4f;
@@ -262,21 +260,19 @@ input[type="text"]::placeholder {
   height: 5.6rem;
   transition:0.3s;
 }
-/* js */
 .map-filter-inner {
   transition: 0.3s ease;
 }
-.map-pin{position: absolute;
-
-}
+.map-pin{position: absolute;}
 .map-pin1 {top: 10%; right: 22%;}
 .map-pin2 {top: 32%; right: 10%;}
 .map-pin3 {top: 50%; right: 18%;}
 .map-pin4 {top: 30%; left: 55%;}
-.map-pin5 {top: 30%; left: 30%;}
+.map-pin5 {top: 34%; left: 24%;}
 .map-pin6 {top: 22%;  left: 35%;}
 .map-pin7 {top: 60%; left: 50%;}
 .map-pin8 {top: 60%; left: 15%;}
+.map-pin9 {top: 39%; left: 15%;}
 
 .map-in-card{
   position: absolute;
@@ -307,21 +303,19 @@ input[type="text"]::placeholder {
   flex-direction: column;
   row-gap: 0.7rem;
 }
-
 .map-in-info-title {
   display: flex;
-  column-gap: 11rem;
 }
-
 .map-info-name {
   font-size: 1.7rem;
   color: #111;
   font-weight: 600;
+  width:20rem;
 }
-
 .map-info-cur {
-  width: 5.9rem;
-  height: 2rem;
+  width:max-content;
+  height:2.6rem;
+  padding:0 1rem;
   border-radius: 3rem;
   background-color: #add2bf;
   font-size: 1.3rem;
@@ -331,17 +325,23 @@ input[type="text"]::placeholder {
   display: flex;
   justify-content: center;
   align-items: center;
+  white-space: nowrap;
 }
-
+.map-cur-end {
+  background-color: #cecece;
+  color: #707070;
+  font-weight: 400;
+  width:max-content;
+  height:2.6rem;
+  padding:0 1rem;
+}
 .map-info-time {
   font-size: 1.3rem;
   color: #777;
-  margin-bottom: 0.8rem;
 }
-
 .map-info-img {
   width: 24rem;
-  height: 12rem;
+  height: 13rem;
   border-radius: 1.5rem;
   object-fit: cover;
 }
@@ -468,11 +468,22 @@ input[type="text"]::placeholder {
   font-size: 1.6rem;
   font-weight:600;
 }
-.map-cur-end {
-  background-color: #cecece;
-  color: #707070;
-  border-radius: 2rem;
-  font-weight: 400;
+.map-list-end{
+  width: 8.5rem;
+  height: 3.7rem;
+  font-size: 1.6rem;
+  font-weight:600;
+}
+.map-course-badge{
+  position:absolute;
+  top:7rem;
+  right:0;
+  width:max-content;
+  padding:0 2rem;
+  height:3.7rem;
+  font-size:1.6rem;
+  background-color:#1a3a2a;
+  color:#fff;
 }
 .map-list-tab {
   width: 109rem;
@@ -507,6 +518,7 @@ input[type="text"]::placeholder {
   align-items: center;
   justify-content: center;
   margin:8rem auto 0;
+  box-shadow:0 1rem 1rem rgba(0,0,0,0.1);
 }
 .map-detail-inner{
   padding:5rem 6rem;
@@ -619,11 +631,11 @@ input[type="text"]::placeholder {
   height:3.7rem;
   font-size:1.6rem;
 }
-.map-detail-corse{
+.map-detail-course{
   position:absolute;
   top:8rem;
   right:3rem;
-  width:auto;
+  width:max-content;
   padding:0 2rem;
   height:3.7rem;
   font-size:1.6rem;
@@ -728,7 +740,6 @@ input[type="text"]::placeholder {
   font-size:1.4rem;
   display:flex;
   row-gap:1rem;
-  align-items: left;
   display:flex;
   flex-direction: column;
   transition:all 0.3s;
