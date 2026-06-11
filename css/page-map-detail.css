@@ -49,7 +49,8 @@ body {
   position: relative;
   background: url(../image/map.png) no-repeat center/cover;
   border-radius: 2.5rem;
-  width: 140rem;
+  width: min(140rem, 100%);  /* 140rem → min(140rem, 100%) */
+  box-sizing: border-box;
   height: 80rem;
   margin-bottom: 10rem;
 }
@@ -184,7 +185,6 @@ input[type="text"]::placeholder {
   flex-direction: column;
   row-gap: 1.8rem;
 }
-/* 클릭시.보더없애기 */
 .map-btn{
   border: 1px solid #e2e1e1;
   color: #2d6a4f;
@@ -500,16 +500,19 @@ input[type="text"]::placeholder {
 /* map-detail______________ */
 .map-detail-content{
   background-color: #fff;
-  width:140rem;
+  width: min(140rem, 100%);
+  box-sizing: border-box;
   height: auto;
   display:flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin:8rem auto 0;
+  margin: var(--header-h, 8rem) auto 0;
+  box-shadow: 0 1rem 1rem rgba(0,0,0,0.1);
 }
 .map-detail-inner{
   padding:5rem 6rem;
+
 }
 .map-detail-back{
   display:flex;
