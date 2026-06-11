@@ -358,13 +358,13 @@
   border: 0.1rem solid #eee;
   border-radius: 2.6rem;
   box-shadow: 0 0.8rem 2rem rgba(0, 0, 0, 0.08);
-  transition: opacity 0.85s cubic-bezier(0.22, 1, 0.36, 1), transform 0.25s ease, box-shadow 0.25s ease;
+  transition: opacity 0.85s cubic-bezier(0.22, 1, 0.36, 1), transform 0.85s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.35s ease;
 }
 
 .page-course .course-card:hover{
   transform: translateY(-0.4rem);
   box-shadow: 0 0.8rem 2rem rgba(0, 0, 0, 0.2);
-  transition: opacity 0.85s cubic-bezier(0.22, 1, 0.36, 1), transform 0.25s ease, box-shadow 0.25s ease;
+  transition: opacity 0.85s cubic-bezier(0.22, 1, 0.36, 1), transform 0.35s ease, box-shadow 0.35s ease;
 }
 
 .page-course .course-card .card-img{

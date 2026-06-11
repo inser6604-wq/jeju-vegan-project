@@ -245,7 +245,7 @@
   display: inline-flex;
   flex-direction: column;
   align-items: flex-start;
-  font-size: clamp(8.5rem, 13vw, 17rem);
+  font-size: clamp(8.5rem, 13vw, 19rem);
   line-height: 0.8;
   letter-spacing: 0.02em;
 }
@@ -266,9 +266,9 @@
 }
 
 .home-hero-fresh-desc {
-  margin-top: 1.8rem;
+  margin-top: 2.2rem;
   color: #333;
-  font-size: 1.6rem;
+  font-size: 2rem;
   font-weight: 500;
   line-height: 1.55;
   word-break: keep-all;
