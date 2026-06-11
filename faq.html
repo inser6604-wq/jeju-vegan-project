@@ -18,7 +18,7 @@
       <section class="sub-hero faq-hero">
         <div class="inner">
           <div class="sub-hero-content sr sr-right" data-sr-delay="0.05">
-            <h2 class="sub-hero-title">자주 묻는 질문</h2>
+            <h1 class="sub-hero-title">자주 묻는 질문</h1>
             <p class="sub-hero-subtitle sr sr-right" data-sr-delay="0.1">
               제주 비건 지도 이용 중 궁금한 내용을 검색하거나 카테고리별로 찾아보세요.
             </p>
@@ -27,9 +27,11 @@
       </section>
 
       <nav class="breadcrumb">
-        <a href="index.html">홈</a>
-        <span>&gt;</span>
-        <span class="current">FAQ</span>
+        <div class="inner">
+          <a href="index.html">홈</a>
+          <span>&gt;</span>
+          <span class="current">FAQ</span>
+        </div>
       </nav>
 
       <!-- 필터 + 검색 + FAQ 목록 -->
@@ -38,29 +40,29 @@
 
           <!-- 카테고리 탭 -->
           <div class="tab faq-tab">
-            <ul class="tab-list sr sr-right" data-sr-delay="0.14" role="tablist">
+            <ul class="tab-list sr sr-right" data-sr-delay="0.14" role="tablist" aria-label="FAQ 카테고리">
               <li role="presentation">
-                <button class="tab-btn js-tab-btn active" data-tab="all" role="tab" aria-selected="true">
+                <button type="button" class="tab-btn js-tab-btn active" id="faq-tab-all" data-tab="all" role="tab" aria-selected="true" aria-controls="faq-tabpanel">
                   <span class="tab-btn-text sr sr-up" data-sr-delay="0.16">전체</span>
                 </button>
               </li>
               <li role="presentation">
-                <button class="tab-btn js-tab-btn" data-tab="service" role="tab" aria-selected="false">
+                <button type="button" class="tab-btn js-tab-btn" id="faq-tab-service" data-tab="service" role="tab" aria-selected="false" aria-controls="faq-tabpanel">
                   <span class="tab-btn-text sr sr-up" data-sr-delay="0.18">서비스 이용</span>
                 </button>
               </li>
               <li role="presentation">
-                <button class="tab-btn js-tab-btn" data-tab="register" role="tab" aria-selected="false">
+                <button type="button" class="tab-btn js-tab-btn" id="faq-tab-register" data-tab="register" role="tab" aria-selected="false" aria-controls="faq-tabpanel">
                   <span class="tab-btn-text sr sr-up" data-sr-delay="0.20">가게 등록</span>
                 </button>
               </li>
               <li role="presentation">
-                <button class="tab-btn js-tab-btn" data-tab="tip" role="tab" aria-selected="false">
+                <button type="button" class="tab-btn js-tab-btn" id="faq-tab-tip" data-tab="tip" role="tab" aria-selected="false" aria-controls="faq-tabpanel">
                   <span class="tab-btn-text sr sr-up" data-sr-delay="0.22">맛집 제보</span>
                 </button>
               </li>
               <li role="presentation">
-                <button class="tab-btn js-tab-btn" data-tab="travel" role="tab" aria-selected="false">
+                <button type="button" class="tab-btn js-tab-btn" id="faq-tab-travel" data-tab="travel" role="tab" aria-selected="false" aria-controls="faq-tabpanel">
                   <span class="tab-btn-text sr sr-up" data-sr-delay="0.24">여행 정보</span>
                 </button>
               </li>
@@ -89,14 +91,14 @@
           </div>
 
           <!-- FAQ 그룹 목록 -->
-          <div class="faq-content">
+          <div class="faq-content" id="faq-tabpanel" role="tabpanel" aria-labelledby="faq-tab-all">
 
             <!-- 서비스 이용 -->
             <div class="faq-group" data-panel="service">
-              <h3 class="faq-group-title">
+              <h2 class="faq-group-title">
                 <span class="faq-group-icon" aria-hidden="true">🌱</span>
                 서비스 이용
-              </h3>
+              </h2>
               <ul class="faq-list">
                 <li class="faq-item active sr sr-up" data-sr-delay="0.14">
                   <button class="faq-question js-faq-question" aria-expanded="true">
