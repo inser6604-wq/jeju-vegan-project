@@ -10,7 +10,7 @@ body {
 }
 .map-hero {
   position: relative;
-  background: url(../image/map-hero-image.png) center center / cover no-repeat;
+  background: url(../image/map-hero-img3.jpg) center bottom / cover no-repeat;
   min-height: 53rem;
 }
 .map-hero::after {
@@ -22,7 +22,6 @@ body {
   pointer-events: none;
 }
 .map-inner {
-  border: 1px solid red;
   z-index: 1;
   min-height: 53rem;
   display: flex;
@@ -390,7 +389,6 @@ input[type="text"]::placeholder {
   align-items: center;
   column-gap: 4rem;
 }
-
 .map-place-card-img {
   width: 28.3rem;
   height: 23.1rem;
@@ -501,7 +499,6 @@ input[type="text"]::placeholder {
 
 /* map-detail______________ */
 .map-detail-content{
-  border: 1px solid #a2c7b6;
   background-color: #fff;
   width:140rem;
   height: auto;
@@ -512,9 +509,7 @@ input[type="text"]::placeholder {
   margin:8rem auto 0;
 }
 .map-detail-inner{
-  border: 1px solid #000;
-  padding:4rem 5rem;
-  
+  padding:5rem 6rem;
 }
 .map-detail-back{
   display:flex;
@@ -532,7 +527,6 @@ input[type="text"]::placeholder {
 }
 .map-detail-section{
   padding:3rem 1rem;
-  /* border: 1px solid #000; */
 }
 .map-detail-head-img-list {
   width: 100%;
@@ -540,16 +534,23 @@ input[type="text"]::placeholder {
   display: flex;
   column-gap: 1rem;
   align-items: stretch;
+  margin-top:2rem;
+  cursor: pointer;
 }
-
 .map-detail-head-img1 {
   width: 60%;
   height: 100%;
   object-fit: cover;
   border-radius: 2rem;
   flex-shrink: 0;
+  transition:all 0.4s ease;
 }
-
+.map-detail-head-img1:hover,
+.map-detail-head-img2:hover,
+.map-detail-head-img3:hover{
+  transform: scale(1.01);
+  filter: brightness(1.05);
+}
 .map-detail-head-img-right {
   width: 40%;
   height: 100%;
@@ -557,7 +558,6 @@ input[type="text"]::placeholder {
   flex-direction: column;
   row-gap: 1rem;
 }
-
 .map-detail-head-img2,
 .map-detail-head-img3 {
   width: 100%;
@@ -565,9 +565,9 @@ input[type="text"]::placeholder {
   min-height: 0;
   object-fit: cover;
   border-radius: 2rem;
+  transition:all 0.4s ease;
 }
 .map-detail-title{
-  /* border: 1px solid red; */
   position: relative;
   width:100%;
   display:flex;
@@ -619,6 +619,17 @@ input[type="text"]::placeholder {
   height:3.7rem;
   font-size:1.6rem;
 }
+.map-detail-corse{
+  position:absolute;
+  top:8rem;
+  right:3rem;
+  width:auto;
+  padding:0 2rem;
+  height:3.7rem;
+  font-size:1.6rem;
+  background-color:#1a3a2a;
+  color:#fff;
+}
 .map-detail-divider{border:1px solid #e6e6e6;}
 .map-detail-sub-title{
   font-size:1.8rem;
@@ -639,7 +650,12 @@ input[type="text"]::placeholder {
 .map-detail-def-left{
   width:10rem;
   display:flex;
+  align-items: center;
   column-gap:0.5rem;
+}
+.map-detail-def-left img{
+  width:2.3rem;
+  height:2.5rem;
 }
 .map-detail-sub-desc{
   font-size:1.6rem;
@@ -654,14 +670,21 @@ input[type="text"]::placeholder {
   width:32rem;
   height:23rem;
   border-radius: 2rem;
-  overflow: hidden;
+  transition: all 0.35s;
 }
 .map-detail-menu img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
+  transition:transform 0.35s ease;
 }
+.map-detail-menu:hover{
+  box-shadow:0 0.4rem 3rem rgba(86, 87, 45, 0.2);
+}
+.map-detail-menu:hover img{transform:scale(1.1);}
+.map-detail-menu:hover .map-detail-menu-desc{transform:translateY(-0.2rem);}
+.map-detail-menu:hover::after{opacity:1;}
 .map-detail-menu:after{
   content: '';
   position: absolute;
@@ -679,6 +702,7 @@ input[type="text"]::placeholder {
   display:flex;
   flex-direction: column;
   row-gap:0.3rem;
+  transition:all 0.35s;
 }
 .map-detail-menu-desc p {
   font-size: 1.6rem;
@@ -693,35 +717,45 @@ input[type="text"]::placeholder {
 }
 .map-detail-review-list{
   display:flex;
-  text-align: center;
+  column-gap:3rem;
 }
 .map-detail-review{
-  /* border: 1px solid #000; */
   border-radius: 2rem;
-  width:auto;
-  height:8rem;
+  width:30rem;
+  height:auto;
   background-color: #f5f5f5;
   padding:2rem;
   font-size:1.4rem;
   display:flex;
-  column-gap:3rem;
-  align-items: center;
+  row-gap:1rem;
+  align-items: left;
+  display:flex;
+  flex-direction: column;
+  transition:all 0.3s;
 }
+.map-detail-review:hover{
+  transform:translateY(-3px);
+  box-shadow:0.4rem 0.2rem 1.2rem rgba(0,0,0,0.1);
+}
+
 .map-detail-top{
   color:#ff7a00;
-  font-size:1.6rem;
+  font-size:1.5rem;
 }
-
-
-
-
-
-
-
-
-
-
-
+.map-detail-btm{
+  display:flex;
+  flex-direction: column;
+  padding-left:1rem;
+}
+.map-detail-review-text{
+  font-weight:500;
+  color:#222;
+  height:7rem;
+}
+.map-detail-review-name{
+  font-size:1.3rem;
+  color:#777;
+}
 .map-list-tab{
   margin:0 auto;
 }
