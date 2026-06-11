@@ -1296,86 +1296,66 @@
   }
 }
 
-/* footer 반응형 */
-/* ============================
-  1200px 이하
-   ============================ */
+/* footer 반응형 _________________________*/
 @media (max-width: 1200px) {
   .footer-inner {
     width: 90%;
     height: auto;
   }
-
   .footer-left {
     row-gap: 5rem;
   }
-
   .footer-right {
     column-gap: 8rem;
   }
 }
 
-/* ============================
-  768px 이하
-   ============================ */
 @media (max-width: 768px) {
   footer {
     border-radius: 3rem 3rem 0 0;
     padding: 3rem;
   }
-
   .footer-content {
     padding: 0;
     align-items: flex-start;
   }
-
   .footer-inner {
     flex-direction: column;
     height: auto;
     width: 100%;
     row-gap: 3rem;
   }
-
   .footer-left {
     row-gap: 3rem;
   }
-
   .footer-left-top {
     row-gap: 1.5rem;
   }
-
   .footer-logo {
     width: 12rem;
   }
-
   .footer-icon {
     width: 4rem;
     height: 4rem;
   }
-
   .footer-icon img {
     width: 2.2rem;
     height: 2.2rem;
   }
-
   .footer-icon-list {
     column-gap: 2rem;
   }
-
   .footer-desc {
     font-size: 1.4rem;
   }
-
   .footer-right {
     font-size: 1.2rem;
     column-gap: 6rem;
     flex-wrap: wrap;
   }
-
   .footer-menu {
     row-gap: 1rem;
   }
-
   .footer-menu-top {
     border-radius: 1.5rem;
     padding: 0.6rem 1rem;
@@ -1383,54 +1363,42 @@
   }
 }
 
-/* ============================
-  480px 이하
-   ============================ */
 @media (max-width: 480px) {
   footer {
     border-radius: 2rem 2rem 0 0;
     padding: 2rem;
   }
-
   .footer-content {
     padding: 0;
   }
-
   .footer-inner {
     width: 100%;
     row-gap: 2rem;
   }
-
   .footer-left {
     row-gap: 2rem;
   }
-
   .footer-left-top {
     row-gap: 1rem;
   }
-
   .footer-logo {
     width: 100%;
     margin: 0 auto;
   }
-
   .footer-desc {
     font-size: 1.3rem;
     text-align: center;
     width: 100%;
   }
-
   .footer-right {
     display:flex;
     justify-content: center;
     width:90%;
     column-gap: 4rem;
   }
-  
   .footer-menu {
     row-gap: 0.5rem;
   }
-
   .footer-menu-top {
     border-radius: 1.2rem;
     padding: 0.5rem 0.8rem;
@@ -1441,12 +1409,10 @@
     width: 3.5rem;
     height: 3.5rem;
   }
-
   .footer-icon img {
     width: 1.8rem;
     height: 1.8rem;
   }
-
   .footer-icon-list {
     column-gap: 1.5rem;
   }
@@ -1465,4 +1431,336 @@
   .main-map-pin img { width: 22px; }
   .main-map-pin span { font-size: 9px; padding: 2px 6px; }
   .main-map-pin { gap: 2px; }
+}
+
+/* map-detail 반응형 ____________________*/
+@media (max-width: 1200px) {
+  .map-detail-content {
+    width: 100%;
+    margin-top: 4rem;
+  }
+  .map-section-title,
+  .map-list-tab,
+  .map-card-list {
+    width: 100%;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    box-sizing: border-box;
+  }
+  .map-detail-inner {
+    padding: 4rem 3rem;
+  }
+      
+  .map-detail-menu-list,
+  .map-detail-review-list {
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: flex-start;
+  }
+  .map-detail-menu,
+  .map-detail-review {
+    width: calc(50% - 1rem); 
+  }
+  
+  .map-place-card-inner {
+    width: 100%;
+    padding: 0 2rem;
+    box-sizing: border-box;
+  }
+}
+
+@media (max-width: 768px) {
+  .map-detail-inner {
+    padding: 2rem;
+  }
+  .map-detail-content {
+    margin-top: var(--header-h, 8rem);
+  }
+  .map-detail-cur,
+  .map-detail-corse {
+    position: static;
+    display: inline-flex;
+    margin-right: 1rem;
+    margin-top: 1rem;
+  }
+  .map-detail-head-img-list {
+    flex-direction: column;
+    height: auto;
+    row-gap:1.4rem;
+  }
+  .map-detail-head-img1 {
+    width: 100%;
+    height: 25rem;
+  }
+  .map-detail-head-img-right {
+    width: 100%;
+    flex-direction: row;
+    column-gap: 1.4rem;
+    height: 16rem;
+  }
+  .map-detail-menu{
+    display:flex;
+    flex-direction: column;
+    flex:1;
+    width: 100%;
+    height: 22rem;
+  }
+  .map-detail-review {
+    width: 100%;
+  }
+  .map-place-card {
+    height: auto;
+    padding: 2rem 0;
+  }
+  .map-place-card-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: 2rem;
+  }
+  .map-place-card-img {
+    width: 100%;
+    height: 25rem;
+  }
+  .map-list-cur {
+    position: static;
+    display: inline-block;
+    margin-bottom: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .map-detail-content {
+    margin-top: var(--header-h, 12rem);
+  }
+  .map-detail-name {
+    font-size: 2.8rem;
+  }
+  .map-detail-place {
+    font-size: 1.8rem;
+  }
+  .map-detail-vegan-level,
+  .map-detail-rating {
+    font-size: 1.4rem;
+  }
+  .map-card-tags {
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  .map-detail-head-img-list{
+    row-gap: 0.8rem;
+  }
+  .map-detail-head-img1 {
+    width:100%;
+    height: 18rem;
+  }
+  .map-detail-head-img-right {
+    height: 12rem;
+    column-gap: 0.8rem;
+  }
+  .map-detail-head-img2,
+  .map-detail-head-img3 {
+    width:45%;
+  }
+  .map-detail-sub-title {
+    font-size: 1.6rem;
+    font-weight: 600;
+  }
+  .map-detail-def {
+    flex-direction: column;
+    row-gap: 0.5rem;
+    font-size: 1.4rem;
+  }
+  .map-detail-def-left {
+    width: auto;
+  }
+  .map-detail-sub-desc {
+    font-size: 1.4rem;
+  }
+  .map-detail-menu-list {
+    flex-direction: column;
+  }
+  .map-detail-menu {
+    width: 100%;
+    height: 20rem;
+  }
+  .map-detail-review-text {
+    height: auto;
+    min-height: 5rem;
+    font-size: 1.3rem;
+  }
+}
+
+/* map반응형_________ */
+@media (max-width: 1200px) {
+  .map-hero, .map-inner {
+    min-height: 35rem;
+  }
+  .map-hero-title {
+    font-size: 6rem;
+  }
+  .map-spot-content, .map-detail-content {
+    margin-top: 3rem;
+  }
+  .map-list-content {
+    padding: 4rem 0;
+  }
+  .page-map .map-main-content {
+    width: 100%;
+    max-width: 100%;
+    height: 80rem;
+    overflow-x: auto; 
+    overflow-y: hidden;
+    background: none; 
+    position: relative;
+    border-radius: 2.5rem;
+    -webkit-overflow-scrolling: touch;
+  }
+  .page-map .map-main-content::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 140rem;
+    height: 100%;
+    background: url(../image/map.png) no-repeat center/cover;
+    border-radius: 2.5rem;
+    z-index: 0;
+  }
+  .page-map .map-main-content-inner {
+    width: 140rem;
+    height: 100%;
+    position: relative;
+    z-index: 3;
+    overflow: visible;
+    pointer-events: none;
+  }
+  .page-map .map-filter {
+    pointer-events: auto;
+  }
+  .page-map .map-pin-list {
+    width: 140rem;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+  }
+  .map-section-title {
+    width: 90%;
+    margin: 0 auto;
+    padding-bottom: 3rem;
+    text-align: left;
+  }
+  .map-place-card {
+    width: 90%; 
+    height: auto; 
+    margin: 0 auto 2.5rem auto;
+    padding: 1.8rem;
+    box-sizing: border-box;
+  }
+  .map-place-card-inner {
+    width: 100%;
+    height: auto;
+    column-gap: 3rem;
+  }
+  .map-place-card-img {
+    width: 24rem;
+    height: 18rem;
+    flex-shrink: 0;
+  }
+  .map-card-inner {
+    width: 100%;
+    row-gap: 1rem;
+  }
+  .map-list-tab {
+    width: 90%;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .map-hero-title {
+    font-size: 4rem;
+  }
+  .map-place-card-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    row-gap: 1.4rem;
+  }
+  .map-place-card-img {
+    width: 100%; 
+    max-width: 100%;
+    height: 18rem;
+  }
+  .map-card-top {
+    align-items: flex-start;
+    row-gap: 0.8rem;
+  }
+  .card-rating {
+    justify-content: flex-start;
+  }
+  .map-card-speak {
+    margin: 0;
+    text-align: left;
+    width: 100%;
+    box-sizing: border-box;
+    line-height: 2rem;
+    padding: 0.6rem 1.2rem;
+  }
+  .map-card-tags {
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+  }
+  .map-list-cur {
+    position: relative;
+    top: unset;
+    right: unset;
+    margin: 0.5rem 0 0 0;
+    display: inline-flex;
+  }
+  .map-list-content {
+    padding-bottom: 5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .map-hero, .map-inner {
+    min-height: 25rem;
+  }
+  .map-hero-title {
+    font-size: 3rem;
+  }
+  .map-section-head h2 {
+    font-size: 2.4rem;
+  }
+  .map-section-head p {
+    font-size: 1.4rem;
+  }
+  .map-place-card {
+    width: 95%;
+    padding: 1.2rem;
+  }
+  .map-place-card-img {
+    height: 15rem;
+  }
+  .map-card-title {
+    font-size: 1.8rem;
+  }
+  .card-place, .card-time, .map-card-speak {
+    font-size: 1.3rem;
+  }
+  .map-card-tag {
+    font-size: 1.2rem;
+    padding: 0 0.8rem;
+    line-height: 2.6rem;
+    height: 3rem;
+  }
+  .map-list-tab {
+    width: 95%;
+    font-size: 1.6rem;
+    height: 4.6rem;
+    line-height: 4.4rem;
+  }
 }
