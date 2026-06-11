@@ -22,6 +22,7 @@ document.addEventListener('DOMContentLoaded', function () {
         var slides = hero.querySelectorAll('.home-hero-slide');
         var heroSearch = hero.querySelector('.home-hero-inner--search');
         var heroMain = hero.querySelector('.home-hero-inner--main');
+        var heroFresh = hero.querySelector('.home-hero-inner--fresh');
         var currentEl = hero.querySelector('.home-hero-current');
         var totalEl = hero.querySelector('.home-hero-total');
         var prevBtn = hero.querySelector('.home-hero-prev');
@@ -45,6 +46,7 @@ document.addEventListener('DOMContentLoaded', function () {
         function updateContent() {
           if (heroSearch) heroSearch.classList.toggle('is-visible', current === 0);
           if (heroMain) heroMain.classList.toggle('is-visible', current === 1);
+          if (heroFresh) heroFresh.classList.toggle('is-visible', current === 2);
         }
 
         function goTo(index) {
