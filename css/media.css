@@ -59,12 +59,8 @@
     padding: 120px 0 80px;
   }
 
-  .home-hero-content {
-    padding-top: 34px;
-  }
-
   .home-hero-title {
-    font-size: 6.2rem;
+    font-size: 6.6rem;
   }
 
   .home-hero .btn-primary {
@@ -72,22 +68,63 @@
     max-width: 100%;
     min-width: 0;
     padding: 1.2rem 2.4rem;
-    font-size: 1.4rem;
+    font-size: 1.5rem;
+    box-sizing: border-box;
+  }
+
+  .home-hero-inner {
+    top: 0;
+    right: 0;
+    bottom: 72px;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 1.5rem;
     box-sizing: border-box;
   }
 
   .home-hero-inner--search {
-    align-items: flex-start;
-    padding-top: 11rem;
-    padding-bottom: 8rem;
+    align-items: center;
+    justify-content: center;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  .home-hero-search-copy {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .home-hero-search-title,
+  .home-hero-search-desc {
+    padding-left: 0;
+    white-space: normal;
+  }
+
+  .home-hero-search-form {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .home-hero-content {
+    width: 100%;
+    padding-top: 0;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .home-hero-subtitle {
+    font-size: 1.55rem;
   }
 
   .home-hero-search-title {
-    font-size: 2.4rem;
+    font-size: 2.8rem;
   }
 
   .home-hero-search-desc {
-    font-size: 1.35rem;
+    font-size: 1.45rem;
   }
 
   .home-hero-search-form {
@@ -97,7 +134,7 @@
   }
 
   .home-hero-search-input {
-    font-size: 1.3rem;
+    font-size: 1.4rem;
   }
 
   .home-hero-search-btn {
@@ -121,7 +158,13 @@
     font-size: 2rem;
   }
 
-  .home-pick .section-head,
+  .home-pick .section-head {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
   .home-map .section-head {
     display: block;
   }
@@ -141,41 +184,50 @@
   }
 
   .home-course .section-head {
-    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
   }
 
   .home-course .section-desc {
     max-width: 100%;
-    margin-left: 0;
-    margin-right: 0;
+    margin-left: auto;
+    margin-right: auto;
     line-height: 1.65;
     word-break: keep-all;
+    text-align: center;
   }
 
   .home-course .btn-line {
     position: static;
+    align-self: flex-end;
     margin-top: 18px;
+    margin-left: auto;
   }
 
-  .home-course-content,
   .home-map-stats {
     grid-template-columns: 1fr;
   }
 
   .home-course-content {
-    margin-top: 40px;
+    display: grid;
+    grid-template-columns: 1fr;
     align-items: stretch;
-    gap: 24px;
+    margin-top: 40px;
+    gap: 28px;
   }
 
-  .home-course-content .course-card:nth-child(2) {
+  .home-course-content .course-card:nth-child(2),
+  .home-course-content .course-card:nth-child(2).sr.is-visible {
     transform: none;
   }
 
-  .home-course .course-card:nth-child(1):hover,
-  .home-course .course-card:nth-child(2):hover,
-  .home-course .course-card:nth-child(3):hover {
+  .home-course-content .course-card:nth-child(1).sr.is-visible:hover,
+  .home-course-content .course-card:nth-child(2).sr.is-visible:hover,
+  .home-course-content .course-card:nth-child(3).sr.is-visible:hover {
     transform: translateY(-8px);
+    box-shadow: 0 18px 36px rgba(47, 70, 55, 0.05);
   }
 
   .home-course-desc {
@@ -432,12 +484,16 @@
     padding-bottom: 72px;
   }
 
+  .home-hero-inner {
+    bottom: 64px;
+  }
+
   .home-hero-search-title {
-    font-size: 2.1rem;
+    font-size: 2.3rem;
   }
 
   .home-hero-search-desc {
-    font-size: 1.25rem;
+    font-size: 1.35rem;
   }
 
   .home-hero-search-form {
@@ -447,7 +503,7 @@
   }
 
   .home-hero-search-input {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
   }
 
   .home-hero-search-btn {
@@ -476,16 +532,16 @@
   }
 
   .home-hero-subtitle {
-    font-size: 1.4rem;
+    font-size: 1.5rem;
   }
 
   .home-hero-title {
-    font-size: 4.8rem;
+    font-size: 5.2rem;
   }
 
   .home-hero .btn-primary {
     padding: 1.1rem 2rem;
-    font-size: 1.35rem;
+    font-size: 1.45rem;
   }
 
   .home-pick-main {
@@ -524,7 +580,7 @@
 
   .home-course-content {
     margin-top: 32px;
-    gap: 20px;
+    gap: 24px;
   }
 
   .home-together.section,
