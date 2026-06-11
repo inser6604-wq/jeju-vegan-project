@@ -52,6 +52,15 @@
   object-position: center center;
 }
 
+.home-hero-slide--fresh {
+  background: #fde6d2;
+}
+
+.home-hero-slide--fresh img {
+  object-fit: cover;
+  object-position: left center;
+}
+
 .home-hero-inner {
   position: absolute;
   inset: 0;
@@ -211,6 +220,61 @@
   background-size: 100% 100%;
   color: #fff;
 }
+
+.home-hero-inner--fresh {
+  justify-content: flex-end;
+  padding-right: clamp(2rem, 6vw, 8rem);
+  box-sizing: border-box;
+}
+
+.home-hero-fresh-copy {
+  width: min(100%, 52rem);
+  margin-right: clamp(1rem, 5vw, 8rem);
+  pointer-events: auto;
+  text-align: left;
+}
+
+.home-hero-fresh-title.bebas-neue-regular,
+.home-hero-fresh-title .home-hero-fresh-line {
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.home-hero-fresh-title {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  font-size: clamp(8.5rem, 13vw, 17rem);
+  line-height: 0.8;
+  letter-spacing: 0.02em;
+}
+
+.home-hero-fresh-line {
+  display: block;
+  color: #fff;
+  white-space: nowrap;
+}
+
+.home-hero-fresh-line--accent {
+  align-self: flex-end;
+  color: #ff8c00;
+}
+
+.home-hero-fresh-dash {
+  margin-right: 0.12em;
+}
+
+.home-hero-fresh-desc {
+  margin-top: 1.8rem;
+  color: #333;
+  font-size: 1.6rem;
+  font-weight: 500;
+  line-height: 1.55;
+  word-break: keep-all;
+  text-align: left;
+}
+
 .home-hero-bar {
   position: absolute;
   left: 0;
