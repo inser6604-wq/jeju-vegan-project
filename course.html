@@ -28,39 +28,42 @@
     </nav>
     <section class="course-vegan">
       <div class="inner">
-        <div class="pick-submenu">
+        <div class="pick-submenu sr">
           <ul>
             <li><a href="pick.html" >오늘의 비건 pick</a></li>
             <li><a href="course.html" class="active">비건 여행 코스</a></li>
           </ul>
         </div>
       
-        <div class="course-title ">
+        <div class="course-title sr">
           <h3 class="section-title">비건 여행 추천 코스</h3>
         </div>
 
-        <div class="tab">
+        <div class="tab sr">
           <div class="tab-list">
-            <button class="tab-btn active">전체</button>
-            <button class="tab-btn">제주시</button>
-            <button class="tab-btn">서귀포</button>
-            <button class="tab-btn">애월</button>
-            <button class="tab-btn">한림</button>
+            <button class="tab-btn active" data-filter-type="location" data-filter-value="전체">전체</button>
+            <button class="tab-btn" data-filter-type="location" data-filter-value="제주시">제주시</button>
+            <button class="tab-btn" data-filter-type="location" data-filter-value="서귀포">서귀포</button>
+            <button class="tab-btn" data-filter-type="location" data-filter-value="애월">애월</button>
+            <button class="tab-btn" data-filter-type="location" data-filter-value="한림">한림</button>
+            <button class="tab-btn" data-filter-type="location" data-filter-value="구좌">구좌</button>
+            <button class="tab-btn" data-filter-type="location" data-filter-value="성산">성산</button>
+            <button class="tab-btn" data-filter-type="location" data-filter-value="안덕">안덕</button>
             <div class="tab-option">
-              <button class="tab-btn">반나절</button>
-              <button class="tab-btn">하루종일</button>
-              <button class="tab-btn">1~2시간</button>
+              <button class="tab-btn" data-filter-type="duration" data-filter-value="반나절">반나절</button>
+              <button class="tab-btn" data-filter-type="duration" data-filter-value="하루종일">하루종일</button>
+              <button class="tab-btn" data-filter-type="duration" data-filter-value="1~2시간">1~2시간</button>
             </div>
             <div class="tab-option">
-              <button class="tab-btn">카페투어</button>
-              <button class="tab-btn">자연스팟</button>
-              <button class="tab-btn">반려동물</button>
+              <button class="tab-btn" data-filter-type="theme" data-filter-value="카페투어">카페투어</button>
+              <button class="tab-btn" data-filter-type="theme" data-filter-value="자연스팟">자연스팟</button>
+              <button class="tab-btn" data-filter-type="theme" data-filter-value="반려동물">반려동물</button>
             </div>
           </div>
         </div>
 
         <ul class="course-card-list">
-          <li class="card course-card">
+          <li class="card course-card sr" data-sr-delay="0" data-location="한림" data-duration="반나절" data-theme="">
             <div class="card-img img-box">
               <img src="./image/main-course-card-img02.jpg" alt="협재">
             </div>
@@ -94,7 +97,7 @@
               </button>
             </div>
           </li>
-          <li class="card course-card">
+          <li class="card course-card sr" data-sr-delay="0.1" data-location="제주시" data-duration="하루종일" data-theme="자연스팟">
             <div class="card-img img-box">
               <img src="./image/main-course-card-img03.jpg" alt="한라산">
             </div>
@@ -128,7 +131,7 @@
               </button>
             </div>
           </li>
-          <li class="card course-card">
+          <li class="card course-card sr" data-sr-delay="0.2" data-location="서귀포" data-duration="반나절" data-theme="">
             <div class="card-img img-box">
               <img src="./image/main-course-card-img01.jpg" alt="서귀포">
             </div>
@@ -162,7 +165,7 @@
               </button>
             </div>
           </li>
-          <li class="card course-card">
+          <li class="card course-card sr" data-sr-delay="0.3" data-location="애월" data-duration="1~2시간" data-theme="카페투어">
             <div class="card-img img-box">
               <img src="./image/vegan-course-card-img01.jpg" alt="애월">
             </div>
@@ -196,7 +199,7 @@
               </button>
             </div>
           </li>
-          <li class="card course-card">
+          <li class="card course-card sr" data-sr-delay="0.4" data-location="구좌" data-duration="1~2시간" data-theme="반려동물">
             <div class="card-img img-box">
               <img src="./image/vegan-course-card-img02.jpg" alt="반려동물동반">
             </div>
@@ -230,7 +233,7 @@
               </button>
             </div>
           </li>
-          <li class="card course-card">
+          <li class="card course-card sr" data-sr-delay="0.5" data-location="구좌" data-duration="반나절" data-theme="자연스팟">
             <div class="card-img img-box">
               <img src="./image/vegan-course-card-img03.jpg" alt="구좌">
             </div>
@@ -264,25 +267,25 @@
               </button>
             </div>
           </li>
-          <li class="card course-card">
+          <li class="card course-card sr card-extra card-hidden" data-location="성산" data-duration="반나절" data-theme="자연스팟">
             <div class="card-img img-box">
-              <img src="./image/vegan-course-card-img03.jpg" alt="구좌">
+              <img src="./image/vegan-course-card-img04.jpg" alt="구좌">
             </div>
             <div class="tag-list">
-              <span class="tag">#트레킹</span>
-              <span class="tag">#로컬맛집</span>
+              <span class="tag">#일출명소</span>
+              <span class="tag">#비건브런치</span>
             </div>
             <div class="course-card-body">
-              <h3 class="course-card-title"> 구좌 오름 코스</h3>
+              <h3 class="course-card-title">성산 일출 코스</h3>
 
               <p class="course-card-desc">
-                오름 산책 후 구좌의 비건 카페와 로컬 맛집을 함께 즐기는 코스
+                성산일출봉의 아침 풍경과 건강한 비건 브런치를 함께 즐기는 코스
               </p>
 
               <ul class="course-card-info">
                 <li>
                   <span class="iconify" data-icon="mdi:map-marker"></span>
-                  구좌
+                  성산
                 </li>
                 <li>
                   <span class="iconify" data-icon="lets-icons:clock-fill"></span>
@@ -290,7 +293,7 @@
                 </li>
                 <li>
                   <span class="iconify" data-icon="bxs:dish"></span>
-                  로컬 비건 맛집
+                  성산일출봉, 광치기해변
                 </li>
               </ul>
               <button type="button" class="btn like-btn">
@@ -298,19 +301,19 @@
               </button>
             </div>
           </li>
-          <li class="card course-card">
+          <li class="card course-card sr card-extra card-hidden" data-location="구좌" data-duration="1~2시간" data-theme="카페투어">
             <div class="card-img img-box">
-              <img src="./image/vegan-course-card-img03.jpg" alt="구좌">
+              <img src="./image/vegan-course-card-img05.jpg" alt="우도">
             </div>
             <div class="tag-list">
-              <span class="tag">#트레킹</span>
-              <span class="tag">#로컬맛집</span>
+              <span class="tag">#오션뷰</span>
+              <span class="tag">#비건카페</span>
             </div>
             <div class="course-card-body">
-              <h3 class="course-card-title"> 구좌 오름 코스</h3>
+              <h3 class="course-card-title">월정리 감성 코스</h3>
 
               <p class="course-card-desc">
-                오름 산책 후 구좌의 비건 카페와 로컬 맛집을 함께 즐기는 코스
+                월정리 해변을 따라 걷고 감성 비건 카페를 즐기는 코스
               </p>
 
               <ul class="course-card-info">
@@ -320,11 +323,11 @@
                 </li>
                 <li>
                   <span class="iconify" data-icon="lets-icons:clock-fill"></span>
-                  반나절
+                  1~2시간
                 </li>
                 <li>
                   <span class="iconify" data-icon="bxs:dish"></span>
-                  로컬 비건 맛집
+                  월정리해변, 해안산책
                 </li>
               </ul>
               <button type="button" class="btn like-btn">
@@ -332,33 +335,33 @@
               </button>
             </div>
           </li>
-          <li class="card course-card">
+          <li class="card course-card sr card-extra card-hidden" data-location="서귀포" data-duration="1~2시간" data-theme="자연스팟">
             <div class="card-img img-box">
-              <img src="./image/vegan-course-card-img03.jpg" alt="구좌">
+              <img src="./image/vegan-course-card-img06.jpg" alt="구좌">
             </div>
             <div class="tag-list">
               <span class="tag">#트레킹</span>
               <span class="tag">#로컬맛집</span>
             </div>
             <div class="course-card-body">
-              <h3 class="course-card-title"> 구좌 오름 코스</h3>
+              <h3 class="course-card-title">중문 자연 코스</h3>
 
               <p class="course-card-desc">
-                오름 산책 후 구좌의 비건 카페와 로컬 맛집을 함께 즐기는 코스
+                천지연폭포와 중문 해안을 따라 자연을 만끽하는 코스
               </p>
 
               <ul class="course-card-info">
                 <li>
                   <span class="iconify" data-icon="mdi:map-marker"></span>
-                  구좌
+                  서귀포
                 </li>
                 <li>
                   <span class="iconify" data-icon="lets-icons:clock-fill"></span>
-                  반나절
+                  1~2시간
                 </li>
                 <li>
                   <span class="iconify" data-icon="bxs:dish"></span>
-                  로컬 비건 맛집
+                  자연명소, 산책
                 </li>
               </ul>
               <button type="button" class="btn like-btn">
@@ -366,25 +369,25 @@
               </button>
             </div>
           </li>
-          <li class="card course-card">
+          <li class="card course-card sr card-extra card-hidden" data-location="애월" data-duration="반나절" data-theme="카페투어">
             <div class="card-img img-box">
-              <img src="./image/vegan-course-card-img03.jpg" alt="구좌">
+              <img src="./image/vegan-course-card-img07.jpg" alt="구좌">
             </div>
             <div class="tag-list">
-              <span class="tag">#트레킹</span>
-              <span class="tag">#로컬맛집</span>
+              <span class="tag">#카페투어</span>
+              <span class="tag">#베이커리</span>
             </div>
             <div class="course-card-body">
-              <h3 class="course-card-title"> 구좌 오름 코스</h3>
+              <h3 class="course-card-title"> 애월 카페 투어</h3>
 
               <p class="course-card-desc">
-                오름 산책 후 구좌의 비건 카페와 로컬 맛집을 함께 즐기는 코스
+                애월의 인기 비건 카페와 디저트를 한 번에 즐기는 코스
               </p>
 
               <ul class="course-card-info">
                 <li>
                   <span class="iconify" data-icon="mdi:map-marker"></span>
-                  구좌
+                  애월
                 </li>
                 <li>
                   <span class="iconify" data-icon="lets-icons:clock-fill"></span>
@@ -392,7 +395,7 @@
                 </li>
                 <li>
                   <span class="iconify" data-icon="bxs:dish"></span>
-                  로컬 비건 맛집
+                  오션뷰카페, 베이커리
                 </li>
               </ul>
               <button type="button" class="btn like-btn">
@@ -400,19 +403,19 @@
               </button>
             </div>
           </li>
-          <li class="card course-card">
+          <li class="card course-card sr card-extra card-hidden" data-location="구좌" data-duration="반나절" data-theme="자연스팟">
             <div class="card-img img-box">
-              <img src="./image/vegan-course-card-img03.jpg" alt="구좌">
+              <img src="./image/vegan-course-card-img08.jpg" alt="구좌">
             </div>
             <div class="tag-list">
-              <span class="tag">#트레킹</span>
-              <span class="tag">#로컬맛집</span>
+              <span class="tag">#숲길</span>
+              <span class="tag">#힐링</span>
             </div>
             <div class="course-card-body">
-              <h3 class="course-card-title"> 구좌 오름 코스</h3>
+              <h3 class="course-card-title">비자림 숲길 코스</h3>
 
               <p class="course-card-desc">
-                오름 산책 후 구좌의 비건 카페와 로컬 맛집을 함께 즐기는 코스
+                비자림 숲길 산책 후 비건 식당에서 여유를 즐기는 코스
               </p>
 
               <ul class="course-card-info">
@@ -426,7 +429,7 @@
                 </li>
                 <li>
                   <span class="iconify" data-icon="bxs:dish"></span>
-                  로컬 비건 맛집
+                  비자림, 숲길 산책
                 </li>
               </ul>
               <button type="button" class="btn like-btn">
@@ -434,25 +437,25 @@
               </button>
             </div>
           </li>
-          <li class="card course-card">
+          <li class="card course-card sr card-extra card-hidden" data-location="안덕" data-duration="반나절" data-theme="자연스팟">
             <div class="card-img img-box">
-              <img src="./image/vegan-course-card-img03.jpg" alt="구좌">
+              <img src="./image/vegan-course-card-img09.jpg" alt="구좌">
             </div>
             <div class="tag-list">
-              <span class="tag">#트레킹</span>
-              <span class="tag">#로컬맛집</span>
+              <span class="tag">#노을명소</span>
+              <span class="tag">#비건식당</span>
             </div>
             <div class="course-card-body">
-              <h3 class="course-card-title"> 구좌 오름 코스</h3>
+              <h3 class="course-card-title">용머리해안 노을 코스</h3>
 
               <p class="course-card-desc">
-                오름 산책 후 구좌의 비건 카페와 로컬 맛집을 함께 즐기는 코스
+                용머리해안의 아름다운 노을과 로컬 비건 맛집을 즐기는 코스
               </p>
 
               <ul class="course-card-info">
                 <li>
                   <span class="iconify" data-icon="mdi:map-marker"></span>
-                  구좌
+                  안덕
                 </li>
                 <li>
                   <span class="iconify" data-icon="lets-icons:clock-fill"></span>
@@ -460,7 +463,7 @@
                 </li>
                 <li>
                   <span class="iconify" data-icon="bxs:dish"></span>
-                  로컬 비건 맛집
+                  노을명소, 로컬맛집
                 </li>
               </ul>
               <button type="button" class="btn like-btn">
@@ -469,11 +472,18 @@
             </div>
           </li>
         </ul>
+        <p class="course-no-result" style="display:none;">해당 조건의 코스가 없습니다.</p>
+        <div class="card-more-wrap sr">
+          <button type="button" class="card-more-btn">
+            <img class="card-more-icon" src="image/map-down-icon.svg" alt="">
+            <span class="card-more-label">더보기</span>
+          </button>
+        </div>
       </div>
     </section>
 
     <section class="course-service">
-      <div class="course-service-map">
+      <div class="course-service-map sr">
         <div class="inner course-service-map-inner">
           <div class="course-service-map-content">
             <h2>지도로 코스 탐색하기</h2>
@@ -487,11 +497,11 @@
 
       <div class="inner">
         <div class="course-service-grid">
-          <article class="course-service-card course-service-card--make">
+          <article class="course-service-card course-service-card--make sr sr-left">
             <h3>나만의 코스 만들기</h3>
             <a href="#" class="btn">만들어보기</a>
           </article>
-          <article class="course-service-card course-service-card--report">
+          <article class="course-service-card course-service-card--report sr sr-right">
             <h3>비건식당 제보하기</h3>
             <a href="submit.html" class="btn">제보하기</a>
           </article>
@@ -505,6 +515,7 @@
   </button>
   <script src="https://code.iconify.design/3/3.1.1/iconify.min.js"></script>
   <script src="js/includeHTML.js"></script>
+  <script src="js/scroll.js"></script>
   <script src="js/index.js"></script>
 </body>
 </html>
