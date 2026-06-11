@@ -131,6 +131,9 @@ document.addEventListener('DOMContentLoaded', function () {
           this.classList.add('active');
           this.setAttribute('aria-selected', 'true');
 
+          var tabPanel = document.getElementById('faq-tabpanel');
+          if (tabPanel) tabPanel.setAttribute('aria-labelledby', this.id);
+
           var tab = this.dataset.tab;
           document.querySelectorAll('.faq-group').forEach(function (group) {
             group.style.display = (tab === 'all' || group.dataset.panel === tab) ? '' : 'none';
