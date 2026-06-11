@@ -262,6 +262,7 @@ input {
 .badge-vegan {
   background: #ff7a00;
   color: #fff;
+  padding: 1rem 2rem;
 }
 
 .badge-course {
@@ -359,3 +360,19 @@ input {
   font-size: 2rem;
 }
 
+
+/* ── 스크롤 애니메이션 ── */
+.sr {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.85s cubic-bezier(0.22, 1, 0.36, 1), transform 0.85s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: opacity, transform;
+}
+.sr-up  { transform: translateY(30px); }
+.sr-down  { transform: translateY(-30px); }
+.sr-left  { transform: translateX(-30px); }
+.sr-right { transform: translateX(30px); }
+.sr.is-visible {
+  opacity: 1;
+  transform: none;
+}

@@ -291,7 +291,9 @@
 .home-pick .section-title span {
   color: #2d6a4f;
 }
-
+.home-pick .btn-primary{
+  transition: 0.3s;
+}
 .home-pick-content {
   display: grid;
   grid-template-columns: minmax(0, 1.08fr) minmax(0, 1fr);
@@ -360,7 +362,7 @@
 
 .home-pick-side {
   display: grid;
-  grid-template-columns: 250px minmax(0, 1fr);
+  grid-template-columns: 26rem minmax(0, 1fr);
   overflow: hidden;
   border: 1px solid #e3ebe5;
   border-radius: 30px;
@@ -386,7 +388,7 @@
 }
 
 .home-pick-side-img {
-  min-height: 228px;
+  min-height: 24rem;
 }
 
 .home-pick-side-info {
@@ -395,13 +397,13 @@
 
 .home-pick-side-place {
   display: inline-flex;
-  min-height: 26px;
+  min-height: 2.6rem;
   align-items: center;
-  padding: 8px 20px;
+  padding: 0.8rem 2rem;
   border-radius: 20px;
   background: #2d6a4f;
   color: #fff;
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   font-weight: 500;
 }
 
@@ -417,6 +419,9 @@
 .home-pick-side-desc span{
   color: #2d6a4f;
   font-weight: 600;
+}
+.home-pick .badge-vegan{
+  font-size: 2rem;
 }
 .home-course {
   background: #fff;
