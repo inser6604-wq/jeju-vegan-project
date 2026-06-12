@@ -15,7 +15,6 @@
   height: 8rem;
   background-color: #2d6a4f;
   border-radius: 0 0 5rem 5rem;
-  transform: 0;
   overflow: hidden;
   transition: height .35s, background-color .35s, border-radius .35s;
 }
