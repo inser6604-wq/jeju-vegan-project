@@ -101,10 +101,10 @@
 }
 .home-hero-search-title {
   font-family: "A2Z", sans-serif;
-  font-size: 5rem;
+  font-size: 4.2rem;
   font-weight: 700;
   color: #111;
-  line-height: 1.5;
+  line-height: 1.45;
   word-break: keep-all;
 }
 
@@ -116,9 +116,9 @@
 
 .home-hero-search-desc {
   margin-top: 1.4rem;
-  font-size: 2rem;
+  font-size: 1.6rem;
   color: #222;
-  line-height: 2;
+  line-height: 1.7;
   word-break: keep-all;
 }
 .home-hero-search-desc span {
@@ -651,7 +651,7 @@
   bottom: 18px;
   z-index: 2;
   min-width: 132px;
-  height: 48px;
+  height: 42px;
   background: #ff7a00;
   font-size: 1.4rem;
   color: #fff;
@@ -822,6 +822,11 @@
 .home-together .section-desc {
   color: #fff;
 }
+
+.home-together .section-desc {
+  font-size: 1.4rem;
+}
+
 .home-together .section-desc span{
   font-weight: 600;
 }
@@ -968,7 +973,7 @@
   display: flex;
   align-items: center;
   overflow: hidden;
-  height: 7rem;
+  height: 6rem;
   border-radius: 999px;
   background: rgba(45, 106, 79, 0.5);
   border: 2px solid transparent;
@@ -988,6 +993,7 @@
   border: 0;
   background: transparent;
   font-size: 1.4rem;
+  letter-spacing: 0.04em;
   color: #fff;
 }
 
@@ -1008,6 +1014,7 @@
   background: #2d6a4f;
   color: #fff;
   font-weight: 600;
+  letter-spacing: 0.06em;
   flex-shrink: 0;
   transition: background 0.3s ease;
 }
