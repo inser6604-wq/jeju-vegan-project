@@ -596,10 +596,10 @@ mapPinItems.forEach(pinItem => {
 });
 // map-list-tab 클릭
 const mapListTab = document.querySelector('.map-list-tab');
-const hiddenCards = document.querySelectorAll('.map-hidden');
 
 if (mapListTab) {
   mapListTab.addEventListener('click', () => {
+    const hiddenCards = document.querySelectorAll('.map-hidden');
     const isHidden = mapListTab.classList.contains('active');
 
     hiddenCards.forEach((card, i) => {
