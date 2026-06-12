@@ -1,3 +1,32 @@
+// 탭 전환 시 숨겨졌던 영역의 스크롤 애니메이션 reveal
+(function () {
+  function revealSr(root) {
+    if (!root) return;
+    root.querySelectorAll('.sr:not(.is-visible)').forEach(function (el) {
+      var delay = parseFloat(el.dataset.srDelay) || 0;
+      el.style.transitionDelay = delay + 's';
+      el.classList.add('is-visible');
+    });
+  }
+
+  var tabStore = document.getElementById('tab-store');
+  var tabReport = document.getElementById('tab-report');
+  if (!tabStore || !tabReport) return;
+
+  function onTabChange() {
+    if (tabReport.checked) {
+      revealSr(document.querySelector('.submit-report-hero'));
+      revealSr(document.querySelector('.submit-report-content'));
+    } else {
+      revealSr(document.querySelector('.submit-store-hero'));
+      revealSr(document.querySelector('.submit-store-content'));
+    }
+  }
+
+  tabStore.addEventListener('change', onTabChange);
+  tabReport.addEventListener('change', onTabChange);
+})();
+
 // 가게 등록 폼 제출
 (function () {
   var storeForm = document.getElementById('storeForm');

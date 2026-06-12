@@ -68,6 +68,7 @@
   }
 
   .home-hero {
+    height: auto;
     min-height: 620px;
     padding: 120px 0 80px;
   }
@@ -386,6 +387,10 @@
     align-self: flex-end;
     margin-top: 18px;
     margin-left: auto;
+    min-width: 0;
+    height: 3.6rem;
+    padding: 0 1.4rem;
+    font-size: 1.3rem;
   }
 
   .home-map-stats {
@@ -540,20 +545,25 @@
   }
 
   .home-map-stats .card {
-    min-height: auto;
-    padding: 12px 8px;
-    border-radius: 14px;
+    gap: 8px;
+    min-height: 88px;
+    padding: 14px 8px;
+    border-radius: 16px;
   }
 
   .home-map-stats strong {
-    font-size: 1.8rem;
+    font-size: 2rem;
   }
 
-  .home-map-stats span {
-    margin-top: 4px;
-    font-size: 1.2rem;
+  .home-map-stat-label {
+    gap: 4px;
+    font-size: 1.1rem;
     line-height: 1.25;
     word-break: keep-all;
+  }
+
+  .home-map-stat-emoji {
+    font-size: 1.5rem;
   }
 
   /* home-together */
@@ -782,6 +792,7 @@
   }
 
   .home-hero {
+    height: auto;
     min-height: 540px;
     padding-bottom: 72px;
   }
@@ -909,24 +920,41 @@
   }
 
   .home-map-stats strong {
-    font-size: 1.5rem;
+    font-size: 1.7rem;
   }
 
-  .home-map-stats span {
-    margin-top: 2px;
-    font-size: 1.2rem;
+  .home-map-stat-label {
+    gap: 3px;
+    font-size: 0.95rem;
     line-height: 1.2;
   }
 
+  .home-map-stat-emoji {
+    font-size: 1.3rem;
+  }
+
   .home-map-stats .card {
-    padding: 10px 6px;
-    border-radius: 12px;
+    gap: 6px;
+    min-height: 78px;
+    padding: 12px 5px;
+    border-radius: 14px;
+  }
+
+  .home-map-stats .card:last-child .home-map-stat-label {
+    font-size: 0.85rem;
+    line-height: 1.15;
   }
 
   .home-course .section-desc {
     font-size: 1.3rem;
     margin-top: 4px;
     line-height: 1.4;
+  }
+
+  .home-course .btn-line {
+    height: 3.4rem;
+    padding: 0 1.2rem;
+    font-size: 1.25rem;
   }
 
   .home-course-content {
@@ -1058,31 +1086,75 @@
 }
 
 /* =========================================
-   Sub Hero + Breadcrumb 공통 반응형
+   Sub Hero + Breadcrumb 공통 반응형 (about 제외)
    ========================================= */
 
-@media (max-width: 768px) {
-  .sub-hero,
-  .sub-hero .inner {
-    min-height: 32rem;
+@media (max-width: 1024px) {
+  .page:not(.page-about):not(.page-map) .sub-hero,
+  .page:not(.page-about):not(.page-map) .sub-hero .inner {
+    min-height: 46rem;
   }
 
-  .sub-hero-content {
-    left: 0;
-    right: 0;
+  .page:not(.page-about):not(.page-map) .sub-hero-content {
+    top: 21rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .page:not(.page-about):not(.page-map) .sub-hero,
+  .page:not(.page-about):not(.page-map) .sub-hero .inner {
+    min-height: 30rem;
+  }
+
+  .page:not(.page-about):not(.page-map) .sub-hero .inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 12.5rem 0 2.5rem;
+    box-sizing: border-box;
+  }
+
+  .page:not(.page-about):not(.page-map) .sub-hero-content {
+    position: static;
+    transform: none;
+    left: auto;
+    right: auto;
+    width: 100%;
+    max-width: 100%;
     padding: 0 1.4rem;
     box-sizing: border-box;
   }
 
-  .sub-hero-title {
-    font-size: 3.2rem;
+  .page:not(.page-about):not(.page-map) .sub-hero-title {
+    font-size: 2.2rem;
     line-height: 1.25;
+    word-break: keep-all;
+    overflow-wrap: break-word;
   }
 
-  .sub-hero-subtitle {
+  .page:not(.page-about):not(.page-map) .sub-hero-subtitle,
+  .page-submit .submit-hero-desc {
+    width: 100%;
+    max-width: 100%;
     margin-top: 1.2rem;
     font-size: 1.3rem;
     line-height: 1.55;
+    white-space: normal;
+    word-break: keep-all;
+    overflow-wrap: break-word;
+  }
+
+  .page-submit .submit-hero-head {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  /* 모바일 전용 줄바꿈 (HTML br 위치) */
+  .page-faq .sub-hero-subtitle br,
+  .page-pick .sub-hero-subtitle br,
+  .page-course .sub-hero-subtitle br,
+  .page-submit .sub-hero-subtitle br {
+    display: block;
   }
 
   .breadcrumb {
@@ -1097,23 +1169,31 @@
 }
 
 @media (max-width: 480px) {
-  .sub-hero,
-  .sub-hero .inner {
-    min-height: 26rem;
+  .page:not(.page-about):not(.page-map) .sub-hero,
+  .page:not(.page-about):not(.page-map) .sub-hero .inner {
+    min-height: 28rem;
   }
 
-  .sub-hero-content {
+  .page:not(.page-about):not(.page-map) .sub-hero .inner {
+    padding: 12rem 0 2rem;
+  }
+
+  .page:not(.page-about):not(.page-map) .sub-hero-content {
     padding: 0 1.2rem;
   }
 
-  .sub-hero-title {
-    font-size: 2.8rem;
+  .page:not(.page-about):not(.page-map) .sub-hero-title {
+    font-size: 2.2rem;
   }
 
-  .sub-hero-subtitle {
+  .page:not(.page-about):not(.page-map) .sub-hero-subtitle,
+  .page-submit .submit-hero-desc {
     margin-top: 1rem;
     font-size: 1.2rem;
     line-height: 1.5;
+    white-space: normal;
+    word-break: keep-all;
+    overflow-wrap: break-word;
   }
 
   .breadcrumb {
@@ -1371,6 +1451,7 @@
 
 @media (max-width: 768px) {
   footer {
+    height: auto;
     border-radius: 3rem 3rem 0 0;
     padding: 3rem;
   }
@@ -1379,10 +1460,10 @@
     align-items: flex-start;
   }
   .footer-inner {
-    display:flex;
+    display: flex;
     align-items: center;
-    height: auto;
     width: 100%;
+    height: auto;
     row-gap: 3rem;
   }
   .footer-left {
@@ -1503,11 +1584,39 @@
   .main-map-pin img { width: 30px; }
   .main-map-pin span { font-size: 1.1rem; padding: 3px 8px; }
   .main-map-pin { gap: 4px; }
+  .main-map-pin,
+  .main-map-pin.sr.is-visible {
+    transform: translateX(-50%) translateY(-14px);
+  }
+  .main-map-pin.sr,
+  .main-map-pin.sr.sr-up {
+    transform: translateX(-50%) translateY(16px);
+  }
+  .main-map-pin[data-location="jeju"] { top: 7%; }
+  .main-map-pin[data-location="aewol"] { top: 19%; }
+  .main-map-pin[data-location="hallim"] { top: 44%; }
+  .main-map-pin[data-location="hyeopjae"] { top: 63%; }
+  .main-map-pin[data-location="seogwipo"] { top: 65%; }
+  .main-map-pin[data-location="seongsan"] { top: 31%; }
 }
 @media (max-width: 480px) {
   .main-map-pin img { width: 22px; }
   .main-map-pin span { font-size: 1rem; padding: 2px 6px; }
   .main-map-pin { gap: 2px; }
+  .main-map-pin,
+  .main-map-pin.sr.is-visible {
+    transform: translateX(-50%) translateY(-18px);
+  }
+  .main-map-pin.sr,
+  .main-map-pin.sr.sr-up {
+    transform: translateX(-50%) translateY(12px);
+  }
+  .main-map-pin[data-location="jeju"] { top: 6%; }
+  .main-map-pin[data-location="aewol"] { top: 17%; }
+  .main-map-pin[data-location="hallim"] { top: 42%; }
+  .main-map-pin[data-location="hyeopjae"] { top: 61%; }
+  .main-map-pin[data-location="seogwipo"] { top: 63%; }
+  .main-map-pin[data-location="seongsan"] { top: 29%; }
 }
 
 /* map 반응형 */
@@ -1538,7 +1647,7 @@
     min-height: 35rem;
   }
   .map-hero-title {
-    font-size: 6rem;
+    font-size: 5.2rem;
   }
   .map-spot-content {
     margin-top: 3rem;
@@ -1851,7 +1960,7 @@
   }
   /* map hero */
   .map-hero-title {
-    font-size: 4rem;
+    font-size: 3.5rem;
   }
   .breadcrumb {
     padding: 3rem 0.8rem;
@@ -2086,7 +2195,7 @@
     padding: 1.8rem 0.8rem;
   }
   .map-hero-title {
-    font-size: 3rem;
+    font-size: 2.8rem;
     margin-top: 4rem;
   }
   .map-section-head h2 {
