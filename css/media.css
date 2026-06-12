@@ -1496,7 +1496,7 @@
     margin-top: 4rem;
   }
   .map-detail-inner {
-    padding: 4rem 3rem;
+    padding: 4rem 3rem;  /* top 4rem: 헤더 하단 기준 일정한 간격 유지 */
   }
   .map-detail-menu-list,
   .map-detail-review-list {
@@ -1760,7 +1760,7 @@
 @media (max-width: 768px) {
   /* map-detail */
   .map-detail-inner {
-    padding: 2rem;
+    padding: 3rem 2rem;  /* top 3rem: 헤더 하단 기준 일정한 간격 유지 */
   }
   .map-detail-content {
     margin-top: var(--header-h, 8rem);
@@ -1966,6 +1966,9 @@
   .map-detail-content {
     margin-top: var(--header-h, 12rem);
   }
+  .map-detail-inner {
+    padding: 3rem 1.4rem;  /* top 3rem: 헤더 하단 기준 일정한 간격 유지 */
+  }
   .map-detail-name {
     font-size: 2.8rem;
   }
@@ -2080,8 +2083,8 @@
 
   /* 카드 */
   .map-card-list {
-    row-gap: 1.4rem;
-    width: 95%;
+    row-gap: 1.6rem;
+    width: 80%;
   }
   .map-place-card-img {
     height: 18rem;
