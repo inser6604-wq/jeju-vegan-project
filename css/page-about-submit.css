@@ -403,6 +403,16 @@
   color: #fff;
 }
 
+@media (max-width: 1200px) {
+  .about-card-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .about-stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
 @media (max-width: 1024px) {
   .about-hero-title {
     font-size: 3rem;
@@ -419,14 +429,6 @@
     gap: 42px;
   }
 
-  .about-card-list {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  .about-stats {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
   .about-cta-inner {
     display: block;
   }
@@ -437,12 +439,34 @@
 }
 
 @media (max-width: 768px) {
+  .page-about .sub-hero,
+  .page-about .sub-hero .inner {
+    min-height: auto;
+  }
+
+  .page-about .sub-hero .inner {
+    display: flex;
+    align-items: flex-start;
+    padding-top: 12rem;
+    padding-bottom: 4rem;
+    box-sizing: border-box;
+  }
+
+  .page-about .sub-hero-content {
+    position: static;
+    transform: none;
+    padding: 0;
+    width: 100%;
+  }
+
   .about-hero-title {
     font-size: 2.8rem;
+    word-break: keep-all;
   }
 
   .about-hero-desc {
     font-size: 1.35rem;
+    word-break: keep-all;
   }
 
   .page-about .section-title {
@@ -460,8 +484,13 @@
     grid-template-columns: 1fr;
   }
 
+  .about-stats li {
+    text-align: center;
+  }
+
   .about-info-card {
     min-height: auto;
+    text-align: center;
   }
 
   .about-hero-actions {
@@ -485,6 +514,11 @@
 }
 
 @media (max-width: 480px) {
+  .about-work-head {
+    text-align: left;
+    margin-inline: 0;
+  }
+
   .about-hero-title {
     font-size: 2.4rem;
   }
@@ -497,10 +531,36 @@
     aspect-ratio: 3 / 2;
   }
 
-  .about-btn,
+  .about-cta-actions {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 8px;
+  }
+
   .about-cta-actions .about-btn {
-    width: 100%;
-    max-width: 100%;
+    flex: 1;
+    min-width: 0;
+    width: auto;
+    max-width: none;
+    height: 42px;
+    padding: 0 10px;
+    font-size: 1.25rem;
+  }
+
+  .about-hero-actions {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 8px;
+  }
+
+  .about-hero-actions .about-btn {
+    flex: 1;
+    min-width: 0;
+    width: auto;
+    max-width: none;
+    height: 42px;
+    padding: 0 10px;
+    font-size: 1.25rem;
   }
 }
 
@@ -716,12 +776,34 @@
 }
 
 @media (max-width: 768px) {
+  .page-submit .sub-hero,
+  .page-submit .sub-hero .inner {
+    min-height: auto;
+  }
+
+  .page-submit .sub-hero .inner {
+    display: flex;
+    align-items: flex-start;
+    padding-top: 12rem;
+    padding-bottom: 4rem;
+    box-sizing: border-box;
+  }
+
+  .page-submit .sub-hero-content {
+    position: static;
+    transform: none;
+    padding: 0;
+    width: 100%;
+  }
+
   .submit-hero-title {
     font-size: 3.8rem;
+    word-break: keep-all;
   }
 
   .submit-hero-desc {
     font-size: 1.6rem;
+    word-break: keep-all;
   }
 
   .submit-tabs label {
@@ -1405,5 +1487,32 @@
 
   .wizard-submit-btn {
     min-width: 160px;
+  }
+}
+
+@media (max-width: 480px) {
+  .wp-track {
+    top: 18px;
+    left: 18px;
+    right: 18px;
+  }
+
+  .wp-num {
+    width: 36px;
+    height: 36px;
+    font-size: 1.3rem;
+  }
+
+  .wp-label {
+    font-size: 0.85rem;
+  }
+
+  .report-submit-cta {
+    justify-content: stretch;
+  }
+
+  .btn-report-submit {
+    width: 100%;
+    min-width: 0;
   }
 }
