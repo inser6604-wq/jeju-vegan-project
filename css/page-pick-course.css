@@ -663,6 +663,10 @@
 @media (max-width: 768px) {
 
   /* ---- 공통 히어로 ---- */
+  .page-pick .sub-hero-subtitle br,
+  .page-course .sub-hero-subtitle br {
+    display: block;
+  }
 
   /* ---- pick 레이아웃 (이미지 + 정보 세로로) ---- */
   .page-pick .pick-layout {
@@ -796,16 +800,6 @@
 
   .page-pick .pick-img {
     height: 20rem;
-  }
-
-  .page-pick .pick-hero,
-  .page-course .course-hero {
-    min-height: 26rem;
-  }
-
-  .page-pick .pick-hero .inner,
-  .page-course .course-hero .inner {
-    min-height: 26rem;
   }
 
   /* ---- course 카드 1열 ---- */

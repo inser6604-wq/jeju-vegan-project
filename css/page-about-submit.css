@@ -32,29 +32,28 @@
   width: min(100%, 560px);
 }
 
-.about-hero-title {
-  line-height: 1.4;
-}
-
 .about-hero-desc {
   width: min(100%, 450px);
-  line-height: 1.8;
+}
+
+.about-hero-desc .br-dt {
+  display: block;
 }
 
 .about-hero-actions,
 .about-cta-actions {
   display: flex;
   flex-wrap: wrap;
-  gap: 12px;
-  margin-top: 34px;
+  gap: 10px;
+  margin-top: 2.4rem;
 }
 
 .about-btn {
-  min-width: 150px;
-  height: 48px;
-  padding: 0 24px;
+  min-width: 12.8rem;
+  height: 4rem;
+  padding: 0 1.8rem;
   border-radius: 999px;
-  font-size: 1.4rem;
+  font-size: 1.3rem;
 }
 
 .about-btn-primary {
@@ -403,14 +402,6 @@
 }
 
 @media (max-width: 1024px) {
-  .about-hero-title {
-    font-size: 3rem;
-  }
-
-  .page-about .section-title {
-    font-size: 3rem;
-  }
-
   .about-split,
   .about-split-reverse,
   .about-feature {
@@ -450,18 +441,76 @@
 }
 
 @media (max-width: 768px) {
-  .about-hero-title {
-    font-size: 2.8rem;
+  .page-about .sub-hero-title {
+    font-size: 2.2rem;
+    line-height: 1.25;
     word-break: keep-all;
+    overflow-wrap: break-word;
   }
 
-  .about-hero-desc {
-    font-size: 1.35rem;
-    word-break: keep-all;
+  .page-about .about-hero-copy {
+    width: 100%;
+    max-width: 100%;
   }
 
-  .page-about .section-title {
-    font-size: 2.6rem;
+  .page-about .about-hero-desc {
+    margin-top: 1.2rem;
+    font-size: 1.3rem;
+    line-height: 1.55;
+    white-space: normal;
+    word-break: keep-all;
+    overflow-wrap: break-word;
+  }
+
+  .page-about .about-hero-desc .br-dt {
+    display: none;
+  }
+
+  .page-about .section-title br,
+  .page-about .section-desc br,
+  .page-about .about-text br {
+    display: none;
+  }
+
+  .page-about .section-desc,
+  .page-about .about-text {
+    white-space: normal;
+    word-break: keep-all;
+    overflow-wrap: break-word;
+  }
+
+  .about-text {
+    font-size: 1.4rem;
+    line-height: 1.55;
+  }
+
+  .about-info-card .card-title {
+    font-size: 1.5rem;
+  }
+
+  .about-info-card .card-desc {
+    font-size: 1.3rem;
+  }
+
+  .about-stats strong {
+    font-size: 2.4rem;
+  }
+
+  .about-stats span {
+    font-size: 1.2rem;
+  }
+
+  .about-cta h2 {
+    font-size: 2.2rem;
+  }
+
+  .about-cta p {
+    font-size: 1.4rem;
+    line-height: 1.55;
+  }
+
+  .about-principles .section-desc {
+    font-size: 1.4rem;
   }
 
   .about-split,
@@ -484,10 +533,18 @@
     text-align: center;
   }
 
+  .about-hero-actions {
+    gap: 8px;
+    margin-top: 1.8rem;
+  }
+
   .about-hero-actions .about-btn {
-    height: 44px;
-    padding: 0 18px;
-    font-size: 1.3rem;
+    flex: 0 1 auto;
+    width: auto;
+    height: 3.2rem;
+    min-width: 0;
+    padding: 0 1.2rem;
+    font-size: 1.1rem;
   }
 
   .principles-card-list {
@@ -501,17 +558,41 @@
 }
 
 @media (max-width: 480px) {
+  .page-about .about-hero-desc {
+    margin-top: 1rem;
+    font-size: 1.2rem;
+    line-height: 1.5;
+  }
+
   .about-work-head {
     text-align: left;
     margin-inline: 0;
   }
 
-  .about-hero-title {
-    font-size: 2.4rem;
+  .page-about .section-desc,
+  .about-text {
+    font-size: 1.3rem;
+    line-height: 1.5;
   }
 
-  .page-about .section-title {
+  .about-info-card .card-title {
+    font-size: 1.4rem;
+  }
+
+  .about-info-card .card-desc {
+    font-size: 1.2rem;
+  }
+
+  .about-stats strong {
     font-size: 2.2rem;
+  }
+
+  .about-cta p {
+    font-size: 1.3rem;
+  }
+
+  .about-principles .section-desc {
+    font-size: 1.3rem;
   }
 
   .about-org-visual {
@@ -529,25 +610,15 @@
     min-width: 0;
     width: auto;
     max-width: none;
-    height: 42px;
-    padding: 0 10px;
-    font-size: 1.25rem;
-  }
-
-  .about-hero-actions {
-    flex-direction: row;
-    flex-wrap: nowrap;
-    gap: 8px;
+    height: 3.4rem;
+    padding: 0 0.8rem;
+    font-size: 1.15rem;
   }
 
   .about-hero-actions .about-btn {
-    flex: 1;
-    min-width: 0;
-    width: auto;
-    max-width: none;
-    height: 42px;
-    padding: 0 10px;
-    font-size: 1.25rem;
+    height: 3rem;
+    padding: 0 1rem;
+    font-size: 1.05rem;
   }
 }
 
@@ -580,8 +651,8 @@
 }
 
 #tab-store:checked ~ .submit-hero {
-  background-image: url("../image/submit-restaurant.jpg");
-  background-position: center 40%;
+  background-image: url("../image/submit-img.jpg");
+  background-position: center;
 }
 
 #tab-report:checked ~ .submit-hero {
@@ -599,16 +670,12 @@
 }
 
 .submit-hero-head {
-  width: min(100%, 560px);
   display: none;
 }
 
-.submit-hero-title {
-  margin-top: 18px;
-}
-
 .submit-hero-desc {
-  width: min(100%, 450px);
+  width: 100%;
+  max-width: 100%;
 }
 
 .submit-tabs {
@@ -776,32 +843,11 @@
 }
 
 @media (max-width: 768px) {
-  .page-submit .sub-hero,
-  .page-submit .sub-hero .inner {
-    min-height: auto;
-  }
-
-  .page-submit .sub-hero .inner {
-    display: flex;
-    align-items: flex-start;
-    padding-top: 12rem;
-    padding-bottom: 4rem;
-    box-sizing: border-box;
-  }
-
-  .page-submit .sub-hero-content {
-    position: static;
-    transform: none;
-    padding: 0;
-    width: 100%;
+  .page-submit .sub-hero-subtitle br {
+    display: block;
   }
 
   .submit-hero-title {
-    word-break: keep-all;
-  }
-
-  .submit-hero-desc {
-    font-size: 1.6rem;
     word-break: keep-all;
   }
 
@@ -826,11 +872,6 @@
 @media (max-width: 480px) {
   .section {
     padding: 60px 0;
-  }
-
-
-  .submit-hero-desc {
-    font-size: 1.45rem;
   }
 
 
