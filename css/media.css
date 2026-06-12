@@ -1973,7 +1973,7 @@
     flex-shrink: 0;
   }
   .map-card-inner {
-    padding: 1.4rem 10rem 1.8rem 1.6rem;
+    padding: 1.4rem 1.6rem 1.8rem;
     row-gap: 1rem;
     width: 100%;
     box-sizing: border-box;
@@ -1990,27 +1990,20 @@
     gap: 0.6rem;
   }
 
-  /* 768px: 코멘트 텍스트만 숨김 */
-  .map-card-speak {
+  /* 모바일에서 숨길 요소 */
+  .map-card-speak,
+  .map-course-badge {
     display: none;
   }
 
-  /* 영업중 뱃지: 텍스트 영역 우측 상단 (이미지 22rem 아래 + 텍스트 패딩 1.4rem) */
+  /* 영업중 뱃지: 이미지 우측 상단 */
   .map-list-cur {
     position: absolute;
-    top: 23.4rem;
-    right: 1.6rem;
+    top: 1.5rem;
+    right: 1.5rem;
     width: 8rem;
     height: 3rem;
     font-size: 1.4rem;
-  }
-
-  /* 코스 뱃지: 영업중 뱃지 바로 아래 */
-  .map-course-badge {
-    top: 27.2rem;
-    right: 1.6rem;
-    font-size: 1.3rem;
-    height: 3rem;
   }
 
   .map-list-content {
