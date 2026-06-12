@@ -1210,6 +1210,10 @@
     padding: 0 2rem;
   }
 
+  .logo a {
+    width: 11rem;
+  }
+
   /* PC 메뉴 숨김 */
   .header-menu {
     display: none;
@@ -1430,6 +1434,8 @@
   .footer-inner {
     width: 100%;
     row-gap: 2rem;
+    display:flex;
+    flex-direction: column;
   }
   .footer-left {
     row-gap: 2rem;
@@ -1438,22 +1444,37 @@
     row-gap: 1rem;
   }
   .footer-logo {
-    width: 100%;
+    width: 9rem;
+    display: block;
     margin: 0 auto;
   }
   .footer-desc {
     font-size: 1.3rem;
     text-align: center;
-    width: 100%;
+    white-space: nowrap;
   }
   .footer-right {
-    display:flex;
-    justify-content: center;
-    width:90%;
-    column-gap: 4rem;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    width: 100%;
+    column-gap: 1rem;
+  }
+  .footer-left {
+    align-items: center;
   }
   .footer-menu {
-    row-gap: 0.5rem;
+    row-gap: 0.6rem;
+    flex: 1;
+    min-width: 0;
+    align-items: center;
+  }
+  .footer-menu li {
+    text-align: center;
+  }
+  .footer-menu li a {
+    font-size: 1.1rem;
+    word-break: keep-all;
   }
   .footer-menu-top {
     border-radius: 1.2rem;
@@ -1494,10 +1515,11 @@
   /* map-detail */
   .map-detail-content {
     width: 100%;
-    margin-top: 4rem;
+    margin-top: 0;
+    padding-top: 8rem; /* 헤더 높이(8rem) 만큼 section 자체 padding → #fff 배경으로 덮음 */
   }
   .map-detail-inner {
-    padding: 4rem 3rem;
+    padding: 3rem 3rem;
   }
   .map-detail-menu-list,
   .map-detail-review-list {
@@ -1760,11 +1782,12 @@
 /* ── 768px 이하: 모바일 카드 세로형 + 필터 너비 조정 ── */
 @media (max-width: 768px) {
   /* map-detail */
-  .map-detail-inner {
-    padding: 2rem;
-  }
   .map-detail-content {
-    margin-top: var(--header-h, 8rem);
+    margin-top: 0;
+    padding-top: 8rem;
+  }
+  .map-detail-inner {
+    padding: 2.5rem 2rem;
   }
   .map-detail-cur,
   .map-detail-corse {
@@ -1772,6 +1795,37 @@
     display: inline-flex;
     margin-right: 1rem;
     margin-top: 1rem;
+  }
+  /* 코스 태그: max-content 너비에 padding 확보, 왼쪽 정렬 */
+  .map-detail-corse {
+    width: max-content;
+    padding: 0 1.6rem;
+    align-self: flex-start;
+  }
+  /* 리뷰 리스트: 세로 스택 → 가로 스크롤 */
+  .map-detail-review-list {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    gap: 1.5rem;
+    padding-bottom: 1.2rem;
+    scrollbar-width: thin;
+    scrollbar-color: #a2c7b6 transparent;
+    justify-content: flex-start;
+  }
+  .map-detail-review-list::-webkit-scrollbar {
+    height: 5px;
+  }
+  .map-detail-review-list::-webkit-scrollbar-thumb {
+    background: #a2c7b6;
+    border-radius: 3px;
+  }
+  .map-detail-review {
+    width: 80vw;
+    max-width: 28rem;
+    flex-shrink: 0;
+    scroll-snap-align: start;
   }
   .map-detail-head-img-list {
     flex-direction: column;
@@ -1795,10 +1849,6 @@
     width: 100%;
     height: 22rem;
   }
-  .map-detail-review {
-    width: 100%;
-  }
-
   /* map hero */
   .map-hero-title {
     font-size: 4rem;
@@ -1965,7 +2015,11 @@
 @media (max-width: 480px) {
   /* map-detail */
   .map-detail-content {
-    margin-top: var(--header-h, 12rem);
+    margin-top: 0;
+    padding-top: 8rem;
+  }
+  .map-detail-inner {
+    padding: 2rem 1.4rem;
   }
   .map-detail-name {
     font-size: 2.8rem;
@@ -2081,8 +2135,8 @@
 
   /* 카드 */
   .map-card-list {
-    row-gap: 1.4rem;
-    width: 95%;
+    row-gap: 1.6rem;
+    width: 80%;
   }
   .map-place-card-img {
     height: 18rem;
