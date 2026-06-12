@@ -8,6 +8,10 @@
 body {
   background-color: #fffcf7;
 }
+/* map-detail 페이지: header-content 간격의 크림색 배경 차단 */
+.page-map-detail {
+  background-color: #fff;
+}
 .map-hero {
   position: relative;
   background: url(../image/map-hero-img3.jpg) center bottom / cover no-repeat;
@@ -320,6 +324,36 @@ body {
   column-gap: 11rem;
 }
 
+/* map-in-card 전용 override: 외부 사용처에 영향 없음 */
+.map-in-card .map-in-info-head {
+  width: calc(100% - 3.2rem); /* 카드 양쪽 1.6rem 여백 */
+}
+
+.map-in-card .map-in-info-title {
+  display: flex;
+  justify-content: space-between; /* 고정 gap 대신 양끝 정렬 */
+  align-items: center;
+  column-gap: 0.8rem;
+  min-width: 0;
+}
+
+/* 이름: 한 줄 유지, 넘치면 말줄임 */
+.map-in-card .map-info-name {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  flex: 1;
+  min-width: 0;
+}
+
+/* 영업중 배지: 카드 크기에 일관된 padding 기반 크기 */
+.map-in-card .map-info-cur {
+  width: auto;
+  padding: 0 1rem;
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+
 .map-info-name {
   font-size: 1.7rem;
   color: #111;
@@ -351,6 +385,11 @@ body {
   height: 12rem;
   border-radius: 1.5rem;
   object-fit: cover;
+}
+
+/* map-in-card 전용: 이미지 너비를 info-head와 동일하게 */
+.map-in-card .map-info-img {
+  width: calc(100% - 3.2rem);
 }
 
 /* map-list________________ */
