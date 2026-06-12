@@ -796,7 +796,7 @@ body {
   font-size:1.4rem;
   display:flex;
   row-gap:1rem;
-  align-items: left;
+  align-items:flex-start;
   display:flex;
   flex-direction: column;
   transition:all 0.3s;
