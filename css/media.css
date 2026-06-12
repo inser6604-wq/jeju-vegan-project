@@ -1212,6 +1212,10 @@
     padding: 0 2rem;
   }
 
+  .logo a {
+    width: 11rem;
+  }
+
   /* PC 메뉴 숨김 */
   .header-menu {
     display: none;
