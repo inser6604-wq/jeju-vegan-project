@@ -490,20 +490,48 @@ document.addEventListener('DOMContentLoaded', () => {
   const filterTab = document.querySelector('.map-filter-tab');
   const filterInner = document.querySelector('.map-filter-inner');
   const mapFilter = document.querySelector('.map-filter');
-  const tabArrow = filterTab ? filterTab.querySelector('img') : null;
-  let isOpen = true;
+  if (!filterTab || !filterInner || !mapFilter) return;
+  const tabArrow = filterTab.querySelector('img');
 
-  if (filterTab && filterInner && mapFilter && tabArrow) {
-    filterTab.addEventListener('click', (e) => {
-      e.preventDefault();
-      isOpen = !isOpen;
-      filterInner.classList.toggle('hidden', !isOpen);
-      mapFilter.classList.toggle('closed', !isOpen);
-      tabArrow.style.transform = isOpen ? 'rotate(0deg)' : 'rotate(180deg)';
-    });
+  // 1200px 이하(태블릿 포함)는 슬라이드 방식 적용
+  const isTabletOrMobile = () => window.innerWidth <= 1200;
+
+  // 기본 상태: 1200px 이하는 닫힘, 데스크탑은 열림
+  let isOpen = !isTabletOrMobile();
+
+  function applyFilterState(open) {
+    if (isTabletOrMobile()) {
+      // 태블릿·모바일(≤1200px): .active 클래스 슬라이드 방식
+      mapFilter.classList.toggle('active', open);
+      mapFilter.classList.remove('closed');
+      filterInner.classList.toggle('hidden', !open);
+    } else {
+      // 데스크탑(>1200px): .closed / .hidden 방식
+      mapFilter.classList.toggle('closed', !open);
+      mapFilter.classList.remove('active');
+      filterInner.classList.toggle('hidden', !open);
+    }
+    if (tabArrow) tabArrow.style.transform = open ? 'rotate(0deg)' : 'rotate(180deg)';
   }
-});
 
+  applyFilterState(isOpen);
+
+  // 클릭 시 토글: 1회=열림, 2회=닫힘
+  filterTab.addEventListener('click', (e) => {
+    e.preventDefault();
+    isOpen = !isOpen;
+    applyFilterState(isOpen);
+  });
+
+  let resizeTimer;
+  window.addEventListener('resize', () => {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(() => {
+      isOpen = !isTabletOrMobile();
+      applyFilterState(isOpen);
+    }, 150);
+  });
+});
   // map-filter-search기능
 const searchInput = document.querySelector('.map-search input');
 const allCards = document.querySelectorAll('.map-place-card');
@@ -566,6 +594,79 @@ mapPinItems.forEach(pinItem => {
     orangeImg.style.opacity = '0';
   });
 });
+// map-in-card 모바일 위치 자동 조정 (지도 영역 밖으로 나가지 않게)
+(function initMobileInCardPosition() {
+  const mapContent = document.querySelector('.page-map .map-main-content');
+  if (!mapContent) return;
+
+  const pins = mapContent.querySelectorAll('.map-pin');
+  if (!pins.length) return;
+
+  function adjust() {
+    const isMobile = window.innerWidth <= 480;
+    const mapH = mapContent.offsetHeight;
+    const mapW = mapContent.offsetWidth;
+    const remPx = parseFloat(getComputedStyle(document.documentElement).fontSize);
+    const cardW = 16 * remPx;  // CSS: width: 16rem
+    const cardH = 8 * remPx;   // 이미지 없는 카드 대략 높이
+    // filter-tab 닫힌 상태: left 2rem + width 2.5rem → 4.5rem 이후부터 안전
+    const tabSafeLeft = 4.5 * remPx;
+
+    pins.forEach(pin => {
+      const card = pin.querySelector('.map-in-card');
+      if (!card) return;
+
+      if (!isMobile) {
+        card.style.top = '';
+        card.style.bottom = '';
+        card.style.transform = '';
+        return;
+      }
+
+      const pinCenterX = pin.offsetLeft + pin.offsetWidth / 2;
+      const pinBottom  = pin.offsetTop + pin.offsetHeight;
+
+      // ── 세로: 하단 넘침 → 핀 위로
+      if (pinBottom + cardH + 8 > mapH) {
+        card.style.top = 'auto';
+        card.style.bottom = 'calc(100% + 8px)';
+      } else {
+        card.style.top = '';
+        card.style.bottom = '';
+      }
+
+      // ── 가로 계산
+      // translateX(-50%) 기준: cardLeft = pinCenterX - cardW/2
+      const cardLeftDefault  = pinCenterX - cardW / 2;
+      const cardRightDefault = pinCenterX + cardW / 2;
+
+      if (cardRightDefault > mapW) {
+        // 오른쪽 넘침: 카드를 왼쪽 방향으로 (translateX(-100%) → 카드 오른쪽 끝 = 핀 중심)
+        const idealLeft = pinCenterX - cardW;
+        if (idealLeft < tabSafeLeft) {
+          // 왼쪽 끝도 filter-tab에 걸릴 경우 최소한 tabSafeLeft 까지만 밀기
+          card.style.transform = `translateX(calc(-100% + ${tabSafeLeft - idealLeft}px))`;
+        } else {
+          card.style.transform = 'translateX(-100%)';
+        }
+      } else if (cardLeftDefault < tabSafeLeft) {
+        // 왼쪽 filter-tab 영역 침범 → 오른쪽으로 밀기
+        card.style.transform = `translateX(calc(-50% + ${tabSafeLeft - cardLeftDefault}px))`;
+      } else {
+        card.style.transform = '';
+      }
+    });
+  }
+
+  adjust();
+
+  let resizeTimer;
+  window.addEventListener('resize', () => {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(adjust, 150);
+  });
+})();
+
 // map-list-tab 클릭
 const mapListTab = document.querySelector('.map-list-tab');
 const hiddenCards = document.querySelectorAll('.map-hidden');
@@ -574,8 +675,19 @@ if (mapListTab) {
   mapListTab.addEventListener('click', () => {
     const isHidden = mapListTab.classList.contains('active');
 
-    hiddenCards.forEach(card => {
+    hiddenCards.forEach((card, i) => {
       card.classList.toggle('map-hidden');
+      // 열릴 때: sr 클래스가 있으면 staggered delay로 is-visible 추가
+      if (isHidden && card.classList.contains('sr')) {
+        card.classList.remove('is-visible');
+        setTimeout(() => {
+          card.classList.add('is-visible');
+        }, 80 * i);
+      }
+      // 닫힐 때: is-visible 제거해 다음 열기에 재애니메이션
+      if (!isHidden && card.classList.contains('sr')) {
+        card.classList.remove('is-visible');
+      }
     });
 
     mapListTab.classList.toggle('active');

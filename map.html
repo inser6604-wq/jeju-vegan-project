@@ -3,7 +3,6 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>html{visibility:hidden}</style>
   <link rel="shortcut icon" href="image/favicon.svg">
   <link rel="stylesheet" href="css/style.css">
   <title>제주비건지도 | 식당 목록</title>
@@ -34,17 +33,18 @@
     <!-- 지도  -->
     <section class="map-spot-content">
       <div class="inner map-sopt-inner">
-        <div class="map-section-head section-head">
+        <div class="map-section-head section-head sr sr-up">
           <h2 class="section-title">비건 지도</h2>
-          <p class="section-desc">당신의 취향에 맞는 제주 비건 스팟을 추천해드려요</p>
+          <p class="section-desc">취향에 맞는 제주 비건 스팟을 추천해드려요</p>
         </div>
         <!-- 비주얼 및 필터 -->
+        <div class="map-scroll-wrap sr sr-up" data-sr-delay="0.15">
         <div class="map-main-content">
           <div class="map-main-content-inner inner">
             <div class="map-filter">
               <div class="map-filter-inner">
                 <div class="map-search search">
-                  <input type="text" placeholder="지역, 식당이름을 입력">
+                  <input id= "map-search-placeholder" type="text" placeholder="지역, 식당이름을 입력">
                   <button><img src="image/map-search-icon.svg" alt="search-icon"></button>
                 </div>
                 <div class="map-filter-sub-inner">
@@ -114,266 +114,159 @@
                   </a>
                 </div>
               </div>
-              <a href="#none" class="map-filter-tab tab tab-btn">
-                  <img class="map-filter-tab-icon" src="image/map-filter-tap-arrow-icon.svg" alt="map-filter-tap">
-              </a>
             </div>
-          </div>
-          <ul class="map-pin-list">
+            <a href="#none" class="map-filter-tab tab tab-btn">
+              <img class="map-filter-tab-icon" src="image/map-filter-tap-arrow-icon.svg" alt="map-filter-tap">
+            </a>
+            <ul class="map-pin-list">
             <li class="map-pin map-pin1">
               <a href="#none">
                 <img src="image/mappin-green.svg" alt="mappin-green">
               </a>
-              <div class="map-in-card map-in-info1 card">
+              <div class="map-in-card card">
                 <div class="map-in-info-head">
                   <div class="map-in-info-title">
                     <p class="map-info-name">cafe 901</p>
                     <p class="map-info-cur">영업 중</p>
                   </div>
-                  <p class="map-info-time">09:00~18:00 | 화요일 휴무</p>
+                  <p class="map-info-time">09:00~18:00 | 매주 화요일 휴무</p>
                 </div>
-                <img class="map-info-img" src="image/map-card-cafe-901.jpg" alt="card1">
+                <img class="map-info-img" src="image/map-list1.jpg" alt="card1">
               </div>
             </li>
             <li class="map-pin map-pin2">
               <a href="#none">
                 <img src="../image/mappin-green.svg" alt="mappin-green">
               </a>
-              <div class="map-in-card map-in-info2 card">
+              <div class="map-in-card card">
                 <div class="map-in-info-head">
                   <div class="map-in-info-title">
-                    <p class="map-info-name">cafe 901</p>
+                    <p class="map-info-name">그날의 조각</p>
                     <p class="map-info-cur">영업 중</p>
                   </div>
-                  <p class="map-info-time">09:00~18:00 | 화요일 휴무</p>
+                  <p class="map-info-time">화-토 11:00-18:00 | 매주 일,월 휴무</p>
                 </div>
-                <img class="map-info-img" src="image/map-card-cafe-901.jpg" alt="card1">
+                <img class="map-info-img" src="image/map-list2.jpg" alt="card2">
               </div>
             </li>
             <li class="map-pin map-pin3">
               <a href="#none">
                 <img src="../image/mappin-green.svg" alt="mappin-green">
               </a>
-              <div class="map-in-card map-in-info3 card">
+              <div class="map-in-card card">
                 <div class="map-in-info-head">
                   <div class="map-in-info-title">
-                    <p class="map-info-name">cafe 901</p>
+                    <p class="map-info-name">루루비건</p>
                     <p class="map-info-cur">영업 중</p>
                   </div>
-                  <p class="map-info-time">09:00~18:00 | 화요일 휴무</p>
+                  <p class="map-info-time">09:00~16:00 | 휴무 인스타 사전 확인</p>
                 </div>
-                <img class="map-info-img" src="image/map-card-cafe-901.jpg" alt="card1">
+                <img class="map-info-img" src="image/map-list3.jpg" alt="card3">
               </div>
             </li>
             <li class="map-pin map-pin4">
               <a href="#none">
                 <img src="../image/mappin-green.svg" alt="mappin-green">
               </a>
-              <div class="map-in-card map-in-info4 card">
+              <div class="map-in-card card">
                 <div class="map-in-info-head">
                   <div class="map-in-info-title">
-                    <p class="map-info-name">cafe 901</p>
+                    <p class="map-info-name">비건테이블 바람</p>
                     <p class="map-info-cur">영업 중</p>
                   </div>
-                  <p class="map-info-time">09:00~18:00 | 화요일 휴무</p>
+                  <p class="map-info-time">10:00~15:00 | 매주 토,일 휴무</p>
                 </div>
-                <img class="map-info-img" src="image/map-card-cafe-901.jpg" alt="card1">
+                <img class="map-info-img" src="image/map-list4.jpg" alt="card4">
               </div>
             </li>
             <li class="map-pin map-pin5">
               <a href="#none">
                 <img src="../image/mappin-green.svg" alt="mappin-green">
               </a>
-              <div class="map-in-card map-in-info5 card">
+              <div class="map-in-card card">
                 <div class="map-in-info-head">
                   <div class="map-in-info-title">
-                    <p class="map-info-name">cafe 901</p>
+                    <p class="map-info-name">AND유CAFE</p>
                     <p class="map-info-cur">영업 중</p>
                   </div>
-                  <p class="map-info-time">09:00~18:00 | 화요일 휴무</p>
+                  <p class="map-info-time">09:00-17:00 | 매주 화,수 휴무</p>
                 </div>
-                <img class="map-info-img" src="image/map-card-cafe-901.jpg" alt="card1">
+                <img class="map-info-img" src="image/map-list5.png" alt="card5">
               </div>
             </li>
             <li class="map-pin map-pin6">
               <a href="#none">
                 <img src="../image/mappin-green.svg" alt="mappin-green">
               </a>
-              <div class="map-in-card map-in-info6 card">
+              <div class="map-in-card card">
                 <div class="map-in-info-head">
                   <div class="map-in-info-title">
-                    <p class="map-info-name">cafe 901</p>
+                    <p class="map-info-name">다소니 Dasoni</p>
                     <p class="map-info-cur">영업 중</p>
                   </div>
-                  <p class="map-info-time">09:00~18:00 | 화요일 휴무</p>
+                  <p class="map-info-time">월-토 11:00-21:00 | 매주 일 휴무</p>
                 </div>
-                <img class="map-info-img" src="image/map-card-cafe-901.jpg" alt="card1">
+                <img class="map-info-img" src="image/map-list6.jpg" alt="card6">
               </div>
             </li>
             <li class="map-pin map-pin7">
               <a href="#none">
                 <img src="../image/mappin-green.svg" alt="mappin-green">
               </a>
-              <div class="map-in-card map-in-info7 card">
+              <div class="map-in-card card">
                 <div class="map-in-info-head">
                   <div class="map-in-info-title">
-                    <p class="map-info-name">cafe 901</p>
+                    <p class="map-info-name">러빙헛</p>
                     <p class="map-info-cur">영업 중</p>
                   </div>
-                  <p class="map-info-time">09:00~18:00 | 화요일 휴무</p>
+                  <p class="map-info-time">수-일 12:00-16:00 | 매주 월,화 휴무</p>
                 </div>
-                <img class="map-info-img" src="image/map-card-cafe-901.jpg" alt="card1">
+                <img class="map-info-img" src="image/map-list7.jpg" alt="card7">
               </div>
             </li>
             <li class="map-pin map-pin8">
               <a href="#none">
                 <img src="../image/mappin-green.svg" alt="mappin-green">
               </a>
-              <div class="map-in-card map-in-info8 card">
+              <div class="map-in-card card">
                 <div class="map-in-info-head">
                   <div class="map-in-info-title">
-                    <p class="map-info-name">cafe 901</p>
-                    <p class="map-info-cur">영업 중</p>
+                    <p class="map-info-name">선샤인워크</p>
+                    <p class="map-info-cur map-cur-end">영업 마감</p>
                   </div>
-                  <p class="map-info-time">09:00~18:00 | 화요일 휴무</p>
+                  <p class="map-info-time">화~일 11:00~16:00 | 매주 월,목,금 휴무</p>
                 </div>
-                <img class="map-info-img" src="image/map-card-cafe-901.jpg" alt="card1">
+                <img class="map-info-img" src="image/map-list8.jpg" alt="card8">
+              </div>
+            </li>
+            <li class="map-pin map-pin9">
+              <a href="#none">
+                <img src="../image/mappin-green.svg" alt="mappin-green">
+              </a>
+              <div class="map-in-card card">
+                <div class="map-in-info-head">
+                  <div class="map-in-info-title">
+                    <p class="map-info-name">숲속의 도토리</p>
+                    <p class="map-info-cur map-cur-end">영업 마감</p>
+                  </div>
+                  <p class="map-info-time">화-일 11:00-20:00 | 매주 월 휴무</p>
+                </div>
+                <img class="map-info-img" src="image/map-list9.png" alt="card9">
               </div>
             </li>
           </ul>
-          <!-- <ul class="map-in-card-list card-list">
-            <li class="map-in-card map-in-info1 card">
-              <div class="map-in-info-head">
-                <div class="map-in-info-title">
-                  <p class="map-info-name">cafe 901</p>
-                  <p class="map-info-cur">영업 중</p>
-                </div>
-                <p class="map-info-time">09:00~18:00 | 화요일 휴무</p>
-              </div>
-              <img class="map-info-img" src="image/map-card-cafe-901.jpg" alt="card1">
-            </li>
-            <li class="map-in-card map-in-info2 card">
-              <div class="map-in-info-head">
-                <div class="map-in-info-title">
-                  <p class="map-info-name">cafe 901</p>
-                  <p class="map-info-cur">영업 중</p>
-                </div>
-                <p class="map-info-time">09:00~18:00 | 화요일 휴무</p>
-              </div>
-              <img class="map-info-img" src="image/map-card-cafe-901.jpg" alt="card1">
-            </li>
-            <li class="map-in-card map-in-info3 card">
-              <div class="map-in-info-head">
-                <div class="map-in-info-title">
-                  <p class="map-info-name">cafe 901</p>
-                  <p class="map-info-cur">영업 중</p>
-                </div>
-                <p class="map-info-time">09:00~18:00 | 화요일 휴무</p>
-              </div>
-              <img class="map-info-img" src="image/map-card-cafe-901.jpg" alt="card1">
-            </li>
-            <li class="map-in-card map-in-info4 card">
-              <div class="map-in-info-head">
-                <div class="map-in-info-title">
-                  <p class="map-info-name">cafe 901</p>
-                  <p class="map-info-cur">영업 중</p>
-                </div>
-                <p class="map-info-time">09:00~18:00 | 화요일 휴무</p>
-              </div>
-              <img class="map-info-img" src="image/map-card-cafe-901.jpg" alt="card1">
-            </li>
-            <li class="map-in-card map-in-info5 card">
-              <div class="map-in-info-head">
-                <div class="map-in-info-title">
-                  <p class="map-info-name">cafe 901</p>
-                  <p class="map-info-cur">영업 중</p>
-                </div>
-                <p class="map-info-time">09:00~18:00 | 화요일 휴무</p>
-              </div>
-              <img class="map-info-img" src="image/map-card-cafe-901.jpg" alt="card1">
-            </li>
-            <li class="map-in-card map-in-info6 card">
-              <div class="map-in-info-head">
-                <div class="map-in-info-title">
-                  <p class="map-info-name">cafe 901</p>
-                  <p class="map-info-cur">영업 중</p>
-                </div>
-                <p class="map-info-time">09:00~18:00 | 화요일 휴무</p>
-              </div>
-              <img class="map-info-img" src="image/map-card-cafe-901.jpg" alt="card1">
-            </li>
-            <li class="map-in-card map-in-info7 card">
-              <div class="map-in-info-head">
-                <div class="map-in-info-title">
-                  <p class="map-info-name">cafe 901</p>
-                  <p class="map-info-cur">영업 중</p>
-                </div>
-                <p class="map-info-time">09:00~18:00 | 화요일 휴무</p>
-              </div>
-              <img class="map-info-img" src="image/map-card-cafe-901.jpg" alt="card1">
-            </li>
-            <li class="map-in-card map-in-info8 card">
-              <div class="map-in-info-head">
-                <div class="map-in-info-title">
-                  <p class="map-info-name">cafe 901</p>
-                  <p class="map-info-cur">영업 중</p>
-                </div>
-                <p class="map-info-time">09:00~18:00 | 화요일 휴무</p>
-              </div>
-              <img class="map-info-img" src="image/map-card-cafe-901.jpg" alt="card1">
-            </li>
-          </ul>
-          <ul class="map-pin-list">
-            <li class="map-pin map-pin1">
-              <a href="#none">
-                <img src="../image/mappin-green.svg" alt="mappin-green">
-              </a>
-            </li>
-            <li class="map-pin map-pin2">
-              <a href="#none">
-                <img src="../image/mappin-green.svg" alt="mappin-green">
-              </a>
-            </li>
-            <li class="map-pin map-pin3">
-              <a href="#none">
-                <img src="../image/mappin-green.svg" alt="mappin-green">
-              </a>
-            </li>
-            <li class="map-pin map-pin4">
-              <a href="#none">
-                <img src="../image/mappin-green.svg" alt="mappin-green">
-              </a>
-            </li>
-            <li class="map-pin map-pin5">
-              <a href="#none">
-                <img src="../image/mappin-green.svg" alt="mappin-green">
-              </a>
-            </li>
-            <li class="map-pin map-pin6">
-              <a href="#none">
-                <img src="../image/mappin-green.svg" alt="mappin-green">
-              </a>
-            </li>
-            <li class="map-pin map-pin7">
-              <a href="#none">
-                <img src="../image/mappin-green.svg" alt="mappin-green">
-              </a>
-            </li>
-            <li class="map-pin map-pin8">
-              <a href="#none">
-                <img src="../image/mappin-green.svg" alt="mappin-green">
-              </a>
-            </li>
-          </ul> -->
+          </div>
+          
         </div>
+        </div><!-- /.map-scroll-wrap -->
       </div>
     </section>
     
     <!-- map-list -->
     <section class="map-list-content section">
-      <h2 class="map-section-title section-title">식당 리스트</h2>
+      <h2 class="map-section-title section-title sr sr-up">식당 리스트</h2>
       <ul class="map-card-list card-list">
-        <li class="map-place-card card place-card">
+        <li class="map-place-card card place-card sr sr-up" data-sr-delay="0.1">
           <a href="map-detail.html" class="map-place-card-inner ">
             <img class="map-place-card-img" src="image/map-list1.jpg" alt="카페901">
             <div class="map-card-inner">
@@ -395,10 +288,11 @@
               </div>
             </div>
             <span class="map-info-cur map-list-cur">영업 중</span>
+            <span class="map-info-cur map-course-badge ">🍊서귀포 코스</span>
           </a>
         </li>
 
-        <li class="map-place-card card place-card">
+        <li class="map-place-card card place-card sr sr-up" data-sr-delay="0.2">
           <a href="map-detail.html" class="map-place-card-inner">
             <img class="map-place-card-img" src="image/map-list2.jpg" alt="그날의 조각">
             <div class="map-card-inner">
@@ -420,10 +314,11 @@
               </div>
             </div>
             <span class="map-info-cur map-list-cur">영업 중</span>
+            <span class="map-info-cur map-course-badge ">🏕️한라산 코스</span>
           </a>
         </li>
         
-        <li class="map-place-card card place-card">
+        <li class="map-place-card card place-card sr sr-up" data-sr-delay="0.3">
           <a href="map-detail.html" class="map-place-card-inner">
             <img class="map-place-card-img" src="image/map-list3.jpg" alt="루루비건">
             <div class="map-card-inner">
@@ -432,7 +327,7 @@
                 <p class="card-place">
                   제주특별자치도 제주시 노형동 연북로 28
                 </p>
-                <p class="card-time">16:00~16:30 | 휴무 인스타 사전 확인</p>
+                <p class="card-time">09:00~16:00 | 휴무 인스타 사전 확인</p>
                 <div class="card-rating like-btn">
                   <img class= like-icon src="image/map-star-icon.svg" alt="star-icon">
                   <p>3.9<span>(72)</span></p>
@@ -447,10 +342,11 @@
               </div>
             </div>
             <span class="map-info-cur map-list-cur">영업 중</span>
+            <span class="map-info-cur map-course-badge ">🏝️한림공원 코스</span>
           </a>
         </li>
         
-        <li class="map-place-card card place-card">
+        <li class="map-place-card card place-card sr sr-up" data-sr-delay="0.4">
           <a href="map-detail.html" class="map-place-card-inner">
             <img class="map-place-card-img" src="image/map-list4.jpg" alt="비건테이블바람">
             <div class="map-card-inner">
@@ -474,10 +370,11 @@
               </div>
             </div>
             <span class="map-info-cur map-list-cur">영업 중</span>
+            <span class="map-info-cur map-course-badge ">🌊협재·금능 코스</span>
           </a>
         </li>
         
-        <li class="map-place-card card place-card">
+        <li class="map-place-card card place-card sr sr-up" data-sr-delay="0.5">
           <div class="map-place-card-inner">
             <img class="map-place-card-img" src="image/map-list5.png" alt="AND유CAFÉ">
             <div class="map-card-inner">
@@ -501,10 +398,11 @@
               </div>
             </div>
             <span class="map-info-cur map-list-cur">영업 중</span>
+            <span class="map-info-cur map-course-badge ">🌊협재·금능 코스</span>
           </div>
         </li>
 
-        <li class="map-place-card card place-card map-hidden">
+        <li class="map-place-card card place-card map-hidden sr sr-up">
           <a href="map-detail.html" class="map-place-card-inner">
             <img class="map-place-card-img" src="image/map-list6.jpg" alt="다소니">
             <div class="map-card-inner">
@@ -528,11 +426,12 @@
               </div>
             </div>
             <span class="map-info-cur map-list-cur">영업 중</span>
+            <span class="map-info-cur map-course-badge ">🍊서귀포 코스</span>
           </a>
         </li>
   
-        <li class="map-place-card card place-card map-hidden">
-            <a href="map-detail.html" class="map-place-card-inner">
+        <li class="map-place-card card place-card map-hidden sr sr-up">
+          <a href="map-detail.html" class="map-place-card-inner">
               <img class="map-place-card-img" src="image/map-list7.jpg" alt="러빙헛">
               <div class="map-card-inner">
                 <div class="map-card-top">
@@ -554,11 +453,12 @@
                   <span class="map-card-tag card-tag">🚗 주차가능</span>
                 </div>
               </div>
-              <span class="map-info-cur map-list-cur ">영업 중</span>
-            </a>
+              <span class="map-info-cur map-list-cur">영업 중</span>
+            <span class="map-info-cur map-course-badge">🏝️한림공원 코스</span>          
+          </a>
         </li>
         
-        <li class="map-place-card card place-card map-hidden">
+        <li class="map-place-card card place-card map-hidden sr sr-up">
             <a href="map-detail.html" class="map-place-card-inner">
               <img class="map-place-card-img" src="image/map-list8.jpg" alt="선샤인워크">
               <div class="map-card-inner">
@@ -581,11 +481,11 @@
                   <span class="map-card-tag card-tag">🫘 글루텐프리</span>
                 </div>
               </div>
-              <span class="map-info-cur map-list-cur map-cur-end  ">영업 마감</span>
+              <span class="map-info-cur map-list-cur map-cur-end  map-list-end">영업 마감</span>
             </a>
         </li>
         
-        <li class="map-place-card card place-card map-hidden">
+        <li class="map-place-card card place-card map-hidden sr sr-up">
             <a href="map-detail.html" class="map-place-card-inner">
               <img class="map-place-card-img" src="image/map-list9.png" alt="숲속의 도토리">
               <div class="map-card-inner">
@@ -608,11 +508,11 @@
                   <span class="map-card-tag card-tag">🐾 반려동물 동반</span>
                 </div>
               </div>
-              <span class="map-info-cur map-list-cur map-cur-end">영업 마감</span>
+              <span class="map-info-cur map-list-cur map-cur-end map-list-end">영업 마감</span>
             </a>
         </li>
         
-        <li class="map-place-card card place-card map-hidden">
+        <li class="map-place-card card place-card map-hidden sr sr-up">
             <a href="map-detail.html" class="map-place-card-inner">
               <img class="map-place-card-img" src="image/map-list10.jpg" alt="푸른솔맑은향">
               <div class="map-card-inner">
@@ -635,12 +535,12 @@
                   <span class="map-card-tag card-tag">🫘 글루텐프리</span>
                 </div>
               </div>
-              <span class="map-info-cur map-list-cur map-cur-end">영업 마감</span>
+              <span class="map-info-cur map-list-cur map-cur-end map-list-end">영업 마감</span>
             </a>
         </li>
       </ul>
       <!-- 더보기 -->
-        <button class="map-list-tab tab-btn active">
+        <button class="map-list-tab tab-btn active sr sr-up" data-sr-delay="0.15">
           <img class="map-list-tap-icon" src="image/map-down-icon.svg" alt="down-icon">
           더보기
         </button>
@@ -656,6 +556,7 @@
   <script src="https://code.iconify.design/3/3.1.1/iconify.min.js"></script>
   <script src="js/includeHTML.js"></script>
   <script src="js/index.js"></script>
+  <script src="js/scroll.js"></script>
 
 </body>
 </html>

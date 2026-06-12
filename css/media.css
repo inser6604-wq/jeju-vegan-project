@@ -170,13 +170,13 @@
   }
 
   .home-hero-search-title {
-    font-size: 2rem;
+    font-size: 2.8rem;
     line-height: 1.35;
   }
 
   .home-hero-search-desc {
     margin-top: 0.8rem;
-    font-size: 1.15rem;
+    font-size: 1.3rem;
     line-height: 1.5;
   }
 
@@ -187,7 +187,7 @@
   }
 
   .home-hero-search-input {
-    font-size: 1.25rem;
+    font-size: 1.3rem;
   }
 
   .home-hero-search-btn {
@@ -233,6 +233,8 @@
     grid-area: pick-button;
     justify-self: center;
     margin: 28px 0 0;
+    padding: 1rem 2.4rem;
+    font-size: 1.4rem;
   }
 
   .home-map .section-head {
@@ -246,9 +248,9 @@
   .home-map .btn-line {
     width: auto;
     min-width: 0;
-    height: 3.6rem;
-    padding: 0 1.6rem;
-    font-size: 1.25rem;
+    height: 3.8rem;
+    padding: 0 1.8rem;
+    font-size: 1.4rem;
   }
 
   .home-pick-content {
@@ -311,7 +313,7 @@
   .home-pick-main-title,
   .home-pick-side-title {
     margin-top: 1rem;
-    font-size: 1.85rem;
+    font-size: 1.8rem;
   }
 
   .home-pick-main-title {
@@ -335,12 +337,13 @@
 
   .home-pick-main-place {
     margin-top: 12px;
-    font-size: 1.25rem;
+    font-size: 1.3rem;
     color: #888;
   }
 
   .home-pick .badge-vegan {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
+    padding: 0.55rem 1.3rem;
   }
 
   .home-pick-side {
@@ -467,12 +470,12 @@
   }
 
   .home-course-content .home-course-title {
-    font-size: 1.65rem;
+    font-size: 1.8rem;
   }
 
   .home-course-content .home-course-desc {
     margin-top: 8px;
-    font-size: 1.25rem;
+    font-size: 1.3rem;
     line-height: 1.55;
     word-break: keep-all;
   }
@@ -480,7 +483,7 @@
   .home-course-content .course-card .like-btn {
     right: 16px;
     top: 16px;
-    font-size: 1.25rem;
+    font-size: 1.3rem;
   }
 
   .home-course-content .course-card .tag-list {
@@ -490,7 +493,7 @@
 
   .home-course-content .course-card .tag-list .tag {
     padding: 6px 12px;
-    font-size: 1.25rem;
+    font-size: 1.3rem;
   }
 
   .home-course-desc {
@@ -506,11 +509,11 @@
   }
 
   .home-map .section-title {
-    font-size: 2.4rem;
+    font-size: 2.8rem;
   }
 
   .home-map .section-desc {
-    font-size: 1.25rem;
+    font-size: 1.3rem;
     line-height: 1.5;
   }
 
@@ -548,7 +551,7 @@
 
   .home-map-stats span {
     margin-top: 4px;
-    font-size: 1.05rem;
+    font-size: 1.2rem;
     line-height: 1.25;
     word-break: keep-all;
   }
@@ -564,13 +567,13 @@
   }
 
   .home-together .section-title {
-    font-size: 2rem;
+    font-size: 2.8rem;
     line-height: 1.35;
     word-break: keep-all;
   }
 
   .home-together .section-desc {
-    font-size: 1.15rem;
+    font-size: 1.3rem;
     line-height: 1.55;
     word-break: keep-all;
   }
@@ -628,14 +631,14 @@
     width: fit-content;
     max-width: 55%;
     margin: 0 auto 20px;
-    font-size: 1.9rem;
+    font-size: 2.8rem;
     line-height: 1.15;
     text-align: center;
     word-break: keep-all;
   }
 
   .home-join .section-desc {
-    font-size: 1rem;
+    font-size: 1.3rem;
     line-height: 1.55;
     word-break: keep-all;
   }
@@ -665,9 +668,9 @@
     max-width: 100%;
     min-width: 0;
     height: auto;
-    min-height: 4.6rem;
-    padding: 1.2rem 1rem;
-    font-size: 1.3rem;
+    min-height: 4.8rem;
+    padding: 1.3rem 1.2rem;
+    font-size: 1.4rem;
     line-height: 1.35;
     white-space: normal;
     text-align: center;
@@ -702,14 +705,14 @@
     width: fit-content;
     max-width: 72%;
     margin: 0 auto 0.8rem;
-    font-size: 1.65rem;
+    font-size: 2.8rem;
     line-height: 1.5;
     text-align: center;
   }
 
   .home-subscribe .section-desc {
     margin-top: 0;
-    font-size: 1.15rem;
+    font-size: 1.3rem;
     color: #2d6a4f;
     line-height: 1.5;
     text-align: center;
@@ -738,24 +741,24 @@
     min-width: 0;
     height: 100%;
     padding: 0 1.4rem;
-    font-size: 1.15rem;
+    font-size: 1.3rem;
   }
 
   .home-subscribe .btn-primary {
     width: auto;
-    min-width: 8.4rem;
+    min-width: 9rem;
     height: 100%;
-    padding: 0 1.6rem;
+    padding: 0 1.8rem;
     border: none;
     border-radius: 0;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     flex-shrink: 0;
   }
 
   .home-subscribe-note {
     margin-left: 0;
     margin-top: 1rem;
-    font-size: 1rem;
+    font-size: 1.2rem;
     line-height: 1.55;
     text-align: center;
     color: #999;
@@ -768,7 +771,7 @@
   }
 
   .section-title {
-    font-size: 2.4rem;
+    font-size: 2.2rem;
   }
 
   .btn-lg {
@@ -794,16 +797,16 @@
   }
 
   .home-hero-fresh-desc {
-    font-size: 1.25rem;
+    font-size: 1.3rem;
     line-height: 1.4;
   }
 
   .home-hero-search-title {
-    font-size: 1.7rem;
+    font-size: 2.8rem;
   }
 
   .home-hero-search-desc {
-    font-size: 1.1rem;
+    font-size: 1.3rem;
   }
 
   .home-hero-search-form {
@@ -813,7 +816,7 @@
   }
 
   .home-hero-search-input {
-    font-size: 1.15rem;
+    font-size: 1.3rem;
   }
 
   .home-hero-search-btn {
@@ -875,7 +878,7 @@
 
   .home-pick-main-title,
   .home-pick-side-title {
-    font-size: 1.75rem;
+    font-size: 1.8rem;
   }
 
   .home-pick-main-desc,
@@ -884,18 +887,18 @@
   }
 
   .home-map .section-title {
-    font-size: 2rem;
+    font-size: 2.2rem;
   }
 
   .home-map .section-desc {
-    font-size: 1.15rem;
+    font-size: 1.3rem;
     line-height: 1.5;
   }
 
   .home-map .btn-line {
-    height: 3.4rem;
-    padding: 0 1.4rem;
-    font-size: 1.15rem;
+    height: 3.6rem;
+    padding: 0 1.6rem;
+    font-size: 1.4rem;
   }
 
   .home-map-stats {
@@ -909,7 +912,7 @@
 
   .home-map-stats span {
     margin-top: 2px;
-    font-size: 0.95rem;
+    font-size: 1.2rem;
     line-height: 1.2;
   }
 
@@ -940,11 +943,11 @@
   }
 
   .home-course-content .home-course-title {
-    font-size: 1.55rem;
+    font-size: 1.8rem;
   }
 
   .home-course-content .home-course-desc {
-    font-size: 1.15rem;
+    font-size: 1.3rem;
   }
 
   .home-together.section,
@@ -954,13 +957,13 @@
   }
 
   .home-together .section-title {
-    font-size: 1.75rem;
+    font-size: 2.2rem;
   }
 
   .home-join .section-title {
     max-width: 60%;
     margin-inline: auto;
-    font-size: 1.7rem;
+    font-size: 2.2rem;
     line-height: 1.1;
     text-align: center;
   }
@@ -972,7 +975,7 @@
 
   .home-together .section-desc,
   .home-join .section-desc {
-    font-size: 1.1rem;
+    font-size: 1.3rem;
   }
 
   .home-together-visual {
@@ -991,7 +994,7 @@
 
   .home-together .tag {
     padding: 0.7rem 1.2rem;
-    font-size: 1.15rem;
+    font-size: 1.2rem;
   }
 
   .home-join-visual {
@@ -999,9 +1002,9 @@
   }
 
   .home-join .btn-main-bottom {
-    font-size: 1.2rem;
-    min-height: 4.2rem;
-    padding: 1rem 1.2rem;
+    font-size: 1.4rem;
+    min-height: 4.6rem;
+    padding: 1.2rem 1.4rem;
   }
 
   .home-subscribe.section {
@@ -1015,13 +1018,13 @@
   .home-subscribe .section-title {
     max-width: 78%;
     margin: 0 auto 0.6rem;
-    font-size: 1.45rem;
+    font-size: 2.2rem;
     line-height: 1.55;
     text-align: center;
   }
 
   .home-subscribe .section-desc {
-    font-size: 1.05rem;
+    font-size: 1.3rem;
   }
 
   .home-subscribe::after {
@@ -1037,18 +1040,88 @@
 
   .home-subscribe .form-input {
     padding: 0 1.2rem;
-    font-size: 1.05rem;
+    font-size: 1.3rem;
   }
 
   .home-subscribe .btn-primary {
-    min-width: 7.2rem;
-    padding: 0 1.4rem;
-    font-size: 1.1rem;
+    min-width: 8.4rem;
+    padding: 0 1.6rem;
+    font-size: 1.4rem;
   }
 
   .home-subscribe-note {
     margin-top: 0.8rem;
-    font-size: 0.95rem;
+    font-size: 1.2rem;
+  }
+}
+
+/* =========================================
+   Sub Hero + Breadcrumb 공통 반응형
+   ========================================= */
+
+@media (max-width: 768px) {
+  .sub-hero,
+  .sub-hero .inner {
+    min-height: 32rem;
+  }
+
+  .sub-hero-content {
+    left: 0;
+    right: 0;
+    padding: 0 1.4rem;
+    box-sizing: border-box;
+  }
+
+  .sub-hero-title {
+    font-size: 3.2rem;
+    line-height: 1.25;
+  }
+
+  .sub-hero-subtitle {
+    margin-top: 1.2rem;
+    font-size: 1.3rem;
+    line-height: 1.55;
+  }
+
+  .breadcrumb {
+    padding: 2rem 0 4rem;
+    font-size: 1.2rem;
+  }
+
+  .page-about .breadcrumb,
+  .page-submit .breadcrumb {
+    padding-bottom: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .sub-hero,
+  .sub-hero .inner {
+    min-height: 26rem;
+  }
+
+  .sub-hero-content {
+    padding: 0 1.2rem;
+  }
+
+  .sub-hero-title {
+    font-size: 2.8rem;
+  }
+
+  .sub-hero-subtitle {
+    margin-top: 1rem;
+    font-size: 1.2rem;
+    line-height: 1.5;
+  }
+
+  .breadcrumb {
+    padding: 1.6rem 0 3rem;
+    font-size: 1.2rem;
+  }
+
+  .page-about .breadcrumb,
+  .page-submit .breadcrumb {
+    padding-bottom: 0;
   }
 }
 
@@ -1059,14 +1132,6 @@
 @media (max-width: 768px) {
   .faq-hero {
     padding: 56px 0 48px;
-  }
-
-  .faq-hero-title {
-    font-size: 3.2rem;
-  }
-
-  .faq-hero-desc {
-    font-size: 1.35rem;
   }
 
   .faq-body {
@@ -1088,7 +1153,7 @@
   }
 
   .faq-group-title {
-    font-size: 2rem;
+    font-size: 2.2rem;
   }
 
   .faq-content {
@@ -1101,14 +1166,6 @@
 }
 
 @media (max-width: 480px) {
-  .faq-hero-title {
-    font-size: 2.8rem;
-  }
-
-  .faq-hero-desc {
-    font-size: 1.3rem;
-  }
-
   .faq-tab .tab-list {
     gap: 8px;
   }
@@ -1116,7 +1173,7 @@
   .faq-tab .tab-btn {
     height: 36px;
     padding: 0 14px;
-    font-size: 1.25rem;
+    font-size: 1.3rem;
   }
 
   .faq-question {
@@ -1153,6 +1210,10 @@
   .site-header .inner {
     grid-template-columns: 1fr auto;
     padding: 0 2rem;
+  }
+
+  .logo a {
+    width: 11rem;
   }
 
   /* PC 메뉴 숨김 */
@@ -1320,7 +1381,8 @@
     align-items: flex-start;
   }
   .footer-inner {
-    flex-direction: column;
+    display:flex;
+    align-items: center;
     height: auto;
     width: 100%;
     row-gap: 3rem;
@@ -1374,6 +1436,8 @@
   .footer-inner {
     width: 100%;
     row-gap: 2rem;
+    display:flex;
+    flex-direction: column;
   }
   .footer-left {
     row-gap: 2rem;
@@ -1382,22 +1446,37 @@
     row-gap: 1rem;
   }
   .footer-logo {
-    width: 100%;
+    width: 9rem;
+    display: block;
     margin: 0 auto;
   }
   .footer-desc {
     font-size: 1.3rem;
     text-align: center;
-    width: 100%;
+    white-space: nowrap;
   }
   .footer-right {
-    display:flex;
-    justify-content: center;
-    width:90%;
-    column-gap: 4rem;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    width: 100%;
+    column-gap: 1rem;
+  }
+  .footer-left {
+    align-items: center;
   }
   .footer-menu {
-    row-gap: 0.5rem;
+    row-gap: 0.6rem;
+    flex: 1;
+    min-width: 0;
+    align-items: center;
+  }
+  .footer-menu li {
+    text-align: center;
+  }
+  .footer-menu li a {
+    font-size: 1.1rem;
+    word-break: keep-all;
   }
   .footer-menu-top {
     border-radius: 1.2rem;
@@ -1424,33 +1503,26 @@
 }
 @media (max-width: 768px) {
   .main-map-pin img { width: 30px; }
-  .main-map-pin span { font-size: 11px; padding: 3px 8px; }
+  .main-map-pin span { font-size: 1.1rem; padding: 3px 8px; }
   .main-map-pin { gap: 4px; }
 }
 @media (max-width: 480px) {
   .main-map-pin img { width: 22px; }
-  .main-map-pin span { font-size: 9px; padding: 2px 6px; }
+  .main-map-pin span { font-size: 1rem; padding: 2px 6px; }
   .main-map-pin { gap: 2px; }
 }
 
-/* map-detail 반응형 ____________________*/
+/* map 반응형 */
 @media (max-width: 1200px) {
+  /* map-detail */
   .map-detail-content {
     width: 100%;
-    margin-top: 4rem;
-  }
-  .map-section-title,
-  .map-list-tab,
-  .map-card-list {
-    width: 100%;
-    padding-left: 2rem;
-    padding-right: 2rem;
-    box-sizing: border-box;
+    margin-top: 0;
+    padding-top: 8rem; /* 헤더 높이(8rem) 만큼 section 자체 padding → #fff 배경으로 덮음 */
   }
   .map-detail-inner {
-    padding: 4rem 3rem;
+    padding: 3rem 3rem;
   }
-      
   .map-detail-menu-list,
   .map-detail-review-list {
     flex-wrap: wrap;
@@ -1459,22 +1531,265 @@
   }
   .map-detail-menu,
   .map-detail-review {
-    width: calc(50% - 1rem); 
+    width: calc(50% - 1rem);
   }
-  
+
+  /* 지도 hero */
+  .map-hero,
+  .map-inner {
+    min-height: 35rem;
+  }
+  .map-hero-title {
+    font-size: 6rem;
+  }
+  .map-spot-content {
+    margin-top: 3rem;
+  }
+  .map-list-content {
+    padding: 4rem 0;
+  }
+
+  /* 지도 가로 스크롤 래퍼 */
+  .map-scroll-wrap {
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    width: 100%;
+    border-radius: 2.5rem;
+    scrollbar-width: thin;
+    scrollbar-color: #a2c7b6 transparent;
+  }
+  .map-scroll-wrap::-webkit-scrollbar {
+    height: 6px;
+  }
+  .map-scroll-wrap::-webkit-scrollbar-thumb {
+    background: #a2c7b6;
+    border-radius: 3px;
+  }
+
+  /* 지도: 너비 120rem, 높이는 원본 비율(140:80=7:4) 유지 */
+  .page-map .map-main-content {
+    width: 120rem;
+    min-width: 120rem;
+    max-width: none;
+    height: 68.6rem;
+    overflow: visible;
+    background: url(../image/map.png) no-repeat center/cover;
+    border-radius: 2.5rem;
+    margin-bottom: 4rem;
+  }
+  .page-map .map-main-content-inner {
+    width: 120rem;
+    height: 100%;
+    position: relative;
+    z-index: 3;
+    overflow: visible;
+    pointer-events: none;
+  }
+  .page-map .map-filter {
+    pointer-events: auto;
+  }
+  .page-map .map-filter-tab {
+    pointer-events: auto;
+  }
+  /* 핀 호버(카드 표시, 오렌지색) 작동을 위해 pointer-events 복원 */
+  .page-map .map-pin-list {
+    width: 120rem;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    pointer-events: auto;
+  }
+
+  /* 핀 이미지: 지도 비율(120/140≈0.86)에 맞게 축소 */
+  .map-pin a img {
+    width: 3.4rem;
+    height: auto;
+  }
+  /* 인카드: scale()로 내부 텍스트·여백·크기 전체 비례 축소 */
+  .map-in-card {
+    transform: translateX(-50%) scale(0.86);
+    transform-origin: top center;
+  }
+
+  /* ─── 필터: 1200px부터 슬라이드 패널 방식 ─── */
+  /* 상하좌 2rem 여백으로 지도와 구분, 그림자로 경계 명확히 */
+  .map-filter {
+    position: absolute;
+    left: 2rem;
+    top: 2rem;
+    bottom: 2rem;
+    height: auto;
+    width: 0;
+    min-width: 0;
+    overflow: hidden;
+    margin-left: 0;
+    border-radius: 2rem;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.13);
+    z-index: 10;
+    transition: width 0.3s ease;
+    /* 기본 CSS의 justify-content:center 덮어쓰기 → 상단부터 표시 */
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  .map-filter.active {
+    width: 44rem;
+    max-width: 44rem;
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+  /* 필터 내부: padding으로 상하좌우 여백 유지, 상단부터 시작 */
+  .map-filter-inner {
+    width: 100%;
+    padding: 2.5rem 2.2rem 3rem;
+    box-sizing: border-box;
+    height: auto;
+    align-self: flex-start;
+    opacity: 0;
+    transform: none;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+  }
+  .map-filter.active .map-filter-inner {
+    opacity: 1;
+    pointer-events: auto;
+  }
+  .map-filter-inner.hidden {
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  /* 필터 탭: 필터 right 끝에 딱 붙도록 left = filter.left + filter.width */
+  .map-filter-tab {
+    position: absolute;
+    top: 50%;
+    left: 2rem;           /* 닫힘: filter left(2rem) + width(0) */
+    transform: translateY(-50%);
+    transition: left 0.3s ease;
+    z-index: 11;
+  }
+  .map-filter.active ~ .map-filter-tab {
+    left: calc(2rem + 44rem); /* 열림: filter left(2rem) + width(44rem) */
+  }
+
+  /* 필터 내부 요소 */
+  .map-search {
+    width: 100%;
+  }
+  #map-search-placeholder {
+    font-size: 1.4rem;
+  }
+  #map-search-placeholder::placeholder {
+    font-size: 1.3rem;
+  }
+  .map-filter-title p:nth-child(1) {
+    font-size: 1.1rem;
+    margin-top: 1.8rem;
+  }
+  .map-filter-title p:nth-child(2) {
+    font-size: 1.7rem;
+    margin-top: 1rem;
+  }
+  .map-filter-name {
+    font-size: 1.5rem;
+    margin-bottom: 0.8rem;
+  }
+  .map-btn {
+    font-size: 1.2rem;
+    min-width: 0;
+    padding: 0.3rem 0.8rem;
+    margin: 0.2rem;
+  }
+  .map-setting {
+    row-gap: 1.4rem;
+  }
+  .map-reset span {
+    font-size: 1.3rem;
+  }
+  /* 비건의 정도: white-space:nowrap 해제 → 잘릴 경우 아래로 줄바꿈 */
+  .map-filter3-in {
+    white-space: normal;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  /* 추천 코스: 잘릴 경우 아래로 줄바꿈, 정사각형 유지 */
+  .map-filter5-in {
+    flex-wrap: wrap;
+    gap: 0.6rem;
+  }
+  .map-course-btn {
+    width: 9rem;
+    height: 9rem;
+    flex-shrink: 0;
+    font-size: 1.2rem;
+    word-break: keep-all;
+    overflow-wrap: break-word;
+    text-align: center;
+    line-height: 1.3;
+  }
+  .map-course-btn img {
+    width: 6rem;
+    height: 5.5rem;
+    flex-shrink: 0;
+  }
+  .map-apply {
+    margin-top: 3rem;
+  }
+
+  /* 카드 리스트: 가로형 유지, 화면 너비 맞춤 */
+  .map-section-title {
+    width: 90%;
+    margin: 0 auto;
+    padding-bottom: 3rem;
+    text-align: left;
+  }
+  .map-card-list {
+    display: flex;
+    flex-direction: column;
+    row-gap: 2rem;
+    width: 90%;
+  }
+  .map-place-card {
+    width: 100%;
+    height: auto;
+    min-height: 18rem;
+    padding: 1.5rem;
+    box-sizing: border-box;
+  }
   .map-place-card-inner {
     width: 100%;
-    padding: 0 2rem;
-    box-sizing: border-box;
+    height: auto;
+    column-gap: 2.5rem;
+    padding-right: 13rem;
+  }
+  .map-place-card-img {
+    width: 22rem;
+    height: 16rem;
+    flex-shrink: 0;
+  }
+  .map-card-inner {
+    flex: 1;
+    min-width: 0;
+    row-gap: 1rem;
+  }
+  .map-list-tab {
+    width: 90%;
+    margin: 0 auto;
   }
 }
 
+/* ── 768px 이하: 모바일 카드 세로형 + 필터 너비 조정 ── */
 @media (max-width: 768px) {
-  .map-detail-inner {
-    padding: 2rem;
-  }
+  /* map-detail */
   .map-detail-content {
-    margin-top: var(--header-h, 8rem);
+    margin-top: 0;
+    padding-top: 8rem;
+  }
+  .map-detail-inner {
+    padding: 2.5rem 2rem;
   }
   .map-detail-cur,
   .map-detail-corse {
@@ -1483,10 +1798,41 @@
     margin-right: 1rem;
     margin-top: 1rem;
   }
+  /* 코스 태그: max-content 너비에 padding 확보, 왼쪽 정렬 */
+  .map-detail-corse {
+    width: max-content;
+    padding: 0 1.6rem;
+    align-self: flex-start;
+  }
+  /* 리뷰 리스트: 세로 스택 → 가로 스크롤 */
+  .map-detail-review-list {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    gap: 1.5rem;
+    padding-bottom: 1.2rem;
+    scrollbar-width: thin;
+    scrollbar-color: #a2c7b6 transparent;
+    justify-content: flex-start;
+  }
+  .map-detail-review-list::-webkit-scrollbar {
+    height: 5px;
+  }
+  .map-detail-review-list::-webkit-scrollbar-thumb {
+    background: #a2c7b6;
+    border-radius: 3px;
+  }
+  .map-detail-review {
+    width: 80vw;
+    max-width: 28rem;
+    flex-shrink: 0;
+    scroll-snap-align: start;
+  }
   .map-detail-head-img-list {
     flex-direction: column;
     height: auto;
-    row-gap:1.4rem;
+    row-gap: 1.4rem;
   }
   .map-detail-head-img1 {
     width: 100%;
@@ -1498,39 +1844,191 @@
     column-gap: 1.4rem;
     height: 16rem;
   }
-  .map-detail-menu{
-    display:flex;
+  .map-detail-menu {
+    display: flex;
     flex-direction: column;
-    flex:1;
+    flex: 1;
     width: 100%;
     height: 22rem;
   }
-  .map-detail-review {
-    width: 100%;
+  /* map hero */
+  .map-hero-title {
+    font-size: 4rem;
+  }
+  .breadcrumb {
+    padding: 3rem 0.8rem;
+  }
+
+  /* 지도: 너비 76.8rem, 높이 원본 비율(7:4) 유지 */
+  .page-map .map-main-content {
+    width: 76.8rem;
+    min-width: 76.8rem;
+    height: 43.9rem;
+  }
+  .page-map .map-main-content-inner {
+    width: 76.8rem;
+  }
+  .page-map .map-pin-list {
+    width: 76.8rem;
+  }
+
+  /* 핀 이미지: 지도 비율(76.8/140≈0.55)에 맞게 축소 */
+  .map-pin a img {
+    width: 2.2rem;
+    height: auto;
+  }
+  /* 인카드: 동일 비율로 scale 축소 */
+  .map-in-card {
+    transform: translateX(-50%) scale(0.55);
+    transform-origin: top center;
+  }
+
+  /* 필터: 모바일에서 더 넓게, min()으로 탭 위치와 너비 동기화 */
+  .map-filter.active {
+    width: min(50vw, 30rem);
+  }
+  .map-filter.active ~ .map-filter-tab {
+    left: calc(2rem + min(50vw, 30rem));
+  }
+  .map-filter-inner {
+    padding: 2.2rem 1.6rem 3rem;
+  }
+  #map-search-placeholder {
+    font-size: 1.3rem;
+  }
+  #map-search-placeholder::placeholder {
+    font-size: 1.2rem;
+  }
+  .map-filter-title p:nth-child(1) {
+    font-size: 1rem;
+    margin-top: 1.4rem;
+  }
+  .map-filter-title p:nth-child(2) {
+    font-size: 1.5rem;
+    margin-top: 0.8rem;
+  }
+  .map-filter-name {
+    font-size: 1.3rem;
+    margin-bottom: 0.6rem;
+  }
+  .map-btn {
+    font-size: 1.1rem;
+    padding: 0.3rem 0.7rem;
+    margin: 0.2rem;
+  }
+  .map-setting {
+    row-gap: 1.1rem;
+  }
+  .map-course-btn {
+    width: 7rem;
+    height: 7rem;
+    border-radius: 1.5rem;
+    font-size: 1.1rem;
+    word-break: keep-all;
+    overflow-wrap: break-word;
+    text-align: center;
+    line-height: 1.3;
+  }
+  .map-course-btn img {
+    width: 4.5rem;
+    height: 4rem;
+    flex-shrink: 0;
+  }
+  .map-apply {
+    height: 4rem;
+    margin-top: 2rem;
+  }
+  .map-apply p {
+    font-size: 1.4rem;
+  }
+  .map-reset span {
+    font-size: 1.2rem;
+  }
+
+  /* 카드: 세로형으로 전환 */
+  .map-card-list {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1.6rem;
+    width: 90%;
   }
   .map-place-card {
+    width: 100%;
     height: auto;
-    padding: 2rem 0;
+    min-height: 0;
+    padding: 0;
+    overflow: hidden;
+    border-radius: 2.5rem;
   }
   .map-place-card-inner {
     flex-direction: column;
     align-items: flex-start;
-    row-gap: 2rem;
+    column-gap: 0;
+    padding-right: 0;
+    height: auto;
+    width: 100%;
   }
   .map-place-card-img {
     width: 100%;
-    height: 25rem;
+    height: 22rem;
+    border-radius: 0;
+    flex-shrink: 0;
   }
+  .map-card-inner {
+    padding: 1.4rem 10rem 1.8rem 1.6rem;
+    row-gap: 1rem;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  .map-card-top {
+    row-gap: 0.8rem;
+  }
+  .card-rating {
+    justify-content: flex-start;
+  }
+  .map-card-tags {
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+  }
+
+  /* 768px: 코멘트 텍스트만 숨김 */
+  .map-card-speak {
+    display: none;
+  }
+
+  /* 영업중 뱃지: 텍스트 영역 우측 상단 (이미지 22rem 아래 + 텍스트 패딩 1.4rem) */
   .map-list-cur {
-    position: static;
-    display: inline-block;
-    margin-bottom: 1rem;
+    position: absolute;
+    top: 23.4rem;
+    right: 1.6rem;
+    width: 8rem;
+    height: 3rem;
+    font-size: 1.4rem;
+  }
+
+  /* 코스 뱃지: 영업중 뱃지 바로 아래 */
+  .map-course-badge {
+    top: 27.2rem;
+    right: 1.6rem;
+    font-size: 1.3rem;
+    height: 3rem;
+  }
+
+  .map-list-content {
+    padding-bottom: 5rem;
   }
 }
 
+/* ── 480px 이하: 소형 모바일 최적화 ── */
 @media (max-width: 480px) {
+  /* map-detail */
   .map-detail-content {
-    margin-top: var(--header-h, 12rem);
+    margin-top: 0;
+    padding-top: 8rem;
+  }
+  .map-detail-inner {
+    padding: 2rem 1.4rem;
   }
   .map-detail-name {
     font-size: 2.8rem;
@@ -1542,15 +2040,11 @@
   .map-detail-rating {
     font-size: 1.4rem;
   }
-  .map-card-tags {
-    flex-wrap: wrap;
-    gap: 1rem;
-  }
-  .map-detail-head-img-list{
+  .map-detail-head-img-list {
     row-gap: 0.8rem;
   }
   .map-detail-head-img1 {
-    width:100%;
+    width: 100%;
     height: 18rem;
   }
   .map-detail-head-img-right {
@@ -1559,7 +2053,7 @@
   }
   .map-detail-head-img2,
   .map-detail-head-img3 {
-    width:45%;
+    width: 45%;
   }
   .map-detail-sub-title {
     font-size: 1.6rem;
@@ -1588,168 +2082,109 @@
     min-height: 5rem;
     font-size: 1.3rem;
   }
-}
+  .map-detail-review:hover {
+    transform: none;
+  }
 
-/* map반응형_________ */
-@media (max-width: 1200px) {
-  .map-hero, .map-inner {
-    min-height: 35rem;
-  }
-  .map-hero-title {
-    font-size: 6rem;
-  }
-  .map-spot-content, .map-detail-content {
-    margin-top: 3rem;
-  }
-  .map-list-content {
-    padding: 4rem 0;
-  }
-  .page-map .map-main-content {
-    width: 100%;
-    max-width: 100%;
-    height: 80rem;
-    overflow-x: auto; 
-    overflow-y: hidden;
-    background: none; 
-    position: relative;
-    border-radius: 2.5rem;
-    -webkit-overflow-scrolling: touch;
-  }
-  .page-map .map-main-content::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 140rem;
-    height: 100%;
-    background: url(../image/map.png) no-repeat center/cover;
-    border-radius: 2.5rem;
-    z-index: 0;
-  }
-  .page-map .map-main-content-inner {
-    width: 140rem;
-    height: 100%;
-    position: relative;
-    z-index: 3;
-    overflow: visible;
-    pointer-events: none;
-  }
-  .page-map .map-filter {
-    pointer-events: auto;
-  }
-  .page-map .map-pin-list {
-    width: 140rem;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 2;
-  }
-  .map-section-title {
-    width: 90%;
-    margin: 0 auto;
-    padding-bottom: 3rem;
-    text-align: left;
-  }
-  .map-place-card {
-    width: 90%; 
-    height: auto; 
-    margin: 0 auto 2.5rem auto;
-    padding: 1.8rem;
-    box-sizing: border-box;
-  }
-  .map-place-card-inner {
-    width: 100%;
-    height: auto;
-    column-gap: 3rem;
-  }
-  .map-place-card-img {
-    width: 24rem;
-    height: 18rem;
-    flex-shrink: 0;
-  }
-  .map-card-inner {
-    width: 100%;
-    row-gap: 1rem;
-  }
-  .map-list-tab {
-    width: 90%;
-    margin: 0 auto;
-  }
-}
-
-@media (max-width: 768px) {
-  .map-hero-title {
-    font-size: 4rem;
-  }
-  .map-place-card-inner {
-    flex-direction: column;
-    align-items: flex-start;
-    text-align: left;
-    row-gap: 1.4rem;
-  }
-  .map-place-card-img {
-    width: 100%; 
-    max-width: 100%;
-    height: 18rem;
-  }
-  .map-card-top {
-    align-items: flex-start;
-    row-gap: 0.8rem;
-  }
-  .card-rating {
-    justify-content: flex-start;
-  }
-  .map-card-speak {
-    margin: 0;
-    text-align: left;
-    width: 100%;
-    box-sizing: border-box;
-    line-height: 2rem;
-    padding: 0.6rem 1.2rem;
-  }
-  .map-card-tags {
-    justify-content: flex-start;
-    flex-wrap: wrap;
-    gap: 0.6rem;
-  }
-  .map-list-cur {
-    position: relative;
-    top: unset;
-    right: unset;
-    margin: 0.5rem 0 0 0;
-    display: inline-flex;
-  }
-  .map-list-content {
-    padding-bottom: 5rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .map-hero, .map-inner {
+  /* map hero */
+  .map-hero,
+  .map-inner {
     min-height: 25rem;
+  }
+  .breadcrumb {
+    padding: 1.8rem 0.8rem;
   }
   .map-hero-title {
     font-size: 3rem;
+    margin-top: 4rem;
   }
   .map-section-head h2 {
-    font-size: 2.4rem;
+    font-size: 2rem;
   }
   .map-section-head p {
     font-size: 1.4rem;
   }
-  .map-place-card {
+
+  .map-section-title {
+    justify-content: center;
     width: 95%;
-    padding: 1.2rem;
+  }
+
+  /* 지도: 너비 48.5rem, 높이 원본 비율(7:4) 유지 */
+  .page-map .map-main-content {
+    width: 48.5rem;
+    min-width: 48.5rem;
+    height: 27.7rem;
+  }
+  .page-map .map-main-content-inner {
+    width: 48.5rem;
+  }
+  .page-map .map-pin-list {
+    width: 48.5rem;
+  }
+
+  /* 핀 이미지: 지도 비율(48.5/140≈0.35)에 맞게 축소 */
+  .map-pin a img {
+    width: 1.4rem;
+    height: auto;
+  }
+  /* 인카드: 이미지 없이 텍스트만 표시, 크기 직접 지정 */
+  .map-in-card {
+    transform: translateX(-50%);
+    width: 16rem;
+    height: auto;
+    border-radius: 1.6rem;
+    row-gap: 0.6rem;
+    padding: 1rem 0;
+  }
+  .map-in-card .map-info-img {
+    display: none;
+  }
+  .map-in-card .map-info-name {
+    font-size: 1.3rem;
+  }
+  .map-in-card .map-info-cur {
+    font-size: 1.1rem;
+    height: 1.8rem;
+    padding: 0 0.8rem;
+  }
+  .map-in-card .map-info-time {
+    font-size: 1.1rem;
+  }
+
+  /* 필터: 소형에서 더 넓게 열림, min()으로 탭 위치와 너비 동기화 */
+  .map-filter.active {
+    width: min(78vw, 30rem);
+  }
+  .map-filter.active ~ .map-filter-tab {
+    left: calc(2rem + min(78vw, 30rem));
+  }
+  .map-filter-inner {
+    padding: 2rem 1.4rem 3rem;
+  }
+
+  /* 카드 */
+  .map-card-list {
+    row-gap: 1.6rem;
+    width: 80%;
   }
   .map-place-card-img {
-    height: 15rem;
+    height: 18rem;
+  }
+  .map-card-inner {
+    padding: 1.2rem 1.4rem 1.6rem;
+    row-gap: 0.8rem;
   }
   .map-card-title {
     font-size: 1.8rem;
   }
-  .card-place, .card-time, .map-card-speak {
-    font-size: 1.3rem;
+  .card-place,
+  .card-time {
+    font-size: 1.4rem;
+  }
+  .map-card-tags {
+    flex-wrap: wrap;
+    gap: 0.8rem;
   }
   .map-card-tag {
     font-size: 1.2rem;
@@ -1757,10 +2192,13 @@
     line-height: 2.6rem;
     height: 3rem;
   }
+
+  /* 더보기 버튼 */
   .map-list-tab {
-    width: 95%;
+    width: 88%;
     font-size: 1.6rem;
-    height: 4.6rem;
-    line-height: 4.4rem;
+    height: 4.8rem;
+    margin: 0 auto;
   }
 }
+

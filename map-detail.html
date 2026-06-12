@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>html{visibility:hidden}</style>
+  <!-- <style>html{visibility:hidden}</style> -->
   <link rel="shortcut icon" href="image/favicon.svg">
   <link rel="stylesheet" href="css/style.css">
   <title>제주비건지도 | 식당 상세</title>
@@ -14,7 +14,7 @@
   <main id="container" class="page page-map-detail">
     <section class="map-detail-content">
       <div class="map-detail-inner inner">
-        <a class="map-detail-back" href="map.html">
+        <a class="map-detail-back sr sr-left" href="map.html">
           <img class="map-detail-back-img" src="image/map-back-icon.svg" alt="map-detail-back">
           <p>식당 리스트로 돌아가기</p>
         </a>
@@ -22,9 +22,9 @@
         <div class="map-detail-desc-inner">
           <!-- 메인 정보 -->
           <div class="map-detail-section">
-            <div class="map-detail-title">
+            <div class="map-detail-title sr sr-left">
               <h1 class="map-detail-name">카페901</h1>
-              <h3 class="map-detail-place">제주시 노형동</h3>
+              <h2 class="map-detail-place">제주시 노형동</h2>
               <div class="map-detail-rating">
                 <img class="like-icon" src="image/map-star-icon.svg" alt="star-icon">
                 <p>4.9<span>(리뷰 128개)</span></p>
@@ -49,7 +49,7 @@
               <div class="map-info-cur map-detail-corse">🍊서귀포 코스</div>
             </div>
 
-            <div class="map-detail-head-img-list">
+            <div class="map-detail-head-img-list sr sr-right" data-sr-delay="0.15">
           <img class="map-detail-head-img1" src="image/map-detail-cafe901-1.jpg" alt="카페901-detail">
           <div class="map-detail-head-img-right">
             <img class="map-detail-head-img2" src="image/map-detail-cafe901-2.jpg" alt="카페901-detail">
@@ -62,7 +62,7 @@
 
           <hr class="map-detail-divider">
           <!-- 기본정보 -->
-          <div class="map-detail-section">
+          <div class="map-detail-section sr sr-up">
               <h3 class="map-detail-sub-title">기본 정보</h3>
               <ul class="map-detail-def-list">
                 <li class="map-detail-def">
@@ -106,7 +106,7 @@
   
           <hr class="map-detail-divider">
           <!-- 소개 -->
-          <div class="map-detail-section">
+          <div class="map-detail-section sr sr-up" data-sr-delay="0.1">
             <h3 class="map-detail-sub-title">소개</h3>
             <p class="map-detail-sub-desc">
               풍부하고 신선하며 균형 잡힌 음식으로 제주의 자연을 담아냅니다.
@@ -117,23 +117,23 @@
           <hr class="map-detail-divider">
           <!-- 대표메뉴 -->
           <div class="map-detail-section">
-            <h3 class="map-detail-sub-title">대표메뉴</h3>
+            <h3 class="map-detail-sub-title sr sr-up">대표메뉴</h3>
             <ul class="map-detail-menu-list card-list">
-              <li class="map-detail-menu card img-box">
+              <li class="map-detail-menu card img-box sr sr-up" data-sr-delay="0.1">
                 <img src="image/cafe901-menu1.jpg" alt="menu1">
                 <div class="map-detail-menu-desc">
                   <p>아보카도 토스트</p>
                   <span>12,000원</span>
                 </div>
               </li>
-              <li class="map-detail-menu card img-box">
+              <li class="map-detail-menu card img-box sr sr-up" data-sr-delay="0.2">
                 <img src="image/cafe901-menu2.jpg" alt="menu2">
                 <div class="map-detail-menu-desc">
                   <p>찹찹유기농케일샐러드</p>
                   <span>10,800원</span>
                 </div>
               </li>
-              <li class="map-detail-menu card img-box">
+              <li class="map-detail-menu card img-box sr sr-up" data-sr-delay="0.3">
                 <img src="image/cafe901-menu3.jpg" alt="menu3">
                 <div class="map-detail-menu-desc">
                   <p>하티스프</p>
@@ -146,13 +146,13 @@
           <hr class="map-detail-divider">
           <!-- 리뷰 -->
           <div class="map-detail-section">
-            <h3 class="map-detail-sub-title">리뷰</h3>
+            <h3 class="map-detail-sub-title sr sr-up">리뷰</h3>
             <ul class="map-detail-review-list card-list">
-              <li class="map-detail-review card">
+              <li class="map-detail-review card sr sr-up" data-sr-delay="0.1">
                 <div class="map-detail-top">
                   <p>
                     <img class="like-icon" src="image/map-star-icon.svg" alt="star-icon">
-                    4.5
+                    5
                   </p>
                 </div>
                 <div class="map-detail-btm">
@@ -160,11 +160,11 @@
                   <p class="map-detail-review-name">유** | 2026.01.23</p>
                 </div>
               </li>
-              <li class="map-detail-review card">
+              <li class="map-detail-review card sr sr-up" data-sr-delay="0.2">
                 <div class="map-detail-top">
                   <p>
                     <img class="like-icon" src="image/map-star-icon.svg" alt="star-icon">
-                    4.8
+                    3
                   </p>
                 </div>
                 <div class="map-detail-btm">
@@ -173,11 +173,11 @@
                   <p class="map-detail-review-name">김** | 2025.11.05</p>
                 </div>
               </li>
-              <li class="map-detail-review card">
+              <li class="map-detail-review card sr sr-up" data-sr-delay="0.3">
                 <div class="map-detail-top">
                   <p>
                     <img class="like-icon" src="image/map-star-icon.svg" alt="star-icon">
-                    4.1
+                    4
                   </p>
                 </div>
                 <div class="map-detail-btm">
@@ -185,11 +185,11 @@
                   <p class="map-detail-review-name">이** | 2025.11.15</p>
                 </div>
               </li>
-              <li class="map-detail-review card">
+              <li class="map-detail-review card sr sr-up" data-sr-delay="0.4">
                 <div class="map-detail-top">
                   <p>
                     <img class="like-icon" src="image/map-star-icon.svg" alt="star-icon">
-                    4.2
+                    5
                   </p>
                 </div>
                 <div class="map-detail-btm">
@@ -206,6 +206,12 @@
 
   <footer include-html="include/footer.html"></footer>
 
+  <button type="button" id="goTopBtn" class="btn btn-go-top" aria-label="위로 이동">
+    <span class="iconify" data-icon="mdi:chevron-up" aria-hidden="true"></span>
+  </button>
+  <script src="https://code.iconify.design/3/3.1.1/iconify.min.js"></script>
   <script src="js/includeHTML.js"></script>
+  <script src="js/index.js"></script>
+  <script src="js/scroll.js"></script>
 </body>
 </html>
