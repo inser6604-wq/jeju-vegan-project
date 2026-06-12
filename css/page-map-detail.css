@@ -44,12 +44,16 @@ body {
   margin-top: 8rem;
 }
 
+.map-scroll-wrap {
+  width: 100%;
+}
+
 .map-main-content {
   border: 1px solid #a2c7b6;
   position: relative;
   background: url(../image/map.png) no-repeat center/cover;
   border-radius: 2.5rem;
-  width: min(140rem, 100%);  /* 140rem → min(140rem, 100%) */
+  width: min(140rem, 100%);
   box-sizing: border-box;
   height: 80rem;
   margin-bottom: 10rem;
@@ -86,11 +90,15 @@ body {
   align-items: center;
   border-radius: 2.5rem;
   margin-left: 1.5rem;
-  z-index: 1;
+  z-index: 3;
   transition:0.3s ease;
 }
 .map-filter.closed {
   width: 0;
+}
+/* 닫힘 상태: 탭이 필터 right 끝(margin-left 위치)에 붙음 */
+.map-filter.closed ~ .map-filter-tab {
+  left: 1.5rem;
 }
 .map-filter-inner {
   /* border: 1px solid #000; */
@@ -112,7 +120,7 @@ body {
   width: 44.5rem;
   height: 4rem;
 }
-input[type="text"] {
+#map-search-placeholder{
   position:absolute;
   top:0;
   left:0;
@@ -124,10 +132,10 @@ input[type="text"] {
   outline: none;
   z-index:2;
   text-indent: 1.5rem;
-  font-size:1.7rem;
+  font-size:1.6rem;
 }
 
-input[type="text"]::placeholder {
+#map-search-placeholder::placeholder {
   font-size: 1.4rem;
 }
 .map-search button {
@@ -250,10 +258,11 @@ input[type="text"]::placeholder {
 .map-filter-tab {
   position: absolute;
   top: 50%;
-  left: 100%;
+  left: calc(1.5rem + 50rem); /* filter margin-left + filter width */
   transform: translateY(-50%);
   width: 2.5rem;
   height: 5.6rem;
+  transition: left 0.3s ease;
   background-color: #fff;
   border-radius: 0 1rem 1rem 0;
 }
@@ -262,21 +271,19 @@ input[type="text"]::placeholder {
   height: 5.6rem;
   transition:0.3s;
 }
-/* js */
 .map-filter-inner {
   transition: 0.3s ease;
 }
-.map-pin{position: absolute;
-
-}
+.map-pin{position: absolute;}
 .map-pin1 {top: 10%; right: 22%;}
 .map-pin2 {top: 32%; right: 10%;}
 .map-pin3 {top: 50%; right: 18%;}
 .map-pin4 {top: 30%; left: 55%;}
-.map-pin5 {top: 30%; left: 30%;}
+.map-pin5 {top: 34%; left: 24%;}
 .map-pin6 {top: 22%;  left: 35%;}
 .map-pin7 {top: 60%; left: 50%;}
 .map-pin8 {top: 60%; left: 15%;}
+.map-pin9 {top: 39%; left: 15%;}
 
 .map-in-card{
   position: absolute;
@@ -370,12 +377,14 @@ input[type="text"]::placeholder {
   border: 1px solid #b3d3c4;
   width: 109rem;
   height: 30.5rem;
+  position: relative;
   display: flex;
   align-items: center;
   border-radius: 3rem;
+  overflow: visible;
   transition: 0.3s;
 }
-.map-place-card:hover{
+.map-place-card:hover {
   box-shadow: 0 12px 28px rgba(47, 70, 55, 0.1);
   transition: transform 0.3s ease;
   transform: translateY(-5px);
@@ -388,25 +397,30 @@ input[type="text"]::placeholder {
   display: flex;
   align-items: center;
   column-gap: 4rem;
+  padding-right: 12rem;
+  box-sizing: border-box;
 }
 .map-place-card-img {
   width: 28.3rem;
   height: 23.1rem;
   border-radius: 2rem;
   object-fit: cover;
+  flex-shrink: 0;
 }
 
 .map-card-inner {
   display: flex;
   flex-direction: column;
-  row-gap: 15px;
+  row-gap: 1.2rem;
   color: #111;
+  flex: 1;
+  min-width: 0;
 }
 
 .map-card-top {
   display: flex;
   flex-direction: column;
-  row-gap: 15px;
+  row-gap: 1rem;
 }
 
 .map-card-title {
@@ -461,18 +475,30 @@ input[type="text"]::placeholder {
 }
 .map-list-cur {
   position: absolute;
-  top: 2.5rem;
-  right: 0;
+  top: 2rem;
+  right: 1.5rem;
   width: 8.5rem;
-  height: 3.7rem;
-  font-size: 1.6rem;
-  font-weight:600;
+  height: 3.2rem;
+  font-size: 1.4rem;
+  font-weight: 600;
 }
 .map-cur-end {
   background-color: #cecece;
   color: #707070;
   border-radius: 2rem;
   font-weight: 400;
+}
+.map-course-badge {
+  position: absolute;
+  top: 6.5rem;
+  right: 1.5rem;
+  width: max-content;
+  padding: 0 1.4rem;
+  height: 3.2rem;
+  font-size: 1.35rem;
+  background-color: #1a3a2a;
+  color: #fff;
+  border-radius: 2rem;
 }
 .map-list-tab {
   width: 109rem;
