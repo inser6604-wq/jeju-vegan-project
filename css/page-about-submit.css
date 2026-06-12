@@ -1512,3 +1512,42 @@
     min-width: 0;
   }
 }
+
+.submit-success {
+  text-align: center;
+  padding: 8rem 2rem;
+}
+.submit-success-icon {
+  width: 7.2rem;
+  height: 7.2rem;
+  border-radius: 50%;
+  background: #4caf50;
+  color: #fff;
+  font-size: 3.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 2.4rem;
+}
+.submit-success h2 {
+  font-size: 2.4rem;
+  font-weight: 800;
+  color: #111;
+  margin-bottom: 1.2rem;
+}
+.submit-success p {
+  font-size: 1.6rem;
+  color: #5d6963;
+  line-height: 1.8;
+}
+.submit-success-retry {
+  margin-top: 2.4rem;
+  padding: 1.2rem 3.2rem;
+  background: #2d6a4f;
+  color: #fff;
+  border: none;
+  border-radius: 0.8rem;
+  font-size: 1.6rem;
+  font-weight: 700;
+  cursor: pointer;
+}
