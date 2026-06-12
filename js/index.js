@@ -602,8 +602,19 @@ if (mapListTab) {
   mapListTab.addEventListener('click', () => {
     const isHidden = mapListTab.classList.contains('active');
 
-    hiddenCards.forEach(card => {
+    hiddenCards.forEach((card, i) => {
       card.classList.toggle('map-hidden');
+      // 열릴 때: sr 클래스가 있으면 staggered delay로 is-visible 추가
+      if (isHidden && card.classList.contains('sr')) {
+        card.classList.remove('is-visible');
+        setTimeout(() => {
+          card.classList.add('is-visible');
+        }, 80 * i);
+      }
+      // 닫힐 때: is-visible 제거해 다음 열기에 재애니메이션
+      if (!isHidden && card.classList.contains('sr')) {
+        card.classList.remove('is-visible');
+      }
     });
 
     mapListTab.classList.toggle('active');

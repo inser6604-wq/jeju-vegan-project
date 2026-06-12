@@ -216,11 +216,19 @@
   font-size: 1.3rem;
 }
 
-.page-pick .tab-option:before{
-  content: '| ';
+.page-pick .tab-option{
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.2rem;
+}
+
+.page-pick .tab-sep{
   color: #eee;
   flex-shrink: 0;
-  padding-right: 0.5rem;
+  padding: 0 0.5rem;
+  line-height: 1;
+  align-self: center;
 }
 
 .page-pick .tab-btn.active{
@@ -328,7 +336,25 @@
   font-size: 1.3rem;
 }
 
+.page-course .tab-option{
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.2rem;
+}
+
 .page-course .tab-option:before{
+  content: '|';
+  color: #eee;
+  flex-shrink: 0;
+  padding: 0 0.5rem;
+}
+
+.page-course .tab-option:last-of-type:before{
+  display: none;
+}
+
+.page-course .tab-option:first-of-type:after{
   content: '|';
   color: #eee;
   flex-shrink: 0;
@@ -512,7 +538,7 @@
   color: #fff;
   font-family: "A2Z", sans-serif;
   font-weight: 600;
-  font-size: 3rem;
+  font-size: 3.2rem;
   line-height: 1.3;
 }
 
@@ -693,6 +719,11 @@
     gap: 0.8rem 0.5rem;
   }
 
+  .page-pick .tab-option,
+  .page-course .tab-option {
+    gap: 0.5rem;
+  }
+
   .page-pick .tab-btn,
   .page-course .tab-btn {
     font-size: 1.2rem;
@@ -700,11 +731,7 @@
     white-space: nowrap;
   }
 
-  /* pick: 유일한 | 숨김 / course: 첫 번째 | 숨김, 두 번째(카페투어) 앞 | 유지 */
-  .page-pick .tab-option:before,
-  .page-course .tab-option:first-of-type:before {
-    display: none;
-  }
+  /* course: 카페투어(last) | 전역에서 숨김 처리됨 */
 
   /* ---- course 서비스 맵 : 우측 패딩 제거 + 이미지 contain ---- */
   .page-course .course-service-map-inner {
