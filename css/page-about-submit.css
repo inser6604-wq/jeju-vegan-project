@@ -5,17 +5,6 @@
   background: #fbfaf6;
 }
 
-.sr {
-  opacity: 0;
-  transform: translateY(32px);
-  transition: opacity 0.65s ease, transform 0.65s ease;
-}
-
-.sr.is-visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
 .about-eyebrow,
 .submit-eyebrow {
   display: block;
