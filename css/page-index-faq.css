@@ -355,7 +355,8 @@
 .home-pick .section-title span {
   color: #2d6a4f;
 }
-.home-pick .btn-primary{
+.home-pick .btn-primary {
+  padding: 1.1rem 3.6rem;
   transition: 0.3s;
 }
 .home-pick-content {
@@ -486,8 +487,9 @@
   color: #2d6a4f;
   font-weight: 600;
 }
-.home-pick .badge-vegan{
+.home-pick .badge-vegan {
   font-size: 2rem;
+  padding: 0.75rem 1.65rem;
 }
 .home-course {
   background: #fff;
