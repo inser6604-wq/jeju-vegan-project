@@ -3,8 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>html{visibility:hidden}</style>
+  <link rel="shortcut icon" href="image/favicon.svg">
   <link rel="stylesheet" href="css/style.css">
-  <title>식당 상세</title>
+  <title>제주비건지도 | 식당 상세</title>
 </head>
 <body>
   <header include-html="include/header.html"></header>
@@ -44,16 +46,19 @@
                 <span class="map-card-tag card-tag">주차가능</span>
               </div>
               <div class="map-info-cur map-detail-cur">영업 중</div>
+              <div class="map-info-cur map-detail-corse">🍊서귀포 코스</div>
             </div>
+
+            <div class="map-detail-head-img-list">
+          <img class="map-detail-head-img1" src="image/map-detail-cafe901-1.jpg" alt="카페901-detail">
+          <div class="map-detail-head-img-right">
+            <img class="map-detail-head-img2" src="image/map-detail-cafe901-2.jpg" alt="카페901-detail">
+            <img class="map-detail-head-img3" src="image/map-detail-cafe901-3.jpg" alt="카페901-detail">
+          </div>
+          </div>
           </div>
 
-          <div class="map-detail-head-img-list">
-          <img class="map-detail-head-img1"src="image/map-detail-cafe901-1.jpg" alt="카페901-detail">
-          <div class="map-detail-head-img-right">
-            <img class="map-detail-head-img2"src="image/map-detail-cafe901-2.jpg" alt="카페901-detail">
-            <img class="map-detail-head-img3"src="image/map-detail-cafe901-3.jpg" alt="카페901-detail">
-          </div>
-          </div>
+          
 
           <hr class="map-detail-divider">
           <!-- 기본정보 -->
@@ -62,34 +67,34 @@
               <ul class="map-detail-def-list">
                 <li class="map-detail-def">
                   <div class="map-detail-def-left">
-                    <img src="image/map-clock-icon.svg" alt="clock-icon">
+                    <img src="image/map-detail-clock2.svg" alt="clock-icon">
                     영업시간
                   </div>
                   <span class="map-detail-def-right">
-                    09:00~18:00 | 화요일 휴무
+                    09:00~18:00 | 매주 월,화 휴무
                   </span>
                 </li>
                 <li class="map-detail-def">
                   <div class="map-detail-def-left">
-                    <img src="image/map-pin-icon.svg" alt="map-pin-icon">
+                    <img src="image/map-detail-pin2.svg" alt="map-pin-icon">
                     주소
                   </div>
                   <span class="map-detail-def-right">
-                    제주시 노형동 123-4
+                    제주특별자치도 제주시 노형동 288-39
                   </span>
                 </li>
                 <li class="map-detail-def">
                   <div class="map-detail-def-left">
-                    <img src="image/map-call-icon.svg" alt="call-icon">
+                    <img src="image/map-detail-call2.svg" alt="call-icon">
                     전화
                   </div>
                   <span class="map-detail-def-right">
-                    064-000-0000
+                    0507-1402-9022
                   </span>
                 </li>
                 <li class="map-detail-def">
                   <div class="map-detail-def-left">
-                    <img src="image/map-car-icon.svg" alt="car-icon">
+                    <img src="image/map-detail-car2.svg" alt="car-icon">
                     주차
                   </div>
                   <span class="map-detail-def-right">
@@ -140,9 +145,9 @@
   
           <hr class="map-detail-divider">
           <!-- 리뷰 -->
-          <div class="map-detail-setion">
+          <div class="map-detail-section">
             <h3 class="map-detail-sub-title">리뷰</h3>
-            <div class="map-detail-review-list card-list">
+            <ul class="map-detail-review-list card-list">
               <li class="map-detail-review card">
                 <div class="map-detail-top">
                   <p>
@@ -152,9 +157,47 @@
                 </div>
                 <div class="map-detail-btm">
                   <p class="map-detail-review-text">분위기가 조용하고, 혼자 오기도 좋아요~</p>
+                  <p class="map-detail-review-name">유** | 2026.01.23</p>
                 </div>
               </li>
-            </div> 
+              <li class="map-detail-review card">
+                <div class="map-detail-top">
+                  <p>
+                    <img class="like-icon" src="image/map-star-icon.svg" alt="star-icon">
+                    4.8
+                  </p>
+                </div>
+                <div class="map-detail-btm">
+                  <p class="map-detail-review-text">비건 메뉴인데도 만족도가 높았어요.
+                    <br>재료도 신선하고 맛있었습니다!</p>
+                  <p class="map-detail-review-name">김** | 2025.11.05</p>
+                </div>
+              </li>
+              <li class="map-detail-review card">
+                <div class="map-detail-top">
+                  <p>
+                    <img class="like-icon" src="image/map-star-icon.svg" alt="star-icon">
+                    4.1
+                  </p>
+                </div>
+                <div class="map-detail-btm">
+                  <p class="map-detail-review-text">사장님이 친절해서 또 방문하고 싶어집니다 ㅎㅎ 식사도 잘 하고 갑니다^^</p>
+                  <p class="map-detail-review-name">이** | 2025.11.15</p>
+                </div>
+              </li>
+              <li class="map-detail-review card">
+                <div class="map-detail-top">
+                  <p>
+                    <img class="like-icon" src="image/map-star-icon.svg" alt="star-icon">
+                    4.2
+                  </p>
+                </div>
+                <div class="map-detail-btm">
+                  <p class="map-detail-review-text">아침에 든든하게 먹고 기분좋게 하루를 시작할 수 있게 할 수 있어 너무 만족스러웠어요.</p>
+                  <p class="map-detail-review-name">서** | 2025.10.30</p>
+                </div>
+              </li>
+            </ul> 
           </div> 
         </div>
       </div>

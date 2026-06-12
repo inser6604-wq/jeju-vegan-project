@@ -35,8 +35,6 @@
 }
 
 .page-about .breadcrumb {
-  margin-left: 0;
-  padding-left: 6rem;
   background: #fff;
   padding-bottom: 0;
 }
@@ -132,6 +130,12 @@
   background: #fbfaf6;
 }
 
+.about-work-head {
+  max-width: 600px;
+  margin: 0 auto 60px;
+  text-align: center;
+}
+
 .about-center-head {
   text-align: center;
 }
@@ -145,37 +149,35 @@
 .about-card-list {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 22px;
+  gap: 8px;
 }
 
 .about-info-card {
-  min-height: 230px;
-  padding: 32px 18px;
-  border: 1px solid #e4ebe6;
-  border-radius: 22px;
-  box-shadow: 0 12px 28px rgba(47, 70, 55, 0.08);
+  padding: 32px 24px;
+  border: none;
+  background: transparent;
 }
 
 .about-icon {
   display: inline-flex;
-  width: 48px;
-  height: 48px;
+  width: 52px;
+  height: 52px;
   align-items: center;
   justify-content: center;
-  margin-bottom: 24px;
+  margin-bottom: 20px;
   border-radius: 50%;
-  background: #e9f1dc;
+  background: rgba(45, 106, 79, 0.09);
   color: #2d6a4f;
 }
 
 .about-icon .iconify {
-  font-size: 2.5rem;
+  font-size: 2.4rem;
 }
 
 .about-info-card:nth-child(2) .about-icon,
 .about-info-card:nth-child(4) .about-icon {
-  background: #fff0df;
-  color: #ff7a00;
+  background: rgba(45, 106, 79, 0.09);
+  color: #2d6a4f;
 }
 
 .about-info-card .card-title {
@@ -188,19 +190,111 @@
 }
 
 .about-principles {
-  background: #f7f3e9;
+  position: relative;
+  background: url("../image/about-people.png") center center / cover no-repeat;
+}
+
+.about-principles::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(10, 28, 18, 0.75);
+}
+
+.about-principles.section {
+  padding: 72px 0;
+}
+
+.about-principles .inner {
+  position: relative;
+  z-index: 1;
+}
+
+.about-principles-head {
+  max-width: 700px;
+}
+
+.about-principles .about-eyebrow {
+  color: rgba(255, 255, 255, 0.7);
+  font-weight: 600;
+  letter-spacing: 0.12em;
+}
+
+.about-principles .section-title {
+  color: #fff;
+  line-height: 1.3;
+}
+
+.about-principles .section-desc {
+  color: rgba(255, 255, 255, 0.72);
+  margin-top: 18px;
+}
+
+.principles-card-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 52px;
+  list-style: none;
+  padding: 0;
+}
+
+.principles-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 40px 28px;
+}
+
+.principles-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.45);
+  color: #fff;
+  font-size: 3rem;
+  margin-bottom: 24px;
+  flex-shrink: 0;
+}
+
+.principles-icon .iconify {
+  font-size: 3rem;
+}
+
+.principles-card h3 {
+  font-size: 1.9rem;
+  font-weight: 800;
+  color: #fff;
+  margin-bottom: 12px;
+}
+
+.principles-card p {
+  font-size: 1.4rem;
+  color: rgba(255, 255, 255, 0.72);
+  line-height: 1.7;
 }
 
 .about-feature {
   grid-template-columns: minmax(320px, 0.9fr) minmax(0, 1fr);
 }
 
-.about-principle-visual {
-  aspect-ratio: 1.45 / 1;
-}
-
 .about-org-visual {
   aspect-ratio: 400 / 173;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+}
+
+.about-org-visual img {
+  width: auto;
+  height: auto;
+  max-width: 40%;
+  object-fit: contain;
 }
 
 .about-story-visual {
@@ -271,6 +365,10 @@
   background: #fbfaf6;
 }
 
+.about-organization .section-title {
+  color: #163525;
+}
+
 .about-cta {
   padding: 44px 0;
   background: #2d6a4f;
@@ -317,6 +415,10 @@
     font-size: 3rem;
   }
 
+  .page-about .section-title {
+    font-size: 3rem;
+  }
+
   .about-split,
   .about-split-reverse,
   .about-feature {
@@ -325,6 +427,10 @@
   }
 
   .about-card-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .about-stats {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
@@ -346,6 +452,16 @@
     font-size: 1.35rem;
   }
 
+  .page-about .section-title {
+    font-size: 2.6rem;
+  }
+
+  .about-split,
+  .about-split-reverse,
+  .about-feature {
+    gap: 28px;
+  }
+
   .about-card-list,
   .about-stats {
     grid-template-columns: 1fr;
@@ -354,6 +470,25 @@
   .about-info-card {
     min-height: auto;
   }
+
+  .about-hero-actions {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .about-btn {
+    width: 100%;
+    max-width: 320px;
+  }
+
+  .principles-card-list {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .principles-card {
+    padding: 28px 20px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -361,13 +496,26 @@
     font-size: 2.4rem;
   }
 
+  .page-about .section-title {
+    font-size: 2.2rem;
+  }
+
+  .about-org-visual {
+    aspect-ratio: 3 / 2;
+  }
+
   .about-btn,
   .about-cta-actions .about-btn {
     width: 100%;
+    max-width: 100%;
   }
 }
 
-/* submit.html */
+
+/* ================================================================
+   submit.html
+   ================================================================ */
+
 .page-submit {
   background: #fbfaf6;
 }
@@ -394,6 +542,7 @@
 
 .submit-hero-head {
   width: min(100%, 560px);
+  display: none;
 }
 
 .submit-hero-title {
@@ -412,25 +561,12 @@
   line-height: 1.6;
 }
 
-.submit-switch {
-  position: relative;
-}
-
-.submit-switch input[type="radio"] {
-  position: absolute;
-  width: 0;
-  height: 0;
-  opacity: 0;
-  pointer-events: none;
-  clip: rect(0, 0, 0, 0);
-}
-
 .submit-tabs {
   display: flex;
   justify-content: center;
   gap: 1rem;
   padding: 3rem 0 4rem;
-  background: #fff;
+  background: #fbfaf6;
 }
 
 .submit-tabs label {
@@ -444,7 +580,7 @@
   border: 0.1rem solid #2d6a4f;
   background: #fff;
   color: #2d6a4f;
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   font-weight: 600;
   cursor: pointer;
   transition: 0.35s ease;
@@ -462,10 +598,8 @@
 }
 
 .page-submit .breadcrumb {
-  margin-left: 0;
-  padding-left: 6rem;
-  background: #fff;
-  padding-bottom: 0;
+  background: #fbfaf6;
+  padding-bottom: 5rem;
 }
 
 .submit-crumb-store,
@@ -481,135 +615,32 @@
   display: inline;
 }
 
-.submit-hero-head {
-  display: none;
-}
-
 #tab-store:checked ~ .submit-hero .submit-store-hero,
 #tab-report:checked ~ .submit-hero .submit-report-hero {
   display: block;
 }
 
-.submit-row.submit-store-only,
-.submit-row.submit-report-only,
-.submit-store-only,
-.submit-report-only,
-.submit-store-sidebar,
-.submit-report-sidebar,
-.submit-btn-store,
-.submit-btn-report {
-  display: none !important;
-}
-
-#tab-store:checked ~ .submit-form .submit-row.submit-store-only,
-#tab-store:checked ~ .submit-form .submit-store-only {
-  display: grid !important;
-}
-
-#tab-report:checked ~ .submit-form .submit-row.submit-report-only,
-#tab-report:checked ~ .submit-form .submit-report-only {
-  display: grid !important;
-}
-
-#tab-store:checked ~ .submit-form .submit-store-sidebar,
-#tab-store:checked ~ .submit-form .submit-btn-store {
-  display: block !important;
-}
-
-#tab-report:checked ~ .submit-form .submit-report-sidebar,
-#tab-report:checked ~ .submit-form .submit-btn-report {
-  display: block !important;
-}
-
-.submit-switch-content {
-  margin-top: 28px;
-  display: grid;
-  gap: 18px;
-  position: relative;
-}
-
-.submit-copy {
+/* ── 탭 기반 콘텐츠 전환 ── */
+.submit-store-content,
+.submit-report-content {
   display: none;
-  gap: 22px;
-  padding: 32px;
-  border-radius: 28px;
-  background: #ffffff;
-  border: 1px solid #e5ece3;
-  box-shadow: 0 18px 38px rgba(47, 70, 55, 0.08);
 }
 
-.submit-copy-label {
-  display: inline-flex;
-  padding: 0.75rem 1.3rem;
-  border-radius: 999px;
-  background: rgba(255, 122, 0, 0.12);
-  color: #ff7a00;
-  font-weight: 700;
-  font-size: 1.15rem;
+#tab-store:checked ~ .submit-form .submit-store-content {
+  display: block;
 }
 
-.submit-copy h2 {
-  margin: 10px 0 0;
-  font-size: 2.4rem;
-  line-height: 1.25;
-  color: #111;
+#tab-report:checked ~ .submit-form .submit-report-content {
+  display: block;
 }
 
-.submit-copy p {
-  margin-top: 14px;
-  color: #53615b;
-  font-size: 1.4rem;
-  line-height: 1.8;
-}
-
-
-.submit-form-body {
-  width: 100%;
-}
-
-.submit-form-grid {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) 360px;
-  gap: 36px;
-}
-
-.submit-left {
-  display: grid;
-  gap: 30px;
-}
-
+/* ── 공통 폼 카드 ── */
 .submit-stage {
   padding: 32px;
   border-radius: 28px;
   background: #ffffff;
   border: 1px solid #e5ece3;
   box-shadow: 0 20px 42px rgba(47, 70, 55, 0.06);
-}
-
-.submit-stage-head {
-  display: flex;
-  align-items: center;
-  gap: 18px;
-  margin-bottom: 28px;
-}
-
-.submit-stage-head strong {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  background: #e9f1dc;
-  color: #2d6a4f;
-  font-size: 1.7rem;
-  font-weight: 800;
-}
-
-.submit-stage-head span {
-  font-size: 2rem;
-  font-weight: 800;
-  color: #111;
 }
 
 .submit-field {
@@ -619,128 +650,15 @@
 }
 
 .submit-field label {
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   font-weight: 700;
   color: #2d6a4f;
-}
-
-.submit-address-row {
-  display: grid;
-  grid-template-columns: 1fr auto;
-  gap: 16px;
 }
 
 .submit-row {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 20px;
-}
-
-.submit-vegan-status-group {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 16px;
-}
-
-.submit-category-chip-group {
-  display: grid;
-  grid-template-columns: repeat(6, minmax(120px, 1fr));
-  gap: 12px;
-}
-
-.submit-category-chip-group input,
-.submit-vegan-status-group input,
-.submit-vegan-stage-grid input {
-  position: absolute;
-  width: 0;
-  height: 0;
-  opacity: 0;
-  pointer-events: none;
-}
-
-.submit-category-chip-group label,
-.submit-vegan-status-group label,
-.submit-vegan-stage-card {
-  min-height: 88px;
-  padding: 18px 20px;
-  display: grid;
-  align-items: center;
-  gap: 8px;
-  border-radius: 22px;
-  border: 1px solid #d8e0db;
-  background: #ffffff;
-  color: #2d6a4f;
-  font-size: 1.35rem;
-  font-weight: 700;
-  line-height: 1.35;
-  cursor: pointer;
-  transition: all 0.25s ease;
-}
-
-.submit-category-chip-group label {
-  justify-content: center;
-  text-align: center;
-  font-size: 1.3rem;
-  padding: 16px 18px;
-}
-
-.submit-category-chip-group label:hover,
-.submit-vegan-status-group label:hover,
-.submit-vegan-stage-card:hover {
-  border-color: #2d6a4f;
-}
-
-.submit-category-chip-group input:checked + label,
-#status-1:checked + label,
-#status-2:checked + label,
-#status-3:checked + label,
-#status-4:checked + label,
-#stage1:checked + .submit-vegan-stage-card,
-#stage2:checked + .submit-vegan-stage-card,
-#stage3:checked + .submit-vegan-stage-card,
-#stage4:checked + .submit-vegan-stage-card {
-  border-color: #2d6a4f;
-  background: #e9f1dc;
-  color: #2d6a4f;
-}
-
-.submit-vegan-status-group label span,
-.submit-vegan-stage-card span {
-  font-size: 1.15rem;
-  font-weight: 500;
-  color: #6f7f74;
-}
-
-.submit-vegan-stage-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 16px;
-}
-
-.submit-vegan-stage-card {
-  min-height: 120px;
-  padding: 20px;
-  gap: 10px;
-  justify-items: start;
-}
-
-.submit-vegan-stage-card strong {
-  display: block;
-  font-size: 1.45rem;
-  color: #111;
-}
-
-.submit-vegan-stage-card span {
-  color: #6f7f74;
-  line-height: 1.6;
-}
-
-.submit-textarea {
-  min-height: 160px;
-  padding: 18px;
-  border-radius: 22px;
-  border: 1px solid #d8e0db;
-  font-size: 1.4rem;
 }
 
 .page-submit .form-input,
@@ -759,8 +677,10 @@
   color: #111;
 }
 
-.page-submit input.form-input[type="text"] {
-  font-size: 1.4rem;
+.page-submit input.form-input[type="text"],
+.page-submit input.form-input[type="tel"],
+.page-submit input.form-input[type="date"] {
+  font-size: 1.5rem;
 }
 
 .page-submit .form-textarea {
@@ -768,15 +688,10 @@
   padding: 16px 18px;
   border-radius: 16px;
   resize: vertical;
+  font-size: 1.5rem;
 }
 
-.submit-photo {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 16px;
-  margin-top: 12px;
-}
-
+/* 사진 업로드 아이템 (맛집 제보 사용) */
 .submit-photo-item {
   position: relative;
   min-height: 160px;
@@ -785,7 +700,7 @@
   border-radius: 24px;
   background: #fbfaf6;
   color: #6f7f74;
-  font-size: 1.35rem;
+  font-size: 1.45rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -804,229 +719,9 @@
   cursor: pointer;
 }
 
-.submit-photo-item small {
-  display: block;
-  color: #7b857d;
-  font-size: 1.15rem;
-}
-
-.photo-note {
-  margin-top: 12px;
-  color: #6f7f74;
-  font-size: 1.25rem;
-}
-
-.submit-checkbox {
-  display: flex;
-  align-items: flex-start;
-  gap: 14px;
-  margin-top: 20px;
-}
-
-.submit-checkbox input {
-  width: 18px;
-  height: 18px;
-  accent-color: #2d6a4f;
-}
-
-.submit-checkbox label {
-  font-size: 1.35rem;
-  color: #415047;
-  line-height: 1.6;
-}
-
-.submit-sidebar {
-  padding: 32px;
-  border-radius: 28px;
-  background: #f7f3e9;
-  border: 1px solid #e7ece3;
-}
-
-.submit-sidebar h2 {
-  margin: 0 0 16px;
-  font-size: 2rem;
-  color: #111;
-}
-
-.submit-sidebar p {
-  margin: 0;
-  font-size: 1.4rem;
-  color: #53615b;
-  line-height: 1.8;
-}
-
-.guide-list {
-  margin-top: 24px;
-  display: grid;
-  gap: 16px;
-  list-style: none;
-  padding: 0;
-}
-
-.guide-item {
-  display: grid;
-  grid-template-columns: 54px 1fr;
-  gap: 14px;
-  align-items: flex-start;
-  padding: 20px;
-  border-radius: 22px;
-  background: #ffffff;
-  border: 1px solid #e4ebe6;
-}
-
-.guide-item strong {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 54px;
-  height: 54px;
-  border-radius: 50%;
-  background: #e9f1dc;
-  color: #2d6a4f;
-  font-size: 1.35rem;
-  font-weight: 800;
-}
-
-.guide-item span {
-  color: #415047;
-  font-size: 1.35rem;
-  line-height: 1.7;
-}
-
-.submit-sidebar-note {
-  margin-top: 28px;
-  padding: 24px;
-  border-radius: 24px;
-  background: #fff;
-  border: 1px solid #e4ebe6;
-}
-
-.submit-sidebar-note strong {
-  display: block;
-  font-size: 1.5rem;
-  font-weight: 800;
-  color: #111;
-  margin-bottom: 10px;
-}
-
-.submit-sidebar-note p {
-  margin: 0;
-  color: #53615b;
-  font-size: 1.35rem;
-}
-
-.step-list {
-  margin-top: 24px;
-  display: grid;
-  gap: 18px;
-  list-style: none;
-  padding: 0;
-}
-
-.step-item {
-  display: grid;
-  grid-template-columns: 76px 1fr;
-  gap: 20px;
-  align-items: center;
-  min-height: 150px;
-  padding: 28px 24px;
-  border-radius: 28px;
-  background: #ffffff;
-  border: 1px solid #e4ebe6;
-  transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
-}
-
-.step-item:hover {
-  background: #ecf5ea;
-  border-color: #2d6a4f;
-  transform: translateY(-2px);
-}
-
-.step-item:hover > strong {
-  background: #2d6a4f;
-  color: #fff;
-}
-
-.step-item > strong {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 64px;
-  height: 64px;
-  border-radius: 50%;
-  background: #e9f1dc;
-  color: #2d6a4f;
-  font-size: 1.45rem;
-  font-weight: 800;
-}
-
-.step-item > div {
-  position: relative;
-  z-index: 1;
-}
-
-.step-item div strong {
-  display: block;
-  font-size: 1.45rem;
-  color: #111;
-  margin-bottom: 10px;
-}
-
-.step-item div p {
-  margin: 0;
-  color: #53615b;
-  font-size: 1.35rem;
-  line-height: 1.75;
-}
-
-.step-item:hover {
-  background: #ecf5ea;
-  border-color: #2d6a4f;
-  transform: translateY(-2px);
-}
-
-.step-item:hover > strong {
-  background: #2d6a4f;
-  color: #fff;
-}
-
-.submit-cta {
-  margin-top: 56px;
-  display: flex;
-  justify-content: center;
-  gap: 16px;
-}
-
-.btn-submit {
-  min-width: 320px;
-  padding: 1.7rem 3rem;
-  border-radius: 999px;
-  border: none;
-  background: #ff7a00;
-  color: #fff;
-  font-size: 1.55rem;
-  font-weight: 700;
-}
-
-.submit-btn-store,
-.submit-btn-report {
-  width: auto;
-}
-
 @media (max-width: 1024px) {
-  .submit-form-grid {
+  .submit-row {
     grid-template-columns: 1fr;
-  }
-
-  .submit-row,
-  .submit-address-row,
-  .submit-vegan-status-group,
-  .submit-photo {
-    grid-template-columns: 1fr;
-  }
-
-  .submit-sidebar {
-    order: -1;
   }
 }
 
@@ -1045,23 +740,8 @@
     padding: 1.1rem 1.6rem;
   }
 
-  .submit-stage,
-  .submit-sidebar {
+  .submit-stage {
     padding: 24px;
-  }
-
-  .submit-stage-head {
-    gap: 14px;
-  }
-
-  .submit-stage-head strong {
-    width: 52px;
-    height: 52px;
-    font-size: 1.5rem;
-  }
-
-  .submit-stage-head span {
-    font-size: 1.8rem;
   }
 }
 
@@ -1086,23 +766,654 @@
     width: 100%;
   }
 
-  .submit-stage,
-  .submit-sidebar {
+  .submit-stage {
     border-radius: 22px;
     padding: 20px;
   }
 
-  .submit-field label,
-  .submit-checkbox label,
-  .guide-item span,
-  .submit-sidebar p,
-  .submit-sidebar-note strong,
-  .submit-sidebar-note p {
+  .submit-field label {
     font-size: 1.25rem;
-  }
-
-  .btn-submit {
-    width: 100%;
   }
 }
 
+
+/* ================================================================
+   가게 등록 위자드
+   ================================================================ */
+
+/* ── 진행 표시 ── */
+.wizard-progress {
+  position: relative;
+  margin-bottom: 40px;
+}
+
+.wp-track {
+  position: absolute;
+  top: 24px;
+  left: 28px;
+  right: 28px;
+  height: 3px;
+  background: #e4ebe6;
+  border-radius: 2px;
+}
+
+.wp-fill {
+  height: 100%;
+  background: #ff7a00;
+  border-radius: 2px;
+  width: 0;
+  transition: width 0.4s ease;
+}
+
+.wp-steps {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  z-index: 1;
+}
+
+.wp-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.wp-num {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 2px solid #d8e0db;
+  background: #fff;
+  color: #aaa;
+  font-size: 1.6rem;
+  font-weight: 700;
+  transition: all 0.35s ease;
+}
+
+.wp-label {
+  font-size: 1.3rem;
+  color: #aaa;
+  font-weight: 600;
+  white-space: nowrap;
+  transition: color 0.35s ease;
+}
+
+.wp-step--active .wp-num {
+  background: #ff7a00;
+  border-color: #ff7a00;
+  color: #fff;
+}
+
+.wp-step--active .wp-label {
+  color: #ff7a00;
+  font-weight: 700;
+}
+
+.wp-step--done .wp-num {
+  background: #ff7a00;
+  border-color: #ff7a00;
+  color: transparent;
+}
+
+.wp-step--done .wp-num::after {
+  content: "✓";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-size: 1.6rem;
+  font-weight: 900;
+  line-height: 1;
+}
+
+.wp-step--done .wp-label {
+  color: #ff7a00;
+}
+
+/* 진행 표시: 카드 안 상단에 구분선 */
+.wizard-card .wizard-progress {
+  margin-bottom: 28px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+/* ── 위자드 레이아웃 ── */
+.wizard-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 360px;
+  gap: 36px;
+  align-items: start;
+}
+
+/* ── 단계별 패널 헤더 ── */
+.wizard-step-title {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 28px;
+}
+
+.wizard-step-title h2 {
+  font-size: 2.3rem;
+  font-weight: 700;
+  color: #111;
+}
+
+.wizard-step-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 46px;
+  height: 46px;
+  border-radius: 14px;
+  font-size: 2.2rem;
+  flex-shrink: 0;
+}
+
+.ws-icon-1 { background: #fff0e6; color: #ff7a00; }
+.ws-icon-2 { background: #e9f1dc; color: #2d6a4f; }
+.ws-icon-3 { background: #e9f1dc; color: #2d6a4f; }
+.ws-icon-4 { background: #f0f0f0; color: #888; }
+
+/* ── 힌트 박스 ── */
+.wizard-hint {
+  padding: 14px 18px;
+  border-radius: 12px;
+  font-size: 1.45rem;
+  line-height: 1.6;
+  margin-top: 24px;
+}
+
+.wizard-hint--orange {
+  background: #fff4ec;
+  color: #b84e00;
+  border-left: 3px solid #ff7a00;
+}
+
+.wizard-hint--green {
+  background: #f0f7ee;
+  color: #2d5c3f;
+  border-left: 3px solid #4caf7d;
+}
+
+/* ── 사진 업로드 드롭존 ── */
+.wizard-photo-drop {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: 200px;
+  padding: 40px 24px;
+  border: 2px dashed #d8e0db;
+  border-radius: 18px;
+  background: #fafcfb;
+  cursor: pointer;
+  text-align: center;
+  transition: border-color 0.25s ease, background 0.25s ease;
+}
+
+.wizard-photo-drop:hover {
+  border-color: #2d6a4f;
+  background: #f4f9f6;
+}
+
+.wizard-photo-icon {
+  font-size: 4rem;
+  color: #c0cfc5;
+}
+
+.wizard-photo-label {
+  font-size: 1.55rem;
+  color: #415047;
+  font-weight: 500;
+}
+
+.wizard-photo-drop small {
+  color: #7b857d;
+  font-size: 1.3rem;
+}
+
+.wizard-photo-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 36px;
+  padding: 0 20px;
+  border: 1px solid #d8e0db;
+  border-radius: 999px;
+  background: #fff;
+  color: #415047;
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-top: 6px;
+}
+
+/* ── 이전/다음 버튼 ── */
+.wizard-nav {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.wizard-prev-btn {
+  background: transparent;
+  border: none;
+  color: #7b857d;
+  font-size: 1.5rem;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 8px 4px;
+  margin-right: auto;
+  transition: color 0.2s ease;
+}
+
+.wizard-prev-btn:hover {
+  color: #415047;
+}
+
+.wizard-next-btn {
+  min-width: 120px;
+  height: 46px;
+  padding: 0 28px;
+  background: #ff7a00;
+  color: #fff;
+  border: none;
+  border-radius: 999px;
+  font-size: 1.5rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.25s ease;
+}
+
+.wizard-next-btn:hover {
+  background: #e06c00;
+}
+
+.wizard-submit-btn {
+  min-width: 160px;
+  height: 46px;
+  padding: 0 28px;
+  background: #2d6a4f;
+  color: #fff;
+  border: none;
+  border-radius: 999px;
+  font-size: 1.5rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.25s ease;
+}
+
+.wizard-submit-btn:hover {
+  background: #245a41;
+}
+
+/* ── 위자드 사이드바 ── */
+.wizard-sidebar {
+  display: grid;
+  gap: 16px;
+  align-self: start;
+  background: transparent;
+  border: none;
+  padding: 0;
+  box-shadow: none;
+}
+
+.wizard-guide-box,
+.wizard-approve-box,
+.wizard-progress-box {
+  padding: 22px 24px;
+  border-radius: 18px;
+  background: #fff;
+  border: 1px solid #e4ebe6;
+}
+
+.wizard-approve-box {
+  background: #f7f3e9;
+  border-color: #e5dcc8;
+}
+
+.wizard-guide-box h3,
+.wizard-approve-box h3 {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: #111;
+  margin-bottom: 14px;
+}
+
+.wizard-guide-list {
+  display: grid;
+  gap: 10px;
+  list-style: none;
+  padding: 0;
+}
+
+.wizard-guide-list li {
+  position: relative;
+  padding-left: 22px;
+  color: #415047;
+  font-size: 1.4rem;
+  line-height: 1.6;
+}
+
+.wizard-guide-list li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: #2d6a4f;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.wizard-approve-box p {
+  color: #53615b;
+  font-size: 1.45rem;
+  line-height: 1.7;
+  margin: 0;
+}
+
+.wizard-approve-box strong {
+  color: #111;
+  font-weight: 800;
+}
+
+.wizard-progress-label {
+  font-size: 1.3rem;
+  color: #7b857d;
+  margin-bottom: 10px;
+}
+
+.wizard-progress-track {
+  height: 8px;
+  background: #e4ebe6;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.wizard-progress-fill {
+  height: 100%;
+  background: #ff7a00;
+  border-radius: 4px;
+  width: 25%;
+  transition: width 0.4s ease;
+}
+
+.wizard-progress-count {
+  margin-top: 8px;
+  text-align: right;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #415047;
+}
+
+
+/* ================================================================
+   맛집 제보 폼
+   ================================================================ */
+
+.report-form-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 340px;
+  gap: 36px;
+  align-items: start;
+}
+
+.report-stage-head {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.report-icon-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  border-radius: 16px;
+  background: #e9f1dc;
+  color: #2d6a4f;
+  font-size: 2.4rem;
+  flex-shrink: 0;
+}
+
+.report-stage-label {
+  font-size: 2.1rem;
+  font-weight: 700;
+  color: #111;
+  line-height: 1.2;
+}
+
+.report-stage-desc {
+  margin-top: 6px;
+  font-size: 1.4rem;
+  color: #7b857d;
+  line-height: 1.6;
+}
+
+.field-note {
+  color: #7b857d;
+  font-size: 1.3rem;
+}
+
+.report-photo-upload {
+  min-height: 140px;
+  flex-direction: column;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.report-photo-icon {
+  font-size: 3.2rem;
+  color: #aab8af;
+}
+
+.photo-select-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 90px;
+  height: 34px;
+  padding: 0 18px;
+  border: 1px solid #d8e0db;
+  background: #fff;
+  color: #2d6a4f;
+  border-radius: 999px;
+  font-size: 1.35rem;
+  font-weight: 600;
+  pointer-events: none;
+}
+
+.report-process-box {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  padding: 22px;
+  border-radius: 18px;
+  background: #e9f1dc;
+  margin-top: 28px;
+}
+
+.process-check {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #2d6a4f;
+  color: #fff;
+  font-size: 1.3rem;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.report-process-box strong {
+  display: block;
+  color: #2d6a4f;
+  font-size: 1.55rem;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.report-process-box p {
+  color: #415047;
+  font-size: 1.3rem;
+  line-height: 1.7;
+  margin: 0;
+}
+
+.report-submit-cta {
+  margin-top: 48px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.btn-report-submit {
+  min-width: 180px;
+  height: 54px;
+  padding: 0 36px;
+  border-radius: 999px;
+  border: none;
+  background: #2d6a4f;
+  color: #fff;
+  font-size: 1.65rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.25s ease;
+}
+
+.btn-report-submit:hover {
+  background: #245a41;
+}
+
+/* ── 제보 사이드바 ── */
+.report-guide-sidebar {
+  display: grid;
+  gap: 16px;
+}
+
+.report-guide-section {
+  padding: 22px 24px;
+  border-radius: 22px;
+  background: #fff;
+  border: 1px solid #e4ebe6;
+}
+
+.report-guide-section h3 {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: #111;
+  margin-bottom: 16px;
+}
+
+.report-guide-section p {
+  font-size: 1.45rem;
+  color: #53615b;
+  line-height: 1.7;
+}
+
+.report-help-list {
+  display: grid;
+  gap: 10px;
+  list-style: none;
+  padding: 0;
+}
+
+.report-help-list li {
+  position: relative;
+  padding-left: 18px;
+  color: #415047;
+  font-size: 1.4rem;
+  line-height: 1.6;
+}
+
+.report-help-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.6em;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #2d6a4f;
+}
+
+.report-community-box {
+  background: #f7f3e9;
+  border-color: #e5dcc8;
+}
+
+.report-community-box a {
+  display: inline-block;
+  margin-top: 12px;
+  color: #2d6a4f;
+  font-size: 1.4rem;
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+.report-tip-box {
+  padding: 20px 22px;
+  border-radius: 18px;
+  background: #fff8f0;
+  border: 1px solid #ffe0bb;
+}
+
+.report-tip-box > strong {
+  display: block;
+  color: #ff7a00;
+  font-size: 1.45rem;
+  font-weight: 800;
+  margin-bottom: 8px;
+}
+
+.report-tip-box p {
+  color: #415047;
+  font-size: 1.4rem;
+  line-height: 1.7;
+  margin: 0;
+}
+
+.report-tip-box a {
+  color: #2d6a4f;
+  font-weight: 700;
+}
+
+@media (max-width: 1024px) {
+  .wizard-layout,
+  .report-form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .report-guide-sidebar {
+    grid-template-columns: repeat(2, 1fr);
+    order: -1;
+  }
+
+  .report-tip-box {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 768px) {
+  .report-guide-sidebar {
+    grid-template-columns: 1fr;
+  }
+
+  .wp-label {
+    font-size: 1.05rem;
+  }
+
+  .wizard-submit-btn {
+    min-width: 160px;
+  }
+}

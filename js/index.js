@@ -22,6 +22,7 @@ document.addEventListener('DOMContentLoaded', function () {
         var slides = hero.querySelectorAll('.home-hero-slide');
         var heroSearch = hero.querySelector('.home-hero-inner--search');
         var heroMain = hero.querySelector('.home-hero-inner--main');
+        var heroFresh = hero.querySelector('.home-hero-inner--fresh');
         var currentEl = hero.querySelector('.home-hero-current');
         var totalEl = hero.querySelector('.home-hero-total');
         var prevBtn = hero.querySelector('.home-hero-prev');
@@ -45,6 +46,7 @@ document.addEventListener('DOMContentLoaded', function () {
         function updateContent() {
           if (heroSearch) heroSearch.classList.toggle('is-visible', current === 0);
           if (heroMain) heroMain.classList.toggle('is-visible', current === 1);
+          if (heroFresh) heroFresh.classList.toggle('is-visible', current === 2);
         }
 
         function goTo(index) {
@@ -128,6 +130,9 @@ document.addEventListener('DOMContentLoaded', function () {
           });
           this.classList.add('active');
           this.setAttribute('aria-selected', 'true');
+
+          var tabPanel = document.getElementById('faq-tabpanel');
+          if (tabPanel) tabPanel.setAttribute('aria-labelledby', this.id);
 
           var tab = this.dataset.tab;
           document.querySelectorAll('.faq-group').forEach(function (group) {
@@ -309,14 +314,157 @@ document.addEventListener("click", (e) => {
     subMenu?.classList.toggle("active");
   }
 
-  // pick / course 탭 버튼 active 토글
+  // pick 탭 버튼 active 토글
   const tabBtn = e.target.closest(".tab-list .tab-btn");
-  if (tabBtn) {
+  if (tabBtn && !tabBtn.dataset.filterType) {
     const tabList = tabBtn.closest(".tab-list");
     tabList.querySelectorAll(".tab-btn").forEach(btn => btn.classList.remove("active"));
     tabBtn.classList.add("active");
   }
 });
+
+//pick, course 카드 더보기 버튼
+document.querySelectorAll('.card-more-btn').forEach(function (btn) {
+  var list = btn.closest('.card-more-wrap').previousElementSibling;
+  while (list && list.tagName !== 'UL') {
+    list = list.previousElementSibling;
+  }
+  if (!list) return;
+  var extraCards = list.querySelectorAll('.card-extra');
+  var icon = btn.querySelector('.card-more-icon');
+  var label = btn.querySelector('.card-more-label');
+
+  btn.addEventListener('click', function () {
+    var isOpen = btn.classList.contains('is-open');
+
+    if (!isOpen) {
+      extraCards.forEach(function (card, i) {
+        card.classList.remove('card-hidden');
+        setTimeout(function () {
+          card.classList.add('is-visible');
+        }, i * 80 + 30);
+      });
+      btn.classList.add('is-open');
+      if (label) label.textContent = '접기';
+      if (icon) icon.style.transform = 'rotate(180deg)';
+    } else {
+      extraCards.forEach(function (card) {
+        card.classList.remove('is-visible');
+        card.classList.add('card-hidden');
+      });
+      btn.classList.remove('is-open');
+      if (label) label.textContent = '더보기';
+      if (icon) icon.style.transform = '';
+    }
+  });
+});
+
+// course 탭 필터
+(function initCourseTabFilter() {
+  if (!document.querySelector('.page-course')) return;
+
+  var cards = Array.from(document.querySelectorAll('.course-card-list .course-card'));
+  var moreWrap = document.querySelector('.card-more-wrap');
+  var moreBtn = document.querySelector('.card-more-btn');
+  var tabList = document.querySelector('.page-course .tab-list');
+  var noResult = document.querySelector('.course-no-result');
+
+  if (!tabList || !cards.length) return;
+
+  var activeFilters = { location: '전체', duration: null, theme: null };
+
+  function isFiltered() {
+    return activeFilters.location !== '전체' || activeFilters.duration || activeFilters.theme;
+  }
+
+  function applyFilter() {
+    var filtered = isFiltered();
+    var visibleCount = 0;
+
+    cards.forEach(function (card) {
+      var locMatch = activeFilters.location === '전체' || card.dataset.location === activeFilters.location;
+      var durMatch = !activeFilters.duration || card.dataset.duration === activeFilters.duration;
+      var themeMatch = !activeFilters.theme || card.dataset.theme === activeFilters.theme;
+      var show = locMatch && durMatch && themeMatch;
+
+      if (filtered) {
+        // 필터 적용 중: 모든 카드를 대상으로 표시/숨김
+        card.classList.remove('card-hidden');
+        card.style.display = show ? '' : 'none';
+        if (show) visibleCount++;
+      } else {
+        // 필터 초기화: 원래 상태로 복원
+        card.style.display = '';
+        if (card.classList.contains('card-extra')) {
+          if (moreBtn && moreBtn.classList.contains('is-open')) {
+            card.classList.remove('card-hidden');
+          } else {
+            card.classList.add('card-hidden');
+          }
+        }
+        visibleCount++;
+      }
+    });
+
+    // 더보기 버튼: 필터 중에는 숨김
+    if (moreWrap) moreWrap.style.display = filtered ? 'none' : '';
+
+    // 결과 없음 메시지
+    if (noResult) noResult.style.display = (filtered && visibleCount === 0) ? '' : 'none';
+  }
+
+  tabList.addEventListener('click', function (e) {
+    var btn = e.target.closest('.tab-btn[data-filter-type]');
+    if (!btn) return;
+
+    var filterType = btn.dataset.filterType;
+    var filterValue = btn.dataset.filterValue;
+
+    if (filterType === 'location') {
+      // 지역: 라디오 방식
+      tabList.querySelectorAll('[data-filter-type="location"]').forEach(function (b) {
+        b.classList.remove('active');
+      });
+      btn.classList.add('active');
+      activeFilters.location = filterValue;
+      // 전체 클릭 시 소요시간·테마 초기화
+      if (filterValue === '전체') {
+        tabList.querySelectorAll('[data-filter-type="duration"], [data-filter-type="theme"]').forEach(function (b) {
+          b.classList.remove('active');
+        });
+        activeFilters.duration = null;
+        activeFilters.theme = null;
+      }
+    } else if (filterType === 'duration') {
+      // 소요시간: 토글 방식
+      if (btn.classList.contains('active')) {
+        btn.classList.remove('active');
+        activeFilters.duration = null;
+      } else {
+        tabList.querySelectorAll('[data-filter-type="duration"]').forEach(function (b) {
+          b.classList.remove('active');
+        });
+        btn.classList.add('active');
+        activeFilters.duration = filterValue;
+      }
+    } else if (filterType === 'theme') {
+      // 테마: 토글 방식
+      if (btn.classList.contains('active')) {
+        btn.classList.remove('active');
+        activeFilters.theme = null;
+      } else {
+        tabList.querySelectorAll('[data-filter-type="theme"]').forEach(function (b) {
+          b.classList.remove('active');
+        });
+        btn.classList.add('active');
+        activeFilters.theme = filterValue;
+      }
+    }
+
+    applyFilter();
+  });
+})();
+
 
 // map__________________________________________________________
 // map-btn클릭 

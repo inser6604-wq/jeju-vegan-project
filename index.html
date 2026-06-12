@@ -3,9 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>제주비건지도 | 홈</title>
+  <title>비건지도 | 홈</title>
+  <style>html{visibility:hidden}</style>
   <link rel="stylesheet" href="css/style.css">
   <link rel="icon" type="image/png" href="./image/favicon.svg">
+  <meta property="og:title" content="제주 비건 지도">
+  <meta property="og:description" content="제주 비건 맛집, 어디로 가볼까요?">
+  <meta property="og:image" content="https://kis0503.dothome.co.kr/image/og.png">
+  <meta property="og:url" content="https://kis0503.dothome.co.kr/">
 </head>
 <body>
   <div id="wrap">
@@ -19,6 +24,9 @@
           </div>
           <div class="home-hero-slide">
             <img src="image/main-hero.svg" alt= "main-slider-image02">
+          </div>
+          <div class="home-hero-slide home-hero-slide--fresh">
+            <img src="image/main-hero03.png" alt="제주 제철 비건 식재료">
           </div>
         </div>
 
@@ -49,12 +57,26 @@
           </div>
         </div>
 
+        <div class="inner home-hero-inner home-hero-inner--fresh">
+          <div class="home-hero-fresh-copy sr sr-up" data-sr-delay="0.2">
+            <h2 class="home-hero-fresh-title bebas-neue-regular">
+              <span class="home-hero-fresh-line">FRESH</span>
+              <span class="home-hero-fresh-line home-hero-fresh-line--accent"><span class="home-hero-fresh-dash" aria-hidden="true">—</span> FROM</span>
+              <span class="home-hero-fresh-line">JEJU</span>
+            </h2>
+            <p class="home-hero-fresh-desc">
+              제주의 제철 식재료로 완성한 건강한 비건 한 끼.<br>
+              신선한 자연의 맛을 그대로 담아냈습니다.
+            </p>
+          </div>
+        </div>
+
         <div class="home-hero-bar">
           <div class="inner home-hero-bar-inner">
             <p class="home-hero-counter" aria-live="polite">
               <span class="home-hero-current">01</span>
               <span class="home-hero-counter-sep" aria-hidden="true">—</span>
-              <span class="home-hero-total">02</span>
+              <span class="home-hero-total">03</span>
             </p>
             <div class="home-hero-nav">
               <button type="button" class="btn home-hero-nav-btn home-hero-prev" aria-label="이전 슬라이드">
@@ -126,64 +148,61 @@
 
           <ul class="home-course-content card-list">
             <li class="course-card card sr sr-up" data-sr-delay="0.15">
-              <a href="course.html">
-                <div class="card-img home-course-img img-box">
-                  <div class="tag-list">
-                    <span class="tag">#샐러드</span>
-                    <span class="tag">#파스타</span>
-                  </div>
-                  <img src="image/main-course-card-img01.jpg" alt="서귀포 코스">
+              <a href="course.html" class="card-link-overlay" aria-label="서귀포 코스 상세보기"></a>
+              <div class="card-img home-course-img img-box">
+                <div class="tag-list">
+                  <span class="tag">#샐러드</span>
+                  <span class="tag">#파스타</span>
                 </div>
-                <div class="card-body home-course-body">
-                  <h3 class="card-title home-course-title">서귀포 코스</h3>
-                  <p class="card-desc home-course-desc">자연과 로컬 비건 맛집을 함께 즐기는 여행</p>
-                  <button type="button" class="btn like-btn" aria-label="서귀포 코스 좋아요">
-                    <span class="iconify like-icon" data-icon="mdi:heart-outline" aria-hidden="true"></span>
-                    <span class="like-count">102</span>
-                  </button>
-                </div>
-              </a>
+                <img src="image/main-course-card-img01.jpg" alt="서귀포 코스">
+              </div>
+              <div class="card-body home-course-body">
+                <h3 class="card-title home-course-title">서귀포 코스</h3>
+                <p class="card-desc home-course-desc">자연과 로컬 비건 맛집을 함께 즐기는 여행</p>
+                <button type="button" class="btn like-btn" aria-label="서귀포 코스 좋아요">
+                  <span class="iconify like-icon" data-icon="mdi:heart-outline" aria-hidden="true"></span>
+                  <span class="like-count">102</span>
+                </button>
+              </div>
             </li>
 
             <li class="course-card card sr sr-up" data-sr-delay="0.2">
-              <a href="course.html">
-                <div class="card-img home-course-img img-box">
-                  <div class="tag-list">
-                    <span class="tag">#브런치</span>
-                    <span class="tag">#디저트</span>
-                  </div>
-                  <div class="btn home-course-view">BEST COURSE</div>
-                  <img src="image/main-course-card-img02.jpg" alt="협재금능코스">
+              <a href="course.html" class="card-link-overlay" aria-label="협재 금능 코스 상세보기"></a>
+              <div class="card-img home-course-img img-box">
+                <div class="tag-list">
+                  <span class="tag">#브런치</span>
+                  <span class="tag">#디저트</span>
                 </div>
-                <div class="card-body home-course-body">
-                  <h3 class="card-title home-course-title">협재 · 금능 코스</h3>
-                  <p class="card-desc home-course-desc">에메랄드빛 해변과 감성 비건 스팟 탐방</p>
-                  <button type="button" class="btn like-btn is-active" aria-label="협재 금능 코스 좋아요">
-                    <span class="iconify like-icon" data-icon="mdi:heart" aria-hidden="true"></span>
-                    <span class="like-count">182</span>
-                  </button>
-                </div>
-              </a>
+                <div class="btn home-course-view">BEST COURSE</div>
+                <img src="image/main-course-card-img02.jpg" alt="협재금능코스">
+              </div>
+              <div class="card-body home-course-body">
+                <h3 class="card-title home-course-title">협재 · 금능 코스</h3>
+                <p class="card-desc home-course-desc">에메랄드빛 해변과 감성 비건 스팟 탐방</p>
+                <button type="button" class="btn like-btn is-active" aria-label="협재 금능 코스 좋아요">
+                  <span class="iconify like-icon" data-icon="mdi:heart" aria-hidden="true"></span>
+                  <span class="like-count">182</span>
+                </button>
+              </div>
             </li>
 
             <li class="course-card card sr sr-up" data-sr-delay="0.25">
-              <a href="course.html">
-                <div class="card-img home-course-img img-box">
-                  <div class="tag-list">
-                    <span class="tag">#건강식</span>
-                    <span class="tag">#포케</span>
-                  </div>
-                  <img src="image/main-course-card-img03.jpg" alt="한라산 코스">
+              <a href="course.html" class="card-link-overlay" aria-label="한라산 코스 상세보기"></a>
+              <div class="card-img home-course-img img-box">
+                <div class="tag-list">
+                  <span class="tag">#건강식</span>
+                  <span class="tag">#포케</span>
                 </div>
-                <div class="card-body home-course-body">
-                  <h3 class="card-title home-course-title">한라산 코스</h3>
-                  <p class="card-desc home-course-desc">등산 후 즐기는 건강한 비건 식사와 휴식</p>
-                  <button type="button" class="btn like-btn" aria-label="한라산 코스 좋아요">
-                    <span class="iconify like-icon" data-icon="mdi:heart-outline" aria-hidden="true"></span>
-                    <span class="like-count">56</span>
-                  </button>
-                </div>
-              </a>
+                <img src="image/main-course-card-img03.jpg" alt="한라산 코스">
+              </div>
+              <div class="card-body home-course-body">
+                <h3 class="card-title home-course-title">한라산 코스</h3>
+                <p class="card-desc home-course-desc">등산 후 즐기는 건강한 비건 식사와 휴식</p>
+                <button type="button" class="btn like-btn" aria-label="한라산 코스 좋아요">
+                  <span class="iconify like-icon" data-icon="mdi:heart-outline" aria-hidden="true"></span>
+                  <span class="like-count">56</span>
+                </button>
+              </div>
             </li>
           </ul>
         </div>
