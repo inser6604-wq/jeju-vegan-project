@@ -292,6 +292,11 @@
 .page-pick .place-card .card-desc{
   margin-top: 0.8rem;
   font-size: 1.4rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  min-height: 4.5rem;
 }
 
 .page-pick .pick-card-info{
