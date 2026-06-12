@@ -490,20 +490,48 @@ document.addEventListener('DOMContentLoaded', () => {
   const filterTab = document.querySelector('.map-filter-tab');
   const filterInner = document.querySelector('.map-filter-inner');
   const mapFilter = document.querySelector('.map-filter');
-  const tabArrow = filterTab ? filterTab.querySelector('img') : null;
-  let isOpen = true;
+  if (!filterTab || !filterInner || !mapFilter) return;
+  const tabArrow = filterTab.querySelector('img');
 
-  if (filterTab && filterInner && mapFilter && tabArrow) {
-    filterTab.addEventListener('click', (e) => {
-      e.preventDefault();
-      isOpen = !isOpen;
-      filterInner.classList.toggle('hidden', !isOpen);
-      mapFilter.classList.toggle('closed', !isOpen);
-      tabArrow.style.transform = isOpen ? 'rotate(0deg)' : 'rotate(180deg)';
-    });
+  // 1200px 이하(태블릿 포함)는 슬라이드 방식 적용
+  const isTabletOrMobile = () => window.innerWidth <= 1200;
+
+  // 기본 상태: 1200px 이하는 닫힘, 데스크탑은 열림
+  let isOpen = !isTabletOrMobile();
+
+  function applyFilterState(open) {
+    if (isTabletOrMobile()) {
+      // 태블릿·모바일(≤1200px): .active 클래스 슬라이드 방식
+      mapFilter.classList.toggle('active', open);
+      mapFilter.classList.remove('closed');
+      filterInner.classList.toggle('hidden', !open);
+    } else {
+      // 데스크탑(>1200px): .closed / .hidden 방식
+      mapFilter.classList.toggle('closed', !open);
+      mapFilter.classList.remove('active');
+      filterInner.classList.toggle('hidden', !open);
+    }
+    if (tabArrow) tabArrow.style.transform = open ? 'rotate(0deg)' : 'rotate(180deg)';
   }
-});
 
+  applyFilterState(isOpen);
+
+  // 클릭 시 토글: 1회=열림, 2회=닫힘
+  filterTab.addEventListener('click', (e) => {
+    e.preventDefault();
+    isOpen = !isOpen;
+    applyFilterState(isOpen);
+  });
+
+  let resizeTimer;
+  window.addEventListener('resize', () => {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(() => {
+      isOpen = !isTabletOrMobile();
+      applyFilterState(isOpen);
+    }, 150);
+  });
+});
   // map-filter-search기능
 const searchInput = document.querySelector('.map-search input');
 const allCards = document.querySelectorAll('.map-place-card');
