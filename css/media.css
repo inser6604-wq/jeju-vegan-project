@@ -170,13 +170,13 @@
   }
 
   .home-hero-search-title {
-    font-size: 2rem;
+    font-size: 2.8rem;
     line-height: 1.35;
   }
 
   .home-hero-search-desc {
     margin-top: 0.8rem;
-    font-size: 1.15rem;
+    font-size: 1.3rem;
     line-height: 1.5;
   }
 
@@ -187,7 +187,7 @@
   }
 
   .home-hero-search-input {
-    font-size: 1.25rem;
+    font-size: 1.3rem;
   }
 
   .home-hero-search-btn {
@@ -233,6 +233,8 @@
     grid-area: pick-button;
     justify-self: center;
     margin: 28px 0 0;
+    padding: 1rem 2.4rem;
+    font-size: 1.4rem;
   }
 
   .home-map .section-head {
@@ -246,9 +248,9 @@
   .home-map .btn-line {
     width: auto;
     min-width: 0;
-    height: 3.6rem;
-    padding: 0 1.6rem;
-    font-size: 1.25rem;
+    height: 3.8rem;
+    padding: 0 1.8rem;
+    font-size: 1.4rem;
   }
 
   .home-pick-content {
@@ -311,7 +313,7 @@
   .home-pick-main-title,
   .home-pick-side-title {
     margin-top: 1rem;
-    font-size: 1.85rem;
+    font-size: 1.8rem;
   }
 
   .home-pick-main-title {
@@ -335,12 +337,13 @@
 
   .home-pick-main-place {
     margin-top: 12px;
-    font-size: 1.25rem;
+    font-size: 1.3rem;
     color: #888;
   }
 
   .home-pick .badge-vegan {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
+    padding: 0.55rem 1.3rem;
   }
 
   .home-pick-side {
@@ -467,12 +470,12 @@
   }
 
   .home-course-content .home-course-title {
-    font-size: 1.65rem;
+    font-size: 1.8rem;
   }
 
   .home-course-content .home-course-desc {
     margin-top: 8px;
-    font-size: 1.25rem;
+    font-size: 1.3rem;
     line-height: 1.55;
     word-break: keep-all;
   }
@@ -480,7 +483,7 @@
   .home-course-content .course-card .like-btn {
     right: 16px;
     top: 16px;
-    font-size: 1.25rem;
+    font-size: 1.3rem;
   }
 
   .home-course-content .course-card .tag-list {
@@ -490,7 +493,7 @@
 
   .home-course-content .course-card .tag-list .tag {
     padding: 6px 12px;
-    font-size: 1.25rem;
+    font-size: 1.3rem;
   }
 
   .home-course-desc {
@@ -506,11 +509,11 @@
   }
 
   .home-map .section-title {
-    font-size: 2.4rem;
+    font-size: 2.8rem;
   }
 
   .home-map .section-desc {
-    font-size: 1.25rem;
+    font-size: 1.3rem;
     line-height: 1.5;
   }
 
@@ -548,7 +551,7 @@
 
   .home-map-stats span {
     margin-top: 4px;
-    font-size: 1.05rem;
+    font-size: 1.2rem;
     line-height: 1.25;
     word-break: keep-all;
   }
@@ -564,13 +567,13 @@
   }
 
   .home-together .section-title {
-    font-size: 2rem;
+    font-size: 2.8rem;
     line-height: 1.35;
     word-break: keep-all;
   }
 
   .home-together .section-desc {
-    font-size: 1.15rem;
+    font-size: 1.3rem;
     line-height: 1.55;
     word-break: keep-all;
   }
@@ -628,14 +631,14 @@
     width: fit-content;
     max-width: 55%;
     margin: 0 auto 20px;
-    font-size: 1.9rem;
+    font-size: 2.8rem;
     line-height: 1.15;
     text-align: center;
     word-break: keep-all;
   }
 
   .home-join .section-desc {
-    font-size: 1rem;
+    font-size: 1.3rem;
     line-height: 1.55;
     word-break: keep-all;
   }
@@ -665,9 +668,9 @@
     max-width: 100%;
     min-width: 0;
     height: auto;
-    min-height: 4.6rem;
-    padding: 1.2rem 1rem;
-    font-size: 1.3rem;
+    min-height: 4.8rem;
+    padding: 1.3rem 1.2rem;
+    font-size: 1.4rem;
     line-height: 1.35;
     white-space: normal;
     text-align: center;
@@ -702,14 +705,14 @@
     width: fit-content;
     max-width: 72%;
     margin: 0 auto 0.8rem;
-    font-size: 1.65rem;
+    font-size: 2.8rem;
     line-height: 1.5;
     text-align: center;
   }
 
   .home-subscribe .section-desc {
     margin-top: 0;
-    font-size: 1.15rem;
+    font-size: 1.3rem;
     color: #2d6a4f;
     line-height: 1.5;
     text-align: center;
@@ -738,24 +741,24 @@
     min-width: 0;
     height: 100%;
     padding: 0 1.4rem;
-    font-size: 1.15rem;
+    font-size: 1.3rem;
   }
 
   .home-subscribe .btn-primary {
     width: auto;
-    min-width: 8.4rem;
+    min-width: 9rem;
     height: 100%;
-    padding: 0 1.6rem;
+    padding: 0 1.8rem;
     border: none;
     border-radius: 0;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     flex-shrink: 0;
   }
 
   .home-subscribe-note {
     margin-left: 0;
     margin-top: 1rem;
-    font-size: 1rem;
+    font-size: 1.2rem;
     line-height: 1.55;
     text-align: center;
     color: #999;
@@ -768,7 +771,7 @@
   }
 
   .section-title {
-    font-size: 2.4rem;
+    font-size: 2.2rem;
   }
 
   .btn-lg {
@@ -794,16 +797,16 @@
   }
 
   .home-hero-fresh-desc {
-    font-size: 1.25rem;
+    font-size: 1.3rem;
     line-height: 1.4;
   }
 
   .home-hero-search-title {
-    font-size: 1.7rem;
+    font-size: 2.8rem;
   }
 
   .home-hero-search-desc {
-    font-size: 1.1rem;
+    font-size: 1.3rem;
   }
 
   .home-hero-search-form {
@@ -813,7 +816,7 @@
   }
 
   .home-hero-search-input {
-    font-size: 1.15rem;
+    font-size: 1.3rem;
   }
 
   .home-hero-search-btn {
@@ -875,7 +878,7 @@
 
   .home-pick-main-title,
   .home-pick-side-title {
-    font-size: 1.75rem;
+    font-size: 1.8rem;
   }
 
   .home-pick-main-desc,
@@ -884,18 +887,18 @@
   }
 
   .home-map .section-title {
-    font-size: 2rem;
+    font-size: 2.2rem;
   }
 
   .home-map .section-desc {
-    font-size: 1.15rem;
+    font-size: 1.3rem;
     line-height: 1.5;
   }
 
   .home-map .btn-line {
-    height: 3.4rem;
-    padding: 0 1.4rem;
-    font-size: 1.15rem;
+    height: 3.6rem;
+    padding: 0 1.6rem;
+    font-size: 1.4rem;
   }
 
   .home-map-stats {
@@ -909,7 +912,7 @@
 
   .home-map-stats span {
     margin-top: 2px;
-    font-size: 0.95rem;
+    font-size: 1.2rem;
     line-height: 1.2;
   }
 
@@ -940,11 +943,11 @@
   }
 
   .home-course-content .home-course-title {
-    font-size: 1.55rem;
+    font-size: 1.8rem;
   }
 
   .home-course-content .home-course-desc {
-    font-size: 1.15rem;
+    font-size: 1.3rem;
   }
 
   .home-together.section,
@@ -954,13 +957,13 @@
   }
 
   .home-together .section-title {
-    font-size: 1.75rem;
+    font-size: 2.2rem;
   }
 
   .home-join .section-title {
     max-width: 60%;
     margin-inline: auto;
-    font-size: 1.7rem;
+    font-size: 2.2rem;
     line-height: 1.1;
     text-align: center;
   }
@@ -972,7 +975,7 @@
 
   .home-together .section-desc,
   .home-join .section-desc {
-    font-size: 1.1rem;
+    font-size: 1.3rem;
   }
 
   .home-together-visual {
@@ -991,7 +994,7 @@
 
   .home-together .tag {
     padding: 0.7rem 1.2rem;
-    font-size: 1.15rem;
+    font-size: 1.2rem;
   }
 
   .home-join-visual {
@@ -999,9 +1002,9 @@
   }
 
   .home-join .btn-main-bottom {
-    font-size: 1.2rem;
-    min-height: 4.2rem;
-    padding: 1rem 1.2rem;
+    font-size: 1.4rem;
+    min-height: 4.6rem;
+    padding: 1.2rem 1.4rem;
   }
 
   .home-subscribe.section {
@@ -1015,13 +1018,13 @@
   .home-subscribe .section-title {
     max-width: 78%;
     margin: 0 auto 0.6rem;
-    font-size: 1.45rem;
+    font-size: 2.2rem;
     line-height: 1.55;
     text-align: center;
   }
 
   .home-subscribe .section-desc {
-    font-size: 1.05rem;
+    font-size: 1.3rem;
   }
 
   .home-subscribe::after {
@@ -1037,18 +1040,18 @@
 
   .home-subscribe .form-input {
     padding: 0 1.2rem;
-    font-size: 1.05rem;
+    font-size: 1.3rem;
   }
 
   .home-subscribe .btn-primary {
-    min-width: 7.2rem;
-    padding: 0 1.4rem;
-    font-size: 1.1rem;
+    min-width: 8.4rem;
+    padding: 0 1.6rem;
+    font-size: 1.4rem;
   }
 
   .home-subscribe-note {
     margin-top: 0.8rem;
-    font-size: 0.95rem;
+    font-size: 1.2rem;
   }
 }
 
@@ -1070,7 +1073,7 @@
   }
 
   .sub-hero-title {
-    font-size: 2.8rem;
+    font-size: 3.2rem;
     line-height: 1.25;
   }
 
@@ -1102,7 +1105,7 @@
   }
 
   .sub-hero-title {
-    font-size: 2.4rem;
+    font-size: 2.8rem;
   }
 
   .sub-hero-subtitle {
@@ -1113,7 +1116,7 @@
 
   .breadcrumb {
     padding: 1.6rem 0 3rem;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
   }
 
   .page-about .breadcrumb,
@@ -1150,7 +1153,7 @@
   }
 
   .faq-group-title {
-    font-size: 2rem;
+    font-size: 2.2rem;
   }
 
   .faq-content {
@@ -1170,7 +1173,7 @@
   .faq-tab .tab-btn {
     height: 36px;
     padding: 0 14px;
-    font-size: 1.25rem;
+    font-size: 1.3rem;
   }
 
   .faq-question {
@@ -1478,12 +1481,12 @@
 }
 @media (max-width: 768px) {
   .main-map-pin img { width: 30px; }
-  .main-map-pin span { font-size: 11px; padding: 3px 8px; }
+  .main-map-pin span { font-size: 1.1rem; padding: 3px 8px; }
   .main-map-pin { gap: 4px; }
 }
 @media (max-width: 480px) {
   .main-map-pin img { width: 22px; }
-  .main-map-pin span { font-size: 11px; padding: 2px 6px; }
+  .main-map-pin span { font-size: 1rem; padding: 2px 6px; }
   .main-map-pin { gap: 2px; }
 }
 
