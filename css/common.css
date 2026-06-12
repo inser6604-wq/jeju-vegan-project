@@ -63,9 +63,18 @@ input {
 
 .sub-hero-content {
   position: absolute;
-  left: 10rem;
+  left: 0;
   top: 58%;
   transform: translateY(-50%);
+}
+
+/* about·map 제외 — 헤더 펼침(20rem) 아래에 텍스트 배치 */
+.page:not(.page-about):not(.page-map) .sub-hero-content {
+  top: 22rem;
+}
+
+.page:not(.page-about):not(.page-map) .sub-hero-content:not(.sr) {
+  transform: none;
 }
 
 .sub-hero-title {
