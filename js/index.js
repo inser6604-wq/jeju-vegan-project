@@ -594,6 +594,79 @@ mapPinItems.forEach(pinItem => {
     orangeImg.style.opacity = '0';
   });
 });
+// map-in-card 모바일 위치 자동 조정 (지도 영역 밖으로 나가지 않게)
+(function initMobileInCardPosition() {
+  const mapContent = document.querySelector('.page-map .map-main-content');
+  if (!mapContent) return;
+
+  const pins = mapContent.querySelectorAll('.map-pin');
+  if (!pins.length) return;
+
+  function adjust() {
+    const isMobile = window.innerWidth <= 480;
+    const mapH = mapContent.offsetHeight;
+    const mapW = mapContent.offsetWidth;
+    const remPx = parseFloat(getComputedStyle(document.documentElement).fontSize);
+    const cardW = 16 * remPx;  // CSS: width: 16rem
+    const cardH = 8 * remPx;   // 이미지 없는 카드 대략 높이
+    // filter-tab 닫힌 상태: left 2rem + width 2.5rem → 4.5rem 이후부터 안전
+    const tabSafeLeft = 4.5 * remPx;
+
+    pins.forEach(pin => {
+      const card = pin.querySelector('.map-in-card');
+      if (!card) return;
+
+      if (!isMobile) {
+        card.style.top = '';
+        card.style.bottom = '';
+        card.style.transform = '';
+        return;
+      }
+
+      const pinCenterX = pin.offsetLeft + pin.offsetWidth / 2;
+      const pinBottom  = pin.offsetTop + pin.offsetHeight;
+
+      // ── 세로: 하단 넘침 → 핀 위로
+      if (pinBottom + cardH + 8 > mapH) {
+        card.style.top = 'auto';
+        card.style.bottom = 'calc(100% + 8px)';
+      } else {
+        card.style.top = '';
+        card.style.bottom = '';
+      }
+
+      // ── 가로 계산
+      // translateX(-50%) 기준: cardLeft = pinCenterX - cardW/2
+      const cardLeftDefault  = pinCenterX - cardW / 2;
+      const cardRightDefault = pinCenterX + cardW / 2;
+
+      if (cardRightDefault > mapW) {
+        // 오른쪽 넘침: 카드를 왼쪽 방향으로 (translateX(-100%) → 카드 오른쪽 끝 = 핀 중심)
+        const idealLeft = pinCenterX - cardW;
+        if (idealLeft < tabSafeLeft) {
+          // 왼쪽 끝도 filter-tab에 걸릴 경우 최소한 tabSafeLeft 까지만 밀기
+          card.style.transform = `translateX(calc(-100% + ${tabSafeLeft - idealLeft}px))`;
+        } else {
+          card.style.transform = 'translateX(-100%)';
+        }
+      } else if (cardLeftDefault < tabSafeLeft) {
+        // 왼쪽 filter-tab 영역 침범 → 오른쪽으로 밀기
+        card.style.transform = `translateX(calc(-50% + ${tabSafeLeft - cardLeftDefault}px))`;
+      } else {
+        card.style.transform = '';
+      }
+    });
+  }
+
+  adjust();
+
+  let resizeTimer;
+  window.addEventListener('resize', () => {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(adjust, 150);
+  });
+})();
+
 // map-list-tab 클릭
 const mapListTab = document.querySelector('.map-list-tab');
 const hiddenCards = document.querySelectorAll('.map-hidden');
