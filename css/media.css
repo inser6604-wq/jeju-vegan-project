@@ -1053,20 +1053,82 @@
 }
 
 /* =========================================
+   Sub Hero + Breadcrumb 공통 반응형
+   ========================================= */
+
+@media (max-width: 768px) {
+  .sub-hero,
+  .sub-hero .inner {
+    min-height: 32rem;
+  }
+
+  .sub-hero-content {
+    left: 0;
+    right: 0;
+    padding: 0 1.4rem;
+    box-sizing: border-box;
+  }
+
+  .sub-hero-title {
+    font-size: 2.8rem;
+    line-height: 1.25;
+  }
+
+  .sub-hero-subtitle {
+    margin-top: 1.2rem;
+    font-size: 1.3rem;
+    line-height: 1.55;
+  }
+
+  .breadcrumb {
+    padding: 2rem 0 4rem;
+    font-size: 1.2rem;
+  }
+
+  .page-about .breadcrumb,
+  .page-submit .breadcrumb {
+    padding-bottom: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .sub-hero,
+  .sub-hero .inner {
+    min-height: 26rem;
+  }
+
+  .sub-hero-content {
+    padding: 0 1.2rem;
+  }
+
+  .sub-hero-title {
+    font-size: 2.4rem;
+  }
+
+  .sub-hero-subtitle {
+    margin-top: 1rem;
+    font-size: 1.2rem;
+    line-height: 1.5;
+  }
+
+  .breadcrumb {
+    padding: 1.6rem 0 3rem;
+    font-size: 1.1rem;
+  }
+
+  .page-about .breadcrumb,
+  .page-submit .breadcrumb {
+    padding-bottom: 0;
+  }
+}
+
+/* =========================================
    FAQ 반응형
    ========================================= */
 
 @media (max-width: 768px) {
   .faq-hero {
     padding: 56px 0 48px;
-  }
-
-  .faq-hero-title {
-    font-size: 3.2rem;
-  }
-
-  .faq-hero-desc {
-    font-size: 1.35rem;
   }
 
   .faq-body {
@@ -1101,14 +1163,6 @@
 }
 
 @media (max-width: 480px) {
-  .faq-hero-title {
-    font-size: 2.8rem;
-  }
-
-  .faq-hero-desc {
-    font-size: 1.3rem;
-  }
-
   .faq-tab .tab-list {
     gap: 8px;
   }
@@ -1429,7 +1483,7 @@
 }
 @media (max-width: 480px) {
   .main-map-pin img { width: 22px; }
-  .main-map-pin span { font-size: 9px; padding: 2px 6px; }
+  .main-map-pin span { font-size: 11px; padding: 2px 6px; }
   .main-map-pin { gap: 2px; }
 }
 
