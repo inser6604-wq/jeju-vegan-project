@@ -2244,7 +2244,8 @@
   }
   .map-card-list {
     row-gap: 1.6rem;
-    width: 80%;
+    width: 90%;
+
   }
   .map-place-card-img {
     height: 18rem;
