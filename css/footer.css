@@ -15,7 +15,7 @@ footer {
   align-items: center;
 }
 .footer-inner {
-  width: 110rem;
+  width: min(110rem, 100%);
   height: auto;
   display: flex;
   justify-content: space-between;

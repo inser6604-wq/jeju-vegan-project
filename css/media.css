@@ -93,6 +93,9 @@
     right: 0;
     bottom: 72px;
     left: 0;
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -151,6 +154,10 @@
     align-items: flex-start;
     font-size: clamp(5.8rem, 16vw, 8.2rem);
     line-height: 0.8;
+  }
+
+  .home-hero-fresh-line {
+    white-space: normal;
   }
 
   .home-hero-fresh-desc {
@@ -400,28 +407,28 @@
   }
 
   .home-course {
-    overflow: visible;
+    overflow-x: clip;
   }
 
   .home-course .inner {
-    overflow: visible;
+    overflow-x: clip;
   }
 
   .home-course-content {
     --course-carousel-gutter: 1.4rem;
     --course-carousel-gap: 1.6rem;
     --course-carousel-peek: 3.6rem;
-    --course-card-size: calc(100vw - var(--course-carousel-gutter) - var(--course-carousel-gap) - var(--course-carousel-peek));
+    --course-card-size: calc(100% - var(--course-carousel-gap) - var(--course-carousel-peek));
 
     display: flex;
     flex-wrap: nowrap;
     align-items: stretch;
     gap: var(--course-carousel-gap);
-    width: 100vw;
-    max-width: 100vw;
+    width: 100%;
+    max-width: 100%;
     margin-top: 40px;
-    margin-inline: calc(50% - 50vw);
-    padding: 0 var(--course-carousel-gutter) 0 var(--course-carousel-gutter);
+    margin-inline: 0;
+    padding: 0;
     overflow-x: auto;
     overflow-y: hidden;
     scroll-snap-type: x mandatory;
@@ -682,7 +689,7 @@
     padding: 1.2rem 1rem;
     font-size: 1.2rem;
     line-height: 1.3;
-    white-space: nowrap;
+    white-space: normal;
     text-align: center;
   }
 
@@ -1277,7 +1284,8 @@
 @media (max-width: 768px) {
   .site-header {
     height: 8rem ;
-    overflow: visible;
+    overflow-x: clip;
+    overflow-y: visible;
     border-radius: 0 0 5rem 5rem;
   }
 
@@ -1532,7 +1540,7 @@
   .footer-desc {
     font-size: 1.3rem;
     text-align: center;
-    white-space: nowrap;
+    white-space: normal;
   }
   .footer-right {
     display: flex;
@@ -1621,6 +1629,10 @@
 
 /* map 반응형 */
 @media (max-width: 1200px) {
+  .page-map {
+    overflow-x: clip;
+  }
+
   /* map-detail */
   .map-detail-content {
     width: 100%;

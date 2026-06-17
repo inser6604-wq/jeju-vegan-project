@@ -1,5 +1,10 @@
 @import url(font.css);
 
+.page {
+  max-width: 100%;
+  overflow-x: clip;
+}
+
 .section-title,
 .hero-title,
 .page-title,
@@ -51,7 +56,7 @@ input {
   content: '';
   position: absolute;
   inset: 0;
-  background: rgba(255, 255, 255, 0.4);
+  background: rgba(255, 255, 255, 0.2);
   pointer-events: none;
 }
 
