@@ -672,31 +672,40 @@ const mapListTab = document.querySelector('.map-list-tab');
 
 if (mapListTab) {
   mapListTab.addEventListener('click', () => {
-    const hiddenCards = document.querySelectorAll('.map-hidden');
-    const isHidden = mapListTab.classList.contains('active');
+    const isExpanded = !mapListTab.classList.contains('active');
 
-    hiddenCards.forEach((card, i) => {
-      card.classList.toggle('map-hidden');
-      // 열릴 때: sr 클래스가 있으면 staggered delay로 is-visible 추가
-      if (isHidden && card.classList.contains('sr')) {
-        card.classList.remove('is-visible');
-        setTimeout(() => {
-          card.classList.add('is-visible');
-        }, 80 * i);
-      }
-      // 닫힐 때: is-visible 제거해 다음 열기에 재애니메이션
-      if (!isHidden && card.classList.contains('sr')) {
-        card.classList.remove('is-visible');
-      }
-    });
+    if (isExpanded) {
+      // 접기: index >= 5 카드에 map-hidden 다시 추가
+      const allCards = document.querySelectorAll('.map-card-list .map-place-card');
+      allCards.forEach((card, i) => {
+        if (i >= 5) {
+          card.classList.add('map-hidden');
+          if (card.classList.contains('sr')) {
+            card.classList.remove('is-visible');
+          }
+        }
+      });
+    } else {
+      // 더보기: hidden 카드 표시
+      const hiddenCards = document.querySelectorAll('.map-hidden');
+      hiddenCards.forEach((card, i) => {
+        card.classList.remove('map-hidden');
+        if (card.classList.contains('sr')) {
+          card.classList.remove('is-visible');
+          setTimeout(() => {
+            card.classList.add('is-visible');
+          }, 80 * i);
+        }
+      });
+    }
 
     mapListTab.classList.toggle('active');
     const tabImg = mapListTab.querySelector('img');
     if (tabImg) {
-      tabImg.style.transform = isHidden ? 'rotate(180deg)' : 'rotate(0deg)';
+      tabImg.style.transform = isExpanded ? 'rotate(0deg)' : 'rotate(180deg)';
     }
     if (mapListTab.lastChild) {
-      mapListTab.lastChild.textContent = isHidden ? '접기' : '더보기';
+      mapListTab.lastChild.textContent = isExpanded ? '더보기' : '접기';
     }
   });
 }
