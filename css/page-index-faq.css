@@ -1062,6 +1062,15 @@
   background: url(../image/faq-img.jpg) center center / cover no-repeat;
 }
 
+.faq-hero::after {
+  background: rgba(0, 0, 0, 0.35);
+}
+
+.faq-hero .sub-hero-title,
+.faq-hero .sub-hero-subtitle{
+  color: #fff;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.35);
+}
 /* 본문 영역 */
 .faq-body {
   padding: 60px 0 100px;

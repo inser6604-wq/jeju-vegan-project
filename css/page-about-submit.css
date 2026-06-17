@@ -1514,12 +1514,39 @@
 }
 
 @media (max-width: 768px) {
+  .page-submit,
+  .submit-form,
+  .submit-form .inner,
+  .submit-store-content,
+  .submit-report-content,
+  .wizard-layout,
+  .report-form-grid {
+    max-width: 100%;
+    overflow-x: clip;
+  }
+
+  .page-submit .submit-stage,
+  .page-submit .wizard-card,
+  .page-submit .report-left,
+  .page-submit .wizard-sidebar,
+  .page-submit .report-guide-sidebar {
+    min-width: 0;
+    max-width: 100%;
+  }
+
+  .page-submit .wizard-progress {
+    overflow: hidden;
+  }
+
   .report-guide-sidebar {
     grid-template-columns: 1fr;
   }
 
   .wp-label {
     font-size: 1.05rem;
+    white-space: normal;
+    text-align: center;
+    line-height: 1.25;
   }
 
   .wizard-submit-btn {
@@ -1542,6 +1569,17 @@
 
   .wp-label {
     font-size: 0.85rem;
+    white-space: normal;
+    line-height: 1.2;
+  }
+
+  .wizard-nav {
+    flex-wrap: wrap;
+  }
+
+  .wizard-next-btn,
+  .wizard-submit-btn {
+    min-width: 0;
   }
 
   .report-submit-cta {
