@@ -1686,7 +1686,6 @@
     border-radius: 3px;
   }
 
-  /* 지도: 너비 120rem, 높이는 원본 비율(140:80=7:4) 유지 */
   .page-map .map-main-content {
     width: 120rem;
     min-width: 120rem;
@@ -1711,7 +1710,6 @@
   .page-map .map-filter-tab {
     pointer-events: auto;
   }
-  /* 핀 호버(카드 표시, 오렌지색) 작동을 위해 pointer-events 복원 */
   .page-map .map-pin-list {
     width: 120rem;
     height: 100%;
@@ -1721,8 +1719,6 @@
     z-index: 2;
     pointer-events: auto;
   }
-
-  /* 핀 이미지: 지도 비율(120/140≈0.86)에 맞게 축소 */
   .map-pin a img {
     width: 3.4rem;
     height: auto;
@@ -1733,8 +1729,6 @@
     transform-origin: top center;
   }
 
-  /* ─── 필터: 1200px부터 슬라이드 패널 방식 ─── */
-  /* 상하좌 2rem 여백으로 지도와 구분, 그림자로 경계 명확히 */
   .map-filter {
     position: absolute;
     left: 2rem;
@@ -1749,7 +1743,6 @@
     box-shadow: 0 4px 24px rgba(0, 0, 0, 0.13);
     z-index: 10;
     transition: width 0.3s ease;
-    /* 기본 CSS의 justify-content:center 덮어쓰기 → 상단부터 표시 */
     justify-content: flex-start;
     align-items: flex-start;
   }
@@ -1759,7 +1752,6 @@
     overflow-y: auto;
     overflow-x: hidden;
   }
-  /* 필터 내부: padding으로 상하좌우 여백 유지, 상단부터 시작 */
   .map-filter-inner {
     width: 100%;
     padding: 2.5rem 2.2rem 3rem;
@@ -1923,7 +1915,6 @@
     padding: 0 1.6rem;
     align-self: flex-start;
   }
-  /* 리뷰 리스트: 세로 스택 → 가로 스크롤 */
   .map-detail-review-list {
     flex-wrap: nowrap;
     overflow-x: auto;
@@ -1970,7 +1961,6 @@
     width: 100%;
     height: 22rem;
   }
-  /* map hero */
   .map-hero-title {
     font-size: 3.5rem;
   }
@@ -1978,7 +1968,6 @@
     padding: 3rem 0.8rem;
   }
 
-  /* 지도: 너비 76.8rem, 높이 원본 비율(7:4) 유지 */
   .page-map .map-main-content {
     width: 76.8rem;
     min-width: 76.8rem;
@@ -1991,12 +1980,10 @@
     width: 76.8rem;
   }
 
-  /* 핀 이미지: 지도 비율(76.8/140≈0.55)에 맞게 축소 */
   .map-pin a img {
     width: 2.2rem;
     height: auto;
   }
-  /* 인카드: 동일 비율로 scale 축소 */
   .map-in-card {
     transform: translateX(-50%) scale(0.55);
     transform-origin: top center;
@@ -2221,8 +2208,6 @@
     justify-content: center;
     width: 95%;
   }
-
-  /* 지도: 너비 48.5rem, 높이 원본 비율(7:4) 유지 */
   .page-map .map-main-content {
     width: 48.5rem;
     min-width: 48.5rem;
@@ -2234,13 +2219,10 @@
   .page-map .map-pin-list {
     width: 48.5rem;
   }
-
-  /* 핀 이미지: 지도 비율(48.5/140≈0.35)에 맞게 축소 */
   .map-pin a img {
     width: 1.4rem;
     height: auto;
   }
-  /* 인카드: 이미지 없이 텍스트만 표시, 크기 직접 지정 */
   .map-in-card {
     transform: translateX(-50%);
     width: 16rem;
@@ -2263,8 +2245,6 @@
   .map-in-card .map-info-time {
     font-size: 1.1rem;
   }
-
-  /* 필터: 소형에서 더 넓게 열림, min()으로 탭 위치와 너비 동기화 */
   .map-filter.active {
     width: min(78vw, 30rem);
   }
@@ -2274,11 +2254,10 @@
   .map-filter-inner {
     padding: 2rem 1.4rem 3rem;
   }
-
-  /* 카드 */
   .map-card-list {
     row-gap: 1.6rem;
-    width: 80%;
+    width: 90%;
+
   }
   .map-place-card-img {
     height: 18rem;
@@ -2290,9 +2269,15 @@
   .map-card-title {
     font-size: 1.8rem;
   }
-  .card-place,
-  .card-time {
+  .card-place{
     font-size: 1.4rem;
+  }
+  .card-time {
+    font-size:1.2rem;
+    color:#444;
+  }
+  .card-rating{
+    color:#333;
   }
   .map-card-tags {
     flex-wrap: wrap;
@@ -2305,7 +2290,6 @@
     height: 3rem;
   }
 
-  /* 더보기 버튼 */
   .map-list-tab {
     width: 88%;
     font-size: 1.6rem;
