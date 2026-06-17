@@ -492,6 +492,12 @@
     transform: none;
   }
 
+  .home-course .course-card {
+    border: 1px solid #e6ece7;
+    background: #fff;
+    box-shadow: none;
+  }
+
   .home-course-content .home-course-img {
     aspect-ratio: auto;
     height: 24rem;
